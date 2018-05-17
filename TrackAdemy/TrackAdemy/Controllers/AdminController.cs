@@ -13,16 +13,28 @@ namespace TrackAdemy.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Help()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Your Help page.";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Report()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your report page.";
+
+            return View();
+        }
+        public ActionResult AddStudent()
+        {
+            ViewBag.Message = "add Student page.";
+
+            return View();
+        }
+        public ActionResult Logout()
+        {
+            ViewBag.Message = "Your logout page.";
 
             return View();
         }
