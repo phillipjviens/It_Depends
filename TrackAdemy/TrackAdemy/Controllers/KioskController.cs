@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace TrackAdemy.Controllers
 {
-    public class HomeController : Controller
+    public class KioskController : Controller
     {
         public ActionResult Index()
         {
@@ -20,15 +20,9 @@ namespace TrackAdemy.Controllers
             return View();
         }
 
-        public ActionResult Login()
+        public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-        public ActionResult Help()
-        {
-            ViewBag.Message = "Your Help page.";
 
             return View();
         }
