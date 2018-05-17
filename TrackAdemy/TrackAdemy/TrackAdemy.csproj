@@ -264,8 +264,8 @@
     <Content Include="Views\Admin\Report.cshtml" />
     <Content Include="Views\Admin\LogOut.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\Student\About.cshtml" />
-    <Content Include="Views\Student\Contact.cshtml" />
+    <Content Include="Views\Student\Help.cshtml" />
+    <Content Include="Views\Student\Logout.cshtml" />
     <Content Include="Views\Student\Index.cshtml" />
     <Content Include="Views\Kiosk\About.cshtml" />
     <Content Include="Views\Kiosk\Contact.cshtml" />
@@ -273,6 +273,10 @@
     <Content Include="Views\Home\Help.cshtml" />
     <Content Include="Views\Admin\AddStudent.cshtml" />
     <Content Include="Views\Admin\Help.cshtml" />
+    <Content Include="Views\Student\Data.cshtml" />
+    <Content Include="Views\Student\Yard.cshtml" />
+    <Content Include="Views\Student\Aspirations.cshtml" />
+    <Content Include="Views\Student\Store.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
