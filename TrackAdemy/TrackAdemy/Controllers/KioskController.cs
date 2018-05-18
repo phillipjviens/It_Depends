@@ -13,18 +13,12 @@ namespace TrackAdemy.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Logout()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "You are logged out.";
 
             return View();
         }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+  
     }
 }

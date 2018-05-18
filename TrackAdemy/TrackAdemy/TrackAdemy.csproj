@@ -268,8 +268,7 @@
     <Content Include="Views\Student\Help.cshtml" />
     <Content Include="Views\Student\Logout.cshtml" />
     <Content Include="Views\Student\Index.cshtml" />
-    <Content Include="Views\Kiosk\About.cshtml" />
-    <Content Include="Views\Kiosk\Contact.cshtml" />
+    <Content Include="Views\Kiosk\Logout.cshtml" />
     <Content Include="Views\Kiosk\Index.cshtml" />
     <Content Include="Views\Home\Help.cshtml" />
     <Content Include="Views\Admin\AddStudent.cshtml" />
