@@ -280,6 +280,8 @@
     <Content Include="Views\Student\Yard.cshtml" />
     <Content Include="Views\Student\Aspirations.cshtml" />
     <Content Include="Views\Student\Store.cshtml" />
+    <Content Include="Views\Shared\_Layout_Student.cshtml" />
+    <Content Include="Views\Student\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
