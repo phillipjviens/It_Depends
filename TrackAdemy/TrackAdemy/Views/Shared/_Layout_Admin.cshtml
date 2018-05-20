@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>   
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="padding-top:unset; padding-bottom:unset">
+    <div class="btn-group btn-group-justified">
+        <a href="~/Admin/Index" class="btn btn-primary">Home</a>
+        <a href="~/Admin/Report" class="btn btn-primary">Report</a>
+        <a href="~/Admin/AddStudent" class="btn btn-primary">Add Student</a>
+        <a href="~/Admin/LogOut" class="btn btn-primary">Logout</a>
+    </div>
+    @RenderBody()
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

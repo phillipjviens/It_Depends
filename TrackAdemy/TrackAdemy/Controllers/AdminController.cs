@@ -15,26 +15,26 @@ namespace TrackAdemy.Controllers
 
         public ActionResult Help()
         {
-            ViewBag.Message = "Your Help page.";
+            ViewBag.Message = "The admin help page.";
 
             return View();
         }
 
         public ActionResult Report()
         {
-            ViewBag.Message = "Your report page.";
+            ViewBag.Message = "View admin reports.";
 
             return View();
         }
         public ActionResult AddStudent()
         {
-            ViewBag.Message = "add Student page.";
+            ViewBag.Message = "Add a student to the database.";
 
             return View();
         }
         public ActionResult Logout()
         {
-            ViewBag.Message = "Your logout page.";
+            ViewBag.Message = "You have successfully logged out.";
 
             return View();
         }
