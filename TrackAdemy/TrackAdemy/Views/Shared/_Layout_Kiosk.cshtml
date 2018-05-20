@@ -6,14 +6,19 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body style="padding-top:unset; padding-bottom:unset">
-    <div class="btn-group btn-group-justified">
-        <a href="~/Student/Index" class="btn btn-primary">Home</a>
-        <a href="~/Student/Data" class="btn btn-primary">Data</a>
-        <a href="~/Student/Yard" class="btn btn-primary">Pet Yard</a>
-        <a href="~/Student/Store" class="btn btn-primary">Pet Store</a>
-        <a href="~/Student/Aspirations" class="btn btn-primary">Pet Aspirations</a>
-        <a href="~/Home/Index" class="btn btn-primary">Log Out</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="pull-right">
+                    <a href="~/Home/Index" class="btn btn-primary">Log Out</a>
+                </div>
+           </div>
+        </div>
     </div>
+    
+    @*<div class="btn-group btn-group-justified" align ="right">        
+        <a href="~/Home/Index" class="btn btn-primary" align="right">Log Out</a>
+    </div>*@
     @RenderBody()
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
