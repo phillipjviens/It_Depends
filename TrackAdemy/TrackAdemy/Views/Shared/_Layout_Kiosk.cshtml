@@ -1,24 +1,15 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>   
+<head>
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body style="padding-top:unset; padding-bottom:unset">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="pull-right">
-                    <a href="~/Home/Index" class="btn btn-primary">Log Out</a>
-                </div>
-           </div>
-        </div>
+<body style="padding-top:unset; padding-bottom:unset;padding-right:unset">
+    <div class="pull-right">
+        <a href="~/Home/Index" class="btn btn-primary">Log Out</a>
     </div>
-    
-    @*<div class="btn-group btn-group-justified" align ="right">        
-        <a href="~/Home/Index" class="btn btn-primary" align="right">Log Out</a>
-    </div>*@
+
     @RenderBody()
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
