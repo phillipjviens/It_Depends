@@ -210,10 +210,8 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\images\aspirations.png" />
     <Content Include="Content\images\login.png" />
-    <Content Include="Content\images\logout.png" />
-    <Content Include="Content\images\petYard.png" />
+    <Content Include="Content\images\SampleClassData.PNG" />
     <Content Include="Content\images\studentHome.png" />
     <Content Include="Content\images\StudentPicture.png" />
     <Content Include="Content\images\StudentPictureCheckedIn.png" />
