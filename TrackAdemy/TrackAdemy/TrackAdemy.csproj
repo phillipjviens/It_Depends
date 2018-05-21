@@ -221,6 +221,7 @@
     <Content Include="Content\images\SampleClassData.PNG" />
     <Content Include="Content\images\StudentData.png" />
     <Content Include="Content\images\StudentHome.png" />
+    <Content Include="Content\images\StudentPetShop.png" />
     <Content Include="Content\images\StudentPicture.png" />
     <Content Include="Content\images\StudentPictureCheckedIn.png" />
     <Content Include="Content\images\StudentHelp.png" />
