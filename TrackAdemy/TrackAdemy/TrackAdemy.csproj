@@ -212,6 +212,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\aspirations.png" />
     <Content Include="Content\images\login.png" />
+    <Content Include="Content\images\logout.png" />
     <Content Include="Content\images\petYard.png" />
     <Content Include="Content\images\SampleClassData.PNG" />
     <Content Include="Content\images\StudentData.png" />
@@ -295,6 +296,8 @@
     <Content Include="Views\Shared\_Layout_Admin.cshtml" />
     <Content Include="Views\Kiosk\_ViewStart.cshtml" />
     <Content Include="Views\Admin\_ViewStart.cshtml" />
+    <Content Include="Views\Admin\IndexMonth.cshtml" />
+    <Content Include="Views\Admin\IndexYear.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

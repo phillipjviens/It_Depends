@@ -13,6 +13,16 @@ namespace TrackAdemy.Controllers
             return View();
         }
 
+        public ActionResult IndexMonth()
+        {
+            return View();
+        }
+
+        public ActionResult IndexYear()
+        {
+            return View();
+        }
+
         public ActionResult Help()
         {
             ViewBag.Message = "The admin help page.";
