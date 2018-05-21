@@ -294,6 +294,7 @@
     <Content Include="Views\Kiosk\_ViewStart.cshtml" />
     <Content Include="Views\Admin\_ViewStart.cshtml" />
     <Content Include="Views\Admin\IndexMonth.cshtml" />
+    <Content Include="Views\Admin\IndexYear.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
