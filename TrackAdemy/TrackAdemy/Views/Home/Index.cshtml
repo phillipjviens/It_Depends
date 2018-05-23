@@ -2,32 +2,39 @@
     ViewBag.Title = "TrackAdemy";
 }
 
-@*<div class="jumbotron">
-    <h1>@ViewBag.Title</h1>
-    <p class="lead"></p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">LEARN LESS &raquo;</a></p>
-</div>*@
 
-<img src="~/Content/images/login.png" style="height:auto; max-width:100%"/>
+<head>
 
-@*<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>*@
+
+</head>
+<body>
+    <img src="~/Content/images/login.png" style="height:auto; max-width:100%" />
+
+    <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="UserName" placeholder="Your username." />
+        <label for="userpass">Password</label>
+        <input type="text" id="password" name="Password" placeholder="Your password." />
+        <input type="button" value="Login" onclick="LoginLogic()" />
+    </form>
+    <script type="text/javascript">
+        function LoginLogic() {
+            if (document.getElementById("username").value === "student") {
+                document.body.style.background = "blue";
+               window.location.href = "/Student/Index";
+            }
+
+            else if (document.getElementById("username").value === "admin") {
+                document.body.style.background = "red";
+              window.location.href = "/Admin/Index";
+            }
+
+            else {
+                document.body.style.background = "green";
+                window.location.href = "/Kiosk/Index";
+
+            }
+            }
+    </script>
+
+</body>
