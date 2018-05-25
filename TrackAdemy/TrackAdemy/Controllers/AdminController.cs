@@ -36,7 +36,7 @@ namespace TrackAdemy.Controllers
 
             return View();
         }
-        public ActionResult AddStudent()
+        public ActionResult ModifyStudent()
         {
             ViewBag.Message = "Add a student to the database.";
 
