@@ -226,6 +226,7 @@
     <Content Include="Content\images\StudentPicture.png" />
     <Content Include="Content\images\StudentPictureCheckedIn.png" />
     <Content Include="Content\images\StudentHelp.png" />
+    <Content Include="Content\images\SVG\AdminHomeAverageDayOfWeek.svg" />
     <Content Include="Content\images\SVG\Archive_Blue.svg" />
     <Content Include="Content\images\SVG\ArrowFull_White.svg" />
     <Content Include="Content\images\SVG\ArrowOutline_Gray.svg" />
