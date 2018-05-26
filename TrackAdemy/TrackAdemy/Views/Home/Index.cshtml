@@ -1,40 +1,94 @@
-﻿@{
+﻿@model TrackAdemy.Models.UserViewModel
+
+@{
+    string username = Request.Form["UserName"];
+    string password = Request.Form["Password"];
     ViewBag.Title = "TrackAdemy";
 }
 
 
-<head>
+<body style="background:linear-gradient(to right,#619b42, #b3c65f)">
+    <div class="row" >
+        <div class="column" >
+            <img src="~/Content/images/SVG/Logo_Default.svg" style="height:auto; max-width:100%" />
+        </div>
+        <div class="column" style="text-align:center">
+            <form method="post">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="UserName" placeholder="Your username" />
+                <br />
+                <label for="userpass">Password</label>
+                <input type="text" id="password" name="Password" placeholder="Your password" />
+                <br />
+                <input type="submit" value="Login" />
 
+                @*<input type="button" value="Login" onclick="LoginLogic()" />*@
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row text-center">
+            @{
 
-</head>
-<body>
-    <img src="~/Content/images/login.png" style="height:auto; max-width:100%" />
+                if (Model.UserList == null || !Model.UserList.Any())
+                {
+                    <br />
+                    <p>No users</p>
+                    <br />
 
-    <form>
-        <label for="username">Username</label>
-        <input type="text" id="username" name="UserName" placeholder="Your username." />
-        <label for="userpass">Password</label>
-        <input type="text" id="password" name="Password" placeholder="Your password." />
-        <input type="button" value="Login" onclick="LoginLogic()" />
-    </form>
-    <script type="text/javascript">
-        function LoginLogic() {
-            if (document.getElementById("username").value === "student") {
-                document.body.style.background = "blue";
-               window.location.href = "/Student/Index";
+                }
+                else
+                {
+
+                    if (Model.UserList.Exists(m => m.Username == username))
+                    {
+                        var item = Model.UserList.First(x => x.Username.Equals(username));
+                        if (item.Password.Equals(password))
+                        {
+                            switch (item.AccessLevel)
+                            {
+                                case 1:
+
+                                    @Html.ActionLink("Admin", "Index", "Admin", new { username = username }, null);
+                                    break;
+                                case 2:
+                                    @Html.ActionLink("Student", "Index", "Student", new { username = username }, null);
+                                    break;
+                                case 3:
+                                    @Html.ActionLink("Kiosk", "Kiosk", "Index", new { username = username }, null);
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                    }
+                    else
+                    {
+                    }
+                }
             }
 
-            else if (document.getElementById("username").value === "admin") {
-                document.body.style.background = "red";
-              window.location.href = "/Admin/Index";
-            }
+        </div>
+    </div>
 
-            else {
-                document.body.style.background = "green";
-                window.location.href = "/Kiosk/Index";
+    @*<script type="text/javascript">
+            function LoginLogic() {
+                if (document.getElementById("username").value === "student") {
+                    document.body.style.background = "blue";
+                    window.location.href = "/Student/Index";
+                }
 
+                else if (document.getElementById("username").value === "admin") {
+                    document.body.style.background = "red";
+                    window.location.href = "/Admin/Index";
+                }
+
+                else {
+                    document.body.style.background = "green";
+                    window.location.href = "/Kiosk/Index";
+
+                }
             }
-            }
-    </script>
+        </script>*@
 
 </body>
