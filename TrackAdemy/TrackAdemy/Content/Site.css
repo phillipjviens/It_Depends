@@ -46,7 +46,7 @@ body {
 /*sets position for download button*/
 #downloadButton {
     position: relative;
-    left: 635px;
+    left: 60%;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
