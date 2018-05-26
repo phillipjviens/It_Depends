@@ -219,6 +219,15 @@
     <Content Include="Content\images\help.png" />
     <Content Include="Content\images\login.png" />
     <Content Include="Content\images\logout.png" />
+    <Content Include="Content\images\NewFolder1\StudentImagesPNG\Student1.png" />
+    <Content Include="Content\images\NewFolder1\StudentImagesPNG\Student2.png" />
+    <Content Include="Content\images\NewFolder1\StudentImagesPNG\Student3.png" />
+    <Content Include="Content\images\NewFolder1\StudentImagesPNG\Student4.png" />
+    <Content Include="Content\images\NewFolder1\StudentImagesPNG\Student5.png" />
+    <Content Include="Content\images\NewFolder1\StudentImagesPNG\Student6.png" />
+    <Content Include="Content\images\NewFolder1\StudentImagesPNG\Student7.png" />
+    <Content Include="Content\images\NewFolder1\StudentImagesPNG\Student8.png" />
+    <Content Include="Content\images\NewFolder1\StudentImagesPNG\Student9.png" />
     <Content Include="Content\images\pet.png" />
     <Content Include="Content\images\petYard.png" />
     <Content Include="Content\images\SampleCalendar.jpg" />
