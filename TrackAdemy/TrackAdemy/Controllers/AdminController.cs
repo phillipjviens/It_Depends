@@ -30,10 +30,12 @@ namespace TrackAdemy.Controllers
             return View();
         }
 
-        public ActionResult Report()
+        public ActionResult Report(string student = null)
         {
             ViewBag.Message = "View admin reports.";
 
+            if (student != null)
+                ViewData["student"] = student;
             return View();
         }
         

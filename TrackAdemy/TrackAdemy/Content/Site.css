@@ -49,6 +49,14 @@ body {
     left: 60%;
 }
 
+#reportStudentDropDown {
+    position:fixed;
+    background-color:#FFFFFF;
+    color: white;
+    top:100px;
+    left:45%;
+}
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
