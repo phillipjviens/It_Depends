@@ -25,7 +25,7 @@ namespace TrackAdemy.Models
         }
 
         /// <summary>
-        /// New Avatar
+        /// New user
         /// </summary>
         public UserModel()
         {
@@ -33,7 +33,7 @@ namespace TrackAdemy.Models
         }
 
         /// <summary>
-        /// Make an Avatar from values passed in
+        /// Make an user from values passed in
         /// </summary>
         /// <param name="username">The Picture path</param>
         /// <param name="password">Avatar Name</param>
@@ -44,6 +44,9 @@ namespace TrackAdemy.Models
             Username = username;
             Password = password;
         }
+        /// <summary>
+        /// Make an admin
+        /// </summary>
         private class AdminModel : UserModel
         {
             public AdminModel(string name, string pass) : base(name, pass)
@@ -51,6 +54,9 @@ namespace TrackAdemy.Models
                 AccessLevel = 1;
             }
         }
+        /// <summary>
+        /// Make a student
+        /// </summary>
         private class StudentModel : UserModel
         {
             public StudentModel(string name, string pass) : base(name, pass)
@@ -58,6 +64,9 @@ namespace TrackAdemy.Models
                 AccessLevel = 2;
             }
         }
+        /// <summary>
+        /// Make a kiosk
+        /// </summary>
         private class KioskModel : UserModel
         {
             public KioskModel(string name, string pass) : base(name, pass)
