@@ -274,10 +274,11 @@
     <Content Include="Content\images\SVG\Store_Speak.svg" />
     <Content Include="Content\images\SVG\Store_Speak_Dark.svg" />
     <Content Include="Content\images\SVG\TaskList_Checkmark_Blue.svg" />
-    <Content Include="Content\images\SVG\Trackademy_White.svg" />
+    <Content Include="Content\images\SVG\TrackAdemy Logo - White.svg" />
     <Content Include="Content\images\SVG\Trackoin_Bonus.svg" />
     <Content Include="Content\images\SVG\Trackoin_Individual.svg" />
     <Content Include="Content\images\SVG\Trackoin_Pile.svg" />
+    <Content Include="Content\images\TrackAdemy Logo - White.svg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
