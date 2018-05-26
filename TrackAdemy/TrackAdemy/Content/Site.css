@@ -1,4 +1,5 @@
-﻿body {
+﻿/*padding for body*/
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -9,11 +10,51 @@
     padding-right: 15px;
 }
 
+/*sets border box sizing*/
+* {
+    box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*resizing to fit graphs vertically when device is smaller*/
+@media screen and (max-width: 800px) {
+    .column {
+        width: 100%;
+    }
+}
+
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
     white-space: normal;
+}
+
+/*sets position for download button*/
+#downloadButton {
+    position: relative;
+    left: 60%;
+}
+
+#reportStudentDropDown {
+    position:fixed;
+    background-color:#FFFFFF;
+    color: white;
+    top:100px;
+    left:45%;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */

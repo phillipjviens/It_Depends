@@ -25,7 +25,7 @@ namespace TrackAdemy.Models
         }
 
         /// <summary>
-        /// New Avatar
+        /// New user
         /// </summary>
         public UserModel()
         {
@@ -33,7 +33,7 @@ namespace TrackAdemy.Models
         }
 
         /// <summary>
-        /// Make an Avatar from values passed in
+        /// Make an user from values passed in
         /// </summary>
         /// <param name="username">The Picture path</param>
         /// <param name="password">Avatar Name</param>
@@ -44,27 +44,61 @@ namespace TrackAdemy.Models
             Username = username;
             Password = password;
         }
-        private class AdminModel : UserModel
+        /// <summary>
+        /// Make an admin
+        /// </summary>
+        public class AdminModel : UserModel
         {
             public AdminModel(string name, string pass) : base(name, pass)
             {
                 AccessLevel = 1;
             }
         }
-        private class StudentModel : UserModel
+        /// <summary>
+        /// Make a student
+        /// </summary>
+        public class StudentModel : UserModel
         {
             public StudentModel(string name, string pass) : base(name, pass)
             {
                 AccessLevel = 2;
             }
         }
-        private class KioskModel : UserModel
+        /// <summary>
+        /// Make a kiosk
+        /// </summary>
+        public class KioskModel : UserModel
         {
             public KioskModel(string name, string pass) : base(name, pass)
             {
                 AccessLevel = 3;
             }
         }
+        /// <summary>
+        /// Used to Update user Before doing a data save
+        /// Updates everything
+        /// </summary>
+        /// <param name="data">Data to update</param>
+        public void Update(UserModel data)
+        {
+            if (data == null)
+            {
+                return;
+            }
+            Username = data.Username;
+            Password = data.Password;
+            AccessLevel = data.AccessLevel;
+
+        }
+
+        //public string GetPass(UserModel data)
+        //{
+        //    if (data == null)
+        //    {
+        //        return "";
+        //    }
+        //    return data.Password;
+        //}
     }
 }
 

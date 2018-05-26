@@ -30,13 +30,23 @@ namespace TrackAdemy.Controllers
             return View();
         }
 
-        public ActionResult Report()
+        public ActionResult Report(string student = null)
         {
             ViewBag.Message = "View admin reports.";
 
+            if (student != null)
+                ViewData["student"] = student;
             return View();
         }
-        public ActionResult AddStudent()
+        
+        public ActionResult Report_PDF()
+        {
+            ViewBag.Message = "Example Report PDF";
+
+            return View();
+        }
+
+        public ActionResult ModifyStudent()
         {
             ViewBag.Message = "Add a student to the database.";
 

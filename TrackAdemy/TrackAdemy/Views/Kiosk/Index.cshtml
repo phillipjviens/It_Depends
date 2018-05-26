@@ -2,14 +2,14 @@
     ViewBag.Title = "Kiosk Home Page";
 }
 <style>
-    * {
+    {
         box-sizing: border-box;
     }
 
     /* Create two equal columns that floats next to each other */
     .column {
         float: right;
-        width: 25%;
+        width: 33%;
         padding: 20px;
         height: 100px; /* Should be removed. Only for demonstration */
     }
@@ -21,97 +21,110 @@
         clear: both;
     }
 
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .Background {
+        background: linear-gradient(#B3C65F,#618B42);
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+    }
+
+    .NavBar {
+        background-color: #efe8b5;
+        width: 100vw;
+        height: 100px;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
 </style>
 
-<div>
-    <h2>@ViewBag.Title</h2>
-    <p class="lead">Welcome!!  Let's check your community hours and see how your PET is!!!</p>
-</div>
 
-
-<div class="container" style="padding-left:unset; padding-right:unset">
+<div class="Background">
 
     <div class="row">
-
-        <div class="column">
-
-            <img src="~/Content/images/StudentPictureCheckedIn.png" style="height:auto; max-width:75%"/>
-
-        </div>
-
-        <div class="column">
-
-            <img src="~/Content/images/StudentPictureCheckedIn.png" style="height:auto; max-width:75%" />
-
-        </div>
-
-        <div class="column">
-
-            <img src="~/Content/images/StudentPicture.png" style="height:auto; max-width:75%" />
-
-        </div>
-
-        <div class="column">
-
-            <img src="~/Content/images/StudentPicture.png" style="height:auto; max-width:75%" />
-
-        </div>
-
+        <br />
+        <img src="~/Content/images/SVG/TrackAdemy Logo - White.svg" style="width:30vw;" class="center" />
+        <img src="~/Content/images/SVG/Logo_Default.svg" style=" width: 5vw" class="center"/>
+        <p class="center"> Login to start racking up those coins! </p>
     </div>
 
-    <div class="row">
+    <div class="container" style="padding-left:unset; padding-right:unset">
 
+        <div class="row">
 
-        <div class="column">
+            <div class="column">
 
-            <img src="~/Content/images/StudentPictureCheckedIn.png" style="height:auto; max-width:75%" />
+                <img src="~/Content/images/StudentImagesPNG/Student1.png" style="height:auto; max-width:75%" />
 
-        </div>
+            </div>
 
-        <div class="column">
+            <div class="column">
 
-            <img src="~/Content/images/StudentPictureCheckedIn.png" style="height:auto; max-width:75%" />
+                <img src="~/Content/images/StudentImages/Student2.png" style="height:auto; max-width:75%" />
 
-        </div>
+            </div>
 
-        <div class="column">
+            <div class="column">
 
-            <img src="~/Content/images/StudentPicture.png" style="height:auto; max-width:75%" />
+                <img src="~/Content/images/StudentImages/Student3.png" style="height:auto; max-width:75%" />
 
-        </div>
-
-        <div class="column">
-
-            <img src="~/Content/images/StudentPictureCheckedIn.png" style="height:auto; max-width:75%" />
+            </div>
 
         </div>
 
-    </div>
+        <div class="row">
 
-    <div class="row">
 
- 
-        <div class="column">
+            <div class="column">
 
-            <img src="~/Content/images/StudentPicture.png" style="height:auto; max-width:75%"/>
+                <img src="~/Content/images/StudentImages/Student4.png" style="height:auto; max-width:75%" />
+
+            </div>
+
+            <div class="column">
+
+                <img src="~/Content/images/StudentImages/Student5.png" style="height:auto; max-width:75%" />
+
+            </div>
+
+            <div class="column">
+
+                <img src="~/Content/images/StudentImages/Student6.png" style="height:auto; max-width:75%" />
+
+            </div>
 
         </div>
 
-        <div class="column">
+        <div class="row">
 
-            <img src="~/Content/images/StudentPictureCheckedIn.png" style="height:auto; max-width:75%" />
 
-        </div>
+            <div class="column">
 
-        <div class="column">
+                <img src="~/Content/images/StudentImages/Student7.png" style="height:auto; max-width:75%" />
 
-            <img src="~/Content/images/StudentPicture.png" style="height:auto; max-width:75%" />
+            </div>
 
-        </div>
+            <div class="column">
 
-        <div class="column">
+                <img src="~/Content/images/StudentImages/Student8.png" style="height:auto; max-width:75%" />
 
-            <img src="~/Content/images/StudentPictureCheckedIn.png" style="height:auto; max-width:75%"/>
+            </div>
+
+            <div class="column">
+
+                <img src="~/Content/images/StudentImages/Student9.png" style="height:auto; max-width:75%" />
+
+            </div>
 
         </div>
 

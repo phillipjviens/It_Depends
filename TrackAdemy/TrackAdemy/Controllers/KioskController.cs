@@ -12,13 +12,6 @@ namespace TrackAdemy.Controllers
         {
             return View();
         }
-
-        public ActionResult Logout()
-        {
-            ViewBag.Message = "You are logged out.";
-
-            return View();
-        }
   
     }
 }

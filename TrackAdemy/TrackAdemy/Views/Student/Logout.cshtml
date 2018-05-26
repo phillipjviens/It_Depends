@@ -2,7 +2,61 @@
     ViewBag.Title = "Logout";
     Layout = null;
 }
-<img src="~/Content/images/logout.png" alt="Student log out page"
-     style="width:100%;height:auto;">
+@*<img src="~/Content/images/logout.png" alt="Student log out page"
+     style="width:100%;height:auto;">*@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
+        .row {
+            display: flex;
+        }
+
+        /* Create three equal columns that sits next to each other */
+        .column {
+            flex: 33.33%;
+            padding: 5px;
+            margin:auto;
+        }
+        .speech-bubble {
+            position: relative;
+            background: linear-gradient(to right,#3D92D0, #7FC2D6);
+            border-radius: .4em;
+            padding: 20px;
+            text-align: center;
+            @*font-family: CollegiateHeavyOutline-Medium, CollegiateHeavyOutline;*@
+        }
+
+            .speech-bubble:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 0;
+                height: 0;
+                border: 26px solid transparent;
+                border-right-color: #3D92D0;
+                border-left: 0;
+                margin-top: -26px;
+                margin-left: -26px;
+            }
+    </style>
+</head>
+<body>
+<div class= "row">
+<div class="column">
+<img src="~/Content/images/SVG/Pet_Home.svg" alt="Pet" style="width:100%;height:auto;" />
+    </div>
+<div class="column">
+    <div class="speech-bubble" >
+        
+        <h1>Thanks for stopping by!</h1>
+        <h2>I hope to see you again soon!</h2>
+    </div>
+</div>
+    </div>
 <h4 align="center"><a class=" btn-block" href="~/Home/Index">Return to TrackAdemy Home</a></h4>
+    </body>
