@@ -1,9 +1,18 @@
 ﻿@{
     ViewBag.Title = "Report";
 }
-<img src="~/Content/images/adminReports.png" alt="about page"
-     style="width:100%;height:90%;">
 
-<div id="downloadButton">
-    <a href="~/Admin/Report_PDF" class="btn btn-primary">Download PDF</a>
-</div>
+@{
+    if(ViewData["student"] == null)
+    {
+        <p>there is no student</p><br />
+    }   
+    else
+    {
+        <img src="~/Content/images/adminReports.png" alt="about page" style="width:100%;height:90%;">
+        <div id="downloadButton">
+            <a href="~/Admin/Report_PDF" class="btn btn-primary">Download PDF</a>
+        </div>
+
+    }
+}
