@@ -47,7 +47,7 @@ namespace TrackAdemy.Models
         /// <summary>
         /// Make an admin
         /// </summary>
-        private class AdminModel : UserModel
+        public class AdminModel : UserModel
         {
             public AdminModel(string name, string pass) : base(name, pass)
             {
@@ -57,7 +57,7 @@ namespace TrackAdemy.Models
         /// <summary>
         /// Make a student
         /// </summary>
-        private class StudentModel : UserModel
+        public class StudentModel : UserModel
         {
             public StudentModel(string name, string pass) : base(name, pass)
             {
@@ -67,13 +67,38 @@ namespace TrackAdemy.Models
         /// <summary>
         /// Make a kiosk
         /// </summary>
-        private class KioskModel : UserModel
+        public class KioskModel : UserModel
         {
             public KioskModel(string name, string pass) : base(name, pass)
             {
                 AccessLevel = 3;
             }
         }
+        /// <summary>
+        /// Used to Update user Before doing a data save
+        /// Updates everything
+        /// </summary>
+        /// <param name="data">Data to update</param>
+        public void Update(UserModel data)
+        {
+            if (data == null)
+            {
+                return;
+            }
+            Username = data.Username;
+            Password = data.Password;
+            AccessLevel = data.AccessLevel;
+
+        }
+
+        //public string GetPass(UserModel data)
+        //{
+        //    if (data == null)
+        //    {
+        //        return "";
+        //    }
+        //    return data.Password;
+        //}
     }
 }
 
