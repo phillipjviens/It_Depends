@@ -51,6 +51,9 @@ body {
 
 #reportStudentDropDown {
     position:fixed;
+    background-color:#FFFFFF;
+    color: white;
+    top:100px;
     left:45%;
 }
 
