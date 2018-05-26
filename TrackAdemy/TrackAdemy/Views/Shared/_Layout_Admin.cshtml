@@ -6,13 +6,41 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body style="padding-top:unset; padding-bottom:unset">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("TrackAdemy", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
+                    <li>@Html.ActionLink("Student", "Index", "Student")</li>
+                    <li>@Html.ActionLink("Kiosk", "Index", "Kiosk")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Help", "Help", "Home")</li>
+                </ul>
+                @*@Html.Partial("_LoginPartial")*@
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - TrackAdemy</p>
+        </footer>
+    </div>
     <div class="btn-group btn-group-justified">
         <a href="~/Admin/Index" class="btn btn-primary">Home</a>
         <a href="~/Admin/Report" class="btn btn-primary">Report</a>
         <a href="~/Admin/AddStudent" class="btn btn-primary">Add Student</a>
         <a href="~/Admin/LogOut" class="btn btn-primary">Logout</a>
     </div>
-    @RenderBody()
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
