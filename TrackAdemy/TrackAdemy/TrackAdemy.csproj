@@ -221,7 +221,6 @@
     <Content Include="Content\images\logout.png" />
     <Content Include="Content\images\pet.png" />
     <Content Include="Content\images\petYard.png" />
-    <Content Include="Content\images\SampleClassData.PNG" />
     <Content Include="Content\images\StudentData.png" />
     <Content Include="Content\images\StudentHome.png" />
     <Content Include="Content\images\StudentPetShop.png" />
