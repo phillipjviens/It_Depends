@@ -2,24 +2,6 @@
     ViewBag.Title = "Kiosk Home Page";
 }
 <style>
-    {
-        box-sizing: border-box;
-    }
-
-    /* Create two equal columns that floats next to each other */
-    .column {
-        float: right;
-        width: 33%;
-        padding: 20px;
-        height: 100px; /* Should be removed. Only for demonstration */
-    }
-
-    .row:after {
-        content: "";
-        padding: 50px;
-        display: table;
-        clear: both;
-    }
 
     html, body {
         margin: 0;
@@ -33,12 +15,6 @@
         position: absolute;
     }
 
-    .NavBar {
-        background-color: #efe8b5;
-        width: 100vw;
-        height: 100px;
-    }
-
     .center {
         display: block;
         margin-left: auto;
@@ -46,88 +22,97 @@
         width: 50%;
     }
 
+    .grid-container {
+        display: grid;
+        grid-template: auto auto auto / auto auto auto;
+        grid-gap: 50px;
+        background-color: #B3C65F;
+        padding: 50px;
+    }
+
+        .grid-container > div {
+            background-color: #618B42;
+            text-align: center;
+            padding: 10px 10px;
+            font-size: 15px;
+        }
+
+    .button {
+        background-color: #463927;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+
 </style>
 
 
 <div class="Background">
 
-    <div class="row">
-        <br />
-        <img src="~/Content/images/SVG/TrackAdemy Logo - White.svg" style="width:30vw;" class="center" />
-        <img src="~/Content/images/SVG/Logo_Default.svg" style=" width: 5vw" class="center"/>
-        <p class="center"> Login to start racking up those coins! </p>
+    <div class=" center">
+
+        <div>
+            <br />
+            <img src="~/Content/images/SVG/TrackAdemy Logo - White.svg" style="width:40vw;" class="center" />
+            <img src="~/Content/images/SVG/Logo_Default.svg" style=" width: 7vw" class="center" />
+        </div>
+
+        <div>
+
+            <br />
+
+            <div class="grid-container">
+
+                <div class="item1">
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student1.png" style="height:auto; max-width:100%" />
+                </div>
+
+                <div class="item2">
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student2.png" style="height:auto; max-width:100%" />
+                </div>
+
+                <div class="item3">
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student3.png" style="height:auto; max-width:100%" />
+                </div>
+
+                <div class="item4">
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student4.png" style="height:auto; max-width:100%" />
+                </div>
+
+                <div class="item5">
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student5.png" style="height:auto; max-width:100%" />
+                </div>
+
+                <div class="item6">
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student6.png" style="height:auto; max-width:100%" />
+                </div>
+
+                <div class="item7">
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student7.png" style="height:auto; max-width:100%" />
+                </div>
+
+                <div class="item8">
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student8.png" style="height:auto; max-width:100%" />
+                </div>
+
+                <div class="item9">
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student9.png" style="height:auto; max-width:100%" />
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="container" style="padding-left:unset; padding-right:unset">
-
-        <div class="row">
-
-            <div class="column">
-
-                <img src="~/Content/images/StudentImagesPNG/Student1.png" style="height:auto; max-width:75%" />
-
-            </div>
-
-            <div class="column">
-
-                <img src="~/Content/images/StudentImages/Student2.png" style="height:auto; max-width:75%" />
-
-            </div>
-
-            <div class="column">
-
-                <img src="~/Content/images/StudentImages/Student3.png" style="height:auto; max-width:75%" />
-
-            </div>
-
-        </div>
-
-        <div class="row">
-
-
-            <div class="column">
-
-                <img src="~/Content/images/StudentImages/Student4.png" style="height:auto; max-width:75%" />
-
-            </div>
-
-            <div class="column">
-
-                <img src="~/Content/images/StudentImages/Student5.png" style="height:auto; max-width:75%" />
-
-            </div>
-
-            <div class="column">
-
-                <img src="~/Content/images/StudentImages/Student6.png" style="height:auto; max-width:75%" />
-
-            </div>
-
-        </div>
-
-        <div class="row">
-
-
-            <div class="column">
-
-                <img src="~/Content/images/StudentImages/Student7.png" style="height:auto; max-width:75%" />
-
-            </div>
-
-            <div class="column">
-
-                <img src="~/Content/images/StudentImages/Student8.png" style="height:auto; max-width:75%" />
-
-            </div>
-
-            <div class="column">
-
-                <img src="~/Content/images/StudentImages/Student9.png" style="height:auto; max-width:75%" />
-
-            </div>
-
-        </div>
-
+    <div>
+        <br />
+        <a href="~/Home/Index" class="button">LOGOUT</a>
     </div>
 
 </div>
