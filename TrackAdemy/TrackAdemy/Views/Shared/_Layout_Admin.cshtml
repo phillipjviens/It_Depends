@@ -12,34 +12,50 @@
             border: 3px solid #73AD21;
             padding: 10px;
         }
-        </style>
-</head>
-<body style="padding-top:unset; padding-bottom:unset">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("TrackAdemy", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Reports", "Report", "Admin")</li>
-                    <li>@Html.ActionLink("Modify Student", "ModifyStudent", "Admin")</li>
-                    <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
-                    <li>@Html.ActionLink("Student", "Index", "Student")</li>
-                    <li>@Html.ActionLink("Kiosk", "Index", "Kiosk")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Help", "Help", "Home")</li>
-                    <li>@Html.ActionLink("Log Out", "Index", "Home")</li>
+        .background {
+            background: linear-gradient(to right, #C22026,#F2696A);
+            width: 100%;
+            height: 10%;
+            position: absolute;
+        }
 
-                </ul>
-                @*@Html.Partial("_LoginPartial")*@
-            </div>
-        </div>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        a {
+            color: white;
+            float: right;
+        }
+
+        b {
+            float: left;
+        }
+
+        li a {
+            display: inline;
+            padding: 10px;
+            text-align: center;
+        }
+
+        li b {
+            display: inline;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body style="padding-top:unset">
+    <div class="background">
+        <ul class="navbar-collapse nav">
+            <li style="float:left"><a href="~/Home/Index">TRACKADEMY</a></li>
+            <li><a href="~/Home/Index">Log Out</a></li>
+            <li><a href="~/Admin/Reports">Reports</a></li>
+            <li><a href="~/Admin/ModifyStudent">Modify Student</a></li>
+            <li><a href="~/Admin/Index">HOME PAGE</a></li>
+        </ul>
     </div>
     <div class="container body-content">
         @RenderBody()
