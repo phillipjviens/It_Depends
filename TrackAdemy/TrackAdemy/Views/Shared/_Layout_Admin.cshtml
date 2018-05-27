@@ -4,6 +4,15 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .right {
+            position: absolute;
+            right: 10px;
+            width: 15%;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+        </style>
 </head>
 <body style="padding-top:unset; padding-bottom:unset">
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -18,11 +27,15 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Reports", "Report", "Admin")</li>
+                    <li>@Html.ActionLink("Modify Student", "ModifyStudent", "Admin")</li>
                     <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
                     <li>@Html.ActionLink("Student", "Index", "Student")</li>
                     <li>@Html.ActionLink("Kiosk", "Index", "Kiosk")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Help", "Help", "Home")</li>
+                    <li>@Html.ActionLink("Log Out", "Index", "Home")</li>
+
                 </ul>
                 @*@Html.Partial("_LoginPartial")*@
             </div>
