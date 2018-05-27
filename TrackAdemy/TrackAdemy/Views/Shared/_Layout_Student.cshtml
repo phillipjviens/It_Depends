@@ -7,7 +7,8 @@
     <style>
         .background {
             background: linear-gradient(to right, #37499F,#3D92D0);
-            width: 100vw;
+            width: 100%;
+            height: 10%;
             position:absolute;
         }
         ul {
@@ -40,23 +41,19 @@
 </head>
 <body style="padding-top:unset">
     <div class="background">
-    <ul>
-        <li style="float:left"><a href="~/Home/Index">TRACKADEMY</a></li>
-        <li><a href="~/Home/Index">Log Out</a></li>
-        <li><a href="~/Student/Aspirations">Aspirations</a></li>
-        <li><a href="~/Student/Store">Pet Store</a></li>
-        <li><a href="~/Student/Yard">Pet Yard</a></li>
-        <li><a href="~Student/Index">HOME PAGE</a></li>
-        <!--
-        <li>@Html.ActionLink("Help", "Help", "Home")</li>
-        <li>@Html.ActionLink("About", "About", "Home")</li>
-        <li>@Html.ActionLink("Pet Aspirations", "Asapirations", "Student")</li>
-        <li>@Html.ActionLink("Pet Yard", "Yard", "Student")</li>
-        <li>@Html.ActionLink("Pet Store", "Store", "Student")</li>
-        <li>@Html.ActionLink("Student", "Index", "Student")</li>
-            -->
-    </ul>
-        </div>
+        <ul>
+            <li style="float:left"><a href="~/Home/Index">TRACKADEMY</a></li>
+            <li><a href="~/Home/Index">Log Out</a></li>
+            <li><a href="~/Student/Aspirations">Aspirations</a></li>
+            <li><a href="~/Student/Store">Pet Store</a></li>
+            <li><a href="~/Student/Yard">Pet Yard</a></li>
+            <li><a href="~Student/Index">HOME PAGE</a></li>
+        </ul>
+    </div>
+    @RenderBody()
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 
 </body>
 </html>
@@ -86,10 +83,7 @@
             </div>
         </div>
     </div>
-    @RenderBody()
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+   
 </body>
 </html>
     -->
