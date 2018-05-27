@@ -5,7 +5,7 @@
 <div id="reportStudentDropDown">
     <ul class="nav nav-pills">
         <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Select a Student<b class="caret"></b></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">@ViewData["student"]<b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <div class="btn-group btn-group-justified">
                     <li>@Html.ActionLink("Ryan Barter", "Report", "Admin", new{student = "Ryan Barter"}, new { @class = "btn btn-primary" })</li>
@@ -24,7 +24,7 @@
 </div>
 
 @{
-    if(ViewData["student"] != null)
+    if(ViewData["student"] != "Select a Student")
     {
         <img src="~/Content/images/adminReports.png" alt="about page" style="width:100%;height:90%;">
         <div id="downloadButton">

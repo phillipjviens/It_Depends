@@ -34,8 +34,12 @@ namespace TrackAdemy.Controllers
         {
             ViewBag.Message = "View admin reports.";
 
+            // Checks if there is a student name passed in
             if (student != null)
                 ViewData["student"] = student;
+            // Otherwise assigns a suggestion to select a student name
+            else
+                ViewData["student"] = "Select a Student";
             return View();
         }
         
