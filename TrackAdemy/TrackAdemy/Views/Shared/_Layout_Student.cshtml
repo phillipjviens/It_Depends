@@ -30,6 +30,7 @@
         li a {
             display: inline;
             padding: 10px;
+            text-align:center;
         }
 
         li b {
@@ -41,13 +42,13 @@
 </head>
 <body style="padding-top:unset">
     <div class="background">
-        <ul>
+        <ul class="navbar-collapse nav">
             <li style="float:left"><a href="~/Home/Index">TRACKADEMY</a></li>
             <li><a href="~/Home/Index">Log Out</a></li>
             <li><a href="~/Student/Aspirations">Aspirations</a></li>
             <li><a href="~/Student/Store">Pet Store</a></li>
             <li><a href="~/Student/Yard">Pet Yard</a></li>
-            <li><a href="~Student/Index">HOME PAGE</a></li>
+            <li><a href="~/Student/Index">HOME PAGE</a></li>
         </ul>
     </div>
     @RenderBody()
