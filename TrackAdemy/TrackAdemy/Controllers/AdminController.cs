@@ -30,8 +30,7 @@ namespace TrackAdemy.Controllers
             return View();
         }
 
-        public ActionResult Report(string student = null,
-                                   string date = "Current Week")
+        public ActionResult Report(string student = null, string date = null)
         {
             ViewBag.Message = "View admin reports.";
 
@@ -42,7 +41,13 @@ namespace TrackAdemy.Controllers
             else
             {
                 ViewData["student"] = "Select a Student";
-                ViewData["date"] = date;
+                if (date != null)
+                {
+                    Console.WriteLine(date);
+                    ViewData["timeRange"] = date;
+                }
+                else
+                    ViewData["timeRange"] = "Current Week";
             }
             return View();
         }
