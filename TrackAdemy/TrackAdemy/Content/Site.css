@@ -53,13 +53,19 @@ body {
     position:fixed;
     background-color:#FFFFFF;
     color: white;
-    top:100px;
+    top:5%;
     left:45%;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
+#reportStudentTime {
+    position: fixed;
+    background-color: #FFFFFF;
+    color: white;
+    top: 10%;
+    left: 45%;
+}
+
+    /* Set width on the form input elements since they're 100% wide by default */
+    input, select, textarea {
     max-width: 280px;
 }
