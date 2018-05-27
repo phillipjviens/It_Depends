@@ -2,7 +2,7 @@
     ViewBag.Title = "Report";
 }
 
-<div id="reportStudentDropDown">
+<div id="reportStudentDropDown" style="display:inline-block;">
     <ul class="nav nav-pills">
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">@ViewData["student"]<b class="caret"></b></a>
@@ -26,6 +26,20 @@
 @{
     if(ViewData["student"] != "Select a Student")
     {
+        <div id="reportStudentTime">
+            <ul class="nav nav-pills">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">@ViewData["Title"]<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <div class="btn-group btn-group-justified">
+                            <li>@Html.ActionLink("Last Week", "Report", "Admin", new{student = ViewData["student"], date=ViewData["LastWeek"]}, new { @class = "btn btn-primary" })</li>
+                            <li>@Html.ActionLink("Last Month", "Report", "Admin", new{student = ViewData["student"], date="Last Month"}, new { @class = "btn btn-primary" })</li>
+                            <li>@Html.ActionLink("Year", "Report", "Admin", new{student = ViewData["student"], date="Year"}, new { @class = "btn btn-primary" })</li>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </div>
         <img src="~/Content/images/adminReports.png" alt="about page" style="width:100%;height:90%;">
         <div id="downloadButton">
             <a href="~/Admin/Report_PDF" class="btn btn-primary">Download PDF</a>
