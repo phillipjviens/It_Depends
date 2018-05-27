@@ -30,7 +30,8 @@ namespace TrackAdemy.Controllers
             return View();
         }
 
-        public ActionResult Report(string student = null)
+        public ActionResult Report(string student = null,
+                                   string date = "Current Week")
         {
             ViewBag.Message = "View admin reports.";
 
@@ -39,7 +40,10 @@ namespace TrackAdemy.Controllers
                 ViewData["student"] = student;
             // Otherwise assigns a suggestion to select a student name
             else
+            {
                 ViewData["student"] = "Select a Student";
+                ViewData["date"] = date;
+            }
             return View();
         }
         
