@@ -215,7 +215,7 @@ input[type=submit] {
 }
 
 /*Background of the student pet yard page page*/
-.Background {
+.blueBackground {
     background: linear-gradient(#37499F,#3D92D0);
     width: 100vw;
     height: 100vh;
