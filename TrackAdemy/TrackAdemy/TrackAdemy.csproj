@@ -216,6 +216,7 @@
     <Content Include="Content\images\AddStudent.PNG" />
     <Content Include="Content\images\adminReports.png" />
     <Content Include="Content\images\aspirations.png" />
+    <Content Include="Content\images\Backyard-Cropped.png" />
     <Content Include="Content\images\help.png" />
     <Content Include="Content\images\login.png" />
     <Content Include="Content\images\logout.png" />
