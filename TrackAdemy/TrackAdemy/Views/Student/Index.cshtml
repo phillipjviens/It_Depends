@@ -3,34 +3,43 @@
 }
 
 <style>
-    .center {
-        margin: auto;
-        width: 60%;
-        border: 3px solid #73AD21;
-        padding: 10px;
+    .container {
+        position: relative;
     }
+
+    .topleft{
+        position:absolute;
+        top: 8px;
+        left: 16px;
+    }
+    .center {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        text-align: center;
     </style>
 <body style=" background:white">
-    <div class="row">
-        <div style="max-width:20%; margin:25px 50px">
+    <div class="container">
+        <div class="topleft">
             <img src="~/Content/images/SVG/Aspiration_Streak.svg" />
-            <p style="color:#3D92D0; font-size:40px; text-align:center">  27 Days</p>
-            <p></p>
-            <img src="~/Content/images/SVG/Home_BestDay_Tuesday.svg" style=" margin-top:70px; max-width:110%">
-            <p style="color:#3D92D0; font-size:40px; text-align:center">Tuesday</p>
-            <p style="color:lightgray; font-size:20px; text-align:center">Best Day</p>
-
-
-
-
-        </div>
-        
-        <div style="max-width:15%;" class="center">
-            <img src="~/Content/images/SVG/Logo_Default.svg" />
+            <p style="color:#3D92D0; font-size:40px; text-align:center">27 Days</p>
         </div>
     </div>
-        <div class="row">
-            
+    <div class="container">
+        <div class="center">
+            <img src="~/Content/images/SVG/Logo_Default.svg" />
         </div>
-    
+        </div>
+
+        <div style="max-width:15%;" class="center">
+          
+        </div>
+    </div>
+    <div class="row">
+        <div style="max-width:20%; margin-top:25px">
+        
+        </div>
+        </div>
+
 </body>
