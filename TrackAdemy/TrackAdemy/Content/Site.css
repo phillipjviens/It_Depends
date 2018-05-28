@@ -1,6 +1,11 @@
-﻿/*padding for body*/
+﻿
+
+/*padding for body*/
 body {
-    padding-top: 50px;
+    background: linear-gradient(#B3C65F,#618B42);
+    width: 100vw;
+    height: 100vh;
+    padding-top: 70px;
     padding-bottom: 20px;
 }
 
@@ -15,12 +20,69 @@ body {
     box-sizing: border-box;
 }
 
-/* Create three equal columns that floats next to each other */
+/*a simple means of setting auto margins for columns*/
 .column {
+    margin: auto;
+}
+
+/*a simple way to set image sizing and location within columns*/
+    .column img {
+        height: auto;
+        max-width: 100%;
+    }
+/* Create two equal columns that float next to each other */
+.columnhalf {
     float: left;
     width: 50%;
     padding: 15px;
 }
+
+/* creat three equal columns that float next to each other*/
+.columnthird {
+    float: left;
+    width: 33%;
+    padding: 15px;
+}
+
+/*login input group items that are img (the custom icons)*/
+.login .input-group-addon img {
+    height: auto;
+    margin: -10px;
+    margin-bottom: -5px;
+    vertical-align: text-bottom;
+}
+
+/*login divs centering*/
+.login {
+    align-items: center;
+    margin-top: 5px;
+}
+
+/*login input items width and centering help*/
+    .login .input-group {
+        width: 50%;
+        max-width: 500px;
+        margin: auto;
+        margin-top: 5px;
+    }
+
+
+/*covers all input buttons*/
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*changes colors of input buttons*/
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
 
 /* Clear floats after the columns */
 .row:after {
@@ -49,9 +111,10 @@ body {
     left: 60%;
 }
 
+
 #reportStudentDropDown {
-    position:fixed;
-    background-color:#FFFFFF;
+    position: fixed;
+    background-color: #FFFFFF;
     color: white;
     top:5%;
     left:45%;
@@ -69,3 +132,8 @@ body {
     input, select, textarea {
     max-width: 280px;
 }
+
+    input[type=text], input[type=password] {
+        max-width: 100vw;
+        /*display: block;*/
+    }
