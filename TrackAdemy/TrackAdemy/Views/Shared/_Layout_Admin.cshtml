@@ -48,14 +48,25 @@
     </style>
 </head>
 <body style="padding-top:unset">
-    <div class="background">
-        <ul class="navbar-collapse nav">
-            <li style="float:left"><a href="~/Home/Index">TRACKADEMY</a></li>
-            <li><a href="~/Home/Index">Log Out</a></li>
-            <li><a href="~/Admin/Report">Reports</a></li>
-            <li><a href="~/Admin/ModifyStudent">Modify Student</a></li>
-            <li><a href="~/Admin/Index">HOME PAGE</a></li>
-        </ul>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background:linear-gradient(to right, #C22026,#F2696A);">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li style="float:left"><a href="~/Home/Index">TRACKADEMY</a></li>
+                    <li><a href="~/Home/Index">Log Out</a></li>
+                    <li><a href="~/Admin/Report">Reports</a></li>
+                    <li><a href="~/Admin/ModifyStudent">Modify Student</a></li>
+                    <li><a href="~/Admin/Index">HOME PAGE</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
     <div class="container body-content">
         @RenderBody()
