@@ -213,3 +213,11 @@ input[type=submit] {
     font-size: 10px;
     border-radius: 8px;
 }
+
+/*Background of the student pet yard page page*/
+.Background {
+    background: linear-gradient(#37499F,#3D92D0);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
