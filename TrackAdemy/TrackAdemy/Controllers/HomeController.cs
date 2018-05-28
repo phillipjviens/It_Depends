@@ -53,7 +53,7 @@ namespace TrackAdemy.Controllers
         //    return RedirectToAction("Admin");
         //}
         /// <summary>
-        /// Read information on a single avatar
+        /// Read information on a single user
         /// </summary>
         /// <param name="username"></param>
         /// <returns></returns>
@@ -65,7 +65,7 @@ namespace TrackAdemy.Controllers
         }
 
         /// <summary>
-        /// This opens up the make a new Avatar screen
+        /// This opens up the make a new User screen
         /// </summary>
         /// <returns></returns>
         // GET: Avatar/Create
@@ -76,7 +76,7 @@ namespace TrackAdemy.Controllers
         }
 
         /// <summary>
-        /// Make a new avatar sent in by the create avatar screen
+        /// Make a new user sent in by the modify user screen
         /// </summary>
         /// <param name="collection"></param>
         /// <returns></returns>
@@ -84,11 +84,9 @@ namespace TrackAdemy.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include=
-                                        "Id,"+
-                                        "Name,"+
-                                        "Description,"+
-                                        "Uri,"+
-                                        "Level,"+
+                                        "Username,"+
+                                        "Password,"+
+                                        "accessLevel,"+
                                         "")] UserModel data)
         {
             if (!ModelState.IsValid)
@@ -134,11 +132,9 @@ namespace TrackAdemy.Controllers
         // POST: Avatar/Update/5
         [HttpPost]
         public ActionResult Update([Bind(Include=
-                                        "Id,"+
-                                        "Name,"+
-                                        "Description,"+
-                                        "Uri,"+
-                                        "Level,"+
+                                        "Username,"+
+                                        "Password,"+
+                                        "accessLevel,"+
                                         "")] UserModel data)
         {
             if (!ModelState.IsValid)
@@ -184,10 +180,9 @@ namespace TrackAdemy.Controllers
         // POST: Avatar/Delete/5
         [HttpPost]
         public ActionResult Delete([Bind(Include=
-                                        "Id,"+
-                                        "Name,"+
-                                        "Description,"+
-                                        "Uri,"+
+                                        "Username,"+
+                                        "Password,"+
+                                        "accessLevel,"+
                                         "")] UserModel data)
         {
             if (!ModelState.IsValid)
