@@ -19,7 +19,7 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        width: 75%;
     }
 
     .grid-container {
@@ -33,11 +33,11 @@
         .grid-container > div {
             background-color: #618B42;
             text-align: center;
-            padding: 10px 10px;
+            padding: 5px 5px;
             font-size: 15px;
         }
 
-    .button {
+    .logoutButton {
         background-color: #463927;
         border: none;
         color: white;
@@ -47,6 +47,33 @@
         display: inline-block;
         font-size: 16px;
         border-radius: 8px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .signInButton {
+        background-color: #FDF9CE;
+        border: none;
+        color: green;
+        padding: 15px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        border-radius: 8px;
+    }
+
+    .signOutButton {
+        background-color: #FDF9CE;
+        border: none;
+        color: red;
+        padding: 15px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        border-radius: 8px;
     }
 
 </style>
@@ -55,8 +82,13 @@
 <div class="Background">
 
     <div class=" center">
+        
+        <div>
+            <a href="~/Home/Index" class="logoutButton">LOGOUT</a>
+        </div>
 
         <div>
+
             <br />
             <img src="~/Content/images/SVG/TrackAdemy Logo - White.svg" style="width:40vw;" class="center" />
             <img src="~/Content/images/SVG/Logo_Default.svg" style=" width: 7vw" class="center" />
@@ -69,50 +101,63 @@
             <div class="grid-container">
 
                 <div class="item1">
-                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student1.png" style="height:auto; max-width:100%" />
+                    <a href="" class="signInButton">Check In</a>
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student1.png" style="height:auto; width:35%" />
+                    <a href="" class="signOutButton">Check Out</a>
                 </div>
 
                 <div class="item2">
-                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student2.png" style="height:auto; max-width:100%" />
+                    <a href="" class="signInButton">Check In</a>
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student2.png" style="height:auto; width:35%" />
+                    <a href="" class="signOutButton">Check Out</a>
                 </div>
 
                 <div class="item3">
-                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student3.png" style="height:auto; max-width:100%" />
+                    <a href="" class="signInButton">Check In</a>
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student3.png" style="height:auto; width:35%" />
+                    <a href="" class="signOutButton">Check Out</a>
                 </div>
 
                 <div class="item4">
-                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student4.png" style="height:auto; max-width:100%" />
+                    <a href="" class="signInButton">Check In</a>
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student4.png" style="height:auto; width:35%" />
+                    <a href="" class="signOutButton">Check Out</a>
                 </div>
 
                 <div class="item5">
-                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student5.png" style="height:auto; max-width:100%" />
+                    <a href="" class="signInButton">Check In</a>
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student5.png" style="height:auto; width:35%" />
+                    <a href="" class="signOutButton">Check Out</a>
                 </div>
 
                 <div class="item6">
-                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student6.png" style="height:auto; max-width:100%" />
+                    <a href="" class="signInButton">Check In</a>
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student6.png" style="height:auto; width:30%" />
+                    <a href="" class="signOutButton">Check Out</a>
                 </div>
 
                 <div class="item7">
-                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student7.png" style="height:auto; max-width:100%" />
+                    <a href="" class="signInButton">Check In</a>
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student7.png" style="height:auto; width:30%" />
+                    <a href="" class="signOutButton">Check Out</a>
                 </div>
 
                 <div class="item8">
-                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student8.png" style="height:auto; max-width:100%" />
+                    <a href="" class="signInButton">Check In</a>
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student8.png" style="height:auto; width:30%" />
+                    <a href="" class="signOutButton">Check Out</a>
                 </div>
 
                 <div class="item9">
-                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student9.png" style="height:auto; max-width:100%" />
+                    <a href="" class="signInButton">Check In</a>
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student9.png" style="height:auto; width:30%" />
+                    <a href="" class="signOutButton">Check Out</a>
                 </div>
 
             </div>
 
         </div>
 
-    </div>
-
-    <div>
-        <br />
-        <a href="~/Home/Index" class="button">LOGOUT</a>
     </div>
 
 </div>
