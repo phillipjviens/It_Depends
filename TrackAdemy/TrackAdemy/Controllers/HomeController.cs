@@ -8,7 +8,7 @@ using TrackAdemy.Models;
 
 namespace TrackAdemy.Controllers
 {
-   
+
     public class HomeController : Controller
     {
         // A ViewModel used for the User that contains the UserList
@@ -25,7 +25,7 @@ namespace TrackAdemy.Controllers
         /// <returns></returns>
         public ActionResult Index()
         {
-            userViewModel.UserList = userBackend.Index();            
+            userViewModel.UserList = userBackend.Index();
             return View(userViewModel);
         }
 
@@ -45,7 +45,7 @@ namespace TrackAdemy.Controllers
         public ActionResult Help()
         {
             ViewBag.Message = "Your Help page.";
-            
+
             return View();
         }
         //public ActionResult FormHandler(string username, int level)
@@ -64,6 +64,79 @@ namespace TrackAdemy.Controllers
             return View(myData);
         }
 
+        /// <summary>
+        /// running a read to get the access level to redirect
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Read([Bind(Include=
+                                        "Username,"+
+                                        "Password,"+
+                                        "accessLevel,"+
+                                        "")] UserModel data)
+        {
+            if (!ModelState.IsValid)
+            {
+                // Send back for edit, with Error Message
+                return View(data);
+            }
+
+            if (data == null)
+            {
+                // Send to Error Page
+                return RedirectToAction("Error", new { route = "Home", action = "Error" });
+            }
+
+            if (string.IsNullOrEmpty(data.Username))
+            {
+                // Sind back for Edit
+                return View(data);
+            }
+
+            switch (userBackend.Read(data.Username).AccessLevel)
+            {
+                case 1:
+                    return RedirectToAction("Action", "Student", new { id = "Index" });
+
+                case 2:
+                    return RedirectToAction("Action", "Admin", new { id = "Index" });
+
+                case 3:
+                    return RedirectToAction("Action", "Kiosk", new { id = "Index" });
+
+                default:
+                    break;
+
+            }
+            return RedirectToAction("Index");
+        }
+        public ActionResult CheckAcess()
+        {
+            return View(new UserViewModel());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CheckAccess(string UserName,UserModel data)
+        {
+            switch (userBackend.Read(data.Username).AccessLevel)
+            {
+                case 1:
+                    return RedirectToAction("Action", "Student", new { id = "Index" });
+
+                case 2:
+                    return RedirectToAction("Action", "Admin", new { id = "Index" });
+
+                case 3:
+                    return RedirectToAction("Action", "Kiosk", new { id = "Index" });
+
+                default:
+                    return RedirectToAction("Index");                 
+
+            }
+        }
         /// <summary>
         /// This opens up the make a new User screen
         /// </summary>
