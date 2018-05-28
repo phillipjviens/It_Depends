@@ -20,8 +20,14 @@ namespace TrackAdemy.Backend
         private static volatile UserBackend instance;
         private static object syncRoot = new Object();
 
+        /// <summary>
+        /// blank constructor
+        /// </summary>
         private UserBackend() { }
 
+        /// <summary>
+        /// make a single instance to avoid data ballooning
+        /// </summary>
         public static UserBackend Instance
         {
             get
@@ -63,7 +69,7 @@ namespace TrackAdemy.Backend
         }
 
         /// <summary>
-        /// Makes a new Avatar
+        /// Makes a new user
         /// </summary>
         /// <param name="data"></param>
         /// <returns>Avatar Passed In</returns>
@@ -154,23 +160,23 @@ namespace TrackAdemy.Backend
         /// </summary>
         /// <param name="data">The user to look up</param>
         /// <returns>null, or the user's password</returns>
-        public string GetPassword(string data)
-        {
-            if (string.IsNullOrEmpty(data))
-            {
-                return null;
-            }
+        //public string GetPassword(string data)
+        //{
+        //    if (string.IsNullOrEmpty(data))
+        //    {
+        //        return null;
+        //    }
 
-            string myReturn = null;
+        //    string myReturn = null;
 
-            var myData = DataSource.Read(data);
-            if (myData != null)
-            {
-                myReturn = myData.Password;
-            }
+        //    var myData = DataSource.Read(data);
+        //    if (myData != null)
+        //    {
+        //        myReturn = myData.Password;
+        //    }
 
-            return myReturn;
-        }
+        //    return myReturn;
+        //}
        
 
         /// <summary>

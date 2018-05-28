@@ -111,7 +111,7 @@ input[type=submit] {
     left: 60%;
 }
 
-
+/*style for drop-down menu on Admin's REPORT page for student names*/
 #reportStudentDropDown {
     position: fixed;
     background-color: #FFFFFF;
@@ -120,6 +120,7 @@ input[type=submit] {
     left:45%;
 }
 
+/*style for drop-down menu on Admin's REPORT page for time range of graph data*/
 #reportStudentTime {
     position: fixed;
     background-color: #FFFFFF;
