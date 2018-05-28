@@ -11,6 +11,7 @@
             height: 10%;
             position:absolute;
         }
+
         ul {
             list-style-type:none;
             margin: 0;
@@ -29,7 +30,7 @@
 
         li a {
             display: inline;
-            padding: 10px;
+            padding: 0px;
             text-align:center;
         }
 
@@ -41,27 +42,27 @@
     </style>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" style="background:linear-gradient(to right, #37499F,#3D92D0);">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbare-nav">
-                    <li style="float:left"><a href="~/Home/Index">TRACKADEMY HOME</a></li>
-                    <li><a href="~/Home/Index">Log Out</a></li>
-                    <li><a href="~/Student/Aspirations">Aspirations</a></li>
-                    <li><a href="~/Student/Store">Pet Store</a></li>
-                    <li><a href="~/Student/Yard">Pet Yard</a></li>
-                    <li><a href="~/Student/Index">HOME PAGE</a></li>
-                </ul>
+        <div class="navbar navbar-inverse navbar-fixed-top" style="background:linear-gradient(to right, #37499F,#3D92D0);">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbare-nav">
+                        <li style="float:left"><a href="~/Home/Index">TRACKADEMY HOME</a></li>
+                        <li><a href="~/Home/Index">Log Out</a></li>
+                        <li><a href="~/Student/Aspirations">Aspirations</a></li>
+                        <li><a href="~/Student/Store">Pet Store</a></li>
+                        <li><a href="~/Student/Yard">Pet Yard</a></li>
+                        <li><a href="~/Student/Index">HOME PAGE</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
             @RenderBody()
             @Scripts.Render("~/bundles/jquery")
             @Scripts.Render("~/bundles/bootstrap")
