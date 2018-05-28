@@ -1,5 +1,4 @@
 ﻿@model TrackAdemy.Models.UserViewModel
-
 @{
     string username = Request.Form["UserName"];
     string password = Request.Form["Password"];
@@ -24,6 +23,10 @@
         </div>
     </div>
 
+    @*@using (Html.BeginForm())*@
+
+    @*@Html.AntiForgeryToken()*@
+
     <form method="post" class="login">
         <div class="input-group">
             <span class="input-group-addon">
@@ -36,7 +39,7 @@
             <span class="input-group-addon">
                 <img src="~/Content/images/SVG/Login_Password.svg" />
             </span>
-            <input type="password" class="form-control" id="password" name="Password" placeholder="Your password" required/>
+            <input type="password" class="form-control" id="password" name="Password" placeholder="Your password" required />
         </div>
 
         <div class="input-group">
@@ -44,8 +47,8 @@
         </div>
     </form>
 
-    @{
 
+    @{
         if (Model.UserList == null || !Model.UserList.Any())
         {
             <br />
@@ -55,12 +58,13 @@
         }
         else
         {
-
             if (Model.UserList.Exists(m => m.Username == username))
             {
                 var item = Model.UserList.First(x => x.Username.Equals(username));
                 if (item.Password.Equals(password))
                 {
+
+
                     switch (item.AccessLevel)
                     {
                         case 1:
@@ -71,7 +75,7 @@
                             @Html.ActionLink("Student", "Index", "Student", new { username = username }, null);
                             break;
                         case 3:
-                            @Html.ActionLink("Kiosk", "Index","Kiosk", new { username = username }, null);
+                            @Html.ActionLink("Kiosk", "Index", "Kiosk", new { username = username }, null);
                             break;
                         default:
                             break;
@@ -79,7 +83,9 @@
                 }
             }
         }
+
     }
+
 
 
 
