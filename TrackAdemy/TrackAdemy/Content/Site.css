@@ -249,4 +249,23 @@ input[type=submit] {
     padding-bottom: 0;
     padding-top: 0;
     padding-left: 15px;
+    position: absolute;
+}
+
+/*Formats the 'help' button on the pet yard page*/
+.blueHelp {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 80px;
+    right: 40px;
+}
+
+/*Formats the 'information' button on the pet yard page*/
+.blueInfo {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 80px;
+    right: 110px;
 }
