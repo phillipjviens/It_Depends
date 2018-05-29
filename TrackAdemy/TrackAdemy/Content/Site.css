@@ -321,3 +321,17 @@ input, select, textarea {
         margin-top: -26px;
         margin-left: -26px;
     }
+
+.storeText{
+    font-family:'Century Gothic';
+    text-align:right;
+}
+.storeText:after{
+    content: "";
+    display: block;
+    background: url('images/SVG/Trackoin_Individual.svg') no-repeat;
+    width:20px;
+    height:20px;
+    float:left;
+    margin:0;
+}
