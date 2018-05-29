@@ -5,16 +5,14 @@ body {
     background: white /*linear-gradient(#B3C65F,#618B42)*/;
     width: 100vw;
     height: 100vh;
-    padding-top: 50px;   
+    padding-top: 50px;
 }
+
 @font-face {
     font-family: "CollegiateHeavyOutline Medium.ttf";
     font-style: normal;
- 
     src: url('../fonts/collegiateHeavyOutline Medium.ttf');
-    src: local('collegiateHeavyOutline Medium'), 
-         local('collegiateHeavyOutline')
-        url("../fonts/collegiateHeavyOutline Medium.ttf") format('truetype');
+    src: local('collegiateHeavyOutline Medium'), local('collegiateHeavyOutline') url("../fonts/collegiateHeavyOutline Medium.ttf") format('truetype');
 }
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -31,8 +29,8 @@ body {
 }
 
 /*set navbar outline to transparent*/
-.navbar{
-    border-color:transparent;
+.navbar {
+    border-color: transparent;
 }
 
 /*sets border box sizing*/
@@ -45,7 +43,7 @@ body {
     margin: auto;
 }
 
-/*a simple way to set image sizing and location within columns*/
+    /*a simple way to set image sizing and location within columns*/
     .column img {
         height: auto;
         max-width: 100%;
@@ -78,7 +76,7 @@ body {
     margin-top: 5px;
 }
 
-/*login input items width and centering help*/
+    /*login input items width and centering help*/
     .login .input-group {
         width: 50%;
         max-width: 500px;
@@ -99,7 +97,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
-/*changes colors of input buttons*/
+    /*changes colors of input buttons*/
     input[type=submit]:hover {
         background-color: #45a049;
     }
@@ -136,8 +134,8 @@ input[type=submit] {
     position: fixed;
     background-color: #FFFFFF;
     color: white;
-    top:5%;
-    left:45%;
+    top: 5%;
+    left: 45%;
 }
 
 /*style for drop-down menu on Admin's REPORT page for time range of graph data*/
@@ -149,8 +147,8 @@ input[type=submit] {
     left: 45%;
 }
 
-    /* Set width on the form input elements since they're 100% wide by default */
-    input, select, textarea {
+/* Set width on the form input elements since they're 100% wide by default */
+input, select, textarea {
     max-width: 280px;
 }
 
@@ -289,3 +287,25 @@ input[type=submit] {
     top: 80px;
     right: 110px;
 }
+
+.speech-bubble {
+    position: relative;
+    background: linear-gradient(to right,#3D92D0, #7FC2D6);
+    border-radius: .4em;
+    padding: 20px;
+    text-align: center;
+}
+
+    .speech-bubble:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border: 26px solid transparent;
+        border-right-color: #3D92D0;
+        border-left: 0;
+        margin-top: -26px;
+        margin-left: -26px;
+    }
