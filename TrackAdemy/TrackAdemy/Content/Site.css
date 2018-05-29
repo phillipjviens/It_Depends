@@ -5,14 +5,18 @@ body {
     background: linear-gradient(#B3C65F,#618B42);
     width: 100vw;
     height: 100vh;
-    padding-top: 70px;
-    padding-bottom: 20px;
+    padding-top: 50px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+/*set navbar outline to transparent*/
+.navbar{
+    border-color:transparent;
 }
 
 /*sets border box sizing*/
