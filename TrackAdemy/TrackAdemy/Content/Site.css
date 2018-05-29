@@ -162,6 +162,12 @@ input, select, textarea {
     background: linear-gradient(#B3C65F,#618B42);
     width: 100vw;
     height: 100vh;
+    /*fixed the weird extra green bit. if you don't like it, here's your original code Melissa:
+    width:100vw;
+    height:100vh;
+
+        ~Jake
+    */
     /*position: absolute;*/
 }
 
