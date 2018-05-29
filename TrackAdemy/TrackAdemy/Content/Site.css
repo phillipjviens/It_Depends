@@ -22,6 +22,14 @@ body {
     padding-right: 15px;
 }
 
+#adminNav {
+    background: linear-gradient(to right, #C22026,#F2696A);
+}
+
+#studentNav {
+    background: linear-gradient(to right, #37499F,#3D92D0);
+}
+
 /*set navbar outline to transparent*/
 .navbar{
     border-color:transparent;

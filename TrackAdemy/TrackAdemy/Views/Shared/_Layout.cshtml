@@ -20,6 +20,87 @@
 
 </head>
 <body>
+    @{
+        @*Gets view name*@
+        var controllerName = this.ViewContext.RouteData.Values["controller"].ToString();
+
+        @*Conditionals to determine which view called the shared layout. Depending on which, displays navbars.*@
+        @*Admin nav*@
+        if(controllerName == "Admin")
+        {
+        <div id="adminNav" class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li style="float:left"><a href="~/Home/Index">TRACKADEMY</a></li>
+                        <li><a href="~/Home/Index">Log Out</a></li>
+                        <li><a href="~/Admin/Report">Reports</a></li>
+                        <li><a href="~/Admin/ModifyStudent">Modify Student</a></li>
+                        <li><a href="~/Admin/Index">HOME PAGE</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        }
+        @*Student nav*@
+        else if(controllerName == "Student")
+        {
+        <div id="studentNav" class="navbar navbar-inverse navbar-fixed-top" style="background:linear-gradient(to right, #37499F,#3D92D0);">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbare-nav">
+                        <li style="float:left"><a href="~/Home/Index">TRACKADEMY HOME</a></li>
+                        <li><a href="~/Home/Index">Log Out</a></li>
+                        <li><a href="~/Student/Aspirations">Aspirations</a></li>
+                        <li><a href="~/Student/Store">Pet Store</a></li>
+                        <li><a href="~/Student/Yard">Pet Yard</a></li>
+                        <li><a href="~/Student/Index">HOME PAGE</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        }
+        @*TrackAdemy home and Kiosk nav*@
+        else
+        {
+        <div class="navbar navbar-inverse navbar-fixed-top" style="background:black">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbare-nav">
+                        <li style="float:left"><a href="~/Home/Index">TRACKADEMY</a></li>
+                        <li><a href="~/Student/Index">Students</a></li>
+                        <li><a href="~/Admin/Index">Administrators</a></li>
+                        <li><a href="~/Kiosk/Index">Check-In Kiosk</a></li>
+                        <li><a href="~/Home/About">About</a></li>
+                        <li><a href="~/Home/Help">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        }
+    }
+    <!--
     <div class="navbar navbar-inverse navbar-fixed-top" style="background:black">
         <div class="container">
             <div class="navbar-header">
@@ -40,7 +121,8 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div>-->
+
     <!--
         <div class="navbar navbar-inverse navbar-fixed-top" style="background:linear-gradient(#4cff00,#00ffff);">
             <div class="container">
