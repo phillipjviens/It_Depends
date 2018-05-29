@@ -360,7 +360,6 @@
     <Content Include="Views\Student\Yard.cshtml" />
     <Content Include="Views\Student\Aspirations.cshtml" />
     <Content Include="Views\Student\Store.cshtml" />
-    <Content Include="Views\Shared\_Layout_Student.cshtml" />
     <Content Include="Views\Admin\IndexMonth.cshtml" />
     <Content Include="Views\Admin\IndexYear.cshtml" />
     <Content Include="Views\Admin\Report_PDF.cshtml" />
