@@ -170,6 +170,8 @@ input[type=submit] {
         text-align: center;
         padding: 5px 5px;
         font-size: 15px;
+        border-radius: 25px;
+        overflow: hidden;
     }
 
 /*Logout button for the kiosk page*/
@@ -220,4 +222,11 @@ input[type=submit] {
     width: 100vw;
     height: 100vh;
     position: absolute;
+}
+
+.picture {
+    height: auto;
+    width: 35%;
+    border-radius: 25px;
+    overflow: hidden;
 }
