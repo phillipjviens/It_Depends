@@ -188,7 +188,7 @@ input, select, textarea {
 /*Creates a grid for the kiosk page*/
 .grid-container {
     display: grid;
-    grid-template: auto auto auto / auto auto auto;
+    grid-template: auto auto auto / auto auto auto !important;
     grid-gap: 50px;
     background-color: #B3C65F;
     padding: 50px;
@@ -201,11 +201,11 @@ input, select, textarea {
         padding: 5px 5px;
         font-size: 15px;
         border-radius: 25px;
-        overflow: hidden;
+        /* overflow: hidden;*/
     }
 
 /*Logout button for the kiosk page*/
-.logoutButton {
+.logoutButton{
     background-color: #463927;
     border: none;
     color: white;
@@ -213,7 +213,7 @@ input, select, textarea {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 10px;
     border-radius: 8px;
     position: absolute;
     top: 10px;
@@ -228,7 +228,7 @@ input, select, textarea {
     padding: 15px 15px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline;
     font-size: 10px;
     border-radius: 8px;
 }
@@ -241,7 +241,7 @@ input, select, textarea {
     padding: 15px 15px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline;
     font-size: 10px;
     border-radius: 8px;
 }
@@ -257,8 +257,8 @@ input, select, textarea {
 /*Formats the student pictures on the kiosk page*/
 .picture {
     height: auto;
-    width: 35%;
-    border-radius: 25px;
+    width: 50%;
+    border-radius: 50px;
     overflow: hidden;
 }
 
