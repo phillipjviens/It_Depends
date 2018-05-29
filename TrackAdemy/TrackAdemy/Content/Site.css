@@ -224,9 +224,29 @@ input[type=submit] {
     position: absolute;
 }
 
+/*Formats the student pictures on the kiosk page*/
 .picture {
     height: auto;
     width: 35%;
     border-radius: 25px;
     overflow: hidden;
+}
+
+/*Formats the backyard picture on the pet yard page*/
+.backYardPicture {
+    height: 80%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    padding: 0;
+}
+
+/*Formats the 'backyard' picture on the pet yard page*/
+.titleBackYard {
+    height: 75px;
+    width: 400px;
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: 15px;
 }
