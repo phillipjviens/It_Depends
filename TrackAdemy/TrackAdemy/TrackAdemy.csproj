@@ -256,6 +256,7 @@
     <Content Include="Content\images\SVG\Aspiration_StayAllDay_Dark.svg" />
     <Content Include="Content\images\SVG\Aspiration_Streak.svg" />
     <Content Include="Content\images\SVG\Aspiration_Streak_Dark.svg" />
+    <Content Include="Content\images\SVG\Backyard-Title.svg" />
     <Content Include="Content\images\SVG\General_Add_White.svg" />
     <Content Include="Content\images\SVG\General_Delete_Blue.svg" />
     <Content Include="Content\images\SVG\General_Delete_White.svg" />
