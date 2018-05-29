@@ -171,6 +171,12 @@ input, select, textarea {
     /*position: absolute;*/
 }
 
+.backgroundHome {
+    background: linear-gradient(#B3C65F,#618B42);
+    width: 100vw;
+    height: 100vh;
+}
+
 /*Centers everything in the kiosk page*/
 .center {
     display: block;
