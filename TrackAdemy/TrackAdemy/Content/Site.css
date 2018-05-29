@@ -5,8 +5,7 @@ body {
     background: linear-gradient(#B3C65F,#618B42);
     width: 100vw;
     height: 100vh;
-    padding-top: 70px;
-    padding-bottom: 20px;
+    padding-top: 50px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -170,6 +169,8 @@ input[type=submit] {
         text-align: center;
         padding: 5px 5px;
         font-size: 15px;
+        border-radius: 25px;
+        overflow: hidden;
     }
 
 /*Logout button for the kiosk page*/
@@ -214,10 +215,37 @@ input[type=submit] {
     border-radius: 8px;
 }
 
-/*Background of the student pet yard page page*/
-.blueBackground {
-    background: linear-gradient(#37499F,#3D92D0);
+/*Creates a white background*/
+.whiteBackground {
+    background-color: white;
     width: 100vw;
     height: 100vh;
     position: absolute;
+}
+
+/*Formats the student pictures on the kiosk page*/
+.picture {
+    height: auto;
+    width: 35%;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+/*Formats the backyard picture on the pet yard page*/
+.backYardPicture {
+    height: 80%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    padding: 0;
+}
+
+/*Formats the 'backyard' picture on the pet yard page*/
+.titleBackYard {
+    height: 75px;
+    width: 400px;
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: 15px;
 }
