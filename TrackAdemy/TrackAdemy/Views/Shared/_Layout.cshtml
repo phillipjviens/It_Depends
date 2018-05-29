@@ -7,18 +7,16 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <style>
-
-            a {
-                color: white;
-                float: right;
-            }
-            li a {
-                display: inline;
-                padding: 10px;
-                text-align: center;
-            }
-
-    </style>
+        a {
+            color: white;
+            float: right;
+        }
+        li a {
+            display: inline;
+            padding: 10px;
+            text-align: center;
+        }
+        </style>
 
 </head>
 <body>
@@ -149,16 +147,18 @@
             </div>
         </div>
         <-->
-
-        
             <div class="container body-content">
                 @RenderBody()
-            
                 @{
                     if(controllerName != "Kiosk")
                     {
-                        <footer>
-                            <p>&copy; @DateTime.Now.Year - TrackAdemy</p>
+                        <hr/>
+                        <footer>                        
+                                &copy;@DateTime.Now.Year - TrackAdemy                         
+                                    @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style="margin-top:-8px;" })
+                                    @Html.ActionLink("Help", "Help", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
+                                
+                   
                         </footer>
                     }
                 }
