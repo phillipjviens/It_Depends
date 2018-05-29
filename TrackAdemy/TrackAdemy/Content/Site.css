@@ -172,7 +172,7 @@ input, select, textarea {
 }
 
 .backgroundHome {
-    background: linear-gradient(#B3C65F,#618B42);
+    background: radial-gradient(#B3C65F,#618B42);
     width: 100vw;
     height: 100vh;
 }
