@@ -5,9 +5,17 @@ body {
     background: linear-gradient(#B3C65F,#618B42);
     width: 100vw;
     height: 100vh;
-    padding-top: 50px;
+    padding-top: 50px;   
 }
-
+@font-face {
+    font-family: "CollegiateHeavyOutline Medium.ttf";
+    font-style: normal;
+ 
+    src: url('../fonts/collegiateHeavyOutline Medium.ttf');
+    src: local('collegiateHeavyOutline Medium'), 
+         local('collegiateHeavyOutline')
+        url("../fonts/collegiateHeavyOutline Medium.ttf") format('truetype');
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
