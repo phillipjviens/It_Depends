@@ -74,6 +74,31 @@
             </div>
         </div>
         }
+        @*TrackAdemy home and Kiosk nav*@
+        else if (controllerName == "Home")
+        {
+        <div class="navbar navbar-inverse navbar-fixed-top" style="background:black">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbare-nav">
+                        <li style="float:left"><a href="~/Home/Index">TRACKADEMY</a></li>
+                        <li><a href="~/Student/Index">Students</a></li>
+                        <li><a href="~/Admin/Index">Administrators</a></li>
+                        <li><a href="~/Kiosk/Index">Check-In Kiosk</a></li>
+                        <li><a href="~/Home/About">About</a></li>
+                        <li><a href="~/Home/Help">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        }
     }
     <!--
     <div class="navbar navbar-inverse navbar-fixed-top" style="background:black">
