@@ -1,14 +1,16 @@
 ﻿@model TrackAdemy.Models.UserViewModel
 @{
+    <!--username and password are set after submit from form post to this same page-->
     string username = Request.Form["UserName"];
     string password = Request.Form["Password"];
     ViewBag.Title = "TrackAdemy";
 }
 
 
-<body>
+<body class="backgroundHome"@*style="background:linear-gradient(#B3C65F,#618B42)"*@>
+
     <div class="row">
-        <div class="column" style="max-width:15%;">
+        <div class="column" style="max-width:15%; padding:1%;">
             <img src="~/Content/images/SVG/Logo_Default.svg" />
         </div>
 
@@ -23,10 +25,9 @@
         </div>
     </div>
 
-    @*@using (Html.BeginForm())*@
 
-    @*@Html.AntiForgeryToken()*@
 
+    <!-- This form posts to the same page above-->
     <form method="post" class="login">
         <div class="input-group">
             <span class="input-group-addon">
@@ -47,7 +48,7 @@
         </div>
     </form>
 
-
+    <!--Start checking the username against the UserViewModel-->
     @{
         if (Model.UserList == null || !Model.UserList.Any())
         {
@@ -57,25 +58,25 @@
 
         }
         else
-        {
+        { <!--If the model exists-->
             if (Model.UserList.Exists(m => m.Username == username))
-            {
+            { <!--get the first (should be only) username that matches and check its password-->
                 var item = Model.UserList.First(x => x.Username.Equals(username));
                 if (item.Password.Equals(password))
                 {
 
-
+                    <!--pop up an action link based on what access level is attached to the user.-->
                     switch (item.AccessLevel)
                     {
                         case 1:
 
-                            @Html.ActionLink("Admin", "Index", "Admin", new { username = username }, null);
+                            @Html.ActionLink("Click here to continue to Admin", "Index", "Admin", new { username = username }, null);
                             break;
                         case 2:
-                            @Html.ActionLink("Student", "Index", "Student", new { username = username }, null);
+                            @Html.ActionLink("Click here to continue to Student", "Index", "Student", new { username = username }, null);
                             break;
                         case 3:
-                            @Html.ActionLink("Kiosk", "Index", "Kiosk", new { username = username }, null);
+                            @Html.ActionLink("Click here to continue to Kiosk", "Index", "Kiosk", new { username = username }, null);
                             break;
                         default:
                             break;
@@ -83,31 +84,5 @@
                 }
             }
         }
-
     }
-
-
-
-
-
-    @*<script type="text/javascript">
-            function LoginLogic() {
-                if (document.getElementById("username").value === "student") {
-                    document.body.style.background = "blue";
-                    window.location.href = "/Student/Index";
-                }
-
-                else if (document.getElementById("username").value === "admin") {
-                    document.body.style.background = "red";
-                    window.location.href = "/Admin/Index";
-                }
-
-                else {
-                    document.body.style.background = "green";
-                    window.location.href = "/Kiosk/Index";
-
-                }
-            }
-        </script>*@
-
 </body>

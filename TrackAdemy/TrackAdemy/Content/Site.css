@@ -2,16 +2,35 @@
 
 /*padding for body*/
 body {
-    background: linear-gradient(#B3C65F,#618B42);
+    background: white /*linear-gradient(#B3C65F,#618B42)*/;
     width: 100vw;
     height: 100vh;
     padding-top: 50px;
 }
 
+@font-face {
+    font-family: "CollegiateHeavyOutline Medium.ttf";
+    font-style: normal;
+    src: url('../fonts/collegiateHeavyOutline Medium.ttf');
+    src: local('collegiateHeavyOutline Medium'), local('collegiateHeavyOutline') url("../fonts/collegiateHeavyOutline Medium.ttf") format('truetype');
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+#adminNav {
+    background: linear-gradient(to right, #C22026,#F2696A);
+}
+
+#studentNav {
+    background: linear-gradient(to right, #37499F,#3D92D0);
+}
+
+/*set navbar outline to transparent*/
+.navbar {
+    border-color: transparent;
 }
 
 /*sets border box sizing*/
@@ -24,7 +43,7 @@ body {
     margin: auto;
 }
 
-/*a simple way to set image sizing and location within columns*/
+    /*a simple way to set image sizing and location within columns*/
     .column img {
         height: auto;
         max-width: 100%;
@@ -57,7 +76,7 @@ body {
     margin-top: 5px;
 }
 
-/*login input items width and centering help*/
+    /*login input items width and centering help*/
     .login .input-group {
         width: 50%;
         max-width: 500px;
@@ -78,7 +97,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
-/*changes colors of input buttons*/
+    /*changes colors of input buttons*/
     input[type=submit]:hover {
         background-color: #45a049;
     }
@@ -115,8 +134,8 @@ input[type=submit] {
     position: fixed;
     background-color: #FFFFFF;
     color: white;
-    top:5%;
-    left:45%;
+    top: 5%;
+    left: 45%;
 }
 
 /*style for drop-down menu on Admin's REPORT page for time range of graph data*/
@@ -128,8 +147,8 @@ input[type=submit] {
     left: 45%;
 }
 
-    /* Set width on the form input elements since they're 100% wide by default */
-    input, select, textarea {
+/* Set width on the form input elements since they're 100% wide by default */
+input, select, textarea {
     max-width: 280px;
 }
 
@@ -141,9 +160,21 @@ input[type=submit] {
 /*Background of the kiosk page*/
 .Background {
     background: linear-gradient(#B3C65F,#618B42);
+    width: 100%;
+    height: 100%;
+    /*fixed the weird extra green bit. if you don't like it, here's your original code Melissa:
+    width:100vw;
+    height:100vh;
+
+        ~Jake
+    */
+    /*position: absolute;*/
+}
+
+.backgroundHome {
+    background: radial-gradient(#B3C65F,#618B42);
     width: 100vw;
     height: 100vh;
-    position: absolute;
 }
 
 /*Centers everything in the kiosk page*/
@@ -157,7 +188,7 @@ input[type=submit] {
 /*Creates a grid for the kiosk page*/
 .grid-container {
     display: grid;
-    grid-template: auto auto auto / auto auto auto;
+    grid-template: auto auto auto / auto auto auto !important;
     grid-gap: 50px;
     background-color: #B3C65F;
     padding: 50px;
@@ -170,11 +201,11 @@ input[type=submit] {
         padding: 5px 5px;
         font-size: 15px;
         border-radius: 25px;
-        overflow: hidden;
+        /* overflow: hidden;*/
     }
 
 /*Logout button for the kiosk page*/
-.logoutButton {
+.logoutButton{
     background-color: #463927;
     border: none;
     color: white;
@@ -182,7 +213,7 @@ input[type=submit] {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 10px;
     border-radius: 8px;
     position: absolute;
     top: 10px;
@@ -197,7 +228,7 @@ input[type=submit] {
     padding: 15px 15px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline;
     font-size: 10px;
     border-radius: 8px;
 }
@@ -210,7 +241,7 @@ input[type=submit] {
     padding: 15px 15px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline;
     font-size: 10px;
     border-radius: 8px;
 }
@@ -226,8 +257,8 @@ input[type=submit] {
 /*Formats the student pictures on the kiosk page*/
 .picture {
     height: auto;
-    width: 35%;
-    border-radius: 25px;
+    width: 50%;
+    border-radius: 50px;
     overflow: hidden;
 }
 
@@ -248,4 +279,59 @@ input[type=submit] {
     padding-bottom: 0;
     padding-top: 0;
     padding-left: 15px;
+    position: absolute;
+}
+
+/*Formats the 'help' button on the pet yard page*/
+.blueHelp {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 80px;
+    right: 40px;
+}
+
+/*Formats the 'information' button on the pet yard page*/
+.blueInfo {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 80px;
+    right: 110px;
+}
+
+.speech-bubble {
+    position: relative;
+    background: linear-gradient(to right,#3D92D0, #7FC2D6);
+    border-radius: .4em;
+    padding: 20px;
+    text-align: center;
+}
+
+    .speech-bubble:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border: 26px solid transparent;
+        border-right-color: #3D92D0;
+        border-left: 0;
+        margin-top: -26px;
+        margin-left: -26px;
+    }
+
+.storeText{
+    font-family:'Century Gothic';
+    text-align:right;
+}
+.storeText:after{
+    content: "";
+    display: block;
+    background: url('images/SVG/Trackoin_Individual.svg') no-repeat;
+    width:20px;
+    height:20px;
+    float:left;
+    margin:0;
 }
