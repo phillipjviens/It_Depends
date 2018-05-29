@@ -6,91 +6,87 @@
 }
 
 
-<body>
-    <div class="row">
-        <div class="column" style="max-width:15%;">
-            <img src="~/Content/images/SVG/Logo_Default.svg" />
-        </div>
+<body @*style="background:linear-gradient(#B3C65F,#618B42)"*@class="Background">
+    
+        <div class="row">
+            <div class="column" style="max-width:15%; padding:1%;">
+                <img src="~/Content/images/SVG/Logo_Default.svg" />
+            </div>
 
-        @*<div class="text-center" style="float:none; overflow:hidden; max-width:600px; height:200px;">
+            @*<div class="text-center" style="float:none; overflow:hidden; max-width:600px; height:200px;">
                 Sometimes you lose motivation, life gets hard and it can break you down. Maybe all you need is a gentle push to build yourself back up. Our vision is to give each student at Middle College High School that nudge with TrackAdemy, their own Personal Education Tracker, or P.E.T. Whether from P.E.T.’s rewarding interface with their own customizable pet based on their attending hours, or from P.E.T.’s access to visually appealing and informative graphs, you’ll find P.E.T. inspiring a sense of responsibility and elevating self-worth, because wherever they go, so will their P.E.T., always cheering them on.
             </div>*@
-    </div>
-
-    <div class="row">
-        <div class="column" style="max-width:50%;">
-            <img src="~/Content/images/SVG/TrackAdemy Logo - White.svg" />
-        </div>
-    </div>
-
-    @*@using (Html.BeginForm())*@
-
-    @*@Html.AntiForgeryToken()*@
-
-    <form method="post" class="login">
-        <div class="input-group">
-            <span class="input-group-addon">
-                <img src="~/Content/images/SVG/Login_User.svg" />
-            </span>
-            <input type="text" class="form-control" id="username" name="UserName" placeholder="Your username" required />
         </div>
 
-        <div class="input-group">
-            <span class="input-group-addon">
-                <img src="~/Content/images/SVG/Login_Password.svg" />
-            </span>
-            <input type="password" class="form-control" id="password" name="Password" placeholder="Your password" required />
+        <div class="row">
+            <div class="column" style="max-width:50%;">
+                <img src="~/Content/images/SVG/TrackAdemy Logo - White.svg" />
+            </div>
         </div>
 
-        <div class="input-group">
-            <input type="submit" value="Login" style="max-width:100%" />
-        </div>
-    </form>
+        @*@using (Html.BeginForm())*@
+
+        @*@Html.AntiForgeryToken()*@
+
+        <form method="post" class="login">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <img src="~/Content/images/SVG/Login_User.svg" />
+                </span>
+                <input type="text" class="form-control" id="username" name="UserName" placeholder="Your username" required />
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <img src="~/Content/images/SVG/Login_Password.svg" />
+                </span>
+                <input type="password" class="form-control" id="password" name="Password" placeholder="Your password" required />
+            </div>
+
+            <div class="input-group">
+                <input type="submit" value="Login" style="max-width:100%" />
+            </div>
+        </form>
 
 
-    @{
-        if (Model.UserList == null || !Model.UserList.Any())
-        {
-            <br />
-            <p>No users</p>
-            <br />
-
-        }
-        else
-        {
-            if (Model.UserList.Exists(m => m.Username == username))
+        @{
+            if (Model.UserList == null || !Model.UserList.Any())
             {
-                var item = Model.UserList.First(x => x.Username.Equals(username));
-                if (item.Password.Equals(password))
+                <br />
+                <p>No users</p>
+                <br />
+
+            }
+            else
+            {
+                if (Model.UserList.Exists(m => m.Username == username))
                 {
-
-
-                    switch (item.AccessLevel)
+                    var item = Model.UserList.First(x => x.Username.Equals(username));
+                    if (item.Password.Equals(password))
                     {
-                        case 1:
 
-                            @Html.ActionLink("Admin", "Index", "Admin", new { username = username }, null);
-                            break;
-                        case 2:
-                            @Html.ActionLink("Student", "Index", "Student", new { username = username }, null);
-                            break;
-                        case 3:
-                            @Html.ActionLink("Kiosk", "Index", "Kiosk", new { username = username }, null);
-                            break;
-                        default:
-                            break;
+
+                        switch (item.AccessLevel)
+                        {
+                            case 1:
+
+                                @Html.ActionLink("Admin", "Index", "Admin", new { username = username }, null);
+                                break;
+                            case 2:
+                                @Html.ActionLink("Student", "Index", "Student", new { username = username }, null);
+                                break;
+                            case 3:
+                                @Html.ActionLink("Kiosk", "Index", "Kiosk", new { username = username }, null);
+                                break;
+                            default:
+                                break;
+                        }
                     }
                 }
             }
+
         }
-
-    }
-
-
-
-
-
-    @*<script type="text/javascript">
+        @*<script type="text/javascript">
             function LoginLogic() {
                 if (document.getElementById("username").value === "student") {
                     document.body.style.background = "blue";
@@ -109,5 +105,5 @@
                 }
             }
         </script>*@
-
+   
 </body>

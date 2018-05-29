@@ -2,7 +2,7 @@
 
 /*padding for body*/
 body {
-    background: linear-gradient(#B3C65F,#618B42);
+    background: white /*linear-gradient(#B3C65F,#618B42)*/;
     width: 100vw;
     height: 100vh;
     padding-top: 50px;   
@@ -164,7 +164,7 @@ input[type=submit] {
     background: linear-gradient(#B3C65F,#618B42);
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    /*position: absolute;*/
 }
 
 /*Centers everything in the kiosk page*/
