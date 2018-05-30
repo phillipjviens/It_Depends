@@ -96,6 +96,11 @@ namespace TrackAdemy.Controllers
             return View();
         }
 
+        public ActionResult Calendar()
+        {
+            return View();
+        }
+
         /// <summary>
         /// Returns to the main TrackAdemy page
         /// </summary>
