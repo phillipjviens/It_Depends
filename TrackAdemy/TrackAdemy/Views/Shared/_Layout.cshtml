@@ -54,6 +54,19 @@
                     </div>
                 </div>
             </div>
+
+            <div class="container body-content">
+                @RenderBody()
+
+                    <footer style="bottom: 0;">
+                        <hr style="color: #C22026"/>
+                        &copy;@DateTime.Now.Year - TrackAdemy
+                        @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
+                        @Html.ActionLink("Help", "Help", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
+                    </footer>
+
+            </div>
+
         }
         @*Student nav*@
         else if (controllerName == "Student")
@@ -74,14 +87,26 @@
                                     <img class="img-responsive" src="~/Content/images/SVG/Trackademy_White.svg" style="max-width:100%">____________________
                                 </a>
                             </li>
-                            <li><a href="~/Home/Index">Log Out</a></li>
-                            <li><a href="~/Student/Aspirations">Aspirations</a></li>
-                            <li><a href="~/Student/Store">Pet Store</a></li>
-                            <li><a href="~/Student/Yard">Pet Yard</a></li>
-                            <li><a href="~/Student/Index">Student Home</a></li>
+                            <li><a href="~/Home/Index">LOG OUT</a></li>
+                            <li><a href="~/Student/Aspirations">ASPIRATIONS</a></li>
+                            <li><a href="~/Student/Store">PET STORE</a></li>
+                            <li><a href="~/Student/Yard">PET YARD</a></li>
+                            <li><a href="~/Student/Index">STUDENT HOME</a></li>
                         </ul>
                     </div>
                 </div>
+            </div>
+
+            <div class="container body-content">
+                @RenderBody()
+
+                        <footer style="bottom: 0;">
+                            <hr style="color: #37499F" />
+                            &copy;@DateTime.Now.Year - TrackAdemy
+                            @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
+                            @Html.ActionLink("Help", "Help", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
+                        </footer>
+                    
             </div>
         }
         @*TrackAdemy home*@
@@ -107,6 +132,18 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+
+            <div class="container body-content">
+                @RenderBody()
+
+                        
+                <footer style="bottom: 0;">
+                    <hr />
+                    &copy;@DateTime.Now.Year - TrackAdemy
+                    @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
+                    @Html.ActionLink("Help", "Help", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
+                </footer>
             </div>
         }
     }
@@ -156,20 +193,7 @@
             </div>
         </div>
         <-->
-    <div class="container body-content">
-        @RenderBody()
-        @{
-            if (controllerName != "Kiosk" )
-            {
 
-                <footer style="bottom: 0;">
-                    &copy;@DateTime.Now.Year - TrackAdemy
-                    @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
-                    @Html.ActionLink("Help", "Help", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
-                </footer>
-            }
-        }
-    </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
