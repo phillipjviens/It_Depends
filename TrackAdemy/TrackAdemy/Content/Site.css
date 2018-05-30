@@ -186,10 +186,13 @@ input, select, textarea {
 /*Creates a grid for the kiosk page*/
 .grid-container {
     display: grid;
-    grid-template: auto auto auto / auto auto auto !important;
+    grid-template: auto auto auto / auto auto auto;
     grid-gap: 50px;
     background-color: #B3C65F;
-    padding: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
     /*The divs of the grid for the kiosk page*/
