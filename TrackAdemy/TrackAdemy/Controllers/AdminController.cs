@@ -17,23 +17,7 @@ namespace TrackAdemy.Controllers
             return View();
         }
 
-        /// <summary>
-        /// Shows attendance data of a the past month in the admin home view
-        /// </summary>
-        /// <returns>View</returns>
-        public ActionResult IndexMonth()
-        {
-            return View();
-        }
-
-        /// <summary>
-        /// Shows attendance data of a the past year in the admin home view
-        /// </summary>
-        /// <returns>View</returns>
-        public ActionResult IndexYear()
-        {
-            return View();
-        }
+       
 
         /// <summary>
         /// Shows the admin's help page
@@ -89,9 +73,9 @@ namespace TrackAdemy.Controllers
         /// Modify's student data (name, picture(?), hours, deletes)
         /// </summary>
         /// <returns>View</returns>
-        public ActionResult ModifyStudent()
+        public ActionResult ManageStudent()
         {
-            ViewBag.Message = "Add a student to the database.";
+            ViewBag.Message = "Manage a student in the database.";
 
             return View();
         }
@@ -100,16 +84,6 @@ namespace TrackAdemy.Controllers
         {
             return View();
         }
-
-        /// <summary>
-        /// Returns to the main TrackAdemy page
-        /// </summary>
-        /// <returns>View</returns>
-        public ActionResult Logout()
-        {
-            ViewBag.Message = "You have successfully logged out.";
-
-            return View();
-        }
+    
     }
 }
