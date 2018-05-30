@@ -329,6 +329,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\images\PetStore.pdf" />
+    <Content Include="Views\Admin\Calendar.cshtml" />
     <Resource Include="fonts\collegiateHeavyOutline Medium.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
