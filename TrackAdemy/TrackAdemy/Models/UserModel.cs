@@ -5,10 +5,6 @@ namespace TrackAdemy.Models
 {
     public class UserModel
     {
-        [Display(Name = "Id", Description = "User Id")]
-        [Required(ErrorMessage = "Id is required")]
-        public string Id { get; set; }
-
         [Display(Name = "Username", Description = "Username")]
         [Required(ErrorMessage = "Username is required")]
         public string Username { get; set; }
@@ -20,13 +16,11 @@ namespace TrackAdemy.Models
         [Display(Name = "accessLevel", Description = "Access Level")]
         [Required(ErrorMessage = "Access is required")]
         public int AccessLevel { get; set; }
-
         /// <summary>
         /// Create the default values
         /// </summary>
         public void Initialize()
         {
-            Id = Guid.NewGuid().ToString();
             AccessLevel = 0;
         }
 
