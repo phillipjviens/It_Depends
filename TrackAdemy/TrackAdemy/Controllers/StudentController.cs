@@ -26,12 +26,7 @@ namespace TrackAdemy.Controllers
 
             return View();
         }
-        public ActionResult Help()
-        {
-            ViewBag.Message = "Help page.";
 
-            return View();
-        }
         public ActionResult Logout()
         {
             ViewBag.Message = "Logout page.";

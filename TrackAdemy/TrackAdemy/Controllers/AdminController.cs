@@ -17,19 +17,6 @@ namespace TrackAdemy.Controllers
             return View();
         }
 
-       
-
-        /// <summary>
-        /// Shows the admin's help page
-        /// </summary>
-        /// <returns>View</returns>
-        public ActionResult Help()
-        {
-            ViewBag.Message = "The admin help page.";
-
-            return View();
-        }
-
         /// <summary>
         /// Shows specific student report statistics
         /// </summary>
@@ -57,7 +44,7 @@ namespace TrackAdemy.Controllers
             }
             return View();
         }
-        
+
         /// <summary>
         /// Shows a PDF png of student data
         /// </summary>
@@ -84,6 +71,6 @@ namespace TrackAdemy.Controllers
         {
             return View();
         }
-    
+
     }
 }
