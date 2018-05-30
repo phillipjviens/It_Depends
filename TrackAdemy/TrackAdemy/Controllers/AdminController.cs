@@ -89,7 +89,7 @@ namespace TrackAdemy.Controllers
         /// Modify's student data (name, picture(?), hours, deletes)
         /// </summary>
         /// <returns>View</returns>
-        public ActionResult ModifyStudent()
+        public ActionResult ManageStudent()
         {
             ViewBag.Message = "Add a student to the database.";
 
