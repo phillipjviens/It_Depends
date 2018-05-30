@@ -158,7 +158,7 @@ input, select, textarea {
     }
 
 /*Background of the kiosk page*/
-.Background {
+.kioskBackground {
     background: radial-gradient(#B3C65F,#618B42);
     width: 100%;
     height: 100%;
