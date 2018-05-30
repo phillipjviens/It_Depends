@@ -1,10 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace TrackAdemy.Models
 {
     public class UserModel
     {
+        [Display(Name = "Id", Description = "User Id")]
+        [Required(ErrorMessage = "Id is required")]
+        public string Id { get; set; }
+
         [Display(Name = "Username", Description = "Username")]
         [Required(ErrorMessage = "Username is required")]
         public string Username { get; set; }
@@ -21,6 +26,7 @@ namespace TrackAdemy.Models
         /// </summary>
         public void Initialize()
         {
+            Id = Guid.NewGuid().ToString();
             AccessLevel = 0;
         }
 
