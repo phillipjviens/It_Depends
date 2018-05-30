@@ -49,7 +49,7 @@
                             <li><a href="~/Home/Index">Log Out</a></li>
                             <li><a href="~/Admin/Calendar">Calendar</a></li>
                             <li><a href="~/Admin/ModifyStudent">Manage Student</a></li>
-                            <li><a href="~/Admin/Index">Admin Home</a></li>
+                            <li><a href="~/Admin/Index">Admininstrator Home</a></li>
                         </ul>
                     </div>
                 </div>
@@ -103,9 +103,7 @@
                             </li>
                             <li><a href="~/Student/Index">Students</a></li>
                             <li><a href="~/Admin/Index">Administrators</a></li>
-                            <li><a href="~/Kiosk/Index">Check-In Kiosk</a></li>
-                            <li><a href="~/Home/About">About</a></li>
-                            <li><a href="~/Home/Help">Help</a></li>
+                            <li><a href="~/Kiosk/Index">Kiosk</a></li>
                         </ul>
                     </div>
                 </div>
@@ -164,12 +162,10 @@
             if (controllerName != "Kiosk" )
             {
 
-                <footer style="position:fixed; bottom: 0;">
+                <footer style="bottom: 0;">
                     &copy;@DateTime.Now.Year - TrackAdemy
                     @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
                     @Html.ActionLink("Help", "Help", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
-
-
                 </footer>
             }
         }
