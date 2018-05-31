@@ -85,6 +85,13 @@ namespace TrackAdemy.Models
         [Display(Name = "TotalHours", Description = "Total Community Hours")]
         [Required(ErrorMessage = "Total community hours is required")]
         public string TotalHours { get; set; }
+
+        /// <summary>
+        /// Student's number of days attending class
+        /// </summary>
+        [Display(Name = "DaysAttended", Description = "Number of Days Attended")]
+        [Required(ErrorMessage = "Number of days attending class is required")]
+        public string DaysAttended { get; set; }
     }
 }
 
