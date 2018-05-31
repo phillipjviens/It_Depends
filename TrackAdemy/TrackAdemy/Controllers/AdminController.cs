@@ -3,11 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TrackAdemy.Models;
+using TrackAdemy.Backend;
 
 namespace TrackAdemy.Controllers
 {
     public class AdminController : Controller
     {
+        // Creates a list of Admin and Students
+        private UserViewModel userViewModel = new UserViewModel();
+
+        // User backend data source.
+        private UserBackend userBackend = UserBackend.Instance;
+
+
         /// <summary>
         /// Admin home view
         /// </summary>
@@ -23,25 +32,8 @@ namespace TrackAdemy.Controllers
         /// <param name="student"></param>
         /// <param name="date"></param>
         /// <returns>View</returns>
-        public ActionResult Report(string student = null, string date = null)
+        public ActionResult Report(string id = null, string timeFrame = null)
         {
-            ViewBag.Message = "View admin reports.";
-
-            // Checks if there is a student name passed in
-            if (student != null)
-                ViewData["student"] = student;
-            // Otherwise assigns a suggestion to select a student name
-            else
-            {
-                ViewData["student"] = "Select a Student";
-                if (date != null)
-                {
-                    Console.WriteLine(date);
-                    ViewData["timeRange"] = date;
-                }
-                else
-                    ViewData["timeRange"] = "Current Week";
-            }
             return View();
         }
 
