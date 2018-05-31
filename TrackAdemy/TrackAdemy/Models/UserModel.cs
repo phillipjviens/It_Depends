@@ -18,7 +18,7 @@ namespace TrackAdemy.Models
         [Required(ErrorMessage = "Password is required")]
         public string Password { get; set; }
 
-        [Display(Name = "accessLevel", Description = "Access Level")]
+        [Display(Name = "AccessLevel", Description = "Access Level")]
         [Required(ErrorMessage = "Access is required")]
         public int AccessLevel { get; set; }
         /// <summary>
@@ -65,8 +65,24 @@ namespace TrackAdemy.Models
         /// </summary>
         public class StudentModel : UserModel
         {
-            public StudentModel(string name, string pass) : base(name, pass)
+            [Display(Name = "First", Description = "First Name")]
+            [Required(ErrorMessage = "First Name is required")]
+            public string FirstName { get; set; }
+
+            [Display(Name = "Last", Description = "Last Name")]
+            [Required(ErrorMessage = "Last Name is required")]
+            public string LastName { get; set; }
+
+            [Display(Name = "Uri", Description = "Profile pic")]
+            [Required(ErrorMessage = "Profile pic is required")]
+            public string Uri { get; set; }
+
+
+            public StudentModel(string name, string pass, string firstname, string lastname, string uri) : base(name, pass)
             {
+                FirstName = firstname;
+                LastName = lastname;
+                Uri = uri;
                 AccessLevel = 2;
             }
         }
