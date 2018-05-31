@@ -35,6 +35,14 @@ namespace TrackAdemy.Models
         [Display(Name = "AccessLevel", Description = "Access Level")]
         [Required(ErrorMessage = "Access Level is required")]
         public int AccessLevel { get; set; }
+
+        /// <summary>
+        /// Create the default values
+        /// </summary>
+        public void Initialize()
+        {
+            Id = Guid.NewGuid().ToString();
+        }
     }
 }
 
