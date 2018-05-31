@@ -71,6 +71,13 @@ namespace TrackAdemy.Models
         [Display(Name = "URIPast3Months", Description = "Past 3 Months")]
         [Required(ErrorMessage = "A graph for the past 3 months is required")]
         public string URIPast3Months { get; set; }
+
+        /// <summary>
+        /// Student's year-to-date community hours graph
+        /// </summary>
+        [Display(Name = "URIYear2Date", Description = "Year to Date")]
+        [Required(ErrorMessage = "A year to date graph is required")]
+        public string URIYear2Date { get; set; }
     }
 }
 
