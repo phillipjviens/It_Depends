@@ -92,6 +92,13 @@ namespace TrackAdemy.Models
         [Display(Name = "DaysAttended", Description = "Number of Days Attended")]
         [Required(ErrorMessage = "Number of days attending class is required")]
         public string DaysAttended { get; set; }
+
+        /// <summary>
+        /// Student's average arrival
+        /// </summary>
+        [Display(Name = "AvgIn", Description = "Average arrival time")]
+        [Required(ErrorMessage = "Average arrival time is required")]
+        public string AvgIn { get; set; }
     }
 }
 
