@@ -26,6 +26,15 @@ namespace TrackAdemy.Models
         [Display(Name = "Password", Description = "Password")]
         [Required(ErrorMessage = "Password is required")]
         public string Password { get; set; }
+
+
+        /// <summary>
+        /// Level of Access
+        /// Distinguishes between Admin and Kiosk
+        /// </summary>
+        [Display(Name = "AccessLevel", Description = "Access Level")]
+        [Required(ErrorMessage = "Access Level is required")]
+        public int AccessLevel { get; set; }
     }
 }
 
