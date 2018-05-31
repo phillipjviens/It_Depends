@@ -52,11 +52,18 @@ namespace TrackAdemy.Models
         public string URIProfilePicture { get; set; }
 
         /// <summary>
-        /// Student's current week graph
+        /// Student's community hours graph for the current week
         /// </summary>
         [Display(Name = "URICurrentWeek", Description = "Current Week")]
         [Required(ErrorMessage = "A graph for the current week is required")]
         public string URICurrentWeek { get; set; }
+
+        /// <summary>
+        /// Student's community hours graph for the current month
+        /// </summary>
+        [Display(Name = "URICurrentMonth", Description = "This Month")]
+        [Required(ErrorMessage = "A graph for the current month is required")]
+        public string URICurrentMonth { get; set; }
     }
 }
 
