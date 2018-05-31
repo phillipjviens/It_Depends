@@ -112,15 +112,6 @@ namespace TrackAdemy.Models
             AccessLevel = data.AccessLevel;
 
         }
-
-        //public string GetPass(UserModel data)
-        //{
-        //    if (data == null)
-        //    {
-        //        return "";
-        //    }
-        //    return data.Password;
-        //}
     }
 }
 
