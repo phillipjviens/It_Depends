@@ -272,15 +272,13 @@ input, select, textarea {
 
 /*Formats the backyard picture on the pet yard page*/
 .backYardPicture {
-    /*height: auto;
-    width: 80%;
-    max-width: 100%;*/
+    height: auto;
+    width: 67%;
+    max-width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    padding-top: 10%;
-    
+    padding-top: 0;
 }
 
 /*Formats the 'backyard' picture on the pet yard page*/
@@ -288,8 +286,9 @@ input, select, textarea {
     height: auto;
     max-width: 100%;
     width: 30%;
-    top: 80px;
-    line-height: 300px !important;
+    line-height: 400px !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 
