@@ -55,6 +55,23 @@ namespace TrackAdemy.Models
             Password = password;
             AccessLevel = accessLevel;
         }
+
+        /// <summary>
+        /// Used to Update nonstudentuser Before doing a data save
+        /// Updates everything
+        /// </summary>
+        /// <param name="data">Data to update</param>
+        public void Update(AdminKioskModel data)
+        {
+            if (data == null)
+            {
+                return;
+            }
+            Username = data.Username;
+            Password = data.Password;
+            AccessLevel = data.AccessLevel;
+
+        }
     }
 }
 
