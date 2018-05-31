@@ -2,6 +2,24 @@
     ViewBag.Title = "Kiosk Home Page";
 }
 
+<style>
+    .item1 .btn {
+        position:absolute;
+        top: 33%;
+        left: 33%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: blue;
+        color: white;
+        font-size: 16px;
+        padding: 24px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 0;
+        text-align: center;
+    }
+</style>
+
 <!--Background of fading green for entire screen-->
 <body class="kioskBackground" style="margin: 0; padding: 0;">
 
@@ -21,8 +39,11 @@
             <div class="grid-container" style="margin-bottom:20px;">
 
                 <!--Student 1 picture with checkin and check out buttons-->
-                <div class="item1">                  
-                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student1.png" class="picture" /> 
+                <div class="item1"> 
+
+                        <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student1.png" class="picture" />
+                        <button class="btn">CHECKMARK</button>
+                    
                 </div>
 
                 <!--Student 2 picture with checkin and check out buttons-->
