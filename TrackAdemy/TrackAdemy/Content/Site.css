@@ -192,6 +192,8 @@ input, select, textarea {
 
 /*Creates a grid for the kiosk page*/
 .grid-container {
+    height: 80%;
+    width: auto;
     display: grid;
     grid-template: auto auto auto / auto auto auto;
     grid-gap: 50px;
@@ -209,7 +211,7 @@ input, select, textarea {
         padding: 5px 5px;
         font-size: 15px;
         border-radius: 25px;
-        /* overflow: hidden;*/
+        overflow: hidden;
     }
 
 /*Logout button for the kiosk page*/
@@ -217,7 +219,7 @@ input, select, textarea {
     background-color: #463927;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 26px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -268,7 +270,8 @@ input, select, textarea {
     width: 60%;
     border-radius: 50px;
     overflow: hidden;
-    border: 5px solid #B3C65F;
+    border: 10px solid #B3C65F;
+    outline: 20px solid #463927;
 }
 
 /*Formats the backyard picture on the pet yard page*/
