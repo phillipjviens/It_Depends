@@ -7,7 +7,7 @@ body {
     height: 100vh;
     padding-top: 50px;
 }
-
+/*attempting to add font to project*/
 @font-face {
     font-family: "CollegiateHeavyOutline Medium.ttf";
     font-style: normal;
@@ -19,11 +19,11 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
-
+/*adminNav bar gradient*/
 #adminNav {
     background: linear-gradient(to right, #C22026,#F2696A);
 }
-
+/*studentNav bar gradient*/
 #studentNav {
     background: linear-gradient(to right, #37499F,#3D92D0);
 }
@@ -296,7 +296,7 @@ input, select, textarea {
 
 }
 
-
+/*Speech bubble for Store page*/
 .speech-bubble {
     position: relative;
     background: linear-gradient(to right,#3D92D0, #7FC2D6);
@@ -304,7 +304,7 @@ input, select, textarea {
     padding: 20px;
     text-align: center;
 }
-
+/*Speech bubble triangle for store page*/
     .speech-bubble:after {
         content: '';
         position: absolute;
@@ -318,11 +318,12 @@ input, select, textarea {
         margin-top: -26px;
         margin-left: -26px;
     }
-
+    /*not button element for grid item*/
 .storeText{
     font-family:'Century Gothic';
     text-align:right;
 }
+/*coin icon for purchasing items*/
 .storeText::after{
     content: "";
     background: url('images/SVG/Trackoin_Individual.svg') no-repeat;
@@ -331,16 +332,16 @@ input, select, textarea {
     float:right;
     margin:6px 0;
 }
-
-.grid-containerStore{
+/*Large container that contains the smaller containers*/
+#grid-containerStore{
     display:  grid;
     grid-template-columns:auto auto auto;
     grid-gap:10px;
     background-color: white;
     align-content:space-around;
 }
-
-    .grid-containerStore > div {
+/*inherited div characteristics for the grids*/
+    #grid-containerStore > div {
         border: 2px solid #C2C1C0;
         font-size: 30px;
         font-family: 'Century Gothic';
@@ -348,7 +349,8 @@ input, select, textarea {
         align-items:center;
     }
 
-.grid-containerSmallerStore {
+ /*the smaller grid that defines each shop item and its buttons*/
+#grid-containerSmallerStore {
     display: grid;
     overflow:auto;
     grid-template-columns: auto auto auto auto;
@@ -356,14 +358,18 @@ input, select, textarea {
     background-color: aliceblue;
     height:100%;
 }
-    .grid-containerSmallerStore > div {
+/*inherited div characters for each grid in the smaller grid*/
+    #grid-containerSmallerStore > div {
         background-color: aliceblue;
        text-align: center;
        
         font-family: 'Century Gothic';
         font-size: 30px;
     }
-.item1{
+    /*Making the first item (the picture) fit properly
+        uses grid area to take up the top row and all 4
+        columns, so that the last row can be devoted to buttons*/
+#grid-containerSmallerStore .item1{
     align-self: center;
   
    grid-area:1/1/1/5; /*grid area starting r1,c1, then spans 1x4 grids.*/
