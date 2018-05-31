@@ -44,6 +44,85 @@ namespace TrackAdemy.Backend
         /// </summary>
         private List<StudentModel> studentList = new List<StudentModel>();
 
+        /// <summary>
+        /// Makes a new Student
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>Avatar Passed In</returns>
+        public StudentModel Create(StudentModel data)
+        {
+            studentList.Add(data);
+            return data;
+        }
+
+        /// <summary>
+        /// Return the data for the id passed in
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Null or valid data</returns>
+        public StudentModel Read(string id)
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                return null;
+            }
+
+            var myReturn = studentList.Find(n => n.Id == id);
+            return myReturn;
+        }
+
+        /// <summary>
+        /// Update all attributes to be what is passed in
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>Null or updated data</returns>
+        public StudentModel Update(StudentModel data)
+        {
+            if (data == null)
+            {
+                return null;
+            }
+            var myReturn = studentList.Find(n => n.Username == data.Username);
+
+            myReturn.Update(data);
+
+            return myReturn;
+        }
+
+        /// <summary>
+        /// Remove the Data item if it is in the list
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>True for success, else false</returns>
+        public bool Delete(string id)
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                return false;
+            }
+
+            var myData = studentList.Find(n => n.Id == id);
+            var myReturn = studentList.Remove(myData);
+            return myReturn;
+        }
+
+        /// <summary>
+        /// Return the full dataset
+        /// </summary>
+        /// <returns>List of students</returns>
+        public List<StudentModel> Index()
+        {
+            return studentList;
+        }
+
+        /// <summary>
+        /// Reset the Data, and reload it
+        /// </summary>
+        public void Reset()
+        {
+            studentList.Clear();
+            Initialize();
+        }
 
         /// <summary>
         /// Create Placeholder Initial Data
