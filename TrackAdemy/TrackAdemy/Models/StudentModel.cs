@@ -36,6 +36,13 @@ namespace TrackAdemy.Models
         [Display(Name = "Username", Description = "Username")]
         [Required(ErrorMessage = "Username is required")]
         public string Username { get; set; }
+
+        /// <summary>
+        /// Student's password
+        /// </summary>
+        [Display(Name = "Password", Description = "Password")]
+        [Required(ErrorMessage = "Password is required")]
+        public string Password { get; set; }
     }
 }
 
