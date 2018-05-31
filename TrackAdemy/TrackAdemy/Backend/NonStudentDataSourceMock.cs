@@ -39,6 +39,9 @@ namespace TrackAdemy.Backend
             }
         }
 
+        /// <summary>
+        /// Create Placeholder Initial Data
+        /// </summary>
         public void Initialize()
         {
             Create(new AdminKioskModel("stevesteve", "stevesteve", 2));
