@@ -106,6 +106,10 @@ namespace TrackAdemy.Models
         [Display(Name = "AvgOut", Description = "Average departure time")]
         [Required(ErrorMessage = "Average departure time is required")]
         public string AvgOut { get; set; }
+
+        [Display(Name = "AccessLevel", Description = "Access Level")]
+        [Required(ErrorMessage = "Access Level is required")]
+        public int AccessLevel { get; set; }
     }
 }
 
