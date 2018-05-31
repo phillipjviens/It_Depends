@@ -17,6 +17,7 @@
             display: inline;
             padding: 10px;
             text-align: center;
+            margin-right:-10px;
         }
     </style>
 
@@ -30,7 +31,7 @@
         @*Admin nav*@
     if (controllerName == "Admin")
     {
-            <div id="adminNav" class="navbar navbar-inverse navbar-fixed-top" style="background:linear-gradient(to right, #C22026,#F8AB9F);">
+            <div id="adminNav" class="navbar navbar-inverse navbar-fixed-top" style="background:linear-gradient(to right, #C22026,#F8AB9F ); height:12%;">
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -40,12 +41,12 @@
                         </button>
                     </div>
                     <div class="navbar-collapse collapse">
-                        <ul class="nav navbare-nav">
-                            <li style="float:left">
+                        <ul class="nav navbare-nav "style="margin-top:13px">
+                            <li style="float:left; margin-left:-90px;">
                                 <a href="~/Home/Index">
-                                    <img class="img-responsive" src="~/Content/images/SVG/Trackademy_White.svg" style="max-width:100%">____________________</a>
+                                    <img class="img-responsive" src="~/Content/images/SVG/Trackademy_White.svg" style="width:80%; margin-top:-5px"></a>
                             </li>
-                            <li><a href="~/Home/Index">LOG OUT</a></li>
+                            <li style="margin-right:-60px"><a href="~/Home/Index">LOG OUT</a></li>
                             <li><a href="~/Admin/ManageStudent">MANAGE STUDENT</a></li>
                             <li><a href="~/Admin/Calendar">CALENDAR</a></li>
                             <li><a href="~/Admin/Index">HOME PAGE</a></li>
@@ -57,7 +58,7 @@
         @*Student nav*@
     else if (controllerName == "Student")
     {
-            <div id="studentNav" class="navbar navbar-inverse navbar-fixed-top" style="background:linear-gradient(to right, #37499F,#3D92D0);">
+            <div id="studentNav" class="navbar navbar-inverse navbar-fixed-top" style="background:linear-gradient(to right, #37499F,#3D92D0); height:12%;">
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -67,13 +68,12 @@
                         </button>
                     </div>
                     <div class="navbar-collapse collapse">
-                        <ul class="nav navbare-nav">
-                            <li style="float:left">
+                        <ul class="nav navbare-nav" style="margin-top:13px">
+                            <li style="float:left; margin-left:-90px;">
                                 <a href="~/Home/Index">
-                                    <img class="img-responsive" src="~/Content/images/SVG/Trackademy_White.svg" style="max-width:100%">____________________
-                                </a>
+                                    <img class="img-responsive" src="~/Content/images/SVG/Trackademy_White.svg" style="width:80%; margin-top:-5px"></a>
                             </li>
-                            <li><a href="~/Home/Index">LOG OUT</a></li>
+                            <li style="margin-right:-60px"><a href="~/Home/Index">LOG OUT</a></li>
                             <li><a href="~/Student/Aspirations">ASPIRATIONS</a></li>
                             <li><a href="~/Student/Store">PET STORE</a></li>
                             <li><a href="~/Student/Yard">PET YARD</a></li>
@@ -86,7 +86,7 @@
         @*TrackAdemy home*@
     else if (controllerName == "Home")
     {
-            <div class="navbar navbar-inverse navbar-fixed-top" style="background:black">
+            <div class="navbar navbar-inverse navbar-fixed-top" style="background:black; height:12%;">
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -96,9 +96,9 @@
                         </button>
                     </div>
                     <div class="navbar-collapse collapse">
-                        <ul class="nav navbare-nav">
+                        <ul class="nav navbare-nav" style="margin-top:13px">
                             <li style="float:left">
-                                <a href="~/Home/Index"><img class="img-responsive" src="~/Content/images/SVG/Trackademy_White.svg" style="max-width:100%">____________________</a>
+                                <a href="~/Home/Index"><img class="img-responsive" src="~/Content/images/SVG/Trackademy_White.svg" style="width:80%; margin-top:-5px"></a>
                             </li>
                             <li><a href="~/Student/Index">Students</a></li>
                             <li><a href="~/Admin/Index">Administrators</a></li>
@@ -156,20 +156,14 @@
         <-->
             <div class="container body-content">
                 @RenderBody()
-                @{
-                    if (controllerName != "Kiosk")
-                    {
 
-                    <footer style="bottom: 0; position: static;">
-                        <hr />
-                        &copy;@DateTime.Now.Year - TrackAdemy
-                        @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px; color:black" })
-                        @Html.ActionLink("Help", "Help", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px; color:black" })
-                    </footer>
-
-                    }
-                }
-            </div>
+                        <footer style="bottom: 0; position: static;">
+                            <hr />
+                            &copy;@DateTime.Now.Year - TrackAdemy
+                            @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
+                            @Html.ActionLink("Help", "Help", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
+                        </footer>
+                    </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

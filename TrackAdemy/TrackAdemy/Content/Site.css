@@ -184,10 +184,10 @@ input, select, textarea {
 }
 
 /*Centers the pet yard picture*/
-.centerYard{
-    width:100vw;
+.centerYard {
+    /*width: 100vw;
     display: flex;
-    justify-content: center;
+    justify-content: center;*/
 }
 
 /*Creates a grid for the kiosk page*/
@@ -273,10 +273,12 @@ input, select, textarea {
 /*Formats the backyard picture on the pet yard page*/
 .backYardPicture {
     height: auto;
-    width: 80%;
+    width: 67%;
     max-width: 100%;
-    paddin
-
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0;
 }
 
 /*Formats the 'backyard' picture on the pet yard page*/
@@ -284,25 +286,11 @@ input, select, textarea {
     height: auto;
     max-width: 100%;
     width: 30%;
+    line-height: 400px !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-/*Formats the 'help' button on the pet yard page*/
-.blueHelp {
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: 80px;
-    right: 40px;
-}
-
-/*Formats the 'information' button on the pet yard page*/
-.blueInfo {
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: 80px;
-    right: 110px;
-}
 
 .speech-bubble {
     position: relative;
