@@ -12,6 +12,13 @@ namespace TrackAdemy.Models
         [Display(Name = "Id", Description = "Non-student Id")]
         [Required(ErrorMessage = "Id is required")]
         public string Id { get; set; }
+
+        /// <summary>
+        /// Non-student's username
+        /// </summary>
+        [Display(Name = "Username", Description = "Username")]
+        [Required(ErrorMessage = "Username is required")]
+        public string Username { get; set; }
     }
 }
 
