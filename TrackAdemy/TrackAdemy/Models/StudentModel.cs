@@ -84,7 +84,7 @@ namespace TrackAdemy.Models
         /// </summary>
         [Display(Name = "TotalHours", Description = "Total Community Hours")]
         [Required(ErrorMessage = "Total community hours is required")]
-        public float TotalHours { get; set; }
+        public double TotalHours { get; set; }
 
         /// <summary>
         /// Student's number of days attending class
@@ -127,7 +127,7 @@ namespace TrackAdemy.Models
             AccessLevel = 1;
         }
 
-        public StudentModel(string first, string last, string username, string password, string profilePic, string currentWeek, string currentMonth, string past3Months, string year2Date, float totalHours, int daysAttended, string avgIn, string avgOut)
+        public StudentModel(string first, string last, string username, string password, string profilePic, string currentWeek, string currentMonth, string past3Months, string year2Date, double totalHours, int daysAttended, string avgIn, string avgOut)
         {
             Initialize();
 
