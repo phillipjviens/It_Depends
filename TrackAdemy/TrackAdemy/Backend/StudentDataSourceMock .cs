@@ -72,6 +72,24 @@ namespace TrackAdemy.Backend
         }
 
         /// <summary>
+        /// Update all attributes to be what is passed in
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>Null or updated data</returns>
+        public StudentModel Update(StudentModel data)
+        {
+            if (data == null)
+            {
+                return null;
+            }
+            var myReturn = studentList.Find(n => n.Username == data.Username);
+
+            myReturn.Update(data);
+
+            return myReturn;
+        }
+
+        /// <summary>
         /// Create Placeholder Initial Data
         /// </summary>
         public void Initialize()
