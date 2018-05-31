@@ -50,6 +50,13 @@ namespace TrackAdemy.Models
         [Display(Name = "URIProfilePicture", Description = "ProfilePicture")]
         [Required(ErrorMessage = "A profile picture is required")]
         public string URIProfilePicture { get; set; }
+
+        /// <summary>
+        /// Student's current week graph
+        /// </summary>
+        [Display(Name = "URICurrentWeek", Description = "Current Week")]
+        [Required(ErrorMessage = "A graph for the current week is required")]
+        public string URICurrentWeek { get; set; }
     }
 }
 
