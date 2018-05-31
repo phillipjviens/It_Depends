@@ -64,6 +64,13 @@ namespace TrackAdemy.Models
         [Display(Name = "URICurrentMonth", Description = "This Month")]
         [Required(ErrorMessage = "A graph for the current month is required")]
         public string URICurrentMonth { get; set; }
+
+        /// <summary>
+        /// Student's community hours graph for the past 3 months
+        /// </summary>
+        [Display(Name = "URIPast3Months", Description = "Past 3 Months")]
+        [Required(ErrorMessage = "A graph for the past 3 months is required")]
+        public string URIPast3Months { get; set; }
     }
 }
 
