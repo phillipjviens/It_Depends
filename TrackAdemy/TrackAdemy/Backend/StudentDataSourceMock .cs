@@ -56,18 +56,18 @@ namespace TrackAdemy.Backend
         }
 
         /// <summary>
-        /// Return the data for the username passed in
+        /// Return the data for the id passed in
         /// </summary>
-        /// <param name="username"></param>
+        /// <param name="id"></param>
         /// <returns>Null or valid data</returns>
-        public StudentModel Read(string username)
+        public StudentModel Read(string id)
         {
-            if (string.IsNullOrEmpty(username))
+            if (string.IsNullOrEmpty(id))
             {
                 return null;
             }
 
-            var myReturn = studentList.Find(n => n.Username == username);
+            var myReturn = studentList.Find(n => n.Id == id);
             return myReturn;
         }
 
@@ -92,16 +92,16 @@ namespace TrackAdemy.Backend
         /// <summary>
         /// Remove the Data item if it is in the list
         /// </summary>
-        /// <param name="username"></param>
+        /// <param name="id"></param>
         /// <returns>True for success, else false</returns>
-        public bool Delete(string username)
+        public bool Delete(string id)
         {
-            if (string.IsNullOrEmpty(username))
+            if (string.IsNullOrEmpty(id))
             {
                 return false;
             }
 
-            var myData = studentList.Find(n => n.Username == username);
+            var myData = studentList.Find(n => n.Id == id);
             var myReturn = studentList.Remove(myData);
             return myReturn;
         }
@@ -109,7 +109,7 @@ namespace TrackAdemy.Backend
         /// <summary>
         /// Return the full dataset
         /// </summary>
-        /// <returns>List of users</returns>
+        /// <returns>List of students</returns>
         public List<StudentModel> Index()
         {
             return studentList;
