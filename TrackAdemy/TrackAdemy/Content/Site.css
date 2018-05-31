@@ -333,7 +333,7 @@ input, select, textarea {
     margin:6px 0;
 }
 /*Large container that contains the smaller containers*/
-#grid-containerStore{
+.containerStore{
     display:  grid;
     grid-template-columns:auto auto auto;
     grid-gap:10px;
@@ -341,7 +341,7 @@ input, select, textarea {
     align-content:space-around;
 }
 /*inherited div characteristics for the grids*/
-    #grid-containerStore > div {
+    .containerStore > div {
         border: 2px solid #C2C1C0;
         font-size: 30px;
         font-family: 'Century Gothic';
@@ -350,7 +350,7 @@ input, select, textarea {
     }
 
  /*the smaller grid that defines each shop item and its buttons*/
-#grid-containerSmallerStore {
+.containerSmallerStore {
     display: grid;
     overflow:auto;
     grid-template-columns: auto auto auto auto;
@@ -359,7 +359,7 @@ input, select, textarea {
     height:100%;
 }
 /*inherited div characters for each grid in the smaller grid*/
-    #grid-containerSmallerStore > div {
+    .containerSmallerStore > div {
         background-color: aliceblue;
        text-align: center;
        
@@ -369,7 +369,7 @@ input, select, textarea {
     /*Making the first item (the picture) fit properly
         uses grid area to take up the top row and all 4
         columns, so that the last row can be devoted to buttons*/
-#grid-containerSmallerStore .item1{
+.containerSmallerStore .item1{
     align-self: center;
   
    grid-area:1/1/1/5; /*grid area starting r1,c1, then spans 1x4 grids.*/
