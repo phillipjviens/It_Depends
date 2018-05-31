@@ -43,6 +43,13 @@ namespace TrackAdemy.Models
         [Display(Name = "Password", Description = "Password")]
         [Required(ErrorMessage = "Password is required")]
         public string Password { get; set; }
+
+        /// <summary>
+        /// Student's profile picture
+        /// </summary>
+        [Display(Name = "URIProfilePicture", Description = "ProfilePicture")]
+        [Required(ErrorMessage = "A profile picture is required")]
+        public string URIProfilePicture { get; set; }
     }
 }
 
