@@ -11,10 +11,10 @@ namespace TrackAdemy.Controllers
     public class AdminController : Controller
     {
         // Creates a list of Admin and Students
-        private UserViewModel userViewModel = new UserViewModel();
+        //private UserViewModel userViewModel = new UserViewModel();
 
         // User backend data source.
-        private UserBackend userBackend = UserBackend.Instance;
+        //private UserBackend userBackend = UserBackend.Instance;
 
 
         /// <summary>
