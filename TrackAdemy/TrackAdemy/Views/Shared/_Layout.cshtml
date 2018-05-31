@@ -24,12 +24,12 @@
 <body>
     @{
         @*Gets view name*@
-        var controllerName = this.ViewContext.RouteData.Values["controller"].ToString();
+    var controllerName = this.ViewContext.RouteData.Values["controller"].ToString();
 
         @*Conditionals to determine which view called the shared layout. Depending on which, displays navbars.*@
         @*Admin nav*@
-        if (controllerName == "Admin")
-        {
+    if (controllerName == "Admin")
+    {
             <div id="adminNav" class="navbar navbar-inverse navbar-fixed-top" style="background:linear-gradient(to right, #C22026,#F8AB9F);">
                 <div class="container">
                     <div class="navbar-header">
@@ -54,23 +54,10 @@
                     </div>
                 </div>
             </div>
-
-            <div class="container body-content">
-                @RenderBody()
-
-                    <footer style="bottom: 0;">
-                        <hr />
-                        &copy;@DateTime.Now.Year - TrackAdemy
-                        @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
-                        @Html.ActionLink("Help", "Help", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
-                    </footer>
-
-            </div>
-
-        }
+    }
         @*Student nav*@
-        else if (controllerName == "Student")
-        {
+    else if (controllerName == "Student")
+    {
             <div id="studentNav" class="navbar navbar-inverse navbar-fixed-top" style="background:linear-gradient(to right, #37499F,#3D92D0);">
                 <div class="container">
                     <div class="navbar-header">
@@ -96,22 +83,10 @@
                     </div>
                 </div>
             </div>
-
-            <div class="container body-content">
-                @RenderBody()
-
-                        <footer style="bottom: 0;">
-                            <hr/>
-                            &copy;@DateTime.Now.Year - TrackAdemy
-                            @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
-                            @Html.ActionLink("Help", "Help", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
-                        </footer>
-                    
-            </div>
-        }
+}
         @*TrackAdemy home*@
-        else if (controllerName == "Home")
-        {
+    else if (controllerName == "Home")
+    {
             <div class="navbar navbar-inverse navbar-fixed-top" style="background:black">
                 <div class="container">
                     <div class="navbar-header">
@@ -133,19 +108,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="container body-content">
-                @RenderBody()
-
-                        
-                <footer style="bottom: 0;">
-                    <hr />
-                    &copy;@DateTime.Now.Year - TrackAdemy
-                    @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
-                    @Html.ActionLink("Help", "Help", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
-                </footer>
-            </div>
-        }
     }
     <!--
     <div class="navbar navbar-inverse navbar-fixed-top" style="background:black">
@@ -193,10 +155,26 @@
             </div>
         </div>
         <-->
+            <div class="container body-content">
+                @RenderBody()
+                @{
+                    if (controllerName != "Kiosk")
+                    {
 
+                    <footer style="bottom: 0; position: static;">
+                        <hr />
+                        &copy;@DateTime.Now.Year - TrackAdemy
+                        @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
+                        @Html.ActionLink("Help", "Help", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px;" })
+                    </footer>
+
+                    }
+                }
+            </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+ }
 </body>
 </html>
