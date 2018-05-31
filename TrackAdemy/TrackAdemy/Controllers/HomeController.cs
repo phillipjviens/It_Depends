@@ -25,7 +25,7 @@ namespace TrackAdemy.Controllers
         /// <returns></returns>
         public ActionResult Index()
         {
-            studentViewModel.StudentList = studentBackend.Index();
+            //studentViewModel.StudentList = studentBackend.Index();
             return View();  //userViewModel);
         }
 

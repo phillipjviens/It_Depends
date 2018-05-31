@@ -1,4 +1,4 @@
-﻿@model TrackAdemy.Models.UserViewModel
+﻿@model TrackAdemy.Models.StudentViewModel
 @{
     <!--username and password are set after submit from form post to this same page-->
     string username = Request.Form["UserName"];
@@ -49,7 +49,7 @@
     </form>
 
     <!--Start checking the username against the UserViewModel-->
-    @{
+    @*@{
         if (Model.UserList == null || !Model.UserList.Any())
         {
             <br />
@@ -84,5 +84,5 @@
                 }
             }
         }
-    }
+    }*@
 </body>
