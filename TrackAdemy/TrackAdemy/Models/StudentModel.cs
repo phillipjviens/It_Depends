@@ -16,7 +16,12 @@ namespace TrackAdemy.Models
         [Required(ErrorMessage = "Id is required")]
         public string Id { get; set; }
 
-
+        /// <summary>
+        /// Student's first name
+        /// </summary>
+        [Display(Name = "FirstName", Description = "First Name")]
+        [Required(ErrorMessage = "First name is required")]
+        public string FirstName { get; set; }
     }
 }
 
