@@ -280,6 +280,7 @@ input, select, textarea {
     margin-right: auto;
     width: 50%;
     padding-top: 10%;
+    
 }
 
 /*Formats the 'backyard' picture on the pet yard page*/
@@ -287,26 +288,9 @@ input, select, textarea {
     height: auto;
     max-width: 100%;
     width: 30%;
+    top: 80px;
 }
 
-/*Formats the 'help' button on the pet yard page*/
-.blueHelp {
-    height: auto;
-    width: 50px;
-    max-width: 100%;
-    position: absolute;
-    top: 80px;
-    right: 40px;
-}
-
-/*Formats the 'information' button on the pet yard page*/
-.blueInfo {
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: 80px;
-    right: 110px;
-}
 
 .speech-bubble {
     position: relative;
