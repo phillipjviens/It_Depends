@@ -146,7 +146,7 @@ namespace TrackAdemy.Models
             AvgOut = avgOut;
         }
 
-        public void Updatate(StudentModel data)
+        public void Update(StudentModel data)
         {
             if(data == null)
             {
