@@ -56,6 +56,22 @@ namespace TrackAdemy.Backend
         }
 
         /// <summary>
+        /// Return the data for the username passed in
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns>Null or valid data</returns>
+        public StudentModel Read(string username)
+        {
+            if (string.IsNullOrEmpty(username))
+            {
+                return null;
+            }
+
+            var myReturn = studentList.Find(n => n.Username == username);
+            return myReturn;
+        }
+
+        /// <summary>
         /// Create Placeholder Initial Data
         /// </summary>
         public void Initialize()
