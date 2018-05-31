@@ -129,6 +129,8 @@ namespace TrackAdemy.Backend
         /// </summary>
         public void Initialize()
         {
+            Create(new AdminKioskModel("stevesteve", "stevesteve", 2));
+            Create(new AdminKioskModel("kioskkiosk", "kioskkiosk", 3));
             Create(new UserModel.StudentModel("alexalex","alexalex","Alex", "Randall", ""));
             Create(new UserModel.StudentModel("ashleyashley", "ashleyashley", "Ashley", "Mortimer", ""));
             Create(new UserModel.StudentModel("jamiejamie", "jamiejamie", "Jamie", "Curtis", ""));
