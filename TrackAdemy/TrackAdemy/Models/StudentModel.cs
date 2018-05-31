@@ -22,6 +22,13 @@ namespace TrackAdemy.Models
         [Display(Name = "FirstName", Description = "First Name")]
         [Required(ErrorMessage = "First name is required")]
         public string FirstName { get; set; }
+
+        /// <summary>
+        /// Student's last name
+        /// </summary>
+        [Display(Name = "LastName", Description = "Last Name")]
+        [Required(ErrorMessage = "First name is required")]
+        public string LastName { get; set; }
     }
 }
 
