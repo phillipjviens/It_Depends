@@ -11,5 +11,31 @@ namespace TrackAdemy.Backend
     /// </summary>
     public class NonStudentDataSourceMock : IUserInterface
     {
-    }
+        /// <summary>
+        /// Make into a Singleton
+        /// </summary>
+        private static volatile NonStudentDataSourceMock instance;
+        private static object syncRoot = new Object();
+
+        private NonStudentDataSourceMock() { }
+
+        public static NonStudentDataSourceMock Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    lock (syncRoot)
+                    {
+                        if (instance == null)
+                        {
+                            instance = new NonStudentDataSourceMock();
+                            instance.Initialize();
+                        }
+                    }
+                }
+
+                return instance;
+            }
+        }
 }
