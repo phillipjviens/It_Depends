@@ -39,6 +39,9 @@ namespace TrackAdemy.Backend
             }
         }
 
+        /// <summary>
+        /// Create Placeholder Initial Data
+        /// </summary>
         public void Initialize()
         {
             Create(new StudentModel("Ryan", "Barter", "ryanryan", "ryanryan", "~/Content/images/NewFolder1/StudentImagesPNG/Student1.png", "~/Content/images/SVG/Chart SVG/Student_Archive_NovemberWk1.svg", 
