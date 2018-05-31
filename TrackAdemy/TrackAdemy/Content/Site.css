@@ -206,11 +206,11 @@ input, select, textarea {
 
     /*The divs of the grid for the kiosk page*/
     .grid-container > div {
-        background-color: #618B42;
+        background-color: #B3C65F;
         text-align: center;
         padding: 5px 5px;
         font-size: 15px;
-        border-radius: 25px;
+        border-radius: 50px;
         overflow: hidden;
     }
 
@@ -270,7 +270,6 @@ input, select, textarea {
     width: 60%;
     border-radius: 50px;
     overflow: hidden;
-    border: 10px solid #B3C65F;
     outline: 20px solid #463927;
 }
 
