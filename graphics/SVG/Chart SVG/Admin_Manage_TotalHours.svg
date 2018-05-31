@@ -1,1 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 260.36 130.15"><defs><style>.cls-1{font-size:29.64px;fill:#c12026;font-family:CenturyGothic-Bold, Century Gothic;font-weight:700;}.cls-2{font-size:20px;fill:#c1c0c0;}.cls-3{fill:url(#linear-gradient);}.cls-4{fill:url(#linear-gradient-2);}.cls-5{fill:none;stroke:#c1c0c0;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style><linearGradient id="linear-gradient" x1="4.21" y1="65.08" x2="125.94" y2="65.08" gradientUnits="userSpaceOnUse"><stop offset="0.43" stop-color="#c1c0c0"/><stop offset="1" stop-color="#fff"/></linearGradient><linearGradient id="linear-gradient-2" x1="65.08" y1="49.51" x2="125.94" y2="49.51" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#88181c"/><stop offset="0.65" stop-color="#c12026"/></linearGradient></defs><title>Asset 23</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><text class="cls-1" transform="translate(149.5 65.15)">232 HRS<tspan class="cls-2"><tspan x="26.84" y="24">TOTAL</tspan></tspan></text><path class="cls-3" d="M65.08,4.21a60.87,60.87,0,1,0,60.86,60.87A60.87,60.87,0,0,0,65.08,4.21Zm0,113.7a52.84,52.84,0,1,1,52.83-52.83A52.83,52.83,0,0,1,65.08,117.91Z"/><path class="cls-4" d="M65.08,4.21v8a52.88,52.88,0,0,1,48,75c-3.75,6.75,3.76,11.6,7.51,2.88A60.91,60.91,0,0,0,65.08,4.21Z"/><circle class="cls-5" cx="65.08" cy="65.08" r="64.08"/><circle class="cls-5" cx="65.08" cy="65.08" r="49.29"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 281 130.1" style="enable-background:new 0 0 281 130.1;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#C12026;}
+	.st1{font-family:'CenturyGothic-Bold';}
+	.st2{font-size:29.64px;}
+	.st3{fill:#C1C0C0;}
+	.st4{font-size:20px;}
+	.st5{fill:url(#SVGID_1_);}
+	.st6{fill:url(#SVGID_2_);}
+	.st7{fill:none;stroke:#C1C0C0;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<g>
+	<text transform="matrix(1 0 0 1 152.4899 65.15)" class="st0 st1 st2">683 HRS</text>
+	<text transform="matrix(1 0 0 1 179.3262 89.15)" class="st3 st1 st4">TOTAL</text>
+	<g>
+		
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="4.2" y1="66.92" x2="125.94" y2="66.92" gradientTransform="matrix(1 0 0 -1 0 132)">
+			<stop  offset="0.43" style="stop-color:#C1C0C0"/>
+			<stop  offset="1" style="stop-color:#FFFFFF"/>
+		</linearGradient>
+		<path class="st5" d="M65.1,4.2C31.5,4.2,4.2,31.5,4.2,65.1s27.2,60.9,60.9,60.9s60.9-27.2,60.9-60.9c0,0,0,0,0,0
+			C125.9,31.5,98.7,4.2,65.1,4.2z M65.1,117.9c-29.2,0-52.8-23.6-52.8-52.8s23.6-52.8,52.8-52.8s52.8,23.6,52.8,52.8c0,0,0,0,0,0
+			C117.9,94.3,94.3,117.9,65.1,117.9C65.1,117.9,65.1,117.9,65.1,117.9z"/>
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="35.3567" y1="65.0789" x2="125.9585" y2="65.0789">
+			<stop  offset="0" style="stop-color:#88181C"/>
+			<stop  offset="0.65" style="stop-color:#C12026"/>
+		</linearGradient>
+		<path class="st6" d="M90,9.6C82.2,6,73.7,4.2,65.1,4.2v8c29.2,0,52.9,23.7,52.8,52.9c0,3.8-0.4,7.6-1.2,11.3c0,0,0,0.1,0,0.1
+			c-0.2,0.9-0.4,1.7-0.6,2.5c0,0.1-0.1,0.2-0.1,0.3c-0.2,0.8-0.5,1.5-0.7,2.3c-0.1,0.2-0.1,0.3-0.2,0.5c-0.2,0.7-0.5,1.4-0.8,2.1
+			c-0.1,0.2-0.2,0.4-0.3,0.7c-0.2,0.6-0.5,1.2-0.8,1.8c-0.1,0.3-0.2,0.5-0.3,0.8c-0.1,0.2-0.2,0.5-0.3,0.7
+			C104,105.8,86,117.9,65,117.9c-7.6,0-15.2-1.7-22.1-4.8c-6.8-3.8-11.6,3.8-2.9,7.5c30.1,13.5,65.4,0.6,79.7-28.9
+			c0.3-0.5,0.6-1,0.8-1.6C134.4,59.4,120.7,23.4,90,9.6z"/>
+		<circle class="st7" cx="65.1" cy="65.1" r="64.1"/>
+		<circle class="st7" cx="65.1" cy="65.1" r="49.3"/>
+	</g>
+</g>
+</svg>
