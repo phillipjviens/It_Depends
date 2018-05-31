@@ -323,15 +323,48 @@ input, select, textarea {
     font-family:'Century Gothic';
     text-align:right;
 }
-.storeText:after{
+.storeText::after{
     content: "";
-    display: block;
     background: url('images/SVG/Trackoin_Individual.svg') no-repeat;
-    width:20px;
-    height:20px;
-    float:left;
-    margin:0;
+    width:30px;
+    height:30px;
+    float:right;
+    margin:6px 0;
 }
 
+.grid-containerStore{
+    display:  grid;
+    grid-template-columns:auto auto auto;
+    grid-gap:10px;
+    background-color: white;
+    align-content:space-around;
+}
 
+    .grid-containerStore > div {
+        border: 2px solid #C2C1C0;
+        font-size: 30px;
+        font-family: 'Century Gothic';
+        justify-content: center;
+        align-items:center;
+    }
 
+.grid-containerSmallerStore {
+    display: grid;
+    overflow:auto;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows:auto 50px;
+    background-color: aliceblue;
+    height:100%;
+}
+    .grid-containerSmallerStore > div {
+        background-color: aliceblue;
+       text-align: center;
+       
+        font-family: 'Century Gothic';
+        font-size: 30px;
+    }
+.item1{
+    align-self: center;
+  
+   grid-area:1/1/1/5; /*grid area starting r1,c1, then spans 1x4 grids.*/
+}

@@ -260,6 +260,7 @@
     <Content Include="Content\images\SVG\Aspiration_Streak.svg" />
     <Content Include="Content\images\SVG\Aspiration_Streak_Dark.svg" />
     <Content Include="Content\images\SVG\Backyard-Title.svg" />
+    <Content Include="Content\images\SVG\Backyard.svg" />
     <Content Include="Content\images\SVG\Backyard_Inventory.svg" />
     <Content Include="Content\images\SVG\Backyard_Title.svg" />
     <Content Include="Content\images\SVG\Chart SVG\Admin_Calendar.svg" />
@@ -308,6 +309,8 @@
     <Content Include="Content\images\SVG\Store_Collar.svg" />
     <Content Include="Content\images\SVG\Store_CowboyHat.svg" />
     <Content Include="Content\images\SVG\Store_CowboyHat_Dark.svg" />
+    <Content Include="Content\images\SVG\Store_DogBed.svg" />
+    <Content Include="Content\images\SVG\Store_DogBed_Dark.svg" />
     <Content Include="Content\images\SVG\Store_Handkerchief.svg" />
     <Content Include="Content\images\SVG\Store_Handkerchief_Dark.svg" />
     <Content Include="Content\images\SVG\Store_Mustache.svg" />
