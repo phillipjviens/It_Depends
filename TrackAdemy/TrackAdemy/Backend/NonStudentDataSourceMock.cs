@@ -38,4 +38,10 @@ namespace TrackAdemy.Backend
                 return instance;
             }
         }
+
+        public void Initialize()
+        {
+            Create(new AdminKioskModel("stevesteve", "stevesteve", 2));
+            Create(new AdminKioskModel("kioskkiosk", "kioskkiosk", 3));
+        }
 }
