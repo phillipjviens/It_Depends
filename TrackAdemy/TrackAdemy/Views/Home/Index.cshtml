@@ -1,5 +1,4 @@
-﻿@model TrackAdemy.Models.StudentViewModel
-@{
+﻿@{
     <!--username and password are set after submit from form post to this same page-->
     string username = Request.Form["UserName"];
     string password = Request.Form["Password"];
@@ -47,7 +46,7 @@
             <input type="submit" value="Login" style="max-width:100%" />
         </div>
     </form>
-
+    
     <!--Start checking the username against the UserViewModel-->
     @*@{
         if (Model.UserList == null || !Model.UserList.Any())
@@ -58,14 +57,13 @@
 
         }
         else
-        { <!--If the model exists-->
+        { 
             if (Model.UserList.Exists(m => m.Username == username))
-            { <!--get the first (should be only) username that matches and check its password-->
+            { 
                 var item = Model.UserList.First(x => x.Username.Equals(username));
                 if (item.Password.Equals(password))
                 {
 
-                    <!--pop up an action link based on what access level is attached to the user.-->
                     switch (item.AccessLevel)
                     {
                         case 1:
