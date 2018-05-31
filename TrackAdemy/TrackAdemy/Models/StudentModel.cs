@@ -140,6 +140,28 @@ namespace TrackAdemy.Models
             AvgIn = avgIn;
             AvgOut = avgOut;
         }
+
+        public void Updatate(StudentModel data)
+        {
+            if(data == null)
+            {
+                return;
+            }
+
+            FirstName = data.FirstName;
+            LastName = data.LastName;
+            Username = data.Username;
+            Password = data.Password;
+            URIProfilePicture = data.URIProfilePicture;
+            URICurrentWeek = data.URICurrentWeek;
+            URICurrentMonth = data.URICurrentMonth;
+            URIPast3Months = data.URIPast3Months;
+            URIYear2Date = data.URIYear2Date;
+            TotalHours = data.TotalHours;
+            DaysAttended = data.DaysAttended;
+            AvgIn = data.AvgIn;
+            AvgOut = data.AvgOut;
+        }
     }
 }
 
