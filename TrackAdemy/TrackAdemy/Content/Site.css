@@ -210,7 +210,7 @@ input, select, textarea {
         text-align: center;
         padding: 5px 5px;
         font-size: 15px;
-        border-radius: 50px;
+        border-radius: 30%;
         overflow: hidden;
     }
 
@@ -219,7 +219,7 @@ input, select, textarea {
     background-color: #463927;
     border: none;
     color: white;
-    padding: 10px 26px;
+    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -268,7 +268,7 @@ input, select, textarea {
 .picture {
     height: auto;
     width: 60%;
-    border-radius: 50px;
+    border-radius: 30%;
     overflow: hidden;
     outline: 20px solid #463927;
 }
