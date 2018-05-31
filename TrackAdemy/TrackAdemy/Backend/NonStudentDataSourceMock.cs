@@ -40,6 +40,12 @@ namespace TrackAdemy.Backend
         }
 
         /// <summary>
+        /// The User List
+        /// </summary>
+        private List<AdminKioskModel> nonStudentList = new List<AdminKioskModel>();
+
+
+        /// <summary>
         /// Create Placeholder Initial Data
         /// </summary>
         public void Initialize()
