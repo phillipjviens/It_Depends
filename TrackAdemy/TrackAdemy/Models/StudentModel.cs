@@ -94,11 +94,18 @@ namespace TrackAdemy.Models
         public string DaysAttended { get; set; }
 
         /// <summary>
-        /// Student's average arrival
+        /// Student's average arrival time
         /// </summary>
         [Display(Name = "AvgIn", Description = "Average arrival time")]
         [Required(ErrorMessage = "Average arrival time is required")]
         public string AvgIn { get; set; }
+
+        /// <summary>
+        /// Student's average departure time
+        /// </summary>
+        [Display(Name = "AvgOut", Description = "Average departure time")]
+        [Required(ErrorMessage = "Average departure time is required")]
+        public string AvgOut { get; set; }
     }
 }
 
