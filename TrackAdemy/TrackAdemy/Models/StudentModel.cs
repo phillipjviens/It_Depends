@@ -84,14 +84,14 @@ namespace TrackAdemy.Models
         /// </summary>
         [Display(Name = "TotalHours", Description = "Total Community Hours")]
         [Required(ErrorMessage = "Total community hours is required")]
-        public string TotalHours { get; set; }
+        public float TotalHours { get; set; }
 
         /// <summary>
         /// Student's number of days attending class
         /// </summary>
         [Display(Name = "DaysAttended", Description = "Number of Days Attended")]
         [Required(ErrorMessage = "Number of days attending class is required")]
-        public string DaysAttended { get; set; }
+        public int DaysAttended { get; set; }
 
         /// <summary>
         /// Student's average arrival time
@@ -120,6 +120,25 @@ namespace TrackAdemy.Models
 
             // A student's AccessLevel is 1
             AccessLevel = 1;
+        }
+
+        public StudentModel(string first, string last, string username, string password, string profilePic, string currentWeek, string currentMonth, string past3Months, string year2Date, float totalHours, int daysAttended, string avgIn, string avgOut)
+        {
+            Initialize();
+
+            FirstName = first;
+            LastName = last;
+            Username = username;
+            Password = password;
+            URIProfilePicture = profilePic;
+            URICurrentWeek = currentWeek;
+            URICurrentMonth = currentMonth;
+            URIPast3Months = past3Months;
+            URIYear2Date = year2Date;
+            TotalHours = totalHours;
+            DaysAttended = daysAttended;
+            AvgIn = avgIn;
+            AvgOut = avgOut;
         }
     }
 }
