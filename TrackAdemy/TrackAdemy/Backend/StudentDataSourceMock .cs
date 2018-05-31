@@ -90,6 +90,23 @@ namespace TrackAdemy.Backend
         }
 
         /// <summary>
+        /// Remove the Data item if it is in the list
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns>True for success, else false</returns>
+        public bool Delete(string username)
+        {
+            if (string.IsNullOrEmpty(username))
+            {
+                return false;
+            }
+
+            var myData = studentList.Find(n => n.Username == username);
+            var myReturn = studentList.Remove(myData);
+            return myReturn;
+        }
+
+        /// <summary>
         /// Create Placeholder Initial Data
         /// </summary>
         public void Initialize()
