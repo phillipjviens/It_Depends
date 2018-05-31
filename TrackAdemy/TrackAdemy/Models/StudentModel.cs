@@ -78,6 +78,13 @@ namespace TrackAdemy.Models
         [Display(Name = "URIYear2Date", Description = "Year to Date")]
         [Required(ErrorMessage = "A year to date graph is required")]
         public string URIYear2Date { get; set; }
+
+        /// <summary>
+        /// Student's total community hours
+        /// </summary>
+        [Display(Name = "TotalHours", Description = "Total Community Hours")]
+        [Required(ErrorMessage = "Total community hours is required")]
+        public string TotalHours { get; set; }
     }
 }
 
