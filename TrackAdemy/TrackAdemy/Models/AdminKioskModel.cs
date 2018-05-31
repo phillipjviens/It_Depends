@@ -31,6 +31,8 @@ namespace TrackAdemy.Models
         /// <summary>
         /// Level of Access
         /// Distinguishes between Admin and Kiosk
+        /// Admin: 2
+        /// Kiosk: 3
         /// </summary>
         [Display(Name = "AccessLevel", Description = "Access Level")]
         [Required(ErrorMessage = "Access Level is required")]
@@ -42,6 +44,16 @@ namespace TrackAdemy.Models
         public void Initialize()
         {
             Id = Guid.NewGuid().ToString();
+        }
+
+
+        public AdminKioskModel(string username, string password, int accessLevel)
+        {
+            Initialize();
+
+            Username = username;
+            Password = password;
+            AccessLevel = accessLevel;
         }
     }
 }
