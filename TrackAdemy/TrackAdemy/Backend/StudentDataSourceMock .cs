@@ -44,6 +44,16 @@ namespace TrackAdemy.Backend
         /// </summary>
         private List<StudentModel> studentList = new List<StudentModel>();
 
+        /// <summary>
+        /// Makes a new Student
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>Avatar Passed In</returns>
+        public StudentModel Create(StudentModel data)
+        {
+            studentList.Add(data);
+            return data;
+        }
 
         /// <summary>
         /// Create Placeholder Initial Data
