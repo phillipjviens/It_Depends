@@ -110,6 +110,7 @@ namespace TrackAdemy.Models
         /// <summary>
         /// Level of Access
         /// Distinguishes between Student and AdminKiosk
+        /// Student: 1
         /// </summary>
         [Display(Name = "AccessLevel", Description = "Access Level")]
         [Required(ErrorMessage = "Access Level is required")]
