@@ -129,15 +129,15 @@ namespace TrackAdemy.Backend
         /// </summary>
         public void Initialize()
         {
-            Create(new UserModel.StudentModel("alexalex","alexalex"));
-            Create(new UserModel.StudentModel("ashleyashley", "ashleyashley"));
-            Create(new UserModel.StudentModel("brianbrian", "brianbrian"));
-            Create(new UserModel.StudentModel("kimkim", "kimkim"));
-            Create(new UserModel.StudentModel("lesleylesley", "lesleylesley"));
-            Create(new UserModel.StudentModel("ramonramon", "ramonramon"));
-            Create(new UserModel.StudentModel("ryanryan", "ryanryan"));
-            Create(new UserModel.StudentModel("seetalseetal", "seetalseetal"));
-            Create(new UserModel.StudentModel("zacharyzachary", "zacharyzachary"));
+            Create(new UserModel.StudentModel("alexalex","alexalex","Alex", "Randall", ""));
+            Create(new UserModel.StudentModel("ashleyashley", "ashleyashley", "Ashley", "Mortimer", ""));
+            Create(new UserModel.StudentModel("jamiejamie", "jamiejamie", "Jamie", "Curtis", ""));
+            Create(new UserModel.StudentModel("kimkim", "kimkim", "Kim", "Reynolds", ""));
+            Create(new UserModel.StudentModel("lesleylesley", "lesleylesley", "Lesley", "Carring", ""));
+            Create(new UserModel.StudentModel("ramonramon", "ramonramon","Ramon", "Leviter", ""));
+            Create(new UserModel.StudentModel("ryanryan", "ryanryan", "Ryan", "Barter", ""));
+            Create(new UserModel.StudentModel("seetalseetal", "seetalseetal", "Seetal", "Guri", ""));
+            Create(new UserModel.StudentModel("zacharyzachary", "zacharyzachary", "Zachary", "Monson", ""));
             Create(new UserModel.AdminModel("stevesteve", "stevesteve"));
             Create(new UserModel.KioskModel("kioskkiosk", "kioskkiosk"));
         }
