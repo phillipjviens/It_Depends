@@ -116,6 +116,15 @@ namespace TrackAdemy.Backend
         }
 
         /// <summary>
+        /// Reset the Data, and reload it
+        /// </summary>
+        public void Reset()
+        {
+            studentList.Clear();
+            Initialize();
+        }
+
+        /// <summary>
         /// Create Placeholder Initial Data
         /// </summary>
         public void Initialize()
