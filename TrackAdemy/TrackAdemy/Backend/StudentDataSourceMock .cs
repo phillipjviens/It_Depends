@@ -107,6 +107,15 @@ namespace TrackAdemy.Backend
         }
 
         /// <summary>
+        /// Return the full dataset
+        /// </summary>
+        /// <returns>List of users</returns>
+        public List<StudentModel> Index()
+        {
+            return studentList;
+        }
+
+        /// <summary>
         /// Create Placeholder Initial Data
         /// </summary>
         public void Initialize()
