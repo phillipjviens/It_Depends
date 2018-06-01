@@ -24,53 +24,92 @@ namespace TrackAdemy.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// The Friendly name for the student, does not need to be directly associated with the actual student name
+        /// The student's first name
         /// </summary>
-        [Display(Name = "Name", Description = "Nick Name")]
-        [Required(ErrorMessage = "Name is required")]
-        public string Name { get; set; }
+        [Display(Name = "FirstName", Description = "First Name")]
+        [Required(ErrorMessage = "Your first name is required")]
+        public string FirstName { get; set; }
 
         /// <summary>
-        /// The ID of the Avatar the student is associated with, this will convert to an avatar picture
+        /// The student's last name
         /// </summary>
-        [Display(Name = "AvatarId", Description = "Avatar")]
-        [Required(ErrorMessage = "Avatar is required")]
-        public string AvatarId { get; set; }
+        [Display(Name = "LastName", Description = "Last Name")]
+        [Required(ErrorMessage = "Your last name is required")]
+        public string LastName { get; set; }
 
         /// <summary>
-        /// The personal level for the Avatar, the avatar levels up.  switching the avatar ID (picture), does not change the level
+        /// The path to the student's photo
         /// </summary>
-        [Display(Name = "Avatar Level", Description = "Level of the Avatar")]
-        [Required(ErrorMessage = "Level is required")]
-        public int AvatarLevel { get; set; }
+        [Display(Name = "URIProfilePicture", Description = "Student Photo")]
+        [Required(ErrorMessage = "A photo is required")]
+        public string URIProfilePicture { get; set; }
 
         /// <summary>
-        /// The number of Tokens the student has, tokens are used in the store, and also to level up
+        /// The student's username
         /// </summary>
-        [Display(Name = "XP", Description = "Experience Points Earned")]
-        [Required(ErrorMessage = "XP is required")]
-        public int ExperiencePoints { get; set; }
+        [Display(Name = "Username", Description = "Username")]
+        [Required(ErrorMessage = "A username is required")]
+        public string Username { get; set; }
 
         /// <summary>
-        /// The number of Tokens the student has, tokens are used in the store, and also to level up
+        /// The student's password
         /// </summary>
-        [Display(Name = "Tokens", Description = "Tokens Saved")]
-        [Required(ErrorMessage = "Tokens are required")]
-        public int Tokens { get; set; }
-
-        /// <summary>
-        /// The status of the student, for example currently logged in, out
-        /// </summary>
-        [Display(Name = "Current Status", Description = "Status of the Student")]
-        [Required(ErrorMessage = "Status is required")]
-        public StudentStatusEnum Status { get; set; }
-
-        /// <summary>
-        /// The status of the student, for example currently logged in, out
-        /// </summary>
-        [Display(Name = "Password", Description = "Student Password")]
-        [PasswordPropertyText]
+        [Display(Name = "Password", Description = "Password")]
+        [Required(ErrorMessage = "A password is required")]
         public string Password { get; set; }
+
+        /// <summary>
+        /// A student's community hours in the current week. Shows the hours accrued per day in the week.
+        /// </summary>
+        [Display(Name = "URICurrentWeek", Description = "Current Week's Hours")]
+        [Required(ErrorMessage = "A graph of the current week is required.")]
+        public string URICurrentWeek { get; set; }
+
+        /// <summary>
+        /// A student's total community hours in the current month.
+        /// </summary>
+        [Display(Name = "CurrentMonth", Description = "Current Month's Hours")]
+        [Required(ErrorMessage = "Current month's hours are required.")]
+        public string CurrentMonth { get; set; }
+
+        [Display(Name = "ThreeMonths", Description = "Community Hours of the Past 3 Months")]
+        [Required(ErrorMessage = "Community hours of the past 3 months is required.")]
+        public string ThreeMonths { get; set; }
+
+        /// <summary>
+        /// A student's total community hours in the current academic year.
+        /// </summary>
+        [Display(Name = "Year2Date", Description = "Community Hours this Academic Year")]
+        [Required(ErrorMessage = "Community hours of this academic year is required.")]
+         public string Year2Date { get; set; }
+       
+        /// <summary>
+        /// A student's total community hours since they enrolled.
+        /// </summary>
+        [Display(Name = "TotalHours", Description = "All-time community hours")]
+        [Required(ErrorMessage = "Total community hours is required.")]
+        public double TotalHours { get; set; }
+
+        /// <summary>
+        /// A student's total days in class this calendar year.
+        /// </summary>
+        [Display(Name = "DaysAttended", Description = "Total number of days attended this academic year.")]
+        [Required(ErrorMessage = "Total community hours is required.")]
+        public string DaysAttended { get; set; }
+
+        /// <summary>
+        /// A student's average arrival time that year
+        /// </summary>
+        [Display(Name = "AvgIn", Description = "Average arrival time")]
+        [Required(ErrorMessage = "Average arrival time is requrired.")]
+        public string AvgIn { get; set; }
+
+        /// <summary>
+        /// A student's average departure time that year        
+        /// </summary>
+        [Display(Name = "AvgOut", Description = "Average departure time")]
+        [Required(ErrorMessage = "Average arrival time is requrired.")]
+        public string AvgOut { get; set; }
 
         /// <summary>
         /// The defaults for a new student
@@ -113,23 +152,6 @@ namespace TrackAdemy.Models
         }
 
         /// <summary>
-        /// Convert a Student Display View Model, to a Student Model, used for when passed data from Views that use the full Student Display View Model.
-        /// </summary>
-        /// <param name="data">The student data to pull</param>
-        public StudentModel(StudentDisplayViewModel data)
-        {
-            Id = data.Id;
-            Name = data.Name;
-
-            AvatarId = data.AvatarId;
-            AvatarLevel = data.AvatarLevel;
-            Tokens = data.Tokens;
-            Status = data.Status;
-            ExperiencePoints = data.ExperiencePoints;
-            Password = data.Password;
-        }
-
-        /// <summary>
         /// Update the Data Fields with the values passed in, do not update the ID.
         /// </summary>
         /// <param name="data">The values to update</param>
@@ -150,74 +172,6 @@ namespace TrackAdemy.Models
             Password = data.Password;
 
             return true;
-        }
-    }
-
-    /// <summary>
-    /// For the Index View, add the Avatar URI to the Student, so it shows the student with the picture
-    /// </summary>
-    public class StudentDisplayViewModel : StudentModel
-    {
-        /// <summary>
-        /// The path to the local image for the avatar
-        /// </summary>
-        [Display(Name = "Avatar Picture", Description = "Avatar Picture to Show")]
-        public string AvatarUri { get; set; }
-
-        /// <summary>
-        /// Display name for the Avatar on the student information (Friendly Police etc.)
-        /// </summary>
-        [Display(Name = "Avatar Name", Description = "Avatar Name")]
-        public string AvatarName { get; set; }
-
-        /// <summary>
-        /// Description of the Avatar to show on the student information
-        /// </summary>
-        [Display(Name = "Avatar Description", Description = "Avatar Description")]
-        public string AvatarDescription { get; set; }
-
-        /// <summary>
-        /// DateTime of last transaction recorded, used for login and logout
-        /// </summary>
-        [Display(Name = "Date", Description = "Date and Time")]
-        public DateTime LastDateTime { get; set; }
-
-        /// <summary>
-        /// Default constructor
-        /// </summary>
-        public StudentDisplayViewModel() { }
-
-        /// <summary>
-        /// Creates a Student Display View Model from a Student Model
-        /// </summary>
-        /// <param name="data">The Student Model to create</param>
-        public StudentDisplayViewModel(StudentModel data)
-        {
-            if (data == null)
-            {
-                // Nothing to convert
-                return;
-            }
-
-            Id = data.Id;
-            Name = data.Name;
-            Tokens = data.Tokens;
-            AvatarLevel = data.AvatarLevel;
-            AvatarId = data.AvatarId;
-            Status = data.Status;
-            ExperiencePoints = data.ExperiencePoints;
-            Password = data.Password;
-
-            /*var myDataAvatar = AvatarBackend.Instance.Read(AvatarId);
-            if (myDataAvatar == null)
-            {
-                // Nothing to convert
-                return;
-            }
-
-            AvatarName = myDataAvatar.Name;
-            AvatarDescription = myDataAvatar.Description;
-            AvatarUri = myDataAvatar.Uri;*/
         }
     }
 }
