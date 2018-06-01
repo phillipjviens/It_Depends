@@ -68,20 +68,20 @@ namespace TrackAdemy.Models
         /// <summary>
         /// A student's total community hours in the current month.
         /// </summary>
-        [Display(Name = "CurrentMonth", Description = "Current Month's Hours")]
+        [Display(Name = "URICurrentMonth", Description = "Current Month's Hours")]
         [Required(ErrorMessage = "Current month's hours are required.")]
-        public string CurrentMonth { get; set; }
+        public string URICurrentMonth { get; set; }
 
-        [Display(Name = "ThreeMonths", Description = "Community Hours of the Past 3 Months")]
+        [Display(Name = "URI3Months", Description = "Community Hours of the Past 3 Months")]
         [Required(ErrorMessage = "Community hours of the past 3 months is required.")]
-        public string ThreeMonths { get; set; }
+        public string URI3Months { get; set; }
 
         /// <summary>
         /// A student's total community hours in the current academic year.
         /// </summary>
-        [Display(Name = "Year2Date", Description = "Community Hours this Academic Year")]
+        [Display(Name = "URIYear2Date", Description = "Community Hours this Academic Year")]
         [Required(ErrorMessage = "Community hours of this academic year is required.")]
-         public string Year2Date { get; set; }
+         public string URIYear2Date { get; set; }
        
         /// <summary>
         /// A student's total community hours since they enrolled.
@@ -95,7 +95,7 @@ namespace TrackAdemy.Models
         /// </summary>
         [Display(Name = "DaysAttended", Description = "Total number of days attended this academic year.")]
         [Required(ErrorMessage = "Total community hours is required.")]
-        public string DaysAttended { get; set; }
+        public int DaysAttended { get; set; }
 
         /// <summary>
         /// A student's average arrival time that year
@@ -117,11 +117,6 @@ namespace TrackAdemy.Models
         public void Initialize()
         {
             Id = Guid.NewGuid().ToString();
-            Tokens = 0;
-            AvatarLevel = 1;
-            Status = StudentStatusEnum.Out;
-            ExperiencePoints = 0;
-            Password = string.Empty;
         }
 
         /// <summary>
@@ -137,11 +132,24 @@ namespace TrackAdemy.Models
         /// </summary>
         /// <param name="name">The Name to call the student</param>
         /// <param name="avatarId">The avatar to use, if not specified, will call the backend to get an ID</param>
-        public StudentModel(string name, string avatarId)
+        public StudentModel(string firstname, string lastname, string username, string password, string profilePic, string currentweek, 
+            string thismonth, string threeMonths, string year, double totalHours, int daysAttended, string avgin, string avgout)
         {
             Initialize();
 
-            Name = name;
+            FirstName = firstname;
+            LastName = lastname;
+            Username = username;
+            Password = password;
+            URIProfilePicture = profilePic;
+            URICurrentWeek = currentweek;
+            URICurrentMonth = thismonth;
+            URI3Months = threeMonths;
+            URIYear2Date = year;
+            TotalHours = totalHours;
+            DaysAttended = daysAttended;
+            AvgIn = avgin;
+            AvgOut = avgout;
 
             // If no avatar ID is sent in, then go and get the first avatar ID from the backend data as the default to use.
             if (string.IsNullOrEmpty(avatarId))
