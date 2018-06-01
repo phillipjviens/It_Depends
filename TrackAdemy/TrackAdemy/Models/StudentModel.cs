@@ -131,7 +131,6 @@ namespace TrackAdemy.Models
         /// Constructor for Student.  Call this when making a new student
         /// </summary>
         /// <param name="name">The Name to call the student</param>
-        /// <param name="avatarId">The avatar to use, if not specified, will call the backend to get an ID</param>
         public StudentModel(string firstname, string lastname, string username, string password, string profilePic, string currentweek, 
             string thismonth, string threeMonths, string year, double totalHours, int daysAttended, string avgin, string avgout)
         {
@@ -151,12 +150,7 @@ namespace TrackAdemy.Models
             AvgIn = avgin;
             AvgOut = avgout;
 
-            // If no avatar ID is sent in, then go and get the first avatar ID from the backend data as the default to use.
-            if (string.IsNullOrEmpty(avatarId))
-            {
-                //avatarId = AvatarBackend.Instance.GetFirstAvatarId();
-            }
-            AvatarId = avatarId;
+           
         }
 
         /// <summary>
@@ -170,15 +164,19 @@ namespace TrackAdemy.Models
             {
                 return false;
             }
-
-            Name = data.Name;
-            AvatarId = data.AvatarId;
-            AvatarLevel = data.AvatarLevel;
-            Tokens = data.Tokens;
-            Status = data.Status;
-            ExperiencePoints = data.ExperiencePoints;
+            FirstName = data.FirstName;
+            LastName = data.LastName;
+            Username = data.Username;
             Password = data.Password;
-
+            URIProfilePicture = data.URIProfilePicture;
+            URICurrentWeek = data.URICurrentWeek;
+            URICurrentMonth = data.URICurrentMonth;
+            URI3Months = data.URI3Months;
+            URIYear2Date = data.URIYear2Date;
+            TotalHours = data.TotalHours;
+            DaysAttended = data.DaysAttended;
+            AvgIn = data.AvgIn;
+            AvgOut = data.AvgOut;
             return true;
         }
     }

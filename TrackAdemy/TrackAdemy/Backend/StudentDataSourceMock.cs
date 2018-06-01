@@ -144,10 +144,7 @@ namespace TrackAdemy.Backend
         private void DataSetDefault()
         {
             DataSetClear();
-            Create(new StudentModel("Mike", null));
-            Create(new StudentModel("Doug", null));
-            Create(new StudentModel("Jea", null));
-            Create(new StudentModel("Sue", null));
+            Create(new StudentModel("Mike","","","","","","","","",20,10,"5","3:45"));
         }
 
         /// <summary>
