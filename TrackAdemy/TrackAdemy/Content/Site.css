@@ -231,6 +231,8 @@ input, select, textarea {
     top: 10px;
     right: 10px;
 }
+
+/*item1 button layout for kiosk page*/
 .item1 .btn {
     position: absolute;
     top: 33%;
@@ -247,6 +249,7 @@ input, select, textarea {
     text-align: center;
 }
 
+/*item2 button layout for kiosk page*/
 .item2 .btn {
     position: absolute;
     top: 33%;
@@ -263,6 +266,7 @@ input, select, textarea {
     text-align: center;
 }
 
+/*item3 button layout for kiosk page*/
 .item3 .btn {
     position: absolute;
     top: 33%;
@@ -279,6 +283,7 @@ input, select, textarea {
     text-align: center;
 }
 
+/*item4 button layout for kiosk page*/
 .item4 .btn {
     position: absolute;
     top: 57%;
@@ -295,6 +300,7 @@ input, select, textarea {
     text-align: center;
 }
 
+/*item5 button layout for kiosk page*/
 .item5 .btn {
     position: absolute;
     top: 57%;
@@ -311,6 +317,7 @@ input, select, textarea {
     text-align: center;
 }
 
+/*item6 button layout for kiosk page*/
 .item6 .btn {
     position: absolute;
     top: 57%;
@@ -327,6 +334,7 @@ input, select, textarea {
     text-align: center;
 }
 
+/*item7 button layout for kiosk page*/
 .item7 .btn {
     position: absolute;
     top: 81%;
@@ -343,6 +351,7 @@ input, select, textarea {
     text-align: center;
 }
 
+/*item8 button layout for kiosk page*/
 .item8 .btn {
     position: absolute;
     top: 81%;
@@ -359,6 +368,7 @@ input, select, textarea {
     text-align: center;
 }
 
+/*item9 button layout for kiosk page*/
 .item9 .btn {
     position: absolute;
     top: 81%;
