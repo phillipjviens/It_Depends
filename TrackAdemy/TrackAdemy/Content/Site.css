@@ -162,6 +162,7 @@ input, select, textarea {
     background: radial-gradient(#B3C65F,#618B42);
     width: 100%;
     height: 100%;
+
     /*fixed the weird extra green bit. if you don't like it, here's your original code Melissa:
     width: 100vw;
     height: 100vh;
@@ -202,6 +203,7 @@ input, select, textarea {
     padding-top: 10px;
     padding-left: 50px;
     padding-right: 50px;
+    margin-bottom: 10px;
 }
 
     /*The divs of the grid for the kiosk page*/
@@ -229,31 +231,148 @@ input, select, textarea {
     top: 10px;
     right: 10px;
 }
-
-/*Sign in button for the kiosk page*/
-.signInButton {
-    background-color: #FDF9CE;
+.item1 .btn {
+    position: absolute;
+    top: 33%;
+    left: 31.5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 50px 10px;
     border: none;
-    color: green;
-    padding: 15px 15px;
+    cursor: pointer;
+    border-radius: 0;
     text-align: center;
-    text-decoration: none;
-    display: inline;
-    font-size: 10px;
-    border-radius: 8px;
 }
 
-/*Sign out button for the kiosk page*/
-.signOutButton {
-    background-color: #FDF9CE;
+.item2 .btn {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 50px 10px;
     border: none;
-    color: red;
-    padding: 15px 15px;
+    cursor: pointer;
+    border-radius: 0;
     text-align: center;
-    text-decoration: none;
-    display: inline;
-    font-size: 10px;
-    border-radius: 8px;
+}
+
+.item3 .btn {
+    position: absolute;
+    top: 33%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+}
+
+.item4 .btn {
+    position: absolute;
+    top: 57%;
+    left: 31.5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+}
+
+.item5 .btn {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+}
+
+.item6 .btn {
+    position: absolute;
+    top: 57%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+}
+
+.item7 .btn {
+    position: absolute;
+    top: 81%;
+    left: 31.5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+}
+
+.item8 .btn {
+    position: absolute;
+    top: 81%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+}
+
+.item9 .btn {
+    position: absolute;
+    top: 81%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
 }
 
 /*Creates a white background*/
