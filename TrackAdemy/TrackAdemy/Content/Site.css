@@ -71,7 +71,7 @@ body {
 }
 
 /*login divs centering*/
-.login {
+.login
     align-items: center;
     margin-top: 5px;
 }
@@ -166,7 +166,8 @@ input, select, textarea {
 
 /*Background of the home page*/
 .backgroundHome {
-    background: radial-gradient(#B3C65F,#618B42);
+    background: 
+        ;
     width: 100vw;
     height: 100vh;
 }
@@ -204,6 +205,29 @@ input, select, textarea {
         border-radius: 30%;
         overflow: hidden;
     }
+
+.grid-container-white {
+    height: 25%;
+    width: auto;
+    display: grid;
+    grid-template: auto auto auto / auto auto auto;
+    grid-gap: 50px;
+    background-color: white;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-right: 2px;
+    margin-bottom: 5px;
+}
+
+/*The divs of the grid for the kiosk page*/
+.grid-container-white > div {
+    background-color: white;
+    text-align: center;
+    padding: 5px 5px;
+    font-size: 15px;
+    overflow: hidden;
+}
 
 /*Logout button for the kiosk page*/
 .logoutButton {
@@ -450,7 +474,7 @@ input, select, textarea {
     margin:6px 0;
 }
 /*Large container that contains the smaller containers*/
-#grid-containerStore{
+.containerStore{
     display:  grid;
     grid-template-columns:auto auto auto;
     grid-gap:10px;
@@ -458,7 +482,7 @@ input, select, textarea {
     align-content:space-around;
 }
 /*inherited div characteristics for the grids*/
-    #grid-containerStore > div {
+    .containerStore > div {
         border: 2px solid #C2C1C0;
         font-size: 30px;
         font-family: 'Century Gothic';
@@ -467,7 +491,7 @@ input, select, textarea {
     }
 
  /*the smaller grid that defines each shop item and its buttons*/
-#grid-containerSmallerStore {
+.containerSmallerStore {
     display: grid;
     overflow:auto;
     grid-template-columns: auto auto auto auto;
@@ -476,7 +500,7 @@ input, select, textarea {
     height:100%;
 }
 /*inherited div characters for each grid in the smaller grid*/
-    #grid-containerSmallerStore > div {
+    .containerSmallerStore > div {
         background-color: aliceblue;
        text-align: center;
        
@@ -486,7 +510,7 @@ input, select, textarea {
     /*Making the first item (the picture) fit properly
         uses grid area to take up the top row and all 4
         columns, so that the last row can be devoted to buttons*/
-#grid-containerSmallerStore .item1{
+.containerSmallerStore .item1{
     align-self: center;
   
    grid-area:1/1/1/5; /*grid area starting r1,c1, then spans 1x4 grids.*/

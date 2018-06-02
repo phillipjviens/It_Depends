@@ -116,15 +116,9 @@ namespace TrackAdemy.Controllers
             if (myDataStudent == null)
             {
                 return RedirectToAction("Error", "Home");
-            }
+            }           
 
-            var myData = new StudentDisplayViewModel(myDataStudent);
-            if (myData == null)
-            {
-                return RedirectToAction("Error", "Home");
-            }
-
-            return View(myData);
+            return View(myDataStudent);
         }
 
         /// <summary>
@@ -141,12 +135,7 @@ namespace TrackAdemy.Controllers
                 return RedirectToAction("Error", "Home");
             }
 
-            var myData = new StudentDisplayViewModel(myDataStudent);
-            if (myData == null)
-            {
-                return RedirectToAction("Error", "Home");
-            }
-            return View(myData);
+            return View(myDataStudent);
         }
 
         /// <summary>
@@ -168,7 +157,7 @@ namespace TrackAdemy.Controllers
                                         "ExperiencePoints,"+
                                         "Password,"+
 
-                                        "")] StudentDisplayViewModel data)
+                                        "")] StudentViewModel data)
         {
             if (!ModelState.IsValid)
             {
@@ -181,14 +170,14 @@ namespace TrackAdemy.Controllers
                 // Send to Error Page
                 return RedirectToAction("Error", new { route = "Home", action = "Error" });
             }
-
-            if (string.IsNullOrEmpty(data.Id))
+            
+            if (string.IsNullOrEmpty(data.ToString()))
             {
                 // Send back for edit
                 return View(data);
             }
 
-            var myDataStudent = new StudentModel(data);
+            var myDataStudent = new StudentModel();
             StudentBackend.Update(myDataStudent);
 
             return RedirectToAction("Index");
@@ -208,13 +197,8 @@ namespace TrackAdemy.Controllers
                 RedirectToAction("Error", "Home");
             }
 
-            var myData = new StudentDisplayViewModel(myDataStudent);
-            if (myData == null)
-            {
-                RedirectToAction("Error", "Home");
-            }
-
-            return View(myData);
+           
+            return View(myDataStudent);
         }
     }
 }

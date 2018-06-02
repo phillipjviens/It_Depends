@@ -114,11 +114,7 @@ namespace TrackAdemy.Backend
                 return null;
             }
 
-            if (myData.Status != data.Status)
-            {
-                // Status Changed, need to process the status change
-                ToggleStatus(myData);
-            }
+        
 
             // Update the record
             var myReturn = DataSource.Update(data);
@@ -163,8 +159,6 @@ namespace TrackAdemy.Backend
                 return;
             }
 
-            data.Status = StudentStatusEnum.In;
-
             // TODO:  Make call to the Attendance Log, to track when the student logged In.
 
         }
@@ -180,7 +174,7 @@ namespace TrackAdemy.Backend
                 return;
             }
 
-            data.Status = StudentStatusEnum.Out;
+          
 
             // TODO:  Make call to the Attendance Log, to track when the student logged out.
         }
@@ -216,21 +210,7 @@ namespace TrackAdemy.Backend
                 return;
             }
 
-            switch (data.Status)
-            {
-                case StudentStatusEnum.In:
-                    SetLogOut(data);
-                    break;
-
-                case StudentStatusEnum.Out:
-                    SetLogIn(data);
-                    break;
-
-                case StudentStatusEnum.Hold:
-                    SetLogOut(data);
-                    break;
-
-            }
+         
 
             DataSource.Update(data);
 
