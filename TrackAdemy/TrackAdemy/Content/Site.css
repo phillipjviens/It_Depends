@@ -193,6 +193,7 @@ input, select, textarea {
     padding-left: 50px;
     padding-right: 50px;
     margin-bottom: 10px;
+    border-radius: 25px;
 }
 
     /*The divs of the grid for the kiosk page*/
@@ -229,8 +230,8 @@ input, select, textarea {
 }
 
 /*Logout button for the kiosk page*/
-.logoutButton{
-    background-color: #463927;
+.logoutButton {
+    background-color: #605341;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -251,8 +252,8 @@ input, select, textarea {
     left: 31.5%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: blue;
-    color: white;
+    background-color: transparent;
+    color: transparent;
     font-size: 16px;
     padding: 50px 10px;
     border: none;
@@ -268,8 +269,8 @@ input, select, textarea {
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: blue;
-    color: white;
+    background-color: transparent;
+    color: transparent;
     font-size: 16px;
     padding: 50px 10px;
     border: none;
@@ -285,8 +286,8 @@ input, select, textarea {
     left: 68%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: blue;
-    color: white;
+    background-color: transparent;
+    color: transparent;
     font-size: 16px;
     padding: 50px 10px;
     border: none;
@@ -302,8 +303,8 @@ input, select, textarea {
     left: 31.5%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: blue;
-    color: white;
+    background-color: transparent;
+    color: transparent;
     font-size: 16px;
     padding: 50px 10px;
     border: none;
@@ -319,8 +320,8 @@ input, select, textarea {
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: blue;
-    color: white;
+    background-color: transparent;
+    color: transparent;
     font-size: 16px;
     padding: 50px 10px;
     border: none;
@@ -336,8 +337,8 @@ input, select, textarea {
     left: 68%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: blue;
-    color: white;
+    background-color: transparent;
+    color: transparent;
     font-size: 16px;
     padding: 50px 10px;
     border: none;
@@ -353,8 +354,8 @@ input, select, textarea {
     left: 31.5%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: blue;
-    color: white;
+    background-color: transparent;
+    color: transparent;
     font-size: 16px;
     padding: 50px 10px;
     border: none;
@@ -370,8 +371,8 @@ input, select, textarea {
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: blue;
-    color: white;
+    background-color: transparent;
+    color: transparent;
     font-size: 16px;
     padding: 50px 10px;
     border: none;
@@ -387,8 +388,8 @@ input, select, textarea {
     left: 68%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: blue;
-    color: white;
+    background-color: transparent;
+    color: transparent;
     font-size: 16px;
     padding: 50px 10px;
     border: none;

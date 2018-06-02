@@ -22,8 +22,8 @@
 
                 <!--Student 1 picture with checkin and check out buttons-->
                 <div class="item1"> 
-                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student1.png" class="picture" />
-                    <button class="btn">CHECKMARK</button>      
+                    <img id="checkmark" src="~/Content/images/NewFolder1/StudentImagesPNG/Student1.png" class="picture" />
+                    <button onclick="checkMark()" class="btn">CHECKMARK</button>      
                 </div>
 
                 <!--Student 2 picture with checkin and check out buttons-->
@@ -79,5 +79,11 @@
         </div>
 
     </div>
+
+<script>
+    function checkMark() {
+        document.getElementsByID("checkmark").src = "~/Content/images/SVG/Kiosk_Checkmark.svg";
+    }
+</script>
 
 </body>
