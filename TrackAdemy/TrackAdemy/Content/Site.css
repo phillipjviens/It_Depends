@@ -166,8 +166,7 @@ input, select, textarea {
 
 /*Background of the home page*/
 .backgroundHome {
-    background: 
-        ;
+    background: radial-gradient(#B3C65F,#618B42);
     width: 100vw;
     height: 100vh;
 }
