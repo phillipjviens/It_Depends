@@ -48,7 +48,6 @@ body {
 }
 
 
-
 /*covers all input buttons*/
 input[type=submit] {
     width: 100%;
@@ -105,6 +104,19 @@ input, select, textarea {
 }
 
 /*NAV*/
+/*custom class a for setting navbar elems*/
+a {
+    color: white;
+    float: right;
+}
+
+/*list for navbar elements*/
+li a {
+    display: inline;
+    padding: 10px;
+    text-align: center;
+    margin-right: -10px;
+}
 /*adminNav bar gradient*/
 #adminNav {
     background: linear-gradient(to right, #C22026,#F2696A);
