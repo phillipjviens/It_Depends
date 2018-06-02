@@ -205,6 +205,29 @@ input, select, textarea {
         overflow: hidden;
     }
 
+.grid-container-white {
+    height: 25%;
+    width: auto;
+    display: grid;
+    grid-template: auto auto auto / auto auto auto;
+    grid-gap: 50px;
+    background-color: white;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-right: 2px;
+    margin-bottom: 5px;
+}
+
+/*The divs of the grid for the kiosk page*/
+.grid-container-white > div {
+    background-color: white;
+    text-align: center;
+    padding: 5px 5px;
+    font-size: 15px;
+    overflow: hidden;
+}
+
 /*Logout button for the kiosk page*/
 .logoutButton{
     background-color: #463927;
