@@ -2,7 +2,7 @@
     ViewBag.Title = "Pet Store";
 }
 <body>
-   
+
     <div class="row">
         <div class="columnthird">
             <img src="~/Content/images/SVG/Pet_Home.svg" alt="Pet" style="width:100%;height:auto;" />
@@ -12,115 +12,134 @@
 
                 <h2>Look at all this great stuff!</h2>
                 <h3>I've had my eye on this for awhile:</h3>
-                <img src="~/Content/images/SVG/Store_CowboyHat.svg" alt="Cowboy Hat"
+                <img src="~/Content/images/SVG/Store_DogBed.svg" alt="Cowboy Hat"
                      style="width:100%;height:auto;max-width:100px;max-height:250px">
             </div>
         </div>
         <div class="columnthird">
-            <h1 style="text-align:center">356</h1>
-            <img src="~/Content/images/SVG/Trackoin_Pile.svg" alt="Pet" style="width:100%;height:auto;" />
+            <h1 style="text-align:center; font-family:'Century Gothic'"><br />356<br /><br /><img src="~/Content/images/SVG/Trackoin_Pile.svg" alt="Pet" style="width:50%;height:auto;text-align:right;" /></h1>
+
         </div>
     </div>
-    <div class="row">
-        <div class="columnthird">
-            <img src="~/Content/images/SVG/Store_Collar.svg" alt="Collar"
-                 style="width:100%;height:auto;max-width:250px;max-height:250px">
+    <!--store container-->
+    <div class="containerStore">
+        <div>
+            <!--1st item-->
+            <div class="containerSmallerStore">
+                <div class="item1">
+                    <!--first time pic-->
+                    <img src="~/Content/images/SVG/Store_Collar.svg" alt="Collar" style="max-height:200px" />
+                </div>
+                <div>
+                    <!--buy button-->
+                    <btn class="btn-warning">BUY!</btn>
+                </div>
+                <div></div>
+                <div></div>
+                <div>
+                    <!--price-->
+                    <text class="storeText">200</text>
+                </div>
+            </div>
+        </div>
+        <div>
+            <!--2nd item-->
+            <div class="containerSmallerStore">
+                <div class="item1">
+                    <!--first time pic-->
+                    <img src="~/Content/images/SVG/Store_CowboyHat.svg" alt="Cowboy Hat" style="max-height:200px" />
+                </div>
+                <div>
+                    <!--buy button-->
+                    <btn class="btn-warning">BUY!</btn>
+                </div>
+                <div></div><!--space-->
+                <div></div>
+                <div>
+                    <!--price-->
+                    <text class="storeText">150</text>
+                </div>
+            </div>
+        </div>
+        <div>
+            <!--3rd item-->
+            <div class="containerSmallerStore">
+                <div class="item1">
+                    <!--first time pic-->
+                    <img src="~/Content/images/SVG/Store_Mustache.svg" alt="Mustache" style="max-height:200px" />
+                </div>
+                <div>
+                    <!--buy button-->
+                    <btn class="btn-warning">BUY!</btn>
+                </div>
+                <div></div><!--space-->
+                <div></div>
+                <div>
+                    <!--price-->
+                    <text class="storeText storeButtons">1100</text>
+                </div>
+            </div>
+        </div>
+        <div>
+            <!--4th item-->
+            <div class="containerSmallerStore">
+                <div class="item1">
+                    <!--first time pic-->
+                    <img src="~/Content/images/SVG/Store_Handkerchief_Dark.svg" alt="Handkerchief" style="max-height:200px" />
+                </div>
+                <div>
+                    <!--buy button-->
+                    <btn class="btn-danger">Bought!</btn>
+                </div>
+                <div></div>
+                <div></div>
+                <div>
+                    <!--price-->
+                    <text class="storeText"></text>
+                </div>
+            </div>
+        </div>
+        <div>
+            <!--5th item-->
+            <div class="containerSmallerStore">
+                <div class="item1">
+                    <!--first time pic-->
+                    <img src="~/Content/images/SVG/Store_Ball.svg" alt="Ball" style="max-height:200px" />
+                </div>
+                <div>
+                    <!--buy button-->
+                    <btn class="btn-warning">Sold out!</btn>
+                </div>
+                <div></div><!--space-->
+                <div></div>
+                <div>
+                    <!--price-->
+                    <text class="storeText"></text>
+                </div>
+            </div>
+        </div>
+        <div>
+            <!--6th item-->
+            <div class="containerSmallerStore">
+                <div class="item1">
+                    <!--first time pic-->
+                    <img src="~/Content/images/SVG/Store_DogBed.svg" alt="Dog Bed" />
+                </div>
+                <div>
+                    <!--buy button-->
+                    <btn class="btn-warning">BUY!</btn>
+                </div>
+                <div></div><!--space-->
+                <div></div>
+                <div>
+                    <!--price-->
+                    <text class="storeText">350</text>
+                </div>
+            </div>
+        </div>
+    </div> <!--end grid container-->
 
-        </div>
-        <div class="columnthird">
-            <img src="~/Content/images/SVG/Store_CowboyHat.svg" alt="Cowboy Hat"
-                 style="width:100%;height:auto;max-width:250px;max-height:250px">
 
-        </div>
-        <div class="columnthird"style="margin:auto;">
-            <img src="~/Content/images/SVG/Store_Mustache.svg" alt="Mustache"
-                 style="width:100%;height:auto;max-width:250px;max-height:250px">
-        </div>
-    </div>
-    <div class="row">
-        <div class="columnthird">
-            <div class="columnthird">
-                <btn class="btn-warning">BUY!</btn>
-            </div>
-            <div class="columnthird">
-                
-            </div>
-            <div class="columnthird">
-                <text class="storeText">100</text>
-            </div>
-        </div>
-        <div class="columnthird">
-            <div class="columnthird">
-                <btn class="btn-warning">BUY!</btn>
-            </div>
-            <div class="columnthird">
 
-            </div>
-            <div class="columnthird">
-                <text class="storeText">350</text>
-            </div>
-        </div>
-        <div class="columnthird">
-            <div class="columnthird">
-                <btn class="btn-warning">BUY!</btn>
-            </div>
-            <div class="columnthird">
 
-            </div>
-            <div class="columnthird">
-                <text class="storeText">200</text>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="columnthird">
-            <img src="~/Content/images/SVG/Store_Handkerchief_Dark.svg" alt="Handkerchief"
-                 style="width:100%;height:auto;max-width:250px;max-height:250px">
-
-        </div>
-        <div class="columnthird">
-            <img src="~/Content/images/SVG/Store_Speak_Dark.svg" alt="Speak"
-                 style="width:100%;height:auto;max-width:250px;max-height:250px">
-
-        </div>
-        <div class="columnthird"style="margin:auto;">
-            <img src="~/Content/images/SVG/Store_Ball.svg" alt="Ball"
-                 style="width:100%;height:auto;max-width:250px;max-height:250px">
-        </div>
-    </div>
-    <div class="row" >
-        <div class="columnthird">
-            <div class="columnthird">
-                <btn class="btn-danger">BOUGHT!</btn>
-            </div>
-            <div class="columnthird">
-
-            </div>
-            <div class="columnthird">
-                <text class="text-right"></text>
-            </div>
-        </div>
-        <div class="columnthird">
-            <div class="columnthird">
-                <btn class="btn-danger">SOLD OUT!</btn>
-            </div>
-            <div class="columnthird">
-                
-            </div>
-            <div class="columnthird">
-                <btn class="btn-danger">SOLD OUT!</btn>
-            </div>
-        </div>
-        <div class="columnthird">
-            <div class="columnthird">
-                <btn class="btn-warning">BUY!</btn>
-            </div>
-            <div class="columnthird">
-
-            </div>
-            <div class="columnthird">
-                <text class="storeText">100</text>
-            </div>
-        </div>
-    </div>
 </body>

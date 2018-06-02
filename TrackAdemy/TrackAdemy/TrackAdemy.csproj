@@ -189,9 +189,10 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Backend\UserInterface.cs" />
-    <Compile Include="Backend\UserDataSourceMock.cs" />
-    <Compile Include="Backend\UserBackend.cs" />
+    <Compile Include="Backend\DataSourceBackend.cs" />
+    <Compile Include="Backend\StudentInterface.cs" />
+    <Compile Include="Backend\StudentDataSourceMock.cs" />
+    <Compile Include="Backend\Student Backend.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\KioskController.cs" />
@@ -201,8 +202,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\UserViewModel.cs" />
-    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Models\AdminKioskModel.cs" />
+    <Compile Include="Models\Enums\StudentStatusEnum.cs" />
+    <Compile Include="Models\Enums\DataSourceEnum.cs" />
+    <Compile Include="Models\SystemGlobals.cs" />
+    <Compile Include="Models\StudentViewModel.cs" />
+    <Compile Include="Models\StudentModel.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -260,6 +265,7 @@
     <Content Include="Content\images\SVG\Aspiration_Streak.svg" />
     <Content Include="Content\images\SVG\Aspiration_Streak_Dark.svg" />
     <Content Include="Content\images\SVG\Backyard-Title.svg" />
+    <Content Include="Content\images\SVG\Backyard.svg" />
     <Content Include="Content\images\SVG\Backyard_Inventory.svg" />
     <Content Include="Content\images\SVG\Backyard_Title.svg" />
     <Content Include="Content\images\SVG\Chart SVG\Admin_Calendar.svg" />
@@ -308,6 +314,8 @@
     <Content Include="Content\images\SVG\Store_Collar.svg" />
     <Content Include="Content\images\SVG\Store_CowboyHat.svg" />
     <Content Include="Content\images\SVG\Store_CowboyHat_Dark.svg" />
+    <Content Include="Content\images\SVG\Store_DogBed.svg" />
+    <Content Include="Content\images\SVG\Store_DogBed_Dark.svg" />
     <Content Include="Content\images\SVG\Store_Handkerchief.svg" />
     <Content Include="Content\images\SVG\Store_Handkerchief_Dark.svg" />
     <Content Include="Content\images\SVG\Store_Mustache.svg" />
@@ -331,6 +339,10 @@
     </Content>
     <Content Include="Content\images\PetStore.pdf" />
     <Content Include="Views\Admin\Calendar.cshtml" />
+    <Content Include="Views\Student\Create.cshtml" />
+    <Content Include="Views\Student\Read.cshtml" />
+    <Content Include="Views\Student\Update.cshtml" />
+    <Content Include="Views\Student\Delete.cshtml" />
     <Resource Include="fonts\collegiateHeavyOutline Medium.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

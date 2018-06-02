@@ -7,7 +7,7 @@ body {
     height: 100vh;
     padding-top: 50px;
 }
-
+/*attempting to add font to project*/
 @font-face {
     font-family: "CollegiateHeavyOutline Medium.ttf";
     font-style: normal;
@@ -19,11 +19,11 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
-
+/*adminNav bar gradient*/
 #adminNav {
     background: linear-gradient(to right, #C22026,#F2696A);
 }
-
+/*studentNav bar gradient*/
 #studentNav {
     background: linear-gradient(to right, #37499F,#3D92D0);
 }
@@ -162,13 +162,9 @@ input, select, textarea {
     background: radial-gradient(#B3C65F,#618B42);
     width: 100%;
     height: 100%;
-    /*fixed the weird extra green bit. if you don't like it, here's your original code Melissa:
-    width: 100vw;
-    height: 100vh;
-    ~Jake 
-    position: absolute;*/
 }
 
+/*Background of the home page*/
 .backgroundHome {
     background: 
         ;
@@ -184,15 +180,10 @@ input, select, textarea {
     width: 75%;
 }
 
-/*Centers the pet yard picture*/
-.centerYard {
-    /*width: 100vw;
-    display: flex;
-    justify-content: center;*/
-}
-
 /*Creates a grid for the kiosk page*/
 .grid-container {
+    height: 50%;
+    width: auto;
     display: grid;
     grid-template: auto auto auto / auto auto auto;
     grid-gap: 50px;
@@ -201,16 +192,17 @@ input, select, textarea {
     padding-top: 10px;
     padding-left: 50px;
     padding-right: 50px;
+    margin-bottom: 10px;
 }
 
     /*The divs of the grid for the kiosk page*/
     .grid-container > div {
-        background-color: #618B42;
+        background-color: #B3C65F;
         text-align: center;
         padding: 5px 5px;
         font-size: 15px;
-        border-radius: 25px;
-        /* overflow: hidden;*/
+        border-radius: 30%;
+        overflow: hidden;
     }
 
 /*Logout button for the kiosk page*/
@@ -229,30 +221,157 @@ input, select, textarea {
     right: 10px;
 }
 
-/*Sign in button for the kiosk page*/
-.signInButton {
-    background-color: #FDF9CE;
+/*item1 button layout for kiosk page*/
+.item1 .btn {
+    position: absolute;
+    top: 33%;
+    left: 31.5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 50px 10px;
     border: none;
-    color: green;
-    padding: 15px 15px;
+    cursor: pointer;
+    border-radius: 0;
     text-align: center;
-    text-decoration: none;
-    display: inline;
-    font-size: 10px;
-    border-radius: 8px;
 }
 
-/*Sign out button for the kiosk page*/
-.signOutButton {
-    background-color: #FDF9CE;
+/*item2 button layout for kiosk page*/
+.item2 .btn {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 50px 10px;
     border: none;
-    color: red;
-    padding: 15px 15px;
+    cursor: pointer;
+    border-radius: 0;
     text-align: center;
-    text-decoration: none;
-    display: inline;
-    font-size: 10px;
-    border-radius: 8px;
+}
+
+/*item3 button layout for kiosk page*/
+.item3 .btn {
+    position: absolute;
+    top: 33%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+}
+
+/*item4 button layout for kiosk page*/
+.item4 .btn {
+    position: absolute;
+    top: 57%;
+    left: 31.5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+}
+
+/*item5 button layout for kiosk page*/
+.item5 .btn {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+}
+
+/*item6 button layout for kiosk page*/
+.item6 .btn {
+    position: absolute;
+    top: 57%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+}
+
+/*item7 button layout for kiosk page*/
+.item7 .btn {
+    position: absolute;
+    top: 81%;
+    left: 31.5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+}
+
+/*item8 button layout for kiosk page*/
+.item8 .btn {
+    position: absolute;
+    top: 81%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+}
+
+/*item9 button layout for kiosk page*/
+.item9 .btn {
+    position: absolute;
+    top: 81%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
 }
 
 /*Creates a white background*/
@@ -267,8 +386,9 @@ input, select, textarea {
 .picture {
     height: auto;
     width: 60%;
-    border-radius: 50px;
+    border-radius: 30%;
     overflow: hidden;
+    outline: 20px solid #463927;
 }
 
 /*Formats the backyard picture on the pet yard page*/
@@ -290,11 +410,9 @@ input, select, textarea {
     line-height: 400px !important;
     margin-bottom: 10px;
     margin-top: 30px;
-
-
 }
 
-
+/*Speech bubble for Store page*/
 .speech-bubble {
     position: relative;
     background: linear-gradient(to right,#3D92D0, #7FC2D6);
@@ -302,7 +420,7 @@ input, select, textarea {
     padding: 20px;
     text-align: center;
 }
-
+/*Speech bubble triangle for store page*/
     .speech-bubble:after {
         content: '';
         position: absolute;
@@ -317,19 +435,59 @@ input, select, textarea {
         margin-left: -26px;
     }
 
+ /*not button element for grid item*/
 .storeText{
     font-family:'Century Gothic';
     text-align:right;
 }
-.storeText:after{
+/*coin icon for purchasing items*/
+.storeText::after{
     content: "";
-    display: block;
     background: url('images/SVG/Trackoin_Individual.svg') no-repeat;
-    width:20px;
-    height:20px;
-    float:left;
-    margin:0;
+    width:30px;
+    height:30px;
+    float:right;
+    margin:6px 0;
 }
+/*Large container that contains the smaller containers*/
+.containerStore{
+    display:  grid;
+    grid-template-columns:auto auto auto;
+    grid-gap:10px;
+    background-color: white;
+    align-content:space-around;
+}
+/*inherited div characteristics for the grids*/
+    .containerStore > div {
+        border: 2px solid #C2C1C0;
+        font-size: 30px;
+        font-family: 'Century Gothic';
+        justify-content: center;
+        align-items:center;
+    }
 
-
-
+ /*the smaller grid that defines each shop item and its buttons*/
+.containerSmallerStore {
+    display: grid;
+    overflow:auto;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows:auto 50px;
+    background-color: aliceblue;
+    height:100%;
+}
+/*inherited div characters for each grid in the smaller grid*/
+    .containerSmallerStore > div {
+        background-color: aliceblue;
+       text-align: center;
+       
+        font-family: 'Century Gothic';
+        font-size: 30px;
+    }
+    /*Making the first item (the picture) fit properly
+        uses grid area to take up the top row and all 4
+        columns, so that the last row can be devoted to buttons*/
+.containerSmallerStore .item1{
+    align-self: center;
+  
+   grid-area:1/1/1/5; /*grid area starting r1,c1, then spans 1x4 grids.*/
+}

@@ -12,10 +12,10 @@ namespace TrackAdemy.Controllers
     public class HomeController : Controller
     {
         // A ViewModel used for the User that contains the UserList
-        private UserViewModel userViewModel = new UserViewModel();
+        private StudentViewModel studentViewModel = new StudentViewModel();
 
         // The Backend Data source
-        private UserBackend userBackend = UserBackend.Instance;
+        private StudentBackend studentBackend = StudentBackend.Instance;
 
         //GET: User
         /// <summary>
@@ -25,8 +25,8 @@ namespace TrackAdemy.Controllers
         /// <returns></returns>
         public ActionResult Index()
         {
-            userViewModel.UserList = userBackend.Index();
-            return View(userViewModel);
+            //studentViewModel.StudentList = studentBackend.Index();
+            return View();  //userViewModel);
         }
 
         public ActionResult About()
@@ -48,6 +48,7 @@ namespace TrackAdemy.Controllers
 
             return View();
         }
+        /*
         //public ActionResult FormHandler(string username, int level)
         //{
         //    return RedirectToAction("Admin");
@@ -60,8 +61,8 @@ namespace TrackAdemy.Controllers
         // GET: Avatar/Details/5
         public ActionResult Read(string username = null)
         {
-            var myData = userBackend.Read(username);
-            return View(myData);
+           // var myData = userBackend.Read(username);
+            return View(); //mydata
         }
 
         /// <summary>
@@ -71,11 +72,14 @@ namespace TrackAdemy.Controllers
         /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Read([Bind(Include=
-                                        "Username,"+
-                                        "Password,"+
-                                        "accessLevel,"+
-                                        "")] UserModel data)
+        public ActionResult Create([Bind(Include=
+                                        "Id,"+
+                                        "Name,"+
+                                        "Description,"+
+                                        "Uri,"+
+                                        "AvatarId,"+
+                                        "Status,"+
+                                        "")] StudentModel data)
         {
             if (!ModelState.IsValid)
             {
@@ -83,19 +87,19 @@ namespace TrackAdemy.Controllers
                 return View(data);
             }
 
-            if (data == null)
+            if ( data == null)
             {
                 // Send to Error Page
                 return RedirectToAction("Error", new { route = "Home", action = "Error" });
             }
 
-            if (string.IsNullOrEmpty(data.Username))
+            if (string.IsNullOrEmpty(data.Username)
             {
                 // Sind back for Edit
                 return View(data);
             }
 
-            switch (userBackend.Read(data.Username).AccessLevel)
+            switch (studentBackend.Read(data.Username).AccessLevel)
             {
                 case 1:
                     return RedirectToAction("Action", "Student", new { id = "Index" });
@@ -114,7 +118,7 @@ namespace TrackAdemy.Controllers
         }
         public ActionResult CheckAcess()
         {
-            return View(new UserViewModel());
+            return View(new StudentViewModel());
         }
 
         [HttpPost]
@@ -279,6 +283,6 @@ namespace TrackAdemy.Controllers
             userBackend.Delete(data.Username);
 
             return RedirectToAction("Index");
-        }
+        }*/
     }
 }
