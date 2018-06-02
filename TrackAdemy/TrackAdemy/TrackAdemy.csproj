@@ -192,7 +192,7 @@
     <Compile Include="Backend\DataSourceBackend.cs" />
     <Compile Include="Backend\StudentInterface.cs" />
     <Compile Include="Backend\StudentDataSourceMock.cs" />
-    <Compile Include="Backend\Student Backend.cs" />
+    <Compile Include="Backend\StudentBackend.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\KioskController.cs" />
