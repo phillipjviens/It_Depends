@@ -71,7 +71,7 @@ body {
 }
 
 /*login divs centering*/
-.login {
+.login
     align-items: center;
     margin-top: 5px;
 }
@@ -170,7 +170,8 @@ input, select, textarea {
 }
 
 .backgroundHome {
-    background: radial-gradient(#B3C65F,#618B42);
+    background: 
+        ;
     width: 100vw;
     height: 100vh;
 }
