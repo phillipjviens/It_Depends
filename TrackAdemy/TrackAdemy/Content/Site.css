@@ -71,7 +71,7 @@ body {
 }
 
 /*login divs centering*/
-.login
+.login {
     align-items: center;
     margin-top: 5px;
 }
@@ -435,6 +435,10 @@ input, select, textarea {
     margin-top: 30px;
 }
 
+
+
+/*STORE PAGE*/
+
 /*Speech bubble for Store page*/
 .speech-bubble {
     position: relative;
@@ -510,7 +514,8 @@ input, select, textarea {
         uses grid area to take up the top row and all 4
         columns, so that the last row can be devoted to buttons*/
 .containerSmallerStore .item1{
-    align-self: center;
-  
+    align-self: center;  
    grid-area:1/1/1/5; /*grid area starting r1,c1, then spans 1x4 grids.*/
 }
+
+/*end STORE PAGE*/
