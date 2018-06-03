@@ -16,6 +16,12 @@ namespace TrackAdemy.Controllers
         // User backend data source.
         //private UserBackend userBackend = UserBackend.Instance;
 
+        // creates a list of students
+        private StudentViewModel studentViewModel = new StudentViewModel();
+
+        //student backend data source
+        private StudentBackend studentBackend = StudentBackend.Instance;
+
 
         /// <summary>
         /// Admin home view
@@ -23,7 +29,8 @@ namespace TrackAdemy.Controllers
         /// <returns>View</returns>
         public ActionResult Index()
         {
-            return View();
+            studentViewModel.StudentList = studentBackend.Index();
+            return View(studentViewModel);
         }
 
         /// <summary>
@@ -52,11 +59,11 @@ namespace TrackAdemy.Controllers
         /// Modify's student data (name, picture(?), hours, deletes)
         /// </summary>
         /// <returns>View</returns>
-        public ActionResult ManageStudent()
+        public ActionResult ManageStudent(string id = null)
         {
-            ViewBag.Message = "Manage a student in the database.";
+            var myData = studentBackend.Read(id);
 
-            return View();
+            return View(myData);
         }
 
         public ActionResult Calendar()
