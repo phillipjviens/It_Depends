@@ -127,6 +127,26 @@ namespace TrackAdemy.Models
             Initialize();
         }
 
+        public StudentModel(StudentModel data)
+        {
+            Initialize();
+
+            Id = data.Id;
+            FirstName = data.FirstName;
+            LastName = data.LastName;
+            Username = data.Username;
+            Password = data.Password;
+            URIProfilePicture = data.URIProfilePicture;
+            URICurrentWeek = data.URICurrentWeek;
+            URICurrentMonth = data.URICurrentMonth;
+            URI3Months = data.URI3Months;
+            URIYear2Date = data.URIYear2Date;
+            TotalHours = data.TotalHours;
+            DaysAttended = data.DaysAttended;
+            AvgIn = data.AvgIn;
+            AvgOut = data.AvgOut;
+        }
+
         /// <summary>
         /// Constructor for Student.  Call this when making a new student
         /// </summary>

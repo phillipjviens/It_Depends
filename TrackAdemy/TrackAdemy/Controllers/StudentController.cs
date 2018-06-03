@@ -74,11 +74,16 @@ namespace TrackAdemy.Controllers
         [HttpPost]
         public ActionResult Create([Bind(Include=
                                         "Id,"+
-                                        "Name,"+
-                                        "Description,"+
-                                        "Uri,"+
-                                        "AvatarId,"+
-                                        "Status,"+
+                                        "FirstName,"+
+                                        "LastName,"+
+                                        "Username,"+
+                                        "URICurrentWeek"+
+                                        "URICurrentMonth"+
+                                        "URI3Months"+
+                                        "URIYear2Date"+
+                                        "TotalHours"+
+                                        "AvgIn"+
+                                        "AvgOut"+
                                         "")] StudentModel data)
         {
             if (!ModelState.IsValid)
@@ -116,7 +121,7 @@ namespace TrackAdemy.Controllers
             if (myDataStudent == null)
             {
                 return RedirectToAction("Error", "Home");
-            }           
+            }
 
             return View(myDataStudent);
         }
@@ -147,17 +152,20 @@ namespace TrackAdemy.Controllers
         [HttpPost]
         public ActionResult Update([Bind(Include=
                                         "Id,"+
-                                        "Name,"+
-                                        "Description,"+
-                                        "Uri,"+
-                                        "AvatarId,"+
-                                        "AvatarLevel,"+
-                                        "Tokens,"+
-                                        "Status,"+
-                                        "ExperiencePoints,"+
+                                        "FirstName,"+
+                                        "LastName,"+
+                                        "URIProfilePicture,"+
+                                        "Username,"+
                                         "Password,"+
-
-                                        "")] StudentViewModel data)
+                                        "URICurrentWeek,"+
+                                        "URICurrentMonth,"+
+                                        "URI3Months,"+
+                                        "URIYear2Date,"+
+                                        "TotalHours,"+
+                                        "DaysAttended,"+
+                                        "AvgIn,"+
+                                        "AvgOut,"+
+                                        "")] StudentModel data)
         {
             if (!ModelState.IsValid)
             {
@@ -170,14 +178,14 @@ namespace TrackAdemy.Controllers
                 // Send to Error Page
                 return RedirectToAction("Error", new { route = "Home", action = "Error" });
             }
-            
+
             if (string.IsNullOrEmpty(data.ToString()))
             {
                 // Send back for edit
                 return View(data);
             }
 
-            var myDataStudent = new StudentModel();
+            var myDataStudent = new StudentModel(data);
             StudentBackend.Update(myDataStudent);
 
             return RedirectToAction("Index");
@@ -197,8 +205,55 @@ namespace TrackAdemy.Controllers
                 RedirectToAction("Error", "Home");
             }
 
-           
+
             return View(myDataStudent);
         }
+
+        /// <summary>
+        /// This deletes the Student sent up as a post from the Student delete page
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        // POST: Student/Delete/5
+        [HttpPost]
+        public ActionResult Delete([Bind(Include=
+                                        "Id,"+
+                                        "FirstName,"+
+                                        "LastName,"+
+                                        "URIProfilePicture,"+
+                                        "Username,"+
+                                        "Password,"+
+                                        "URICurrentWeek,"+
+                                        "URICurrentMonth,"+
+                                        "URI3Months,"+
+                                        "URIYear2Date,"+
+                                        "TotalHours,"+
+                                        "DaysAttended,"+
+                                        "AvgIn,"+
+                                        "AvgOut,"+
+                                        "")] StudentModel data)
+        {
+            if (!ModelState.IsValid)
+            {
+                // Send back for edit
+                return View(data);
+            }
+            if (data == null)
+            {
+                // Send to Error page
+                return RedirectToAction("Error", new { route = "Home", action = "Error" });
+            }
+
+            if (string.IsNullOrEmpty(data.Id))
+            {
+                // Send back for Edit
+                return View(data);
+            }
+
+            StudentBackend.Delete(data.Id);
+
+            return RedirectToAction("Index");
+        }
+
     }
 }

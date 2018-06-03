@@ -1,4 +1,4 @@
-﻿@model Student.Models.StudentDisplayViewModel
+﻿@model TrackAdemy.Models.StudentModel
 
 @{
     ViewBag.Title = "Delete";
@@ -8,56 +8,62 @@
     <div class="row">
 
         @{
-        if (Model == null)
-        {
-        <p>No Student</p>
-        }
-
-        else
-        {
-        <div class="row">
-            <h2>Delete Student</h2>
-            <br />
-            <br />
-
-            <div class="row">
-                <div class="col-sm-3 text-right">
-                </div>
-                <div class="col-sm-2">
-                    <img src="~/Content/img/@Model.AvatarUri" class="AvatarSize1" />
-                    <br />
-                    <span>
-                        @Model.Name
-                        <br />
-                        <br />
-                        <br />
-                    </span>
-                </div>
-            </div>
-
-            @using (Html.BeginForm())
+            if (Model == null)
             {
-            @Html.AntiForgeryToken()
-            @Html.HiddenFor(m => m.Id)
-            @Html.HiddenFor(m => m.Name)
-            @Html.HiddenFor(m => m.AvatarId)
-            @Html.HiddenFor(m => m.AvatarLevel)
-            @Html.HiddenFor(m => m.Tokens)
-            @Html.HiddenFor(m => m.ExperiencePoints)
-            @Html.HiddenFor(m => m.Password)
-
-            <div class="row">
-                <div class="col-sm-3 text-right">
-                </div>
-                <div class="col-sm-4">
-                    @Html.ActionLink("Cancel", "Index", new { id = Model.Id }, new { @class = "btn btn-success" })
-                    <input type="submit" value="Delete" class="btn btn-danger">
-                </div>
-            </div>
+                <p>No Student</p>
             }
 
-        </div>
-        }
+            else
+            {
+                <div class="row">
+                    <h2>Delete Student</h2>
+                    <br />
+                    <br />
+
+                    <div class="row">
+                        <div class="col-sm-3 text-right">
+                        </div>
+                        <div class="col-sm-2">
+                            <img src=@Model.URIProfilePicture class="AvatarSize1" />
+                            <br />
+                            <span>
+                                @Model.FirstName @Model.LastName
+                                <br />
+                                <br />
+                                <br />
+                            </span>
+                        </div>
+                    </div>
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.HiddenFor(m => m.Id)
+                        @Html.HiddenFor(m => m.FirstName)
+                        @Html.HiddenFor(m => m.LastName)
+                        @Html.HiddenFor(m => m.URIProfilePicture)
+                        @Html.HiddenFor(m => m.Username)
+                        @Html.HiddenFor(m => m.Password)
+                        @Html.HiddenFor(m => m.URICurrentWeek)
+                        @Html.HiddenFor(m => m.URICurrentMonth)
+                        @Html.HiddenFor(m => m.URI3Months)
+                        @Html.HiddenFor(m => m.URIYear2Date)
+                        @Html.HiddenFor(m => m.TotalHours)
+                        @Html.HiddenFor(m => m.DaysAttended)
+                        @Html.HiddenFor(m => m.AvgIn)
+                        @Html.HiddenFor(m => m.AvgOut)
+                        <div class="row">
+                            <div class="col-sm-3 text-right">
+                            </div>
+                            <div class="col-sm-4">
+                                @Html.ActionLink("Cancel", "Index", new { id = Model.Id }, new { @class = "btn btn-success" })
+                                <input type="submit" value="Delete" class="btn btn-danger">
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            }
 
         }
     </div>
