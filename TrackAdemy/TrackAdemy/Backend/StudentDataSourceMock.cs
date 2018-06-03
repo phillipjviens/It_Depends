@@ -144,15 +144,15 @@ namespace TrackAdemy.Backend
         private void DataSetDefault()
         {
             DataSetClear();
-            Create(new StudentModel("Mike","K","","","~Content/images/StudentImages/Student1.png","","","","",20,10,"5","3:45"));
-            Create(new StudentModel("Lop", "A", "", "", "~Content/images/StudentImages/Student2.png", "", "", "", "", 20, 10, "5", "3:45"));
-            Create(new StudentModel("Lop", "A", "", "", "~Content/images/StudentImages/Student3.png", "", "", "", "", 20, 10, "5", "3:45"));
-            Create(new StudentModel("Lop", "A", "", "", "~Content/images/StudentImages/Student4.png", "", "", "", "", 20, 10, "5", "3:45"));
-            Create(new StudentModel("Lop", "A", "", "", "~Content/images/StudentImages/Student5.png", "", "", "", "", 20, 10, "5", "3:45"));
-            Create(new StudentModel("Lop", "A", "", "", "~Content/images/StudentImages/Student6.png", "", "", "", "", 20, 10, "5", "3:45"));
-            Create(new StudentModel("Lop", "A", "", "", "~Content/images/StudentImages/Student7.png", "", "", "", "", 20, 10, "5", "3:45"));
-            Create(new StudentModel("Lop", "A", "", "", "~Content/images/StudentImages/Student8.png", "", "", "", "", 20, 10, "5", "3:45"));
-            Create(new StudentModel("Lop", "A", "", "", "~Content/images/StudentImages/Student9.png", "", "", "", "", 20, 10, "5", "3:45"));
+            Create(new StudentModel("Mike","K","","","/Content/images/StudentImages/Student1.png","","","","",20,10,"5","3:45"));
+            Create(new StudentModel("Lop", "A", "", "", "/Content/images/StudentImages/Student2.png", "", "", "", "", 20, 10, "5", "3:45"));
+            Create(new StudentModel("Lop", "A", "", "", "/Content/images/StudentImages/Student3.png", "", "", "", "", 20, 10, "5", "3:45"));
+            Create(new StudentModel("Lop", "A", "", "", "/Content/images/StudentImages/Student4.png", "", "", "", "", 20, 10, "5", "3:45"));
+            Create(new StudentModel("Lop", "A", "", "", "/Content/images/StudentImages/Student5.png", "", "", "", "", 20, 10, "5", "3:45"));
+            Create(new StudentModel("Lop", "A", "", "", "/Content/images/StudentImages/Student6.png", "", "", "", "", 20, 10, "5", "3:45"));
+            Create(new StudentModel("Lop", "A", "", "", "/Content/images/StudentImages/Student7.png", "", "", "", "", 20, 10, "5", "3:45"));
+            Create(new StudentModel("Lop", "A", "", "", "/Content/images/StudentImages/Student8.png", "", "", "", "", 20, 10, "5", "3:45"));
+            Create(new StudentModel("Lop", "A", "", "", "/Content/images/StudentImages/Student9.png", "", "", "", "", 20, 10, "5", "3:45"));
         }
 
         /// <summary>
