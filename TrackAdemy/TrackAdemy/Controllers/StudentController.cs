@@ -106,7 +106,7 @@ namespace TrackAdemy.Controllers
 
             StudentBackend.Create(data);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("ManageStudent","Admin");
         }
 
         /// <summary>
@@ -188,7 +188,7 @@ namespace TrackAdemy.Controllers
             var myDataStudent = new StudentModel(data);
             StudentBackend.Update(myDataStudent);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("ManageStudent", "Admin");
         }
 
         /// <summary>
@@ -252,7 +252,7 @@ namespace TrackAdemy.Controllers
 
             StudentBackend.Delete(data.Id);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("ManageStudent", "Admin");
         }
 
     }

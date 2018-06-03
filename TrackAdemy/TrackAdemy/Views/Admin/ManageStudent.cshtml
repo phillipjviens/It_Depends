@@ -4,35 +4,38 @@
 }
 
 @*<img src="~/Content/images/AddStudent.png" alt="about page"
-     style="width:100%;height:auto;">*@
+    style="width:100%;height:auto;">*@
 <body>
-    @{
-        if (Model.StudentList == null || !Model.StudentList.Any())
-        {
-            <br />
-            <p>No Students in the System</p>
-            <br />
-        }
-        else
-        {
-            foreach (var item in Model.StudentList)
-            {
-                <div class="col-sm-2">
-                    <a id="@item.Id" href="~/Student/Read/@item.Id">
-                        <img src=@string.Format("/Content/images/StudentImages/Student{0}", @item.URIProfilePicture) width="75" height="75" />
-                        <br />
-                        <span>
-                            @item.FirstName @item.LastName
-                        </span>
-                    </a>
-                </div>
+            @{
+
+                if (Model.StudentList == null || !Model.StudentList.Any())
+                {
+                    <br />
+                    <p>No Students in the System</p>
+                    <br />
                 }
+                else
+                {
+
+                    foreach (var item in Model.StudentList)
+                    {
+                        <div class="col-xs-4">
+                            <a id="@item.Id" href="~/Student/Read/@item.Id" style="float:left; color:black">
+                                <img src=@string.Format("/Content/images/StudentImages/Student{0}", @item.URIProfilePicture) width="75" height="75" />
+                                <br />
+                                <span>
+                                    @item.FirstName @item.LastName
+                                </span>
+                            </a>
+                        </div>
+                    }
+                }
+
             }
-        }
+      
+    
 
-
-
-        <div id="deleteStudent">
-            <a href="~/Admin/ManageStudent" class="btn btn-primary">Delete Student</a>
-        </div>
-    </body>
+    <div id="deleteStudent">
+        <a href="~/Admin/ManageStudent" class="btn btn-primary">Delete Student</a>
+    </div>
+</body>
