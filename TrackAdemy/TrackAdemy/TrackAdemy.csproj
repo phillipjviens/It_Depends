@@ -354,6 +354,7 @@
     <Content Include="Views\Student\Delete.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Student\YardUpdated.cshtml" />
+    <Content Include="Views\Student\StoreUpdated.cshtml" />
     <Resource Include="fonts\collegiateHeavyOutline Medium.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
