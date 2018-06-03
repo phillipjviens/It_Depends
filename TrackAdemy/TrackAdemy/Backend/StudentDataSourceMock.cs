@@ -154,9 +154,9 @@ namespace TrackAdemy.Backend
             //main example student
             Create(new StudentModel("Jamie", "Curtis", "jamie", "jamie", count++ + ".png", 
                 "Student_Home_HoursThisWeek.svg",
-               "Student_Manage_MonthHours.svg", 
-                "Student_Manage_3MonthsHours.svg", 
-               "Student_Manage_YearToDateHours.svg",
+               "Admin_Manage_MonthHours.svg", 
+                "Admin_Manage_3MonthsHours.svg", 
+               "Admin_Manage_YearToDateHours.svg",
                 20, 10, "11", "3:45"));
             Create(new StudentModel("Seetal", "Guri", "seetal", "seetal",  count++ + ".png"));
             Create(new StudentModel("Zachary", "Monson", "zachary", "zachary",count++ + ".png"));
