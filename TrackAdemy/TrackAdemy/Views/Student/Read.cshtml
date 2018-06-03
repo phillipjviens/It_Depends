@@ -22,12 +22,10 @@
                 <br />
 
                 <div class="row">
-                    <div class="col-sm-3 text-right">
-                    </div>
-                    <div class="col-sm-2">
-                        <img src=@string.Format("/Content/images/StudentImages/Student{0}", @Model.URIProfilePicture) />
+                    <div class="col-sm-2"  >
+                        <img src=@string.Format("/Content/images/StudentImages/Student{0}", @Model.URIProfilePicture) style="position:relative; left:55px; width:100px; height:auto;"/>
                         <br />
-                        <span>
+                        <span style="position:relative; left:80px;" >
                             @Model.FirstName @Model.LastName
                             <br />
                             <br />
@@ -138,7 +136,6 @@
                 <br />
             </div>
         </div>
-
     </div>
 
     <div id="manageButtons" class="row">
