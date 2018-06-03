@@ -280,9 +280,12 @@
     <Content Include="Content\images\SVG\Chart SVG\Admin_Calendar.svg" />
     <Content Include="Content\images\SVG\Chart SVG\Admin_Home_StudentAttendance.svg" />
     <Content Include="Content\images\SVG\Chart SVG\Admin_Home_StudentHours.svg" />
+    <Content Include="Content\images\SVG\Chart SVG\Admin_Manage_3MonthsHours.svg" />
     <Content Include="Content\images\SVG\Chart SVG\Admin_Manage_Calendar.svg" />
     <Content Include="Content\images\SVG\Chart SVG\Admin_Manage_MonthHours.svg" />
     <Content Include="Content\images\SVG\Chart SVG\Admin_Manage_TotalHours.svg" />
+    <Content Include="Content\images\SVG\Chart SVG\Admin_Manage_YearToDateHours.svg" />
+    <Content Include="Content\images\SVG\Chart SVG\Admin_ThisWk.svg" />
     <Content Include="Content\images\SVG\Chart SVG\Student_Archive_NovemberHours.svg" />
     <Content Include="Content\images\SVG\Chart SVG\Student_Archive_NovemberWk1.svg" />
     <Content Include="Content\images\SVG\Chart SVG\Student_Archive_NovemberWk2.svg" />
