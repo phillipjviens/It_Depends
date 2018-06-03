@@ -144,15 +144,23 @@ namespace TrackAdemy.Backend
         private void DataSetDefault()
         {
             DataSetClear();
-            Create(new StudentModel("Alex","Randall","alex","alex","/Content/images/StudentImages/Student1.png","","","","",20,10,"5","3:45"));
-            Create(new StudentModel("Ashley", "Mortimer", "ashley", "ashley", "/Content/images/StudentImages/Student2.png", "", "", "", "", 20, 10, "5", "3:45"));
-            Create(new StudentModel("Jamie", "Curtis", "jamie", "jamie", "/Content/images/StudentImages/Student3.png", "", "", "", "", 20, 10, "5", "3:45"));
-            Create(new StudentModel("Kim", "Reynolds", "", "", "/Content/images/StudentImages/Student4.png", "", "", "", "", 20, 10, "5", "3:45"));
-            Create(new StudentModel("Lesley", "Carring", "", "", "/Content/images/StudentImages/Student5.png", "", "", "", "", 20, 10, "5", "3:45"));
-            Create(new StudentModel("Ramon", "Leviter", "", "", "/Content/images/StudentImages/Student6.png", "", "", "", "", 20, 10, "5", "3:45"));
-            Create(new StudentModel("Ryan", "Barter", "", "", "/Content/images/StudentImages/Student7.png", "", "", "", "", 20, 10, "5", "3:45"));
-            Create(new StudentModel("Seetal", "Guri", "", "", "/Content/images/StudentImages/Student8.png", "", "", "", "", 20, 10, "5", "3:45"));
-            Create(new StudentModel("Zachary", "Monson", "", "", "/Content/images/StudentImages/Student9.png", "", "", "", "", 20, 10, "5", "3:45"));
+            string graphDirectory = "/Content/images/SVG/Chart SVG/";
+            string profileDir = "/Content/images/StudentImages/Student";
+            var count = 1;
+            Create(new StudentModel("Alex", "Randall", "alex", "alex", profileDir + count++ + ".png", graphDirectory + "Student_Archive_NovemberHours.svg", "", "", "", 20, 10, "5", "3:45"));
+            Create(new StudentModel("Ashley", "Mortimer", "ashley", "ashley", profileDir + count++ + ".png", "", "", "", "", 20, 10, "5", "3:45"));
+            Create(new StudentModel("Ryan", "Barter", "ryan", "ryan", profileDir + count++ + ".png", "", "", "", "", 20, 10, "5", "3:45"));
+            Create(new StudentModel("Kim", "Reynolds", "kim", "kim", profileDir + count++ + ".png", "", "", "", "", 20, 10, "5", "3:45"));
+            Create(new StudentModel("Lesley", "Carring", "lesley", "lesley", profileDir + count++ + ".png", "", "", "", "", 20, 10, "5", "3:45"));
+            Create(new StudentModel("Ramon", "Leviter", "ramon", "ramon", profileDir + count++ + ".png", "", "", "", "", 20, 10, "5", "3:45"));
+            //main example student
+            Create(new StudentModel("Jamie", "Curtis", "jamie", "jamie", profileDir + count++ + ".png", graphDirectory + "Student_Home_HoursThisWeek.svg",
+                graphDirectory + "Student_Manage_MonthHours.svg", 
+                graphDirectory + "Student_Manage_3MonthsHours.svg", 
+                graphDirectory + "Student_Manage_YearToDateHours.svg",
+                20, 10, "5", "3:45"));
+            Create(new StudentModel("Seetal", "Guri", "seetal", "seetal", profileDir + count++ + ".png", "", "", "", "", 20, 10, "5", "3:45"));
+            Create(new StudentModel("Zachary", "Monson", "zachary", "zachary", profileDir + count++ + ".png", "", "", "", "", 20, 10, "5", "3:45"));
         }
 
         /// <summary>
