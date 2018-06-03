@@ -81,6 +81,17 @@ namespace TrackAdemy.Controllers
             ViewBag.Message = "Yard updated.";
             return View();
         }
+        
+        /// <summary>
+        /// sneaky store updated after purchase
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult StoreUpdated()
+        {
+            ViewBag.Message = "Store Updated";
+            return View();
+        }
+
 
         /// <summary>
         /// This opens up the make a new Student screen
