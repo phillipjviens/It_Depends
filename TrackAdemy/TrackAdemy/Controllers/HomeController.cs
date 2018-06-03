@@ -48,6 +48,12 @@ namespace TrackAdemy.Controllers
 
             return View();
         }
+
+        public ActionResult Error()
+        {
+            ViewBag.Message ="Error Page";
+            return View();
+        }
         /*
         //public ActionResult FormHandler(string username, int level)
         //{
