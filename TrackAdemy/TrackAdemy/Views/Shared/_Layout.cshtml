@@ -13,9 +13,16 @@
         @*Gets view name*@
     var controllerName = this.ViewContext.RouteData.Values["controller"].ToString();
 
+        @*getting action name*@
+    var actionName = this.ViewContext.RouteData.Values["action"].ToString();
+
+    @*making a list of exception student pages*@
+    string []studentAdminPagesList= {"Read", "Create", "Update", "Delete" };
+    bool inList = (controllerName == "Student" && Array.Exists(studentAdminPagesList, x => x == actionName));
+
         @*Conditionals to determine which view called the shared layout. Depending on which, displays navbars.*@
         @*Admin nav*@
-    if (controllerName == "Admin")
+    if (controllerName == "Admin" || inList) 
     {
             <div id="adminNav" class="navbar navbar-inverse navbar-fixed-top" style="background:linear-gradient(to right, #C22026,#F8AB9F );">
                 <div class="container">
