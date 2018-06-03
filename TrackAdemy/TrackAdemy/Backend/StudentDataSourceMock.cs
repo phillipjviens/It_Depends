@@ -144,9 +144,7 @@ namespace TrackAdemy.Backend
         private void DataSetDefault()
         {
             DataSetClear();
-            string graphDirectory = "/Content/images/SVG/Chart SVG/";
-            string profileDir = "/Content/images/StudentImages/Student";
-            var count = 1;
+            var count = 1;//used to iterate through profile pics
             Create(new StudentModel("Alex", "Randall", "alex", "alex", (count++) + ".png", "Student_Archive_NovemberHours.svg"));
             Create(new StudentModel("Ashley", "Mortimer", "ashley", "ashley", count++ + ".png"));
             Create(new StudentModel("Ryan", "Barter", "ryan", "ryan",  count++ + ".png"));

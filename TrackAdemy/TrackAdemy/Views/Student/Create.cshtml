@@ -14,11 +14,8 @@
         {
             @Html.AntiForgeryToken()
             @Html.HiddenFor(m => m.Id)
-            @*@Html.HiddenFor(m => m.URICurrentWeek)
-            @Html.HiddenFor(m => m.URICurrentMonth)
-            @Html.HiddenFor(m => m.URI3Months)
-            @Html.HiddenFor(m => m.URIYear2Date)*@
-
+           
+            @*Should be substituted out for values*@
             @Html.Hidden("URICurrentWeek", "default")
             @Html.Hidden("URICurrentMonth", "default")
             @Html.Hidden("URI3Months", "default")
@@ -28,9 +25,6 @@
             @Html.Hidden("AvgIn", "default")
             @Html.Hidden("AvgOut", "default")
 
-
-            @*@Html.HiddenFor(m => m.AvgIn)
-            @Html.HiddenFor(m => m.AvgOut)*@
 
 
             <div class="row">

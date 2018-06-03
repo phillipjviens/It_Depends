@@ -68,7 +68,7 @@ namespace TrackAdemy.Controllers
         /// <summary>
         /// Make a new Student sent in by the create Student screen
         /// </summary>
-        /// <param name="collection"></param>
+        /// <param name="data"></param>
         /// <returns></returns>
         // POST: Student/Create
         [HttpPost]

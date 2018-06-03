@@ -18,6 +18,8 @@
 
     @*making a list of exception student pages*@
     string []studentAdminPagesList= {"Read", "Create", "Update", "Delete" };
+
+    @*checks if the controller name is Student and if the CRUD action is being used*@
     bool inList = (controllerName == "Student" && Array.Exists(studentAdminPagesList, x => x == actionName));
 
         @*Conditionals to determine which view called the shared layout. Depending on which, displays navbars.*@

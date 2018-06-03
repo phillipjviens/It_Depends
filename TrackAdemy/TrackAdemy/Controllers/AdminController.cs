@@ -66,6 +66,10 @@ namespace TrackAdemy.Controllers
             return View(studentViewModel);
         }
 
+        /// <summary>
+        /// the calendar controller
+        /// </summary>
+        /// <returns>View</returns>
         public ActionResult Calendar()
         {
             return View();

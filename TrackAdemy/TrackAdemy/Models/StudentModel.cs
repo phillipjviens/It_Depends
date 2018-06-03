@@ -127,6 +127,10 @@ namespace TrackAdemy.Models
             Initialize();
         }
 
+        /// <summary>
+        /// This takes a studentModel data and constructs from it.
+        /// </summary>
+        /// <param name="data"></param>
         public StudentModel(StudentModel data)
         {
             Initialize();
@@ -149,8 +153,21 @@ namespace TrackAdemy.Models
 
         /// <summary>
         /// Constructor for Student.  Call this when making a new student
+        /// 
         /// </summary>
-        /// <param name="name">The Name to call the student</param>
+        /// <param name="firstname">The last Name to call the student</param>
+        /// <param name="lastname">The last name</param>
+        /// <param name="username">the username</param>
+        /// <param name="password">the password</param>
+        /// <param name="profilePic">The URI of the profile pic</param>
+        /// <param name="currentweek">the URI for the current week graph</param>
+        /// <param name="thismonth">the URI for the current month graph</param>
+        /// <param name="threeMonths">the URI for the 3 months graph</param>
+        /// <param name="year">the URI for the year to date graph</param>
+        /// <param name="totalHours">the total hours</param>
+        /// <param name="daysAttended">days attended by the student</param>
+        /// <param name="avgin">The student's average check in time</param>
+        /// <param name="avgout">The student's average check out time</param>
         public StudentModel(string firstname, string lastname, string username, string password, string profilePic, string currentweek = "Student_Home_HoursThisWeek.svg",
             string thismonth = "Student_Manage_MonthHours.svg", string threeMonths = "Student_Manage_3MonthsHours.svg", string year = "Student_Manage_YearToDateHours.svg", double totalHours = 10.5, int daysAttended = 4, string avgin = "9:50", string avgout = "2:00")
         {
