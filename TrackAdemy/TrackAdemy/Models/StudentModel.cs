@@ -81,8 +81,8 @@ namespace TrackAdemy.Models
         /// </summary>
         [Display(Name = "URIYear2Date", Description = "Community Hours this Academic Year")]
         [Required(ErrorMessage = "Community hours of this academic year is required.")]
-         public string URIYear2Date { get; set; }
-       
+        public string URIYear2Date { get; set; }
+
         /// <summary>
         /// A student's total community hours since they enrolled.
         /// </summary>
@@ -151,8 +151,8 @@ namespace TrackAdemy.Models
         /// Constructor for Student.  Call this when making a new student
         /// </summary>
         /// <param name="name">The Name to call the student</param>
-        public StudentModel(string firstname, string lastname, string username, string password, string profilePic, string currentweek="Student_Home_HoursThisWeek.svg",
-            string thismonth= "Student_Manage_MonthHours.svg", string threeMonths= "Student_Manage_3MonthsHours.svg", string year= "Student_Manage_YearToDateHours.svg", double totalHours=10.5, int daysAttended=4, string avgin="9:50", string avgout="2:00")
+        public StudentModel(string firstname, string lastname, string username, string password, string profilePic, string currentweek = "Student_Home_HoursThisWeek.svg",
+            string thismonth = "Student_Manage_MonthHours.svg", string threeMonths = "Student_Manage_3MonthsHours.svg", string year = "Student_Manage_YearToDateHours.svg", double totalHours = 10.5, int daysAttended = 4, string avgin = "9:50", string avgout = "2:00")
         {
             Initialize();
 
@@ -170,7 +170,7 @@ namespace TrackAdemy.Models
             AvgIn = avgin;
             AvgOut = avgout;
 
-           
+
         }
 
         /// <summary>
@@ -199,5 +199,6 @@ namespace TrackAdemy.Models
             AvgOut = data.AvgOut;
             return true;
         }
+
     }
 }

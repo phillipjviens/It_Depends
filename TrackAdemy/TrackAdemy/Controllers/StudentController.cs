@@ -76,14 +76,17 @@ namespace TrackAdemy.Controllers
                                         "Id,"+
                                         "FirstName,"+
                                         "LastName,"+
+                                        "URIProfilePicture,"+
                                         "Username,"+
-                                        "URICurrentWeek"+
-                                        "URICurrentMonth"+
-                                        "URI3Months"+
-                                        "URIYear2Date"+
-                                        "TotalHours"+
-                                        "AvgIn"+
-                                        "AvgOut"+
+                                        "Password,"+
+                                        "URICurrentWeek,"+
+                                        "URICurrentMonth,"+
+                                        "URI3Months,"+
+                                        "URIYear2Date,"+
+                                        "TotalHours,"+
+                                        "DaysAttended,"+
+                                        "AvgIn,"+
+                                        "AvgOut,"+
                                         "")] StudentModel data)
         {
             if (!ModelState.IsValid)
