@@ -147,20 +147,21 @@ namespace TrackAdemy.Backend
             string graphDirectory = "/Content/images/SVG/Chart SVG/";
             string profileDir = "/Content/images/StudentImages/Student";
             var count = 1;
-            Create(new StudentModel("Alex", "Randall", "alex", "alex", profileDir + count++ + ".png", graphDirectory + "Student_Archive_NovemberHours.svg", "", "", "", 20, 10, "9", "3:45"));
-            Create(new StudentModel("Ashley", "Mortimer", "ashley", "ashley", profileDir + count++ + ".png", "", "", "", "", 20, 10, "12", "3:45"));
-            Create(new StudentModel("Ryan", "Barter", "ryan", "ryan", profileDir + count++ + ".png", "", "", "", "", 20, 10, "9", "3:45"));
-            Create(new StudentModel("Kim", "Reynolds", "kim", "kim", profileDir + count++ + ".png", "", "", "", "", 20, 10, "10", "3:45"));
-            Create(new StudentModel("Lesley", "Carring", "lesley", "lesley", profileDir + count++ + ".png", "", "", "", "", 20, 10, "11", "3:45"));
-            Create(new StudentModel("Ramon", "Leviter", "ramon", "ramon", profileDir + count++ + ".png", "", "", "", "", 20, 10, "9", "3:45"));
+            Create(new StudentModel("Alex", "Randall", "alex", "alex", (count++) + ".png", "Student_Archive_NovemberHours.svg"));
+            Create(new StudentModel("Ashley", "Mortimer", "ashley", "ashley", count++ + ".png"));
+            Create(new StudentModel("Ryan", "Barter", "ryan", "ryan",  count++ + ".png"));
+            Create(new StudentModel("Kim", "Reynolds", "kim", "kim", count++ + ".png"));
+            Create(new StudentModel("Lesley", "Carring", "lesley", "lesley", count++ + ".png"));
+            Create(new StudentModel("Ramon", "Leviter", "ramon", "ramon", count++ + ".png"));
             //main example student
-            Create(new StudentModel("Jamie", "Curtis", "jamie", "jamie", profileDir + count++ + ".png", graphDirectory + "Student_Home_HoursThisWeek.svg",
-                graphDirectory + "Student_Manage_MonthHours.svg", 
-                graphDirectory + "Student_Manage_3MonthsHours.svg", 
-                graphDirectory + "Student_Manage_YearToDateHours.svg",
+            Create(new StudentModel("Jamie", "Curtis", "jamie", "jamie", count++ + ".png", 
+                "Student_Home_HoursThisWeek.svg",
+               "Student_Manage_MonthHours.svg", 
+                "Student_Manage_3MonthsHours.svg", 
+               "Student_Manage_YearToDateHours.svg",
                 20, 10, "11", "3:45"));
-            Create(new StudentModel("Seetal", "Guri", "seetal", "seetal", profileDir + count++ + ".png", "", "", "", "", 20, 10, "9", "3:45"));
-            Create(new StudentModel("Zachary", "Monson", "zachary", "zachary", profileDir + count++ + ".png", "", "", "", "", 20, 10, "10", "3:45"));
+            Create(new StudentModel("Seetal", "Guri", "seetal", "seetal",  count++ + ".png"));
+            Create(new StudentModel("Zachary", "Monson", "zachary", "zachary",count++ + ".png"));
         }
 
         /// <summary>

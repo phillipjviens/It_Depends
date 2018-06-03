@@ -151,8 +151,8 @@ namespace TrackAdemy.Models
         /// Constructor for Student.  Call this when making a new student
         /// </summary>
         /// <param name="name">The Name to call the student</param>
-        public StudentModel(string firstname, string lastname, string username, string password, string profilePic, string currentweek, 
-            string thismonth, string threeMonths, string year, double totalHours, int daysAttended, string avgin, string avgout)
+        public StudentModel(string firstname, string lastname, string username, string password, string profilePic, string currentweek="Student_Home_HoursThisWeek.svg",
+            string thismonth= "Student_Manage_MonthHours.svg", string threeMonths= "Student_Manage_3MonthsHours.svg", string year= "Student_Manage_YearToDateHours.svg", double totalHours=10.5, int daysAttended=4, string avgin="9:50", string avgout="2:00")
         {
             Initialize();
 
