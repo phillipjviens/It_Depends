@@ -61,9 +61,9 @@ namespace TrackAdemy.Controllers
         /// <returns>View</returns>
         public ActionResult ManageStudent(string id = null)
         {
-            var myData = studentBackend.Read(id);
-
-            return View(myData);
+            studentViewModel.StudentList = studentBackend.Index();
+           
+            return View(studentViewModel);
         }
 
         public ActionResult Calendar()
