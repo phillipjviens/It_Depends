@@ -21,36 +21,64 @@ namespace TrackAdemy.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Aspirations page
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Aspirations()
         {
             ViewBag.Message = "Your aspirations page.";
 
             return View();
         }
-
+        /// <summary>
+        /// Data page, possibly deprecated
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Data()
         {
             ViewBag.Message = "Your Data page.";
 
             return View();
         }
-
+        /// <summary>
+        /// logout, not currently in use
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Logout()
         {
             ViewBag.Message = "Logout page.";
 
             return View();
         }
+
+        /// <summary>
+        /// Store page
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Store()
         {
             ViewBag.Message = "Store page.";
 
             return View();
         }
+        /// <summary>
+        /// Pet's yard
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Yard()
         {
             ViewBag.Message = "Yard page.";
 
+            return View();
+        }
+        /// <summary>
+        /// sneaky pet's yard updated
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult YardUpdated()
+        {
+            ViewBag.Message = "Yard updated.";
             return View();
         }
 
