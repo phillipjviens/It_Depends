@@ -248,6 +248,60 @@ li a {
 }
 /*end ADMIN REPORT*/
 
+
+/*STUDENT READ*/
+#studentReadContainer {
+    width: 100vw;
+    height: auto;
+    background-color: rosybrown;
+    overflow: hidden;
+}
+
+#studentStats {
+    width: 40%;
+    position: relative;
+    left: 15%;
+    float:left;
+}
+
+#graphs {
+    width: 600px;
+    float: right;
+    position: relative;
+    overflow: hidden;
+}
+
+#currentMonth {
+    width: 300px;
+    height: auto;
+    float: left;
+}
+
+#threeMonths {
+    width: 300px;
+    height: auto;
+    float: left;
+}
+
+#yearToDate {
+    width: 300px;
+    height: auto;
+    float: left;
+}
+
+#totalHours {
+    width: 300px;
+    height: auto;
+    float: left;
+}
+
+#manageButtons {
+    position: relative;
+    bottom: 5%;
+    left: 0%;
+}
+/*end STUDENT READ*/
+
 /*HOME/INDEX PAGE*/
 /*login input group items that are img (the custom icons)*/
 .login .input-group-addon img {
