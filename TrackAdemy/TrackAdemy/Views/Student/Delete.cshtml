@@ -24,7 +24,7 @@
                         <div class="col-sm-3 text-right">
                         </div>
                         <div class="col-sm-2">
-                            <img src=@Model.URIProfilePicture class="AvatarSize1" />
+                            <img src=@string.Format("/Content/images/StudentImages/Student{0}", @Model.URIProfilePicture)  />
                             <br />
                             <span>
                                 @Model.FirstName @Model.LastName
@@ -56,7 +56,7 @@
                             <div class="col-sm-3 text-right">
                             </div>
                             <div class="col-sm-4">
-                                @Html.ActionLink("Cancel", "Index", new { id = Model.Id }, new { @class = "btn btn-success" })
+                                @Html.ActionLink("Cancel", "Read", new { id = Model.Id }, new { @class = "btn btn-success" })
                                 <input type="submit" value="Delete" class="btn btn-danger">
                             </div>
                         </div>
