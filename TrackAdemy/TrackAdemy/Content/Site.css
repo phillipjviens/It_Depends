@@ -134,6 +134,9 @@ li a {
 /*style for drop-down menu on Admin's MANAGE STUDENT page for student names*/
 .containerManage {
     height: 100vh;
+    position: relative;
+    top:75px;
+    right:50px;
 }
 
 #rig {
@@ -260,6 +263,7 @@ li a {
 #studentStats {
     width: 40%;
     position: relative;
+    top:45px;
     left: 15%;
     float:left;
 }
@@ -268,6 +272,7 @@ li a {
     width: 600px;
     float: right;
     position: relative;
+    top:100px;
     overflow: hidden;
 }
 
@@ -298,7 +303,7 @@ li a {
 #manageButtons {
     position: relative;
     bottom: 5%;
-    left: 0%;
+    right: 80%;
 }
 /*end STUDENT READ*/
 
