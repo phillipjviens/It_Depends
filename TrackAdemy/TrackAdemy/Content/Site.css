@@ -363,7 +363,7 @@ li a {
 }
 
 /*Creates a grid for the kiosk page*/
-.grid-container {
+.grid-container-kiosk {
     height: 50%;
     width: auto;
     display: grid;
@@ -379,7 +379,7 @@ li a {
 }
 
     /*The divs of the grid for the kiosk page*/
-    .grid-container > div {
+    .grid-container-kiosk > div {
         background-color: #B3C65F;
         text-align: center;
         padding: 5px 5px;
@@ -388,19 +388,13 @@ li a {
         overflow: hidden;
     }
 
-/*Creates a grid for the Student Maing page*/
-.grid-container-white {
-    height: 25%;
-    width: auto;
-    display: grid;
-    grid-template: auto auto auto / auto auto auto;
-    grid-gap: 50px;
-    background-color: white;
-    padding-bottom: 10px;
-    padding-top: 5px;
-    padding-left: 25px;
-    padding-right: 2px;
-    margin-bottom: 5px;
+/*Formats the student pictures on the kiosk page*/
+.studentPicture {
+    height: auto;
+    width: 60%;
+    border-radius: 30%;
+    overflow: hidden;
+    outline: 20px solid #463927;
 }
 
 /*Formats the student check mark pictures on the kiosk page*/
@@ -417,18 +411,6 @@ li a {
     width: 100px;
 }
 
-#checkMarkButton {
-    position: absolute;
-    margin-top: 7%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    padding: 50px 10px;
-    border: none;
-    border-radius: 0;
-    text-align: center;
-    height: auto;
-    width: 100px;
-}
 /*Logout button for the kiosk page*/
 .logoutButton {
     background-color: #605341;
@@ -709,6 +691,22 @@ li a {
 /*end STORE PAGE*/
 
 /*begin STUDENT HOME PAGE*/
+
+/*Creates a grid for the Student Maing page*/
+.grid-container-white {
+    height: 25%;
+    width: auto;
+    display: grid;
+    grid-template: auto auto auto / auto auto auto;
+    grid-gap: 50px;
+    background-color: white;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-right: 2px;
+    margin-bottom: 5px;
+}
+
 
 .grid-container-white {
     height: 25%;
