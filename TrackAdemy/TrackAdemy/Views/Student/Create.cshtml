@@ -12,39 +12,78 @@
 
         @using (Html.BeginForm())
         {
-        @Html.AntiForgeryToken()
-        @Html.HiddenFor(m => m.Id)
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.Id)
+           
+            @*Should be substituted out for values*@
+            @Html.Hidden("URICurrentWeek", "default")
+            @Html.Hidden("URICurrentMonth", "default")
+            @Html.Hidden("URI3Months", "default")
+            @Html.Hidden("URIYear2Date", "default")
+            @Html.Hidden("TotalHours", null)
+            @Html.Hidden("DaysAttended",null)
+            @Html.Hidden("AvgIn", "default")
+            @Html.Hidden("AvgOut", "default")
 
-        <div class="row">
-            <div class="col-sm-3 text-right">
-                @Html.DisplayNameFor(m => m.Name)
-            </div>
-            <div class="col-sm-2">
-                @Html.EditorFor(m => m.Name)
-                @Html.ValidationMessageFor(m => m.Name)
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-sm-3 text-right">
-                @Html.DisplayNameFor(m => m.AvatarId)
-            </div>
-            <div class="col-sm-2">
-                @Html.DropDownListFor(m => m.AvatarId, _5051.Backend.AvatarBackend.Instance.GetAvatarListItem(Model.AvatarId))
-                @Html.ValidationMessageFor(m => m.AvatarId)
-            </div>
-        </div>
 
-        <br />
-        <br />
-        <div class="row">
-            <div class="col-sm-3 text-right">
+            <div class="row">
+                <div class="col-sm-3 text-right">
+                    @Html.DisplayNameFor(m => m.FirstName)
+                </div>
+                <div class="col-sm-2">
+                    @Html.EditorFor(m => m.FirstName)
+                    @Html.ValidationMessageFor(m => m.FirstName)
+                </div>
             </div>
-            <div class="col-sm-4">
-                @Html.ActionLink("Cancel", "Index", new { id = Model.Id }, new { @class = "btn btn-success" })
-                <input type="submit" value="Create" class="btn btn-primary">
+
+            <div class="row">
+                <div class="col-sm-3 text-right">
+                    @Html.DisplayNameFor(m => m.LastName)
+                </div>
+                <div class="col-sm-2">
+                    @Html.EditorFor(m => m.LastName)
+                    @Html.ValidationMessageFor(m => m.LastName)
+                </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="col-sm-3 text-right">
+                    @Html.DisplayNameFor(m => m.Username)
+                </div>
+                <div class="col-sm-2">
+                    @Html.EditorFor(m => m.Username)
+                    @Html.ValidationMessageFor(m => m.Username)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 text-right">
+                    @Html.DisplayNameFor(m => m.Password)
+                </div>
+                <div class="col-sm-2">
+                    @Html.EditorFor(m => m.Password)
+                    @Html.ValidationMessageFor(m => m.Password)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 text-right">
+                    @Html.DisplayNameFor(m => m.URIProfilePicture)
+                </div>
+                <div class="col-sm-2">
+                    @Html.EditorFor(m => m.URIProfilePicture)
+                    @Html.ValidationMessageFor(m => m.URIProfilePicture)
+                </div>
+            </div>
+
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-sm-3 text-right">
+                </div>
+                <div class="col-sm-4">
+                    @Html.ActionLink("Cancel", "ManageStudent", "Admin", new { id = "" }, new { @class = "btn btn-success" })
+                    <input type="submit" value="Create" class="btn btn-primary">
+                </div>
+            </div>
         }
     </div>
 </div>

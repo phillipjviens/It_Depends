@@ -21,38 +21,77 @@ namespace TrackAdemy.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Aspirations page
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Aspirations()
         {
             ViewBag.Message = "Your aspirations page.";
 
             return View();
         }
-
+        /// <summary>
+        /// Data page, possibly deprecated
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Data()
         {
             ViewBag.Message = "Your Data page.";
 
             return View();
         }
-
+        /// <summary>
+        /// logout, not currently in use
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Logout()
         {
             ViewBag.Message = "Logout page.";
 
             return View();
         }
+
+        /// <summary>
+        /// Store page
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Store()
         {
             ViewBag.Message = "Store page.";
 
             return View();
         }
+        /// <summary>
+        /// Pet's yard
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Yard()
         {
             ViewBag.Message = "Yard page.";
 
             return View();
         }
+        /// <summary>
+        /// sneaky pet's yard updated
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult YardUpdated()
+        {
+            ViewBag.Message = "Yard updated.";
+            return View();
+        }
+        
+        /// <summary>
+        /// sneaky store updated after purchase
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult StoreUpdated()
+        {
+            ViewBag.Message = "Store Updated";
+            return View();
+        }
+
 
         /// <summary>
         /// This opens up the make a new Student screen
@@ -68,17 +107,25 @@ namespace TrackAdemy.Controllers
         /// <summary>
         /// Make a new Student sent in by the create Student screen
         /// </summary>
-        /// <param name="collection"></param>
+        /// <param name="data"></param>
         /// <returns></returns>
         // POST: Student/Create
         [HttpPost]
         public ActionResult Create([Bind(Include=
                                         "Id,"+
-                                        "Name,"+
-                                        "Description,"+
-                                        "Uri,"+
-                                        "AvatarId,"+
-                                        "Status,"+
+                                        "FirstName,"+
+                                        "LastName,"+
+                                        "URIProfilePicture,"+
+                                        "Username,"+
+                                        "Password,"+
+                                        "URICurrentWeek,"+
+                                        "URICurrentMonth,"+
+                                        "URI3Months,"+
+                                        "URIYear2Date,"+
+                                        "TotalHours,"+
+                                        "DaysAttended,"+
+                                        "AvgIn,"+
+                                        "AvgOut,"+
                                         "")] StudentModel data)
         {
             if (!ModelState.IsValid)
@@ -101,7 +148,7 @@ namespace TrackAdemy.Controllers
 
             StudentBackend.Create(data);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("ManageStudent","Admin");
         }
 
         /// <summary>
@@ -116,7 +163,7 @@ namespace TrackAdemy.Controllers
             if (myDataStudent == null)
             {
                 return RedirectToAction("Error", "Home");
-            }           
+            }
 
             return View(myDataStudent);
         }
@@ -147,17 +194,20 @@ namespace TrackAdemy.Controllers
         [HttpPost]
         public ActionResult Update([Bind(Include=
                                         "Id,"+
-                                        "Name,"+
-                                        "Description,"+
-                                        "Uri,"+
-                                        "AvatarId,"+
-                                        "AvatarLevel,"+
-                                        "Tokens,"+
-                                        "Status,"+
-                                        "ExperiencePoints,"+
+                                        "FirstName,"+
+                                        "LastName,"+
+                                        "URIProfilePicture,"+
+                                        "Username,"+
                                         "Password,"+
-
-                                        "")] StudentViewModel data)
+                                        "URICurrentWeek,"+
+                                        "URICurrentMonth,"+
+                                        "URI3Months,"+
+                                        "URIYear2Date,"+
+                                        "TotalHours,"+
+                                        "DaysAttended,"+
+                                        "AvgIn,"+
+                                        "AvgOut,"+
+                                        "")] StudentModel data)
         {
             if (!ModelState.IsValid)
             {
@@ -170,17 +220,17 @@ namespace TrackAdemy.Controllers
                 // Send to Error Page
                 return RedirectToAction("Error", new { route = "Home", action = "Error" });
             }
-            
+
             if (string.IsNullOrEmpty(data.ToString()))
             {
                 // Send back for edit
                 return View(data);
             }
 
-            var myDataStudent = new StudentModel();
+            var myDataStudent = new StudentModel(data);
             StudentBackend.Update(myDataStudent);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("ManageStudent", "Admin");
         }
 
         /// <summary>
@@ -197,8 +247,55 @@ namespace TrackAdemy.Controllers
                 RedirectToAction("Error", "Home");
             }
 
-           
+
             return View(myDataStudent);
         }
+
+        /// <summary>
+        /// This deletes the Student sent up as a post from the Student delete page
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        // POST: Student/Delete/5
+        [HttpPost]
+        public ActionResult Delete([Bind(Include=
+                                        "Id,"+
+                                        "FirstName,"+
+                                        "LastName,"+
+                                        "URIProfilePicture,"+
+                                        "Username,"+
+                                        "Password,"+
+                                        "URICurrentWeek,"+
+                                        "URICurrentMonth,"+
+                                        "URI3Months,"+
+                                        "URIYear2Date,"+
+                                        "TotalHours,"+
+                                        "DaysAttended,"+
+                                        "AvgIn,"+
+                                        "AvgOut,"+
+                                        "")] StudentModel data)
+        {
+            if (!ModelState.IsValid)
+            {
+                // Send back for edit
+                return View(data);
+            }
+            if (data == null)
+            {
+                // Send to Error page
+                return RedirectToAction("Error", new { route = "Home", action = "Error" });
+            }
+
+            if (string.IsNullOrEmpty(data.Id))
+            {
+                // Send back for Edit
+                return View(data);
+            }
+
+            StudentBackend.Delete(data.Id);
+
+            return RedirectToAction("ManageStudent", "Admin");
+        }
+
     }
 }

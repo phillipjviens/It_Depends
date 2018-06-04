@@ -1,11 +1,9 @@
 ﻿
+/*GENERAL CLASSES USED THROUGHOUT*/
 
 /*padding for body*/
-body {
-    background: white /*linear-gradient(#B3C65F,#618B42)*/;
-    width: 100vw;
-    height: 100vh;
-    padding-top: 50px;
+body {    
+    padding-top: 70px;
 }
 /*attempting to add font to project*/
 @font-face {
@@ -19,19 +17,7 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
-/*adminNav bar gradient*/
-#adminNav {
-    background: linear-gradient(to right, #C22026,#F2696A);
-}
-/*studentNav bar gradient*/
-#studentNav {
-    background: linear-gradient(to right, #37499F,#3D92D0);
-}
 
-/*set navbar outline to transparent*/
-.navbar {
-    border-color: transparent;
-}
 
 /*sets border box sizing*/
 * {
@@ -62,28 +48,6 @@ body {
     padding: 15px;
 }
 
-/*login input group items that are img (the custom icons)*/
-.login .input-group-addon img {
-    height: auto;
-    margin: -10px;
-    margin-bottom: -5px;
-    vertical-align: text-bottom;
-}
-
-/*login divs centering*/
-.login
-    align-items: center;
-    margin-top: 5px;
-}
-
-    /*login input items width and centering help*/
-    .login .input-group {
-        width: 50%;
-        max-width: 500px;
-        margin: auto;
-        margin-top: 5px;
-    }
-
 
 /*covers all input buttons*/
 input[type=submit] {
@@ -100,6 +64,17 @@ input[type=submit] {
     /*changes colors of input buttons*/
     input[type=submit]:hover {
         background-color: #45a049;
+    }
+
+
+/* Set width on the form input elements since they're 100% wide by default */
+input, select, textarea {
+    max-width: 280px;
+}
+
+    input[type=text], input[type=password] {
+        max-width: 100vw;
+        /*display: block;*/
     }
 
 /* Clear floats after the columns */
@@ -122,54 +97,249 @@ input[type=submit] {
 .dl-horizontal dt {
     white-space: normal;
 }
+/*End GENERAL CLASSES*/
 
-/*sets position for download button*/
-#downloadButton {
-    position: relative;
-    left: 60%;
-}
-
-/*style for drop-down menu on Admin's REPORT page for student names*/
-#reportStudentDropDown {
-    position: fixed;
-    background-color: #FFFFFF;
+/*NAV*/
+/*custom class a for setting navbar elems*/
+a {
     color: white;
-    top: 5%;
-    left: 45%;
+    float: right;
 }
 
-/*style for drop-down menu on Admin's REPORT page for time range of graph data*/
-#reportStudentTime {
-    position: fixed;
-    background-color: #FFFFFF;
-    color: white;
-    top: 10%;
-    left: 45%;
+/*list for navbar elements*/
+li a {
+    display: inline;
+    padding: 10px;
+    text-align: center;
+    margin-right: -10px;
+}
+/*adminNav bar gradient*/
+#adminNav {
+    background: linear-gradient(to right, #C22026,#F2696A);
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input, select, textarea {
-    max-width: 280px;
+/*studentNav bar gradient*/
+#studentNav {
+    background: linear-gradient(to right, #37499F,#3D92D0);
 }
 
-    input[type=text], input[type=password] {
-        max-width: 100vw;
-        /*display: block;*/
+/*set navbar outline to transparent*/
+.navbar {
+    border-color: transparent;
+}
+/*End NAV*/
+
+/*ADMIN MANAGE STUDENT*/
+
+/*style for drop-down menu on Admin's MANAGE STUDENT page for student names*/
+.containerManage {
+    height: 100vh;
+}
+
+#rig {
+    max-width: 150%;
+    margin: 0 auto; /*center aligned*/
+    padding: 0;
+    font-size: 0; /* Remember to change it back to normal font size if have captions */
+    list-style: none;
+    background-color: transparent;
+    width: 900px;
+}
+
+    #rig li {
+        display: inline-block;
+        *display: inline; /*for IE6 - IE7*/
+        width: 25%;
+        vertical-align: middle;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        ;
     }
+
+/* The wrapper for each item */
+.rig-cell {
+    /*margin:12px;
+    box-shadow:0 0 6px rgba(0,0,0,0.3);*/
+    display: table-cell;
+    position: relative;
+    overflow: hidden;
+    width: 150px;
+    align-content: center;
+}
+
+/* If have the image layer */
+.rig-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+    transform: scale(1);
+    transition: all 1s;
+}
+
+#rig li:hover .rig-img {
+    transform: scale(1.05);
+}
+
+/* If have the overlay layer */
+.rig-overlay {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #fe8484 url(img/link.png) no-repeat center 20%;
+    background-size: 50px 50px;
+    opacity: 0;
+    filter: alpha(opacity=0); /*For IE6 - IE8*/
+    transition: all 0.6s;
+}
+
+#rig li:hover .rig-overlay {
+    opacity: 0.8;
+}
+
+/* If have captions */
+.rig-text {
+    display: block;
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    /*text-align: center;*/
+    text-transform: capitalize;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal !important;
+    top: 40%;
+    color: #ffffff;
+    opacity: 0;
+    filter: alpha(opacity=0); /*For older IE*/
+    transform: translateY(-20px);
+    transition: all .3s;
+}
+
+#rig li:hover .rig-text {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+@media (max-width: 9000px) {
+    #rig li {
+        width: 50%;
+    }
+}
+
+@media (max-width: 700px) {
+    #rig li {
+        width: 33.33%;
+    }
+}
+
+@media (max-width: 550px) {
+    #rig li {
+        width: 50%;
+    }
+}
+/*end ADMIN REPORT*/
+
+
+/*STUDENT READ*/
+#studentReadContainer {
+    width: 100vw;
+    height: auto;
+    background-color: rosybrown;
+    overflow: hidden;
+}
+
+#studentStats {
+    width: 40%;
+    position: relative;
+    left: 15%;
+    float:left;
+}
+
+#graphs {
+    width: 600px;
+    float: right;
+    position: relative;
+    overflow: hidden;
+}
+
+#currentMonth {
+    width: 300px;
+    height: auto;
+    float: left;
+}
+
+#threeMonths {
+    width: 300px;
+    height: auto;
+    float: left;
+}
+
+#yearToDate {
+    width: 300px;
+    height: auto;
+    float: left;
+}
+
+#totalHours {
+    width: 300px;
+    height: auto;
+    float: left;
+}
+
+#manageButtons {
+    position: relative;
+    bottom: 5%;
+    left: 0%;
+}
+/*end STUDENT READ*/
+
+/*HOME/INDEX PAGE*/
+/*login input group items that are img (the custom icons)*/
+.login .input-group-addon img {
+    height: auto;
+    margin: -10px;
+    margin-bottom: -5px;
+    vertical-align: text-bottom;
+}
+
+/*login divs centering*/
+.login {
+    align-items: center;
+    margin-top: 5px;
+}
+
+    /*login input items width and centering help*/
+    .login .input-group {
+        width: 50%;
+        max-width: 500px;
+        min-width:200px;
+        margin: auto;
+        margin-top: 5px;
+    }
+/*Background of the home page*/
+.backgroundHome {
+    background: radial-gradient(#B3C65F,#618B42);
+    width: 100vw;
+    height: 100vh;
+}
+/*end HOME/INDEX*/
+
+/*KIOSK PAGE*/
 
 /*Background of the kiosk page*/
 .kioskBackground {
     background: radial-gradient(#B3C65F,#618B42);
     width: 100%;
     height: 100%;
-}
-
-
-/*Background of the home page*/
-.backgroundHome {
-    background: radial-gradient(#B3C65F,#618B42);
-    width: 100vw;
-    height: 100vh;
 }
 
 /*Centers everything in the kiosk page*/
@@ -398,14 +568,6 @@ input, select, textarea {
     text-align: center;
 }
 
-/*Creates a white background*/
-.whiteBackground {
-    background-color: white;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-}
-
 /*Formats the student pictures on the kiosk page*/
 .picture {
     height: auto;
@@ -414,6 +576,9 @@ input, select, textarea {
     overflow: hidden;
     outline: 20px solid #463927;
 }
+/*End KIOSK*/
+
+/*PET YARD*/
 
 /*Formats the backyard picture on the pet yard page*/
 .backYardPicture {
@@ -434,7 +599,11 @@ input, select, textarea {
     line-height: 400px !important;
     margin-bottom: 10px;
     margin-top: 30px;
-}
+} /*End YARD*/
+
+
+
+/*STORE PAGE*/
 
 /*Speech bubble for Store page*/
 .speech-bubble {
@@ -511,7 +680,9 @@ input, select, textarea {
         uses grid area to take up the top row and all 4
         columns, so that the last row can be devoted to buttons*/
 .containerSmallerStore .item1{
-    align-self: center;
-  
+    align-self: center;  
    grid-area:1/1/1/5; /*grid area starting r1,c1, then spans 1x4 grids.*/
 }
+
+/*end STORE PAGE*/
+

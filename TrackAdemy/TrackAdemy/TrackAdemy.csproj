@@ -192,7 +192,7 @@
     <Compile Include="Backend\DataSourceBackend.cs" />
     <Compile Include="Backend\StudentInterface.cs" />
     <Compile Include="Backend\StudentDataSourceMock.cs" />
-    <Compile Include="Backend\Student Backend.cs" />
+    <Compile Include="Backend\StudentBackend.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\KioskController.cs" />
@@ -240,6 +240,15 @@
     <Content Include="Content\images\SampleCalendar.jpg" />
     <Content Include="Content\images\StudentData.png" />
     <Content Include="Content\images\StudentHome.png" />
+    <Content Include="Content\images\StudentImages\Student1.png" />
+    <Content Include="Content\images\StudentImages\Student2.png" />
+    <Content Include="Content\images\StudentImages\Student3.png" />
+    <Content Include="Content\images\StudentImages\Student4.png" />
+    <Content Include="Content\images\StudentImages\Student5.png" />
+    <Content Include="Content\images\StudentImages\Student6.png" />
+    <Content Include="Content\images\StudentImages\Student7.png" />
+    <Content Include="Content\images\StudentImages\Student8.png" />
+    <Content Include="Content\images\StudentImages\Student9.png" />
     <Content Include="Content\images\StudentPetShop.png" />
     <Content Include="Content\images\StudentPicture.png" />
     <Content Include="Content\images\StudentPictureCheckedIn.png" />
@@ -271,9 +280,12 @@
     <Content Include="Content\images\SVG\Chart SVG\Admin_Calendar.svg" />
     <Content Include="Content\images\SVG\Chart SVG\Admin_Home_StudentAttendance.svg" />
     <Content Include="Content\images\SVG\Chart SVG\Admin_Home_StudentHours.svg" />
+    <Content Include="Content\images\SVG\Chart SVG\Admin_Manage_3MonthsHours.svg" />
     <Content Include="Content\images\SVG\Chart SVG\Admin_Manage_Calendar.svg" />
     <Content Include="Content\images\SVG\Chart SVG\Admin_Manage_MonthHours.svg" />
     <Content Include="Content\images\SVG\Chart SVG\Admin_Manage_TotalHours.svg" />
+    <Content Include="Content\images\SVG\Chart SVG\Admin_Manage_YearToDateHours.svg" />
+    <Content Include="Content\images\SVG\Chart SVG\Admin_ThisWk.svg" />
     <Content Include="Content\images\SVG\Chart SVG\Student_Archive_NovemberHours.svg" />
     <Content Include="Content\images\SVG\Chart SVG\Student_Archive_NovemberWk1.svg" />
     <Content Include="Content\images\SVG\Chart SVG\Student_Archive_NovemberWk2.svg" />
@@ -343,6 +355,9 @@
     <Content Include="Views\Student\Read.cshtml" />
     <Content Include="Views\Student\Update.cshtml" />
     <Content Include="Views\Student\Delete.cshtml" />
+    <Content Include="Views\Home\Error.cshtml" />
+    <Content Include="Views\Student\YardUpdated.cshtml" />
+    <Content Include="Views\Student\StoreUpdated.cshtml" />
     <Resource Include="fonts\collegiateHeavyOutline Medium.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

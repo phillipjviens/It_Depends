@@ -81,8 +81,8 @@ namespace TrackAdemy.Models
         /// </summary>
         [Display(Name = "URIYear2Date", Description = "Community Hours this Academic Year")]
         [Required(ErrorMessage = "Community hours of this academic year is required.")]
-         public string URIYear2Date { get; set; }
-       
+        public string URIYear2Date { get; set; }
+
         /// <summary>
         /// A student's total community hours since they enrolled.
         /// </summary>
@@ -128,11 +128,48 @@ namespace TrackAdemy.Models
         }
 
         /// <summary>
-        /// Constructor for Student.  Call this when making a new student
+        /// This takes a studentModel data and constructs from it.
         /// </summary>
-        /// <param name="name">The Name to call the student</param>
-        public StudentModel(string firstname, string lastname, string username, string password, string profilePic, string currentweek, 
-            string thismonth, string threeMonths, string year, double totalHours, int daysAttended, string avgin, string avgout)
+        /// <param name="data"></param>
+        public StudentModel(StudentModel data)
+        {
+            Initialize();
+
+            Id = data.Id;
+            FirstName = data.FirstName;
+            LastName = data.LastName;
+            Username = data.Username;
+            Password = data.Password;
+            URIProfilePicture = data.URIProfilePicture;
+            URICurrentWeek = data.URICurrentWeek;
+            URICurrentMonth = data.URICurrentMonth;
+            URI3Months = data.URI3Months;
+            URIYear2Date = data.URIYear2Date;
+            TotalHours = data.TotalHours;
+            DaysAttended = data.DaysAttended;
+            AvgIn = data.AvgIn;
+            AvgOut = data.AvgOut;
+        }
+
+        /// <summary>
+        /// Constructor for Student.  Call this when making a new student
+        /// 
+        /// </summary>
+        /// <param name="firstname">The last Name to call the student</param>
+        /// <param name="lastname">The last name</param>
+        /// <param name="username">the username</param>
+        /// <param name="password">the password</param>
+        /// <param name="profilePic">The URI of the profile pic</param>
+        /// <param name="currentweek">the URI for the current week graph</param>
+        /// <param name="thismonth">the URI for the current month graph</param>
+        /// <param name="threeMonths">the URI for the 3 months graph</param>
+        /// <param name="year">the URI for the year to date graph</param>
+        /// <param name="totalHours">the total hours</param>
+        /// <param name="daysAttended">days attended by the student</param>
+        /// <param name="avgin">The student's average check in time</param>
+        /// <param name="avgout">The student's average check out time</param>
+        public StudentModel(string firstname, string lastname, string username, string password, string profilePic, string currentweek = "Student_Home_HoursThisWeek.svg",
+            string thismonth = "Student_Manage_MonthHours.svg", string threeMonths = "Student_Manage_3MonthsHours.svg", string year = "Student_Manage_YearToDateHours.svg", double totalHours = 10.5, int daysAttended = 4, string avgin = "9:50", string avgout = "2:00")
         {
             Initialize();
 
@@ -150,7 +187,7 @@ namespace TrackAdemy.Models
             AvgIn = avgin;
             AvgOut = avgout;
 
-           
+
         }
 
         /// <summary>
@@ -179,5 +216,6 @@ namespace TrackAdemy.Models
             AvgOut = data.AvgOut;
             return true;
         }
+
     }
 }

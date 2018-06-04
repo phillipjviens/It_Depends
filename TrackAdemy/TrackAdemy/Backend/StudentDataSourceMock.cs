@@ -144,7 +144,22 @@ namespace TrackAdemy.Backend
         private void DataSetDefault()
         {
             DataSetClear();
-            Create(new StudentModel("Mike","","","","","","","","",20,10,"5","3:45"));
+            var count = 1;//used to iterate through profile pics
+            Create(new StudentModel("Alex", "Randall", "alex", "alex", (count++) + ".png", "Student_Archive_NovemberHours.svg"));
+            Create(new StudentModel("Ashley", "Mortimer", "ashley", "ashley", count++ + ".png"));
+            Create(new StudentModel("Ryan", "Barter", "ryan", "ryan",  count++ + ".png"));
+            Create(new StudentModel("Kim", "Reynolds", "kim", "kim", count++ + ".png"));
+            Create(new StudentModel("Lesley", "Carring", "lesley", "lesley", count++ + ".png"));
+            Create(new StudentModel("Ramon", "Leviter", "ramon", "ramon", count++ + ".png"));
+            //main example student
+            Create(new StudentModel("Jamie", "Curtis", "jamie", "jamie", count++ + ".png", 
+                "Student_Home_HoursThisWeek.svg",
+               "Admin_Manage_MonthHours.svg", 
+                "Admin_Manage_3MonthsHours.svg", 
+               "Admin_Manage_YearToDateHours.svg",
+                20, 10, "11", "3:45"));
+            Create(new StudentModel("Seetal", "Guri", "seetal", "seetal",  count++ + ".png"));
+            Create(new StudentModel("Zachary", "Monson", "zachary", "zachary",count++ + ".png"));
         }
 
         /// <summary>
