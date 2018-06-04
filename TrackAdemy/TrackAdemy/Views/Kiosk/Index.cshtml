@@ -6,7 +6,7 @@
     <script>
 
         function checkMarkView1() {
-            var x = document.getElementById('checkMarkButton');
+            var x = document.getElementById('checkMark1');
             if (x.style.display === "none") {
                 x.style.display = "block";
             }
@@ -16,7 +16,7 @@
         }
 
         function checkMarkView2() {
-            var x = document.getElementById('checkMarkButton');
+            var x = document.getElementById('checkMark2');
             if (x.style.display === "none") {
                 x.style.display = "block";
             }
@@ -50,7 +50,7 @@
                 <div class="item1">
 
                     <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student1.png" class="studentPicture" />
-                    <img id="checkMarkButton" src="~/Content/images/SVG/Kiosk_Checkmark.svg" class="checkMark" />
+                    <img id="checkMark1" src="~/Content/images/SVG/Kiosk_Checkmark.svg" class="checkMark" />
                     <button onclick="checkMarkView1()" class="btn">CHECKMARK</button>
 
                 </div>
@@ -58,7 +58,7 @@
                 <!--Student 2 picture with checkin and check out buttons-->
                 <div class="item2">
                     <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student2.png" class="studentPicture" />
-                    <img id="checkMarkButton" src="~/Content/images/SVG/Kiosk_Checkmark.svg" class="checkMark" />
+                    <img id="checkMark2" src="~/Content/images/SVG/Kiosk_Checkmark.svg" class="checkMark" />
                     <button onclick="checkMarkView2()" class="btn">CHECKMARK</button>
                 </div>
 
