@@ -398,7 +398,7 @@ li a {
 }
 
 /*Formats the student check mark pictures on the kiosk page*/
-.checkMark1 {
+.checkMark {
     position: absolute;
     margin-top: 7%;
     transform: translate(-50%, -50%);
@@ -409,6 +409,7 @@ li a {
     text-align: center;
     height:auto;
     width: 100px;
+    display : none;
 }
 
 #checkMark1 {
@@ -416,26 +417,13 @@ li a {
     margin-top: 7%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    padding: 50px 10px;
-    border: none;
-    border-radius: 0;
-    text-align: center;
-    height: auto;
-    width: 100px;
-}
 
-/*Formats the student check mark pictures on the kiosk page*/
-.checkMark2 {
-    position: absolute;
-    margin-top: 7%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    padding: 50px 10px;
     border: none;
     border-radius: 0;
     text-align: center;
     height: auto;
     width: 100px;
+    display: none;
 }
 
 #checkMark2 {
@@ -449,6 +437,103 @@ li a {
     text-align: center;
     height: auto;
     width: 100px;
+    display: none;
+}
+
+#checkMark3 {
+    position: absolute;
+    margin-top: 7%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding: 50px 10px;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    height: auto;
+    width: 100px;
+    display: none;
+}
+
+#checkMark4 {
+    position: absolute;
+    margin-top: 7%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding: 50px 10px;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    height: auto;
+    width: 100px;
+    display: none;
+}
+
+#checkMark5 {
+    position: absolute;
+    margin-top: 7%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding: 50px 10px;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    height: auto;
+    width: 100px;
+    display: none;
+}
+
+#checkMark6 {
+    position: absolute;
+    margin-top: 7%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding: 50px 10px;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    height: auto;
+    width: 100px;
+    display: none;
+}
+
+#checkMark7 {
+    position: absolute;
+    margin-top: 7%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding: 50px 10px;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    height: auto;
+    width: 100px;
+    display: none;
+}
+#checkMark8 {
+    position: absolute;
+    margin-top: 7%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding: 50px 10px;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    height: auto;
+    width: 100px;
+    display: none;
+}
+#checkMark9 {
+    position: absolute;
+    margin-top: 7%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding: 50px 10px;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    height: auto;
+    width: 100px;
+    display: none;
 }
 
 /*Logout button for the kiosk page*/
