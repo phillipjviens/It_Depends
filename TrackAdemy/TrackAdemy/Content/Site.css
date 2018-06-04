@@ -550,6 +550,8 @@ li a {
     cursor: pointer;
     border-radius: 0;
     text-align: center;
+    outline: none;
+
 }
 
 /*item2 button layout for kiosk page*/
@@ -567,6 +569,7 @@ li a {
     cursor: pointer;
     border-radius: 0;
     text-align: center;
+    outline: none;
 }
 
 /*item3 button layout for kiosk page*/
@@ -584,6 +587,7 @@ li a {
     cursor: pointer;
     border-radius: 0;
     text-align: center;
+    outline: none;
 }
 
 /*item4 button layout for kiosk page*/
@@ -601,6 +605,7 @@ li a {
     cursor: pointer;
     border-radius: 0;
     text-align: center;
+    outline: none;
 }
 
 /*item5 button layout for kiosk page*/
@@ -618,6 +623,7 @@ li a {
     cursor: pointer;
     border-radius: 0;
     text-align: center;
+    outline: none;
 }
 
 /*item6 button layout for kiosk page*/
@@ -635,6 +641,7 @@ li a {
     cursor: pointer;
     border-radius: 0;
     text-align: center;
+    outline: none;
 }
 
 /*item7 button layout for kiosk page*/
@@ -652,6 +659,7 @@ li a {
     cursor: pointer;
     border-radius: 0;
     text-align: center;
+    outline: none;
 }
 
 /*item8 button layout for kiosk page*/
@@ -669,6 +677,7 @@ li a {
     cursor: pointer;
     border-radius: 0;
     text-align: center;
+    outline: none;
 }
 
 /*item9 button layout for kiosk page*/
@@ -686,6 +695,7 @@ li a {
     cursor: pointer;
     border-radius: 0;
     text-align: center;
+    outline: none;
 }
 
 /*End KIOSK*/
