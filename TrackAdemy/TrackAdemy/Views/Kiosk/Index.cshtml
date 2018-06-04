@@ -5,13 +5,13 @@
 
     <script>
 
-        function checkMarkView(id) {
-            var e = document.getElementsByID(id);
-            if (e.style.display == 'block') {
-                e.style.display == 'none';
+        function checkMarkView() {
+            var x = document.getElementById('checkMarkButton');
+            if (x.style.display === "none") {
+                x.style.display = "block";
             }
             else {
-                e.style.display = 'block';
+                x.style.display = "none";
             }
         }
     </script>
@@ -40,8 +40,8 @@
                 <div class="item1">
 
                     <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student1.png" class="studentPicture" />
-                    <img src="~/Content/images/SVG/Kiosk_Checkmark.svg" class="checkMark" />
-                    <button  class="btn">CHECKMARK</button>
+                    <img id="checkMarkButton" src="~/Content/images/SVG/Kiosk_Checkmark.svg" class="checkMark" />
+                    <button onclick="checkMarkView()" class="btn">CHECKMARK</button>
 
                 </div>
 
