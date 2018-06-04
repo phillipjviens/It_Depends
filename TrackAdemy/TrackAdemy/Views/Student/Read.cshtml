@@ -25,7 +25,7 @@
                     <div class="col-sm-2"  >
                         <img src=@string.Format("/Content/images/StudentImages/Student{0}", @Model.URIProfilePicture) style="position:relative; left:55px; width:100px; height:auto;"/>
                         <br />
-                        <span style="position:relative; left:80px;" >
+                        <span id="profileSpan">
                             @Model.FirstName @Model.LastName
                             <br />
                             <br />
@@ -124,17 +124,17 @@
         </div>
 
         <div id="currentMonth">
-            <img src="~/Content/images/SVG/Chart SVG/@Model.URICurrentMonth" style="width:300px;"/>
+            <img src="~/Content/images/SVG/Chart SVG/@Model.URICurrentMonth"/>
             <br />
             <div id="yearToDate">
                 <br />
-                <img src="~/Content/images/SVG/Chart SVG/@Model.URIYear2Date" style="width:315px;"/>
+                <img src="~/Content/images/SVG/Chart SVG/@Model.URIYear2Date"/>
                 <br />
                 <br />
             </div>
 
             <div id="totalHours">
-                <img src="~/Content/images/SVG/Chart SVG/Admin_Manage_TotalHours.svg" style="width:300px;"/>
+                <img src="~/Content/images/SVG/Chart SVG/Admin_Manage_TotalHours.svg"/>
                 <br />
             </div>
         </div>
@@ -146,7 +146,7 @@
 <br />
 <br />
 <br />
-<div id="manageButtons" class="row" style="position:relative; right:400px;">
+<div id="manageButtons" class="row">
     <div class="col-sm-3">
     </div>
     <div class="col-sm-8">
