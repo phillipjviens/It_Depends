@@ -139,6 +139,12 @@ li a {
     right:50px;
 }
 
+#createStudent {
+    width: 40%;
+    margin-left: 17%;
+    margin-right: 70%
+}
+
 #rig {
     max-width: 150%;
     margin: 0 auto; /*center aligned*/
@@ -268,6 +274,11 @@ li a {
     float:left;
 }
 
+#profileSpan {
+    position: relative;
+    left: 80px;
+}
+
 #graphs {
     width: 600px;
     float: right;
@@ -278,32 +289,28 @@ li a {
 
 #currentMonth {
     width: 300px;
-    height: auto;
     float: left;
 }
 
 #threeMonths {
     width: 300px;
-    height: auto;
     float: left;
 }
 
 #yearToDate {
-    width: 300px;
-    height: auto;
+    width: 315px;
     float: left;
 }
 
 #totalHours {
     width: 300px;
-    height: auto;
     float: left;
 }
 
 #manageButtons {
     position: relative;
     bottom: 5%;
-    right: 80%;
+    right: 400px;
 }
 /*end STUDENT READ*/
 
