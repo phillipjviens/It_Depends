@@ -362,6 +362,15 @@ li a {
     width: 75%;
 }
 
+.kioksTrackAdemyTitle {
+    width:40vw; 
+    padding-top: 0;
+}
+
+.kioskLogo {
+    width: 5vw;
+}
+
 /*Creates a grid for the kiosk page*/
 .grid-container-kiosk {
     height: 50%;
