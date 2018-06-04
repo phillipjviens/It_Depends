@@ -376,6 +376,7 @@ li a {
         overflow: hidden;
     }
 
+/*Creates a grid for the Student Maing page*/
 .grid-container-white {
     height: 25%;
     width: auto;

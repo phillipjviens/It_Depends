@@ -1,210 +1,108 @@
 ﻿@{
     ViewBag.Title = "Student Home Page";
 }
+<head>
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title:{
+		text: "Community Hourse",
+		horizontalAlign: "left"
+	},
+	data: [{
+		type: "doughnut",
+		startAngle: 60,
+		//innerRadius: 60,
+		indexLabelFontSize: 17,
+		indexLabel: "{label} - #int",
+		toolTipContent: "<b>{label}:</b> {y} (#int)",
+		dataPoints: [
+            { y: 67, label: "Hours In School" },
+            { y: 43, label: "Hours Left To Go" },
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
 <body>
+    <!--Grid container for the student home page-->
     <div class="grid-container-white" style="margin-bottom:20px;">
+
+        <!--Item 1 container-->
         <div class="item1" style=" margin-top:50px; margin-left:50px;">
+
+            <!--Students current stash Icon-->
             <p style="font-family:'MS Gothic'; font-size:medium; color:#3D92D0"> CURRENT STASH</p>
             <img src="~/Content/images/SVG/Trackoin_Individual.svg" />
         </div>
+
+        <!--Item 2 container-->
         <div class="item2" style="width:350px; margin-left:100px; margin-right:-300px; margin-top:100px;">
+
+            <!--Pet Icon-->
             <img src="~/Content/images/SVG/Pet_Home.svg" />
         </div>
+
+        <!--Item 3 container-->
         <div class="item3" style=" margin-top:50px; margin-right:100px;">
+
+            <!--TrackCoin bonus streak-->
             <p style="font-family:'MS Gothic'; font-size:medium; color:#3D92D0"> BONUS STREAK</p>
             <img src="~/Content/images/SVG/Trackoin_Bonus.svg" />
         </div>
+
+        <!--Item 4 container-->
         <div class="item4" style="margin-left:50px;">
+
+            <!--Current Active aspiration-->
             <p style="font-family:'MS Gothic'; font-size:medium; color:#3D92D0"> CURRENT ASPIRATION</p>
             <img src="~/Content/images/SVG/Aspiration_ClockIn.svg" />
         </div>
+
+        <!--Item 5 container-->
         <div class="item5" style="margin-left:100px; margin-right:100px;">
+
+            <!--Home Streak Icon-->
             <img src="~/Content/images/SVG/Home_DayStreak_9.svg" />
         </div>
+
+        <!--Item 6 container-->
         <div class="item6" style="margin-left:-150px; margin-left:25px; margin-right:100px">
             <p style="font-family:'MS Gothic'; font-size:medium; color:#3D92D0"> YOUR REPORTS</p>
+
+            <!--Archive Button-->
             <img src="~/Content/images/SVG/Archive_Blue.svg" />
         </div>
-        <div class="item7" style="margin-right:-150px; margin-top:50px;">
-            <img src="~/Content/images/SVG/Chart SVG/Student_Home_CommunityHours.svg" />
-        </div>
-        <div class="item8" style="margin-left:10vw; margin-right:10vw;">
-            <p style="font-family:'MS Gothic'; font-size:large; color:#3D92D0"> TODAY'S SNAPSHOT</p>
 
+        <!--Item 7 container-->
+        <div class="item7" style="margin-right:-150px; margin-top:50px;">
+            
+            <div id="chartContainer" style="height: 300px; width: 100%;">
+
+                <!--Community Hours Chart-->
+                <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+            </div>
         </div>
-        <div class="item9" style="margin-left:-15vw; margin-top:50px">
-            <img src="~/Content/images/SVG/Chart SVG/Student_Home_HoursThisWeek.svg" />
+
+        <!--Item 8 container-->
+        <div class="item8" style="margin-left:10vw; margin-right:10vw;">
+
+            <!--Student Community Hours Chart-->
+            <p style="font-family:'MS Gothic'; font-size:large; color:#3D92D0"> TODAY'S SNAPSHOT</p>
+        </div>
+
+        <!--Item 9 container-->
+        <div class="item9" style="margin-left:-10vw; margin-top:50px">
+
+            <!--Student Hours Chart-->
+            <div id="chartContainer" style="height: 300px; width: 80%;">
+                <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+            </div>
         </div>
     </div>
-
-
-
-
-            <!--First row on the student page-->
-            <!--<div class="row"> -->
-            <!--First column including the streak logo and the description of-->
-            <!--
-            <div style="margin-left:100px; margin-right:100px; margin-top:10px; width:50px; ">
-                <img src="~/Content/images/SVG/Trackoin_Individual.svg" />
-                <p style="color:#3D92D0; font-size:larger; text-align:center">365</p>
-            </div>
-            <div style="margin-left:unset; margin-right:100px; margin-top:50px; width:150px; ">
-                <img src="~/Content/images/SVG/Home_DayStreak_9.svg">
-                <p style="color:#3D92D0; font-size:larger; text-align:center">CURRENT STREAK</p>
-            </div>
-            <div style="margin-left:unset; margin-right:100px; margin-top:10px; width:100px; ">
-                <img src="~/Content/images/SVG/Pet_Home.svg" />
-                <p style="color:#3D92D0; font-size:larger; text-align:center">CURRENT STREAK</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <!--First column including the streak logo and the description of-->
-            <!--
-            <div style="margin-left:100px; margin-right:100px; margin-top:10px; width:50px; ">
-                <img src="~/Content/images/SVG/Aspiration_Streak.svg" />
-                <p style="color:#3D92D0; font-size:larger; text-align:center">27 DAYS</p>
-            </div>
-            <div style="margin-left:unset; margin-right:100px; margin-top:50px; width:150px; ">
-                <img src="~/Content/images/SVG/Home_DayStreak_9.svg">
-                <p style="color:#3D92D0; font-size:larger; text-align:center">CURRENT STREAK</p>
-            </div>
-            <div style="margin-left:unset; margin-right:100px; margin-top:10px; width:100px; ">
-                <img src="~/Content/images/SVG/Pet_Home.svg" />
-                <p style="color:#3D92D0; font-size:larger; text-align:center">CURRENT STREAK</p>
-            </div>
-        </div>
-        <div class="row">
-            -->
-            <!--First column including the streak logo and the description of-->
-            <!--
-            <div style="margin-left:100px; margin-right:100px; margin-top:10px; width:50px; ">
-                <img src="~/Content/images/SVG/Aspiration_Streak.svg" />
-                <p style="color:#3D92D0; font-size:larger; text-align:center">27 DAYS</p>
-            </div>
-            <div style="margin-left:unset; margin-right:100px; margin-top:50px; width:150px; ">
-                <img src="~/Content/images/SVG/Home_DayStreak_9.svg">
-                <p style="color:#3D92D0; font-size:larger; text-align:center">CURRENT STREAK</p>
-            </div>
-            <div style="margin-left:unset; margin-right:100px; margin-top:10px; width:100px; ">
-                <img src="~/Content/images/SVG/Pet_Home.svg" />
-                <p style="color:#3D92D0; font-size:larger; text-align:center">CURRENT STREAK</p>
-            </div>
-        </div>
-
-
-        <!--Second column including the streak logo and the description of
-        <div style="margin-left: 10vw; margin-top: 5vw; width:300px;">
-            <div class="item">
-                <img src="~/Content/images/SVG/Home_DayStreak_9.svg" />
-                <p style="color:#3D92D0; font-size:larger; text-align:center">CURRENT STREAK</p>
-            </div>
-        </div>
-            -->
-            <!--Third column including the Aspirations logo and the description of
-            <div style="margin-left:10vw;  width:300px;">
-                <div class="item">
-                    <img src="~/Content/images/SVG/Pet_Home.svg" />
-                </div>
-            </div>
-        </div>
-        -->
-            <!--Second row on the student page
-        <div class="row">
-            <div style="margin-top:-5vw; margin-left: -4vw; width:150px;">
-                <div class="item">
-                    <img src="~/Content/images/SVG/Home_BestDay_Tuesday.svg" />
-                    <p style="color:#3D92D0; font-size:xx-large; text-align:center">TUESDAY</p>
-                </div>
-            </div>
-            <div style="margin-top:0vw; margin-left: 20vw; width:300px;">
-                <div class="item">
-                    <img src="~/Content/images/SVG/Chart SVG/Student_Home_CommunityHours.svg" />
-                </div>
-            </div>
-            <div style="margin-left:10vw; width:200px;">
-                <div class="item">
-                    <img src="~/Content/images/SVG/Aspiration_Streak.svg" />
-                    <p style="color:#3D92D0; font-size:xx-large; text-align:center">27 Days</p>
-                </div>
-            </div>
-        </div>
-            -->
-            <!--Third Row
-        <div class="row">
-            <div style="margin-top:-100vw; margin-left:-850vw; width:100px;">
-                <div class="item">
-                    <img src="~/Content/images/SVG/Trackoin_Pile.svg" />
-                    <p style="color:#3D92D0; font-size:xx-large; text-align:center">356</p>
-                    <p style="color:#3D92D0; font-size:xx-large; text-align:center; margin-top:-30px">Trackcoin</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div style="margin-top:25vw; margin-left:20vw; width:100px;">
-                <div class="item">
-                    <img src="~/Content/images/SVG/Archive_Blue.svg" />
-                </div>
-            </div>
-            <div style="margin-top:25vw; margin-left:100vw; width:300px;">
-                <div class="item">
-                    <img src="~/Content/images/SVG/Chart SVG/Student_Home_HoursThisWeek.svg" />
-                </div>
-            </div>
-            <div style="margin-top:25vw; margin-left:100vw; width:300px;">
-                <div class="item">
-                    <img src="~/Content/images/SVG/Pet_Home.svg" />
-                </div>
-            </div>
-        </div>
-        <!--
-        <div class="column" style="max-width:20%; float:right;">
-            <div class="item" style=" padding-top:10px; padding-left:10px;">
-                <img src="~/Content/images/SVG/Aspiration_Streak.svg" />
-                <p style="color:#3D92D0; font-size:40px; text-align:center">27 Days</p>
-            </div>
-        </div>
-            -->
-            <!--
-                <div class="item" style="padding-top:30px; padding-left:10px;">
-                    <img src="~/Content/images/SVG/Home_BestDay_Tuesday.svg" />
-                    <p style="color:#3D92D0; font-size:40px; text-align:center">Tuesday</p>
-                </div>
-                <div class="item" style="padding-top:30px; padding-left:10px;">
-                    <img src="~/Content/images/SVG/Trackoin_Pile.svg" />
-                    <p style="color:#3D92D0; font-size:40px; text-align:center">356</p>
-                </div>
-                <div class="item" style="padding-top:30px; padding-left:10px;">
-                    <img src="~/Content/images/SVG/Archive_Blue.svg" />
-                    <p style="color:#3D92D0; font-size:40px; text-align:center">356</p>
-                </div>
-            </div>
-        </div>
-                -->
-            <!--
-        <div class="row">
-            <div class="column" style=" max-width:20%">
-
-            </div>
-            <div class="column" style=" max-width:20%">
-                <p style="color:#3D92D0; font-size:60px; text-align:center">Current Streak</p>
-                <img src="~/Content/images/SVG/Aspiration_Streak.svg" />
-                <p style="color:#3D92D0; font-size:40px; text-align:center">27 Days</p>
-            </div>
-            <div class="column" style="max-width:20%; margin-top:10%">
-                <img src="~/Content/images/SVG/Home_BestDay_Tuesday.svg" />
-                <p style="color:#3D92D0; font-size:40px; text-align:center">Tuesday</p>
-                <p style="color:lightgray; font-size:30px; text-align:center">Best Day</p>
-            </div>
-            <div class="column" style="max-width:20%; margin-top:10%">
-                <p style="color:#3D92D0; font-size:40px; text-align:center">Current Stash</p>
-                <img src="~/Content/images/SVG/Trackoin_Individual.svg" />
-                <p style="color:#3D92D0; font-size:30px; text-align:center">326 Trackoin</p>
-
-
-            </div>
-
-        </div>
-            -->
-
 </body>
