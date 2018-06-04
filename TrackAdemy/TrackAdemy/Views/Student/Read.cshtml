@@ -120,7 +120,7 @@
     </div>
     <div id="graphs">
         <div id="threeMonths">
-            <img src="~/Content/images/SVG/Chart SVG/@Model.URI3Months" />
+            <img src=@string.Format("~/Content/images/SVG/Chart SVG/{0}", @Model.URI3Months) />
         </div>
 
         <div id="currentMonth">
@@ -141,11 +141,7 @@
     </div>
 </div>
 <br />
-<br />
-<br />
-<br />
-<br />
-<br />
+
 <div id="manageButtons" class="row">
     <div class="col-sm-3">
     </div>
