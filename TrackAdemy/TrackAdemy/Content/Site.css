@@ -433,13 +433,12 @@ li a {
     position: absolute;
     top: 33%;
     left: 31.5%;
-
     border: none;
     border-radius: 0;
     text-align: center;
     height: auto;
     width: 100px;
-    display: none;
+    display: block;
 }
 
 /*Formats the student2 check mark */
@@ -452,7 +451,7 @@ li a {
     text-align: center;
     height: auto;
     width: 100px;
-    display: none;
+    display: block;
 }
 
 /*Formats the student3 check mark */
@@ -478,7 +477,7 @@ li a {
     text-align: center;
     height: auto;
     width: 100px;
-    display: none;
+    display: block;
 }
 
 /*Formats the student5 check mark */
@@ -504,7 +503,7 @@ li a {
     text-align: center;
     height: auto;
     width: 100px;
-    display: none;
+    display: block;
 }
 
 /*Formats the student7 check mark */
@@ -530,7 +529,7 @@ li a {
     text-align: center;
     height: auto;
     width: 100px;
-    display: none;
+    display: block;
 }
 
 /*Formats the student9 check mark */
