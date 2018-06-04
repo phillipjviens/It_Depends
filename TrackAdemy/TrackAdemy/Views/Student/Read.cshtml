@@ -23,7 +23,7 @@
 
                 <div class="row">
                     <div class="col-sm-2"  >
-                        <img src=@string.Format("/Content/images/StudentImages/Student{0}", @Model.URIProfilePicture) style="position:relative; left:55px; width:100px; height:auto;"/>
+                        <img class="ReadProfilePic" src=@string.Format("/Content/images/StudentImages/Student{0}", @Model.URIProfilePicture) alt=""/>
                         <br />
                         <span id="profileSpan">
                             @Model.FirstName @Model.LastName
@@ -120,21 +120,21 @@
     </div>
     <div id="graphs">
         <div id="threeMonths">
-            <img src=@string.Format("~/Content/images/SVG/Chart SVG/{0}", @Model.URI3Months) />
+            <img src=@string.Format("/Content/images/SVG/ChartSVG/{0}", @Model.URI3Months) alt=""/>
         </div>
 
         <div id="currentMonth">
-            <img src="~/Content/images/SVG/Chart SVG/@Model.URICurrentMonth"/>
+            <img src=@string.Format("/Content/images/SVG/ChartSVG/{0}", @Model.URICurrentMonth) alt="smiley face"/>
             <br />
             <div id="yearToDate">
                 <br />
-                <img src="~/Content/images/SVG/Chart SVG/@Model.URIYear2Date"/>
+                <img src=@string.Format("/Content/images/SVG/ChartSVG/{0}", @Model.URIYear2Date) alt=""/>
                 <br />
                 <br />
             </div>
 
             <div id="totalHours">
-                <img src="~/Content/images/SVG/Chart SVG/Admin_Manage_TotalHours.svg"/>
+                <img src="~/Content/images/SVG/ChartSVG/Admin_Manage_TotalHours.svg"/>
                 <br />
             </div>
         </div>
