@@ -388,15 +388,13 @@ li a {
 
 /*Formats the student check mark pictures on the kiosk page*/
 .checkMark {
-
     height: auto;
     width: 70px;
     border-radius: 30%;
     overflow: hidden;
     position: absolute;
-
-
-
+    margin-top: 5%;
+    margin-right: 50px;
 }
 
 /*Logout button for the kiosk page*/
@@ -422,7 +420,7 @@ li a {
     left: 31.5%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: transparent;
+    background-color: blue;
     color: transparent;
     font-size: 16px;
     padding: 50px 10px;
@@ -439,7 +437,7 @@ li a {
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: transparent;
+    background-color: blue;
     color: transparent;
     font-size: 16px;
     padding: 50px 10px;
