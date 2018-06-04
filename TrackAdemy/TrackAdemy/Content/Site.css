@@ -412,6 +412,7 @@ li a {
     display : none;
 }
 
+/*Formats the student1 check mark */
 #checkMark1 {
     position: absolute;
     top: 33%;
@@ -425,6 +426,7 @@ li a {
     display: none;
 }
 
+/*Formats the student2 check mark */
 #checkMark2 {
     position: absolute;
     top: 33%;
@@ -437,6 +439,7 @@ li a {
     display: none;
 }
 
+/*Formats the student3 check mark */
 #checkMark3 {
     position: absolute;
     top: 33%;
@@ -449,6 +452,7 @@ li a {
     display: none;
 }
 
+/*Formats the student4 check mark */
 #checkMark4 {
     position: absolute;
     top: 57%;
@@ -461,6 +465,7 @@ li a {
     display: none;
 }
 
+/*Formats the student5 check mark */
 #checkMark5 {
     position: absolute;
     top: 57%;
@@ -473,6 +478,7 @@ li a {
     display: none;
 }
 
+/*Formats the student6 check mark */
 #checkMark6 {
     position: absolute;
     top: 57%;
@@ -485,6 +491,7 @@ li a {
     display: none;
 }
 
+/*Formats the student7 check mark */
 #checkMark7 {
     position: absolute;
     top: 81%;
@@ -496,6 +503,8 @@ li a {
     width: 100px;
     display: none;
 }
+
+/*Formats the student8 check mark */
 #checkMark8 {
     position: absolute;
     top: 81%;
@@ -507,6 +516,8 @@ li a {
     width: 100px;
     display: none;
 }
+
+/*Formats the student9 check mark */
 #checkMark9 {
     position: absolute;
     top: 81%;
