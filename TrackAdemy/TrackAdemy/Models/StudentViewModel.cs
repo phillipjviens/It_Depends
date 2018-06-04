@@ -6,7 +6,7 @@ using System.Web;
 namespace TrackAdemy.Models
 {
     /// <summary>
-    /// View Model for the Student Index, this will have the list of the students in it convered to a StudentDisplayViewModel
+    /// View Model for the Student Index
     /// </summary>
     public class StudentViewModel
     {
