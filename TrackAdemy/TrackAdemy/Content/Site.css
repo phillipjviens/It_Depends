@@ -417,7 +417,7 @@ input, select, textarea {
 /*Formats the backyard picture on the pet yard page*/
 .backYardPicture {
     height: auto;
-    width: 67%;
+    width: 80%;
     max-width: 100%;
     display: block;
     margin-left: auto;
