@@ -101,6 +101,11 @@ input, select, textarea {
 
 /*NAV*/
 /*custom class a for setting navbar elems*/
+li a:hover:not(.active) {
+    background-color: transparent;
+    color: white;
+}
+
 a {
     color: white;
     float: right;
@@ -113,6 +118,7 @@ li a {
     text-align: center;
     margin-right: -10px;
 }
+
 /*adminNav bar gradient*/
 #adminNav {
     background: linear-gradient(to right, #C22026,#F2696A);
