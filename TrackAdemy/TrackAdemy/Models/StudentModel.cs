@@ -169,7 +169,7 @@ namespace TrackAdemy.Models
         /// <param name="avgin">The student's average check in time</param>
         /// <param name="avgout">The student's average check out time</param>
         public StudentModel(string firstname, string lastname, string username, string password, string profilePic, string currentweek = "Student_Home_HoursThisWeek.svg",
-            string thismonth = "Student_Manage_MonthHours.svg", string threeMonths = "Student_Manage_3MonthsHours.svg", string year = "Student_Manage_YearToDateHours.svg", double totalHours = 10.5, int daysAttended = 4, string avgin = "9:50", string avgout = "2:00")
+            string thismonth = "Admin_Manage_MonthHours.svg", string threeMonths = "Admin_Manage_3MonthsHours.svg", string year = "Admin_Manage_YearToDateHours.svg", double totalHours = 10.5, int daysAttended = 4, string avgin = "9:50", string avgout = "2:00")
         {
             Initialize();
 
