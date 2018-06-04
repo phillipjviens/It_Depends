@@ -362,11 +362,13 @@ li a {
     width: 75%;
 }
 
+/*Formats title in kiosk page*/
 .kioksTrackAdemyTitle {
     width:40vw; 
     padding-top: 0;
 }
 
+/*Formats logo in kiosk page*/
 .kioskLogo {
     width: 5vw;
 }
