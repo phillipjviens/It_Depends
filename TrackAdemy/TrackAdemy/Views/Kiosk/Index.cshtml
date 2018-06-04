@@ -4,6 +4,7 @@
 <head>
 
     <script>
+
         function checkMarkView(id) {
             var e = document.getElementsByID(id);
             if (e.style.display == 'block') {
@@ -38,9 +39,11 @@
                 <!--Student 1 picture with checkin and check out buttons-->
                 <div class="item1">
                     <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student1.png" class="picture" />
+
                     <div id="checkMarkButton">
                         <img src="~/Content/images/SVG/Kiosk_Checkmark.svg" class="checkMark" />
                     </div>
+
                     <button onclick="checkMarkView('checkMarkButton')" class="btn">CHECKMARK</button>
 
                 </div>
