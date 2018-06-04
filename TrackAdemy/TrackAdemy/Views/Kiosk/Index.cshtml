@@ -1,6 +1,21 @@
 ﻿@{
     ViewBag.Title = "Kiosk Home Page";
 }
+<head>
+
+    <script>
+        function checkMarkView(id) {
+            var e = document.getElementsByID(id);
+            if (e.style.display == 'block') {
+                e.style.display == 'none';
+            }
+            else {
+                e.style.display = 'block';
+            }
+        }
+    </script>
+
+</head>
 
 <!--Background of fading green for entire screen-->
 <body class="kioskBackground" style="margin: 0; padding: 0;">
@@ -23,8 +38,10 @@
                 <!--Student 1 picture with checkin and check out buttons-->
                 <div class="item1">
                     <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student1.png" class="picture" />
-                    <img src="~/Content/images/SVG/Kiosk_Checkmark.svg" class="checkMark" />
-                    <button onclick="checkMark()" class="btn">CHECKMARK</button>
+                    <div id="checkMarkButton">
+                        <img src="~/Content/images/SVG/Kiosk_Checkmark.svg" class="checkMark" />
+                    </div>
+                    <button onclick="checkMarkView('checkMarkButton')" class="btn">CHECKMARK</button>
 
                 </div>
 
@@ -89,11 +106,5 @@
         </div>
 
     </div>
-
-<script>
-    function checkMark() {
-        document.getElementsByID("checkmark").src = "~/Content/images/SVG/Kiosk_Checkmark.svg";
-    }
-</script>
 
 </body>
