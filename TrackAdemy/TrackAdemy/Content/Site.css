@@ -268,9 +268,9 @@ li a {
 
 #studentStats {
     width: 40%;
-    position: relative;
-    top:45px;
-    left: 15%;
+    position: absolute;
+    top:25%;
+    left: 25%;
     float:left;
 }
 
@@ -280,11 +280,11 @@ li a {
 }
 
 #graphs {
-    width: 600px;
-    float: right;
+    width: 70%;
+    height:100vh;
     position: relative;
-    top:100px;
-    overflow: hidden;
+    top:8em;
+    left:40em;
 }
 
 #currentMonth {
@@ -309,7 +309,7 @@ li a {
 
 #manageButtons {
     position: relative;
-    bottom: 5%;
+    bottom: 0%;
     right: 400px;
 }
 /*end STUDENT READ*/
