@@ -1,4 +1,4 @@
-﻿@model TrackAdemy.Models.StudentDisplayViewModel
+﻿@model TrackAdemy.Models.StudentModel
 
 @{
     ViewBag.Title = "Update";
@@ -25,10 +25,10 @@
                 <div class="col-sm-3 text-right">
                 </div>
                 <div class="col-sm-2">
-                    <img src="~/Content/img/@Model.AvatarUri" class="AvatarSize1" />
+                    <img src=@string.Format("/Content/images/StudentImages/Student{0}", @Model.URIProfilePicture) />
                     <br />
                     <span>
-                        @Model.Name
+                        @Model.FirstName @Model.LastName
                         <br />
                         <br />
                         <br />
@@ -38,81 +38,78 @@
 
             @using (Html.BeginForm())
             {
-            @Html.AntiForgeryToken()
-            @Html.HiddenFor(m => m.Id)
-            @Html.HiddenFor(m => m.Password)
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.Id)
+                @Html.HiddenFor(m => m.Password)
+                @Html.HiddenFor(m => m.URICurrentWeek)
+                @Html.HiddenFor(m => m.URICurrentMonth)
+                @Html.HiddenFor(m => m.URI3Months)
+                @Html.HiddenFor(m => m.URIYear2Date)                
+                @Html.HiddenFor(m => m.DaysAttended)
+                @Html.HiddenFor(m => m.AvgIn)
+                @Html.HiddenFor(m => m.AvgOut)
 
-            <div class="row">
-                <div class="col-sm-3 text-right">
-                    @Html.DisplayNameFor(m => m.Name)
+                <div class="row">
+                    <div class="col-sm-3 text-right">
+                        @Html.DisplayNameFor(m => m.FirstName)
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.EditorFor(m => m.FirstName)
+                        @Html.ValidationMessageFor(m => m.FirstName)
+                    </div>
                 </div>
-                <div class="col-sm-2">
-                    @Html.EditorFor(m => m.Name)
-                    @Html.ValidationMessageFor(m => m.Name)
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-sm-3 text-right">
-                    @Html.DisplayNameFor(m => m.AvatarId)
+                <div class="row">
+                    <div class="col-sm-3 text-right">
+                        @Html.DisplayNameFor(m => m.LastName)
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.EditorFor(m => m.LastName)
+                        @Html.ValidationMessageFor(m => m.LastName)
+                    </div>
                 </div>
-                <div class="col-sm-2">
-                    @Html.DropDownListFor(m => m.AvatarId, _5051.Backend.AvatarBackend.Instance.GetAvatarListItem(Model.AvatarId))
-                    @Html.ValidationMessageFor(m => m.AvatarId)
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-sm-3 text-right">
-                    @Html.DisplayNameFor(m => m.AvatarLevel)
-                </div>
-                <div class="col-sm-2">
-                    @Html.EditorFor(m => m.AvatarLevel)
-                    @Html.ValidationMessageFor(m => m.AvatarLevel)
+                <div class="row">
+                    <div class="col-sm-3 text-right">
+                        @Html.DisplayNameFor(m => m.Username)
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.EditorFor(m => m.Username)
+                        @Html.ValidationMessageFor(m => m.Username)
 
+                    </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-sm-3 text-right">
-                    @Html.DisplayNameFor(m => m.Tokens)
+                <div class="row">
+                    <div class="col-sm-3 text-right">
+                        @Html.DisplayNameFor(m => m.URIProfilePicture)
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.EditorFor(m => m.URIProfilePicture)
+                        @Html.ValidationMessageFor(m => m.URIProfilePicture)
+                    </div>
                 </div>
-                <div class="col-sm-2">
-                    @Html.EditorFor(m => m.Tokens)
-                    @Html.ValidationMessageFor(m => m.Tokens)
+                <div class="row">
+                    <div class="col-sm-3 text-right">
+                        @Html.DisplayNameFor(m => m.TotalHours)
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.EditorFor(m => m.TotalHours)
+                        @Html.ValidationMessageFor(m => m.TotalHours)
+                    </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-sm-3 text-right">
-                    @Html.DisplayNameFor(m => m.ExperiencePoints)
-                </div>
-                <div class="col-sm-2">
-                    @Html.EditorFor(m => m.ExperiencePoints)
-                    @Html.ValidationMessageFor(m => m.ExperiencePoints)
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-sm-3 text-right">
-                    @Html.DisplayNameFor(m => m.Status)
+                <br />
+                <br />
+                <div class="row">
+                    <div class="col-sm-3 text-right">
+                    </div>
+                    <div class="col-sm-4">
+                        @Html.ActionLink("Cancel", "Read", new { id = Model.Id }, new { @class = "btn btn-success" })
+                        <input type="submit" value="Update" class="btn btn-primary">
+                    </div>
                 </div>
-                <div class="col-sm-2">
-                    @Html.EnumDropDownListFor(x => x.Status, "Select Status")
-                    @Html.ValidationMessageFor(m => m.Status)
-                </div>
-            </div>
-
-            <br />
-            <br />
-            <div class="row">
-                <div class="col-sm-3 text-right">
-                </div>
-                <div class="col-sm-4">
-                    @Html.ActionLink("Cancel", "Index", new { id = Model.Id }, new { @class = "btn btn-success" })
-                    <input type="submit" value="Update" class="btn btn-primary">
-                </div>
-            </div>
 
             }
 

@@ -1,9 +1,11 @@
-﻿@{
+﻿@model TrackAdemy.Models.StudentViewModel
+@{
     ViewBag.Title = "Admin Home Page";
 }
 
+
 <!--Drop-down menu changing the data range of statistics-->
-<ul class="nav nav-pills">
+<ul class="nav nav-pills" style="margin-top:40px">
     <li class="dropdown">
         <a class="dropdown-toggle btn btn-info" data-toggle="dropdown" href="#">This Week<b class="caret"></b></a>
         <ul class="dropdown-menu">
@@ -15,25 +17,30 @@
     </li>
 </ul>
 
+
+
+
+
+
+
 <!--Graph of total hours per student in data range-->
 <div class="row">
     <div class="column">
-        <img src="~/Content/images/SVG/AdminTotalHoursByStudentThisWeek.svg" style="width:50vw"/>
+        <img src="~/Content/images/SVG/Chart SVG/Admin_Home_StudentAttendance.svg" style="height:50vh;" />
+        <img src="~/Content/images/SVG/Chart SVG/Admin_Home_StudentHours.svg" style="width:49vw;" />
     </div>
-<!--Graph of number of students in class per day of the week in data range-->
-    <div class="column">
-        <img src="~/Content/images/SVG/AdminHomeAverageDayOfWeek.svg"style="width:50vw"/>
-    </div>
+    <!--Graph of number of students in class per day of the week in data range-->
+   
 
 </div>
 
 <!--Calendar Image-->
-<img src="~/Content/images/SampleCalendar.jpg" style="width:450px;height:250px;position:relative;"/>
+@*<img src="~/Content/images/SampleCalendar.jpg" style="width:450px;height:250px;position:relative;" />*@
 <!--Change item labels with button-->
-<div id="calendarMod">
+@*<div id="calendarMod">
     <label for="date">Date: </label>
     <input id="date" type="text" name="text"> <br />
     <label for="hours">Number of Hours: </label>
     <input id"hours" type="text" name="text"><br />
     @Html.ActionLink("Change", "Index", "Admin", null, new { @class = "btn btn-primary" })
-</div>
+</div>*@

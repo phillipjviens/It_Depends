@@ -6,32 +6,34 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
     <style>
-        
-        a {
+        li a:hover:not(.active) {
+            background-color: transparent;
             color: white;
-            float: right;
         }
-
-        li a {
-            display: inline;
-            padding: 10px;
-            text-align: center;
-            margin-right:-10px;
-        }
-    </style>
-
+        </style>
+  
 </head>
 <body>
     @{
         @*Gets view name*@
     var controllerName = this.ViewContext.RouteData.Values["controller"].ToString();
 
+        @*getting action name*@
+    var actionName = this.ViewContext.RouteData.Values["action"].ToString();
+
+    @*making a list of exception student pages*@
+    string []studentAdminPagesList= {"Read", "Create", "Update", "Delete" };
+
+    @*checks if the controller name is Student and if the CRUD action is being used*@
+    bool inList = (controllerName == "Student" && Array.Exists(studentAdminPagesList, x => x == actionName));
+
         @*Conditionals to determine which view called the shared layout. Depending on which, displays navbars.*@
         @*Admin nav*@
-    if (controllerName == "Admin")
+    if (controllerName == "Admin" || inList) 
     {
-            <div id="adminNav" class="navbar navbar-inverse navbar-fixed-top" style="background:linear-gradient(to right, #C22026,#F8AB9F );">
+            <div id="adminNav" class="navbar navbar-inverse navbar-fixed-top" style="background:linear-gradient(to right, #C22026,#F8AB9F );height:12%">
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -41,10 +43,16 @@
                         </button>
                     </div>
                     <div class="navbar-collapse collapse">
-                        <ul class="nav navbare-nav "style="margin-top:13px">
+                        <ul class="nav navbare-nav " style="margin-top:13px">
                             <li style="float:left; margin-left:-90px;">
                                 <a href="~/Home/Index">
-                                    <img class="img-responsive" src="~/Content/images/SVG/Trackademy_White.svg" style="width:80%; margin-top:-5px"></a>
+                                    <img class="img-responsive" src="~/Content/images/SVG/Trackademy_White.svg" style="width:80%; margin-top:-5px">
+                                </a>
+                            </li>
+                            <li style=" float:left; overflow:visible;">
+                                <a href="~/Home/Index">
+                                    <img class="img-responsive" src="~/Content/images/SVG/Logo_Blue.svg" style="width:150px; margin-left:200px; margin-top:-22px;">
+                                </a>
                             </li>
                             <li style="margin-right:-60px"><a href="~/Home/Index">LOG OUT</a></li>
                             <li><a href="~/Admin/ManageStudent">MANAGE STUDENT</a></li>
@@ -104,7 +112,7 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbare-nav" style="margin-top:13px">
-                            <li style="float:left">
+                            <li style="float:left; margin-left:-90px;">
                                 <a href="~/Home/Index"><img class="img-responsive" src="~/Content/images/SVG/Trackademy_White.svg" style="width:80%; margin-top:-5px"></a>
                             </li>
                             <li><a href="~/Student/Index">Students</a></li>
@@ -115,52 +123,8 @@
                 </div>
             </div>
     }
-    <!--
-    <div class="navbar navbar-inverse navbar-fixed-top" style="background:black">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbare-nav">
-                    <li style="float:left"><a href="~/Home/Index">TRACKADEMY</a></li>
-                    <li><a href="~/Student/Index">Students</a></li>
-                    <li><a href="~/Admin/Index">Administrators</a></li>
-                    <li><a href="~/Kiosk/Index">Check-In Kiosk</a></li>
-                    <li><a href="~/Home/About">About</a></li>
-                    <li><a href="~/Home/Help">Help</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>-->
-    <!--
-        <div class="navbar navbar-inverse navbar-fixed-top" style="background:linear-gradient(#4cff00,#00ffff);">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    @Html.ActionLink("TrackAdemy", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
-                        <li>@Html.ActionLink("Student", "Index", "Student")</li>
-                        <li>@Html.ActionLink("Kiosk", "Index", "Kiosk")</li>
-                        <li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Help", "Help", "Home")</li>
-                    </ul>
-                    @*@Html.Partial("_LoginPartial")*@
-                </div>
-            </div>
-        </div>
-        <-->
+    <!--End conditional layout-->
+    
             <div class="container body-content">
                 @RenderBody()
 

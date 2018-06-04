@@ -1,12 +1,12 @@
-﻿@model TrackAdemy.Models.StudentDisplayViewModel
+﻿@model TrackAdemy.Models.StudentModel
 
 @{
     ViewBag.Title = "Read";
 }
 
 
-<div class="container">
-    <div class="row">
+<div id="studentReadcontainer" class="container">
+    <div id ="studentStats" class="row">
         <div class="col-sm-12">
             @{
             if (Model == null)
@@ -22,13 +22,11 @@
                 <br />
 
                 <div class="row">
-                    <div class="col-sm-3 text-right">
-                    </div>
-                    <div class="col-sm-2">
-                        <img src="~/Content/img/@Model.AvatarUri" class="AvatarSize1" />
+                    <div class="col-sm-2"  >
+                        <img src=@string.Format("/Content/images/StudentImages/Student{0}", @Model.URIProfilePicture) style="position:relative; left:55px; width:100px; height:auto;"/>
                         <br />
-                        <span>
-                            @Model.Name
+                        <span style="position:relative; left:80px;" >
+                            @Model.FirstName @Model.LastName
                             <br />
                             <br />
                             <br />
@@ -38,83 +36,119 @@
 
                 <div class="row">
                     <div class="col-sm-3 text-right">
-                        @Html.DisplayNameFor(m => m.Name)
+                        @Html.DisplayNameFor(m => m.FirstName)
                     </div>
                     <div class="col-sm-2">
-                        @Html.DisplayFor(m => m.Name)
+                        @Html.DisplayFor(m => m.FirstName)
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-3 text-right">
-                        @Html.DisplayNameFor(m => m.AvatarName)
+                        @Html.DisplayNameFor(m => m.LastName)
                     </div>
                     <div class="col-sm-2">
-                        @Html.DisplayFor(m => m.AvatarName)
+                        @Html.DisplayFor(m => m.LastName)
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-3 text-right">
-                        @Html.DisplayNameFor(m => m.AvatarDescription)
+                        @Html.DisplayNameFor(m => m.AvgIn)
                     </div>
                     <div class="col-sm-2">
-                        @Html.DisplayFor(m => m.AvatarDescription)
+                        @Html.DisplayFor(m => m.AvgIn)
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-3 text-right">
-                        @Html.DisplayNameFor(m => m.AvatarLevel)
+                        @Html.DisplayNameFor(m => m.AvgOut)
                     </div>
                     <div class="col-sm-2">
-                        @Html.DisplayFor(m => m.AvatarLevel)
+                        @Html.DisplayFor(m => m.AvgOut)
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-3 text-right">
-                        @Html.DisplayNameFor(m => m.Tokens)
+                        @Html.DisplayNameFor(m => m.DaysAttended)
                     </div>
                     <div class="col-sm-2">
-                        @Html.DisplayFor(m => m.Tokens)
+                        @Html.DisplayFor(m => m.DaysAttended)
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-3 text-right">
-                        @Html.DisplayNameFor(m => m.ExperiencePoints)
+                        @Html.DisplayNameFor(m => m.Username)
                     </div>
                     <div class="col-sm-2">
-                        @Html.DisplayFor(m => m.ExperiencePoints)
+                        @Html.DisplayFor(m => m.Username)
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-3 text-right">
-                        @Html.DisplayNameFor(m => m.Status)
+                        @Html.DisplayNameFor(m => m.URIProfilePicture)
                     </div>
                     <div class="col-sm-2">
-                        @Html.DisplayFor(x => x.Status)
+                        @Html.DisplayFor(x => x.URIProfilePicture)
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 text-right">
+                        @Html.DisplayNameFor(m => m.TotalHours)
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.DisplayFor(x => x.TotalHours)
                     </div>
                 </div>
 
                 <br />
                 <br />
-                <div class="row">
-                    <div class="col-sm-3">
-                    </div>
-                    <div class="col-sm-8">
-                        @Html.ActionLink("Cancel", "Index", new { id = Model.Id }, new { @class = "btn btn-success" })
-                        @Html.ActionLink("Update", "Update", new { id = Model.Id }, new { @class = "btn btn-primary" })
-                        @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger" })
-                    </div>
-                </div>
+                
 
             </div>
             }
 
             }
         </div>
+        
+        
     </div>
+    <div id="graphs">
+        <div id="threeMonths">
+            <img src="~/Content/images/SVG/Chart SVG/@Model.URI3Months" />
+        </div>
+
+        <div id="currentMonth">
+            <img src="~/Content/images/SVG/Chart SVG/@Model.URICurrentMonth" style="width:300px;"/>
+            <br />
+            <div id="yearToDate">
+                <br />
+                <img src="~/Content/images/SVG/Chart SVG/@Model.URIYear2Date" style="width:315px;"/>
+                <br />
+                <br />
+            </div>
+
+            <div id="totalHours">
+                <img src="~/Content/images/SVG/Chart SVG/Admin_Manage_TotalHours.svg" style="width:300px;"/>
+                <br />
+            </div>
+        </div>
+    </div>
+
+    <div id="manageButtons" class="row">
+        <div class="col-sm-3">
+        </div>
+        <div class="col-sm-8">
+            @Html.ActionLink("Cancel", "ManageStudent", "Admin", new { id = "" }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Update", "Update", new { id = Model.Id }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger" })
+        </div>
+    </div>
+
+
 </div>
