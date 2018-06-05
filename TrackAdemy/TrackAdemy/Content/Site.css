@@ -12,10 +12,11 @@ body {
     src: url('../fonts/collegiateHeavyOutline Medium.ttf');
     src: local('collegiateHeavyOutline Medium'), local('collegiateHeavyOutline') url("../fonts/collegiateHeavyOutline Medium.ttf") format('truetype');
 }
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 15px;    
 }
 
 
@@ -778,12 +779,17 @@ li a {
 
 /*STORE PAGE*/
 
+.topStoreRow {
+    margin-top:70px;
+}
+
 /*Speech bubble for Store page*/
 .speech-bubble {
     position: relative;
-    background: linear-gradient(to right,#3D92D0, #7FC2D6);
-    border-radius: .4em;
-    padding: 20px;
+    background: linear-gradient(to right,#7FC2D6,#3D92D0);
+    color: white;
+    border-radius: 3em;
+    padding: 15px;
     text-align: center;
 }
 /*Speech bubble triangle for store page*/
@@ -795,10 +801,16 @@ li a {
         width: 0;
         height: 0;
         border: 26px solid transparent;
-        border-right-color: #3D92D0;
+        border-right-color: #7FC2D6;
         border-left: 0;
         margin-top: -26px;
         margin-left: -26px;
+    }
+    .speech-bubble > img {
+        width:100%;
+        height:auto;
+        max-width:100px;
+        max-height:250px
     }
 
  /*not button element for grid item*/
@@ -829,8 +841,6 @@ li a {
 /*inherited div characteristics for the grids*/
     .containerStore > div {
         border: 2px solid #C2C1C0;
-        font-size: 30px;
-        font-family: 'Century Gothic';
         justify-content: center;
         align-items:center;
     }
@@ -849,7 +859,7 @@ li a {
         background-color: aliceblue;
        text-align: center;
        
-        font-family: 'Century Gothic';
+        font-family:Collau; /*'Century Gothic'*/
         font-size: 30px;
     }
     /*Making the first item (the picture) fit properly
