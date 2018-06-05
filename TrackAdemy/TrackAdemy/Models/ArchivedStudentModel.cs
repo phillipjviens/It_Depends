@@ -13,7 +13,7 @@ namespace TrackAdemy.Models
     /// <summary>
     /// The Student, this holds the student id, name, tokens.  Other things about the student such as their attendance is pulled from the attendance data, or the owned items, from the inventory data
     /// </summary>
-    public class StudentModel
+    public class ArchivedStudentModel
     {
         /// <summary>
         /// The ID for the Student, this is the key, and a required field
@@ -111,6 +111,7 @@ namespace TrackAdemy.Models
         [Required(ErrorMessage = "Average arrival time is requrired.")]
         public string AvgOut { get; set; }
 
+        /*
         /// <summary>
         /// The defaults for a new student
         /// </summary>
@@ -122,7 +123,7 @@ namespace TrackAdemy.Models
         /// <summary>
         /// Constructor for a student
         /// </summary>
-        public StudentModel()
+        public ArchivedStudentModel()
         {
             Initialize();
         }
@@ -131,7 +132,7 @@ namespace TrackAdemy.Models
         /// This takes a studentModel data and constructs from it.
         /// </summary>
         /// <param name="data"></param>
-        public StudentModel(StudentModel data)
+        public ArchivedStudentModel(StudentModel data)
         {
             Initialize();
 
@@ -168,7 +169,7 @@ namespace TrackAdemy.Models
         /// <param name="daysAttended">days attended by the student</param>
         /// <param name="avgin">The student's average check in time</param>
         /// <param name="avgout">The student's average check out time</param>
-        public StudentModel(string firstname, string lastname, string username, string password, string profilePic, string currentweek = "Student_Home_HoursThisWeek.svg",
+        public ArchivedStudentModel(string firstname, string lastname, string username, string password, string profilePic, string currentweek = "Student_Home_HoursThisWeek.svg",
             string thismonth = "Admin_Manage_MonthHours.svg", string threeMonths = "Admin_Manage_3MonthsHours.svg", string year = "Admin_Manage_YearToDateHours.svg", double totalHours = 10.5, int daysAttended = 4, string avgin = "9:50", string avgout = "2:00")
         {
             Initialize();
@@ -189,6 +190,7 @@ namespace TrackAdemy.Models
 
 
         }
+       
 
         /// <summary>
         /// Update the Data Fields with the values passed in, do not update the ID.
@@ -216,6 +218,7 @@ namespace TrackAdemy.Models
             AvgOut = data.AvgOut;
             return true;
         }
+        */
 
     }
 }
