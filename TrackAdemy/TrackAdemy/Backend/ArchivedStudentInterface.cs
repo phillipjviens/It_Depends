@@ -9,7 +9,7 @@ namespace TrackAdemy.Backend
     /// <summary>
     /// The interface for the Student DataSource.
     /// </summary>
-    public interface IArchivedStudentInterface
+    public interface IStudentInterface
     {
         StudentModel Create(StudentModel data);
         StudentModel Read(string id);
