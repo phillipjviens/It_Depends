@@ -12,13 +12,18 @@ body {
     src: url('../fonts/collegiateHeavyOutline Medium.ttf');
     src: local('collegiateHeavyOutline Medium'), local('collegiateHeavyOutline') url("../fonts/collegiateHeavyOutline Medium.ttf") format('truetype');
 }
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 15px;    
 }
 
-
+.subheader{
+    font-family:'Century Gothic';
+    font-weight:bold;
+    text-align:center;
+}
 /*sets border box sizing*/
 * {
     box-sizing: border-box;
@@ -156,7 +161,7 @@ li a {
     margin-left: 17%;
     margin-right: 70%
 }
-
+/*rigging for overlays*/
 #rig {
     max-width: 150%;
     margin: 0 auto; /*center aligned*/
@@ -277,14 +282,14 @@ li a {
     background-color: rosybrown;
     overflow: hidden;
 }
-
+/*Read of Profile Pic*/
 .ReadProfilePic {
     position: relative;
     left: 55px;
     width: 100px;
     height: auto;
 }
-
+/*student stats*/
 #studentStats {
     width: 40%;
     position: absolute;
@@ -292,12 +297,12 @@ li a {
     left: 25%;
     float:left;
 }
-
+/*spans the profile*/
 #profileSpan {
     position: relative;
     left: 80px;
 }
-
+/*attributes to apply to graphs*/
 #graphs {
     width: 70%;
     height:100vh;
@@ -305,27 +310,27 @@ li a {
     top:8em;
     left:40em;
 }
-
+/*current month style*/
 #currentMonth {
     width: 300px;
     float: left;
 }
-
+/*3 months style*/
 #threeMonths {
     width: 300px;
     float: left;
 }
-
+/* year to date style*/
 #yearToDate {
     width: 315px;
     float: left;
 }
-
+/*total hours graph style*/
 #totalHours {
     width: 300px;
     float: left;
 }
-
+/*manage buttons*/
 #manageButtons {
     position: relative;
     right:22em;
@@ -795,13 +800,20 @@ li a {
 
 /*STORE PAGE*/
 
+.topStoreRow {
+    margin-top:70px;
+    margin-left:50px;
+}
+
 /*Speech bubble for Store page*/
 .speech-bubble {
     position: relative;
-    background: linear-gradient(to right,#3D92D0, #7FC2D6);
-    border-radius: .4em;
-    padding: 20px;
+    background: linear-gradient(to right,#7FC2D6,#3D92D0);
+    color: white;
+    border-radius: 3em;
+    padding: 15px;
     text-align: center;
+    margin-bottom:20px;
 }
 /*Speech bubble triangle for store page*/
     .speech-bubble:after {
@@ -812,10 +824,17 @@ li a {
         width: 0;
         height: 0;
         border: 26px solid transparent;
-        border-right-color: #3D92D0;
+        border-right-color: #7FC2D6;
         border-left: 0;
         margin-top: -26px;
         margin-left: -26px;
+    }
+    /*speech bubble image for pet wish*/
+    .speech-bubble > img {
+        width:100%;
+        height:auto;
+        max-width:100px;
+        max-height:250px
     }
 
  /*not button element for grid item*/
@@ -830,21 +849,22 @@ li a {
     width:30px;
     height:30px;
     float:right;
-    margin:6px 0;
+    margin:6px 0 0 -10px;
 }
 /*Large container that contains the smaller containers*/
-.containerStore{
-    display:  grid;
-    grid-template-columns:auto auto auto;
-    grid-gap:10px;
+.containerStore {
+    margin:auto;
+    width:70%;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
     background-color: white;
-    align-content:space-around;
+    align-content: space-around;
 }
 /*inherited div characteristics for the grids*/
     .containerStore > div {
         border: 2px solid #C2C1C0;
-        font-size: 30px;
-        font-family: 'Century Gothic';
         justify-content: center;
         align-items:center;
     }
@@ -852,18 +872,46 @@ li a {
  /*the smaller grid that defines each shop item and its buttons*/
 .containerSmallerStore {
     display: grid;
-    overflow:auto;
     grid-template-columns: auto auto auto auto;
-    grid-template-rows:auto 50px;
+    grid-template-rows: auto 50px;
     background-color: aliceblue;
-    height:100%;
+    height: 100%;
+    font-family: 'Century Gothic';
 }
+/*style for buy button*/
+    .containerSmallerStore .buyButton {
+        display: inline-block;
+        padding: 0 10px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #3D92D0;
+        border: none;
+        border-radius: 15px;
+        float: none;
+    }
+    /*style for buy button*/
+    .containerSmallerStore .unbuyable {
+        display: inline-block;
+        padding: 0 10px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #7FC2D6;
+        border: none;
+        border-radius: 15px;
+        float: none;
+    }
 /*inherited div characters for each grid in the smaller grid*/
     .containerSmallerStore > div {
         background-color: aliceblue;
-       text-align: center;
-       
-        font-family: 'Century Gothic';
+       text-align: center;       
         font-size: 30px;
     }
     /*Making the first item (the picture) fit properly
@@ -873,6 +921,14 @@ li a {
     align-self: center;  
    grid-area:1/1/1/5; /*grid area starting r1,c1, then spans 1x4 grids.*/
 }
+
+/*child img for grid item1*/
+    .containerSmallerStore .item1 > img{
+        
+        height: 200px;
+        width:15vw;
+         /*grid area starting r1,c1, then spans 1x4 grids.*/
+    }
 
 /*end STORE PAGE*/
 
@@ -893,7 +949,7 @@ li a {
     margin-bottom: 5px;
 }
 
-
+/*student grid*/
 .grid-container-studentHome {
     height: 25%;
     width: auto;
@@ -919,3 +975,42 @@ li a {
         position: relative;
     }
 
+/*ASPIRATIONS STUDENT*/
+.aspirations-container {
+    height: 50%;
+    width: auto;
+    display: grid;
+    grid-template: auto auto auto / auto auto auto;
+    grid-gap: 40px;
+    background-color: #C9E9EA;
+    padding-bottom: 10px;
+    padding-top: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 10px;
+    border-radius: 100px;
+}
+/*end ASPIRATIONS STUDENT*/
+
+/*ADMIN CALENDAR*/
+
+.invisButton {
+    background: transparent;
+    border: none !important;
+    font-size: 0;
+    position: absolute;
+    top:0px;
+    width:200px;
+    height:50px;
+    right:0;
+    color:black;
+}
+
+#hiddenBox{
+    text-align:center;
+    width: 100%;
+    background-color: lightblue;
+    margin-top:20px;
+}
+
+/*end ADMIN Calendar*/

@@ -278,6 +278,7 @@
     <Content Include="Content\images\SVG\Backyard_Inventory.svg" />
     <Content Include="Content\images\SVG\Backyard_Title.svg" />
     <Content Include="Content\images\SVG\ChartSVG\Admin_Calendar.svg" />
+    <Content Include="Content\images\SVG\ChartSVG\Admin_Calendar_editedNov7th.svg" />
     <Content Include="Content\images\SVG\ChartSVG\Admin_Home_StudentAttendance.svg" />
     <Content Include="Content\images\SVG\ChartSVG\Admin_Home_StudentHours.svg" />
     <Content Include="Content\images\SVG\ChartSVG\Admin_Manage_3MonthsHours.svg" />
@@ -366,6 +367,7 @@
     <Content Include="fonts\GOTHICBI.TTF" />
     <Content Include="fonts\GOTHICI.TTF" />
     <None Include="Properties\PublishProfiles\TrackAdemy20180517070256 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\TrackAdemyDepends - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
