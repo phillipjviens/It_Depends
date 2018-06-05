@@ -223,7 +223,6 @@
     <Content Include="Content\images\Aspiration new.png" />
     <Content Include="Content\images\aspirations.png" />
     <Content Include="Content\images\Backyard-Cropped.png" />
-    <Content Include="Content\images\backYardUpdate.svg" />
     <Content Include="Content\images\help.png" />
     <Content Include="Content\images\login.png" />
     <Content Include="Content\images\logout.png" />
@@ -275,6 +274,7 @@
     <Content Include="Content\images\SVG\Aspiration_Streak.svg" />
     <Content Include="Content\images\SVG\Aspiration_Streak_Dark.svg" />
     <Content Include="Content\images\SVG\Backyard-Title.svg" />
+    <Content Include="Content\images\SVG\backYardUpdate.svg" />
     <Content Include="Content\images\SVG\Backyard_Inventory.svg" />
     <Content Include="Content\images\SVG\Backyard_Title.svg" />
     <Content Include="Content\images\SVG\ChartSVG\Admin_Calendar.svg" />
