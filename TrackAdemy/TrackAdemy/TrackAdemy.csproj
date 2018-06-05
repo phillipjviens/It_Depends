@@ -205,7 +205,6 @@
     <Compile Include="Models\AdminKioskModel.cs" />
     <Compile Include="Models\Enums\StudentStatusEnum.cs" />
     <Compile Include="Models\Enums\DataSourceEnum.cs" />
-    <Compile Include="Models\ArchivedStudentModel.cs" />
     <Compile Include="Models\SystemGlobals.cs" />
     <Compile Include="Models\StudentViewModel.cs" />
     <Compile Include="Models\StudentModel.cs" />
