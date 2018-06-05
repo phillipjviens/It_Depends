@@ -769,9 +769,8 @@ li a {
 .backYardPicture {
     height: 675px;
     margin-top: 25px;
-    width: 120%;
-    margin: 0;
-    padding-left: 500px;
+    width: auto;
+    padding-left: 20px;
 }
 
 /*Formats new backyard picture*/
@@ -780,7 +779,10 @@ li a {
     margin-top: 25px;
     float:none;
     align-content: center;
+}
 
+.backYardUpdateHREF {
+    float: none;
 }
 
 
