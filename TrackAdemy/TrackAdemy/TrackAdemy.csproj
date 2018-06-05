@@ -279,6 +279,7 @@
     <Content Include="Content\images\SVG\Backyard_Inventory.svg" />
     <Content Include="Content\images\SVG\Backyard_Title.svg" />
     <Content Include="Content\images\SVG\ChartSVG\Admin_Calendar.svg" />
+    <Content Include="Content\images\SVG\ChartSVG\Admin_Calendar_editedNov7th.svg" />
     <Content Include="Content\images\SVG\ChartSVG\Admin_Home_StudentAttendance.svg" />
     <Content Include="Content\images\SVG\ChartSVG\Admin_Home_StudentHours.svg" />
     <Content Include="Content\images\SVG\ChartSVG\Admin_Manage_3MonthsHours.svg" />
