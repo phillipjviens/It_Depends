@@ -725,16 +725,12 @@ li a {
 
 /*Formats the backyard picture on the pet yard page*/
 .backYardPicture {
-    height: 20%;
-    width: 100%;
-
-    margin-left: 0;
-    margin-right: 0;
-    margin-left: 0;
+    height: 675px;
+    width: 126.5%;
     margin-top: 25px;
+    margin-left: -150px;
     padding:0;
 }
-
 /*End YARD*/
 
 
