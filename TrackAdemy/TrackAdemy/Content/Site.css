@@ -106,6 +106,12 @@ li a:hover:not(.active) {
     color: white;
 }
 
+backImg {
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+}
+
 a {
     color: white;
     float: right;
@@ -322,8 +328,7 @@ li a {
 
 #manageButtons {
     position: relative;
-    bottom: 0%;
-    right: 400px;
+    right:22em;
 }
 /*end STUDENT READ*/
 
@@ -388,6 +393,17 @@ li a {
     margin-left: auto;
     margin-right: auto;
     width: 75%;
+}
+
+/*Formats title in kiosk page*/
+.kioksTrackAdemyTitle {
+    width:40vw; 
+    padding-top: 0;
+}
+
+/*Formats logo in kiosk page*/
+.kioskLogo {
+    width: 5vw;
 }
 
 /*Creates a grid for the kiosk page*/
@@ -461,13 +477,12 @@ li a {
     position: absolute;
     top: 33%;
     left: 31.5%;
-
     border: none;
     border-radius: 0;
     text-align: center;
     height: auto;
     width: 100px;
-    display: none;
+    display: block;
 }
 
 /*Formats the student2 check mark */
@@ -480,7 +495,7 @@ li a {
     text-align: center;
     height: auto;
     width: 100px;
-    display: none;
+    display: block;
 }
 
 /*Formats the student3 check mark */
@@ -506,7 +521,7 @@ li a {
     text-align: center;
     height: auto;
     width: 100px;
-    display: none;
+    display: block;
 }
 
 /*Formats the student5 check mark */
@@ -532,7 +547,7 @@ li a {
     text-align: center;
     height: auto;
     width: 100px;
-    display: none;
+    display: block;
 }
 
 /*Formats the student7 check mark */
@@ -558,7 +573,7 @@ li a {
     text-align: center;
     height: auto;
     width: 100px;
-    display: none;
+    display: block;
 }
 
 /*Formats the student9 check mark */
@@ -736,31 +751,28 @@ li a {
     text-align: center;
     outline: none;
 }
-
 /*End KIOSK*/
 
 /*PET YARD*/
 
 /*Formats the backyard picture on the pet yard page*/
 .backYardPicture {
-    height: auto;
-    width: 80%;
-    max-width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 0;
+    height: 675px;
+    width: 126.5%;
+    margin-top: 25px;
+    margin-left: -150px;
+    padding:0;
 }
 
-/*Formats the 'backyard' picture on the pet yard page*/
-.titleBackYard {
-    height: auto;
-    max-width: 100%;
-    width: 30%;
-    line-height: 400px !important;
-    margin-bottom: 10px;
-    margin-top: 30px;
-} /*End YARD*/
+/*End YARD*/
+
+
+/*PET YARD UPDATE*/
+
+/*Formats new backyard picture*/
+.backYardPictureUpdate {
+
+}
 
 
 
@@ -865,13 +877,14 @@ li a {
 }
 
 
-.grid-container-white {
+.grid-container-studentHome {
     height: 25%;
     width: auto;
     display: grid;
     grid-template: auto auto auto / auto auto auto;
     grid-gap: 50px;
-    background-color: white;
+    background: radial-gradient(#37499F,#3D92D0);
+    opacity:0.3;
     padding-bottom: 10px;
     padding-top: 5px;
     padding-left: 25px;
