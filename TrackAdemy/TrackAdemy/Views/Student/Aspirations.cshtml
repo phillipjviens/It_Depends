@@ -3,76 +3,70 @@
 }
 
 <body style="background-color:#FFFFFF;">
-    <div class="center" style="margin:10; padding: 10;">
-        <body class="AspirationBackground" style="margin: 10; padding: 10;">
+    <div class="center" style="margin:0; padding: 0;">
+        <body class="AspirationBackground" style="margin: 0; padding: 0;">
     </div>
-
     <div>
-        <div class="grid-container" style="position:relative; top: 50%;">
 
-            <p style="color:#FFFFFF; font-size:40px; font-family:'Century Gothic'; text-align:center"> TODAY'S ASPIRATION </p>
+        <div class="aspirations-container">
+            <!--<p style="color:#FFFFFF; font-size:20px; font-family:'Century Gothic'; margin-top:60px; margin-right:200px; text-align:center"> FUTURE'S ASPIRATION </p>-->
 
-            <div class="item1">
+            <div class="item1" style=" margin-top:90px; margin-right:75px;">
+
                 <img id="clockIn" src="~/Content/images/SVG/Aspiration_ClockIn.svg" />
-                <p style="color:#FFFFFF; font-size:12px; text-align:center">Clock In</p>
-
+                <p style="color:#FFFFFF; font-size:14px; text-align:center"> <b> Today's Clock In</b></p>
+                <button onclick="clockIn()" class="btn">Clock In</button>
             </div>
-            <div class="item2">
+            <div class="item2" style=" margin-top:90px; margin-right:75px;">
                 <img src="~/Content/images/SVG/Aspiration_ClockOut_Dark.svg" />
-                <p style="color:#3D92D0; font-size:12px; text-align:center">Clock Out</p>
+                <p style="color:#3D92D0; font-size:14px; text-align:center"> <b> Today's Clock Out</b></p>
                 <button onclick="clockOut()" class="btn">Clock Out</button>
             </div>
 
-            <div class="item3">
+            <div class="item3" style=" margin-top:85px; margin-right:75px;">
                 <img src="~/Content/images/SVG/Aspiration_StayAllDay_Dark.svg" />
-                <p style="color:#3D92D0; font-size:12px; text-align:center">Stay All Day</p>
+                <p style="color:#3D92D0; font-size:14px; text-align:center"><b>Stay All Day Today</b> </p>
                 <button onclick="StayAllDay()" class="btn">StayAllDay</button>
             </div>
 
-
-            <p style="color:#FFFFFF; font-size:40px; font-family:'Century Gothic'; text-align:left"> FUTURE'S ASPIRATION </p>
-
-
-            <div class="item4">
+            <div class="item4" style=" margin-top:100px; margin-right:30px;">
                 <img src="~/Content/images/SVG/Aspiration_Streak_Dark.svg" />
-                <p style="color:#3D92D0; font-size:12px; text-align:center">28 DAYS STREAK</p>
+                <p style="color:#3D92D0; font-size:14px; text-align:center"><b>28 DAYS STREAK</b></p>
                 <button onclick="28DaysStreak();" class="btn">28DaysStreak</button>
             </div>
 
-            <div class="item5">
+            <div class="item5" style="margin-top:20px; margin-right:30px;">
+                <p style="color:#FFFFFF; font-size:18px; text-align:center"><b> FUTURE ASPIRATION</b></p>
                 <img src="~/Content/images/SVG/Aspiration_ClockOut_3_Dark.svg" />
-                <p style="color:#3D92D0; font-size:12px; text-align:center"> 3 DAYS IN A ROW </p>
-                <button onclick="StayAllDay()" class="btn">StayAllDay</button>
+                <p style="color:#3D92D0; font-size:14px; text-align:center"><b>3 DAYS IN A ROW</b> </p>
+                <button onclick="3DaysInARow()" class="btn">3 Days in a Row</button>
             </div>
 
-            <div class="item6">
+            <div class="item6" style=" margin-top:50px; margin-right:70px;">
                 <img src="~/Content/images/SVG/Aspiration_300Hours_Dark.svg" />
-                <p style="color:#3D92D0; font-size:12px; text-align:center">300 COMMUNITY HOURS </p>
+                <p style="color:#3D92D0;font-size:14px;text-align:center"><b>300 COMMUNITY HOURS</b></p>
                 <button onclick="300CommunityHours()" class="btn">300 Community Hours</button>
             </div>
 
 
-
-            <p style="color:#FFFFFF; font-size:40px; font-family:'Century Gothic'; text-align:center"> Dexter's Wishlist </p>
-
-            <div class="item7">
-                <img src="~/Content/images/SVG/Store_Speak.svg" />
-                <p style="color:#3D92D0; font-size:12px; text-align:center"> LEARN SPEAK </p>
+            <div class="item7" style=" margin-top:90px; margin-right:50px;">
+                <img src="~/Content/images/SVG/Store_Speak.svg" style=" margin-top:50px; margin-right:90px;" />
+                <p style="color:#3D92D0; font-size:14px; text-align:center"><b>LEARN SPEAK </b></p>
                 <button onclick="LearnSpeak()" class="btn">Learn Speak</button>
             </div>
-
-            <div class="item8">
-                <img src="~/Content/images/SVG/Store_Handkerchief_Dark.svg" />
-                <p style="color:#3D92D0; font-size:10px; text-align:center">HANDKARECHIEF</p>
+            <div class="item8" style=" margin-top:70px; margin-right:60px;">
+                <p style="color:#FFFFFF; font-size:18px; text-align:center"><b> WISH LIST</b></p>
+                <img src="~/Content/images/SVG/Store_Handkerchief_Dark.svg" style=" margin-top:30px; margin-right:50px;" />
+                <p style="color:#3D92D0; font-size:14px; text-align:center"><b>HANDKARECHIEF</b></p>
                 <button onclick="Handkrachief()" class="btn">HANDKARECHIEF</button>
             </div>
 
-
-            <div class="item9">
-                <img src="~/Content/images/SVG/Store_CowboyHat_Dark.svg" />
-                <p style="color:#3D92D0; font-size:12px; text-align:center">COWBOY HAT </p>
-                <button onclick="CowboyHat()" class="btn">Cowboy Hat</button>
+            <div class="item9" style=" margin-top:100px; margin-right:70px;">
+                <img src="~/Content/images/SVG/Store_CowboyHat_Dark.svg" style=" margin-top:70px; margin-right:60px;" />
+                <p style="color:#3D92D0; font-size:14px; text-align:center"><b>COWBOY HAT</b></p>
+                <button onclick="CowboyHat()" class="btn"> Cowboy Hat</button>
             </div>
 
         </div>
 </body>
+
