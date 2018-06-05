@@ -816,12 +816,15 @@ li a {
     margin:6px 0;
 }
 /*Large container that contains the smaller containers*/
-.containerStore{
-    display:  grid;
-    grid-template-columns:auto auto auto;
-    grid-gap:10px;
+.containerStore {
+    margin:auto;
+    width:70%;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
     background-color: white;
-    align-content:space-around;
+    align-content: space-around;
 }
 /*inherited div characteristics for the grids*/
     .containerStore > div {
@@ -835,7 +838,7 @@ li a {
  /*the smaller grid that defines each shop item and its buttons*/
 .containerSmallerStore {
     display: grid;
-    overflow:auto;
+   
     grid-template-columns: auto auto auto auto;
     grid-template-rows:auto 50px;
     background-color: aliceblue;
@@ -856,6 +859,12 @@ li a {
     align-self: center;  
    grid-area:1/1/1/5; /*grid area starting r1,c1, then spans 1x4 grids.*/
 }
+    .containerSmallerStore .item1 > img{
+        
+        height: 200px;
+        width:15vw;
+         /*grid area starting r1,c1, then spans 1x4 grids.*/
+    }
 
 /*end STORE PAGE*/
 
