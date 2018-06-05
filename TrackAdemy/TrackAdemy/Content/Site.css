@@ -755,25 +755,35 @@ li a {
 
 /*PET YARD*/
 
+
+/*Have the formatting on left and right be 0*/
+.backYardFormat {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
 /*Formats the backyard picture on the pet yard page*/
 .backYardPicture {
     height: 675px;
     margin-top: 25px;
-    width: 
-    
+    width: 120%;
+    margin: 0;
+    padding-left: 500px;
 }
-
-/*End YARD*/
-
-
-/*PET YARD UPDATE*/
 
 /*Formats new backyard picture*/
 .backYardPictureUpdate {
     height: 675px;
     margin-top: 25px;
-    padding: 0;
+    width: 100%;
+
+  
 }
+
+/*End YARD*/
 
 
 /*STORE PAGE*/
