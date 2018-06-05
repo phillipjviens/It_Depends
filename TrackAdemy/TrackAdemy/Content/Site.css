@@ -753,8 +753,8 @@ li a {
 }
 /*End KIOSK*/
 
-/*PET YARD*/
 
+/*PET YARD*/
 
 /*Have the formatting on left and right be 0*/
 .backYardFormat {
@@ -764,13 +764,15 @@ li a {
     padding-right: 0;
 }
 
-
 /*Formats the backyard picture on the pet yard page*/
 .backYardPicture {
     height: 675px;
     margin-top: 25px;
-    width: auto;
-    padding-left: 20px;
+    width: 1100px;
+    float: none;
+    align-content: center;
+    justify-content: center;
+    padding-left: 32px;
 }
 
 /*Formats new backyard picture*/
