@@ -328,10 +328,24 @@ li a {
 
 #manageButtons {
     position: relative;
-    bottom: 0%;
-    right: 400px;
+    right:22em;
 }
 /*end STUDENT READ*/
+
+/*ADMIN/CALENDAR PAGE*/
+.calContainer {
+    position: relative;
+    top: 50px;
+    left: 15%;
+    width: 70%;
+    height: 100vh;
+}
+
+.calPic {
+    width: 100%;
+    height: auto;
+}
+/*end ADMIN/CALENDAR PAGE*/
 
 /*HOME/INDEX PAGE*/
 /*login input group items that are img (the custom icons)*/
