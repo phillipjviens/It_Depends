@@ -779,9 +779,12 @@ li a {
     height: 675px;
     margin-top: 25px;
     width: 100%;
-
-  
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
+
 
 /*End YARD*/
 
