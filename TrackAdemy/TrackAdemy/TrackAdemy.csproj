@@ -190,8 +190,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Backend\DataSourceBackend.cs" />
-    <Compile Include="Backend\ArchivedStudentBackend.cs" />
-    <Compile Include="Backend\ArchivedStudentInterface.cs" />
     <Compile Include="Backend\StudentInterface.cs" />
     <Compile Include="Backend\StudentDataSourceMock.cs" />
     <Compile Include="Backend\StudentBackend.cs" />
