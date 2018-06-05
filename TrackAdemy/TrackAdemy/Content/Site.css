@@ -106,6 +106,12 @@ li a:hover:not(.active) {
     color: white;
 }
 
+backImg {
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+}
+
 a {
     color: white;
     float: right;
@@ -724,6 +730,171 @@ li a {
 
 /*End KIOSK*/
 
+/*STUDENT HOME*/
+/*item1 button layout for kiosk page*/
+.item1 .btn {
+    position: absolute;
+    top: 33%;
+    left: 31.5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: transparent;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+    outline: none;
+
+}
+
+/*item2 button layout for kiosk page*/
+.item2 .btn {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: transparent;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+    outline: none;
+}
+
+/*item3 button layout for kiosk page*/
+.item3 .btn {
+    position: absolute;
+    top: 33%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: transparent;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+    outline: none;
+}
+
+/*item4 button layout for kiosk page*/
+.item4 .btn {
+    position: absolute;
+    top: 57%;
+    left: 31.5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: transparent;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+    outline: none;
+}
+
+/*item5 button layout for kiosk page*/
+.item5 .btn {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: transparent;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+    outline: none;
+}
+
+/*item6 button layout for kiosk page*/
+.item6 .btn {
+    position: absolute;
+    top: 57%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: transparent;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+    outline: none;
+}
+
+/*item7 button layout for kiosk page*/
+.item7 .btn {
+    position: absolute;
+    top: 81%;
+    left: 31.5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: transparent;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+    outline: none;
+}
+
+/*item8 button layout for kiosk page*/
+.item8 .btn {
+    position: absolute;
+    top: 81%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: transparent;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+    outline: none;
+}
+
+/*item9 button layout for kiosk page*/
+.item9 .btn {
+    position: absolute;
+    top: 81%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: transparent;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+    outline: none;
+}
+
+
 /*PET YARD*/
 
 /*Formats the backyard picture on the pet yard page*/
@@ -850,13 +1021,14 @@ li a {
 }
 
 
-.grid-container-white {
+.grid-container-studentHome {
     height: 25%;
     width: auto;
     display: grid;
     grid-template: auto auto auto / auto auto auto;
     grid-gap: 50px;
-    background-color: white;
+    background: radial-gradient(#37499F,#3D92D0);
+    opacity:0.3;
     padding-bottom: 10px;
     padding-top: 5px;
     padding-left: 25px;
