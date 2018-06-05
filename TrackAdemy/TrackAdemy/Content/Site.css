@@ -777,12 +777,14 @@ li a {
 .backYardPictureUpdate {
     height: 675px;
     margin-top: 25px;
-    float:none;
+    width: 100%;
     align-content: center;
+    justify-content: center;
 }
 
 .backYardUpdateHREF {
     float: none;
+    justify-content: center;
 }
 
 
