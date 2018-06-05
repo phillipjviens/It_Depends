@@ -758,10 +758,9 @@ li a {
 /*Formats the backyard picture on the pet yard page*/
 .backYardPicture {
     height: 675px;
-    width: 126.5%;
     margin-top: 25px;
-    margin-left: -150px;
-    padding:0;
+    width: 
+    
 }
 
 /*End YARD*/
@@ -771,9 +770,10 @@ li a {
 
 /*Formats new backyard picture*/
 .backYardPictureUpdate {
-
+    height: 675px;
+    margin-top: 25px;
+    padding: 0;
 }
-
 
 
 /*STORE PAGE*/
