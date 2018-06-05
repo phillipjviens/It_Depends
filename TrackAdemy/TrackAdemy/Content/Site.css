@@ -101,6 +101,17 @@ input, select, textarea {
 
 /*NAV*/
 /*custom class a for setting navbar elems*/
+li a:hover:not(.active) {
+    background-color: transparent;
+    color: white;
+}
+
+backImg {
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+}
+
 a {
     color: white;
     float: right;
@@ -113,6 +124,7 @@ li a {
     text-align: center;
     margin-right: -10px;
 }
+
 /*adminNav bar gradient*/
 #adminNav {
     background: linear-gradient(to right, #C22026,#F2696A);
@@ -266,6 +278,13 @@ li a {
     overflow: hidden;
 }
 
+.ReadProfilePic {
+    position: relative;
+    left: 55px;
+    width: 100px;
+    height: auto;
+}
+
 #studentStats {
     width: 40%;
     position: absolute;
@@ -309,10 +328,24 @@ li a {
 
 #manageButtons {
     position: relative;
-    bottom: 0%;
-    right: 400px;
+    right:22em;
 }
 /*end STUDENT READ*/
+
+/*ADMIN/CALENDAR PAGE*/
+.calContainer {
+    position: relative;
+    top: 50px;
+    left: 15%;
+    width: 70%;
+    height: 100vh;
+}
+
+.calPic {
+    width: 100%;
+    height: auto;
+}
+/*end ADMIN/CALENDAR PAGE*/
 
 /*HOME/INDEX PAGE*/
 /*login input group items that are img (the custom icons)*/
@@ -720,7 +753,6 @@ li a {
 }
 /*End KIOSK*/
 
-
 /*PET YARD*/
 
 /*Formats the backyard picture on the pet yard page*/
@@ -845,13 +877,14 @@ li a {
 }
 
 
-.grid-container-white {
+.grid-container-studentHome {
     height: 25%;
     width: auto;
     display: grid;
     grid-template: auto auto auto / auto auto auto;
     grid-gap: 50px;
-    background-color: white;
+    background: radial-gradient(#37499F,#3D92D0);
+    opacity:0.3;
     padding-bottom: 10px;
     padding-top: 5px;
     padding-left: 25px;
