@@ -75,5 +75,16 @@ namespace TrackAdemy.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Displays students who have been archived. This view allows the
+        /// administrator to re-enroll archived students.
+        /// </summary>
+        /// <returns>View</returns>
+        public ActionResult ManageArchived(string id = null)
+        {
+            studentViewModel.StudentList = studentBackend.Index();
+
+            return View(studentViewModel);
+        }
     }
 }
