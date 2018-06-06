@@ -32,6 +32,7 @@ body {
 /*a simple means of setting auto margins for columns*/
 .column {
     margin: auto;
+    padding-top:100px;
 }
 
     /*a simple way to set image sizing and location within columns*/
