@@ -112,6 +112,13 @@ namespace TrackAdemy.Models
         public string AvgOut { get; set; }
 
         /// <summary>
+        /// The student's current enrollment status
+        /// </summary>
+        [Display(Name = "CurrentlyEnrolled", Description = "Student Status")]
+        [Required(ErrorMessage = "A current student status is required")]
+        public bool CurrentlyEnrolled { get; set; }
+
+        /// <summary>
         /// The defaults for a new student
         /// </summary>
         public void Initialize()
@@ -149,6 +156,7 @@ namespace TrackAdemy.Models
             DaysAttended = data.DaysAttended;
             AvgIn = data.AvgIn;
             AvgOut = data.AvgOut;
+            CurrentlyEnrolled = data.CurrentlyEnrolled;
         }
 
         /// <summary>
@@ -168,8 +176,10 @@ namespace TrackAdemy.Models
         /// <param name="daysAttended">days attended by the student</param>
         /// <param name="avgin">The student's average check in time</param>
         /// <param name="avgout">The student's average check out time</param>
+        /// <param name="status">the student's enrollment status</param>
         public StudentModel(string firstname, string lastname, string username, string password, string profilePic, string currentweek = "Student_Home_HoursThisWeek.svg",
-            string thismonth = "Admin_Manage_MonthHours.svg", string threeMonths = "Admin_Manage_3MonthsHours.svg", string year = "Admin_Manage_YearToDateHours.svg", double totalHours = 10.5, int daysAttended = 4, string avgin = "9:50", string avgout = "2:00")
+            string thismonth = "Admin_Manage_MonthHours.svg", string threeMonths = "Admin_Manage_3MonthsHours.svg", string year = "Admin_Manage_YearToDateHours.svg", 
+            double totalHours = 10.5, int daysAttended = 4, string avgin = "9:50", string avgout = "2:00", bool status = true)
         {
             Initialize();
 
@@ -186,8 +196,7 @@ namespace TrackAdemy.Models
             DaysAttended = daysAttended;
             AvgIn = avgin;
             AvgOut = avgout;
-
-
+            CurrentlyEnrolled = status;
         }
 
         /// <summary>
@@ -214,8 +223,31 @@ namespace TrackAdemy.Models
             DaysAttended = data.DaysAttended;
             AvgIn = data.AvgIn;
             AvgOut = data.AvgOut;
+            CurrentlyEnrolled = data.CurrentlyEnrolled;
             return true;
         }
 
+        /// <summary>
+        /// Toggles the CurrentlyEnrolled attribute of a student to archive them.
+        /// </summary>
+        /// <param name="data">The values to update</param>
+        /// <returns>False if null, else true</returns>
+        public bool Archive(StudentModel data)
+        {
+            if (data == null)
+            {
+                return false;
+            }
+            if(data.CurrentlyEnrolled == true)
+            {
+                CurrentlyEnrolled = false;
+            }
+            else
+            {
+                CurrentlyEnrolled = true;
+            }
+
+            return true;
+        }
     }
 }
