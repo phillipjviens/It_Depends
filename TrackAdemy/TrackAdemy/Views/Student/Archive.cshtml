@@ -1,0 +1,80 @@
+﻿@model TrackAdemy.Models.StudentModel
+
+@{
+    ViewBag.Title = "Archive";
+}
+
+<div class="container">
+    <div class="row">
+
+        @{
+            if (Model == null)
+            {
+                <p>No Student</p>
+            }
+
+            else
+            {
+                <div class="row">
+                    <h2>Delete Student</h2>
+                    <br />
+                    <br />
+
+                    <div class="row">
+                        <div class="col-sm-3 text-right">
+                        </div>
+                        <div class="col-sm-2">
+                            <img src=@string.Format("/Content/images/StudentImages/Student{0}", @Model.URIProfilePicture)  />
+                            <br />
+                            <span>
+                                @Model.FirstName @Model.LastName
+                                <br />
+                                <br />
+                                <br />
+                            </span>
+                        </div>
+                    </div>
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.HiddenFor(m => m.Id)
+                        @Html.HiddenFor(m => m.FirstName)
+                        @Html.HiddenFor(m => m.LastName)
+                        @Html.HiddenFor(m => m.URIProfilePicture)
+                        @Html.HiddenFor(m => m.Username)
+                        @Html.HiddenFor(m => m.Password)
+                        @Html.HiddenFor(m => m.URICurrentWeek)
+                        @Html.HiddenFor(m => m.URICurrentMonth)
+                        @Html.HiddenFor(m => m.URI3Months)
+                        @Html.HiddenFor(m => m.URIYear2Date)
+                        @Html.HiddenFor(m => m.TotalHours)
+                        @Html.HiddenFor(m => m.DaysAttended)
+                        @Html.HiddenFor(m => m.AvgIn)
+                        @Html.HiddenFor(m => m.AvgOut)
+                        @Html.HiddenFor(m => m.CurrentlyEnrolled)
+                        <div class="row">
+                            <div class="col-sm-3 text-right">
+                            </div>
+                            <div class="col-sm-4">
+                                @Html.ActionLink("Cancel", "Read", new {id = Model.Id }, new { @class = "btn btn-success" })
+                                @{
+                                    if(@Model.CurrentlyEnrolled == true)
+                                    {
+                                        <input type="submit" value="Archive" class="btn btn-danger" />
+                                    }
+                                    else
+                                    {
+                                        <input type="submit" value="Re-Enroll" class="btn btn-danger" />
+                                    }
+                                }
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            }
+
+        }
+    </div>
+</div>
