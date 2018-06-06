@@ -115,6 +115,24 @@ namespace TrackAdemy.Backend
         }
 
         /// <summary>
+        /// Archives a student
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>Null or updated data</returns>
+        public StudentModel Archive(StudentModel data)
+        {
+            if (data == null)
+            {
+                return null;
+            }
+            var myReturn = StudentList.Find(n => n.Id == data.Id);
+
+            myReturn.Archive(data);
+
+            return myReturn;
+        }
+
+        /// <summary>
         /// Reset the Data, and reload it
         /// </summary>
         public void Reset()
