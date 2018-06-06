@@ -14,6 +14,7 @@ namespace TrackAdemy.Backend
         StudentModel Create(StudentModel data);
         StudentModel Read(string id);
         StudentModel Update(StudentModel data);
+        StudentModel Archive(StudentModel data);
         bool Delete(string id);
         List<StudentModel> Index();
         void Reset();
