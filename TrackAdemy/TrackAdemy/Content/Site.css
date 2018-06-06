@@ -465,7 +465,8 @@ li a {
 /*Formats the student check mark pictures on the kiosk page*/
 .checkMark {
     position: absolute;
-    margin-top: 7%;
+    margin-top: 5px;
+    margin-left: 30px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     padding: 50px 10px;
@@ -475,123 +476,6 @@ li a {
     height:auto;
     width: 100px;
     display : none;
-}
-
-/*Formats the student1 check mark */
-#checkMark1 {
-    position: absolute;
-    top: 33%;
-    left: 31.5%;
-    border: none;
-    border-radius: 0;
-    text-align: center;
-    height: auto;
-    width: 100px;
-    display: block;
-}
-
-/*Formats the student2 check mark */
-#checkMark2 {
-    position: absolute;
-    top: 33%;
-    left: 50%;
-    border: none;
-    border-radius: 0;
-    text-align: center;
-    height: auto;
-    width: 100px;
-    display: block;
-}
-
-/*Formats the student3 check mark */
-#checkMark3 {
-    position: absolute;
-    top: 33%;
-    left: 68%;
-    border: none;
-    border-radius: 0;
-    text-align: center;
-    height: auto;
-    width: 100px;
-    display: none;
-}
-
-/*Formats the student4 check mark */
-#checkMark4 {
-    position: absolute;
-    top: 57%;
-    left: 31.5%;
-    border: none;
-    border-radius: 0;
-    text-align: center;
-    height: auto;
-    width: 100px;
-    display: block;
-}
-
-/*Formats the student5 check mark */
-#checkMark5 {
-    position: absolute;
-    top: 57%;
-    left: 50%;
-    border: none;
-    border-radius: 0;
-    text-align: center;
-    height: auto;
-    width: 100px;
-    display: none;
-}
-
-/*Formats the student6 check mark */
-#checkMark6 {
-    position: absolute;
-    top: 57%;
-    left: 68%;
-    border: none;
-    border-radius: 0;
-    text-align: center;
-    height: auto;
-    width: 100px;
-    display: block;
-}
-
-/*Formats the student7 check mark */
-#checkMark7 {
-    position: absolute;
-    top: 81%;
-    left: 31.5%;
-    border: none;
-    border-radius: 0;
-    text-align: center;
-    height: auto;
-    width: 100px;
-    display: none;
-}
-
-/*Formats the student8 check mark */
-#checkMark8 {
-    position: absolute;
-    top: 81%;
-    left: 50%;
-    border: none;
-    border-radius: 0;
-    text-align: center;
-    height: auto;
-    width: 100px;
-    display: block;
-}
-
-/*Formats the student9 check mark */
-#checkMark9 {
-    position: absolute;
-    top: 81%;
-    left: 68%;
-    border: none;
-    border-radius: 0;
-    text-align: center;
-    height: auto;
-    width: 100px;
-    display: none;
 }
 
 /*item1 button layout for kiosk page*/
