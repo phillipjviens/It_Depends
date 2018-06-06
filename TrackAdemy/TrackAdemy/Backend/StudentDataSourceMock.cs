@@ -163,21 +163,21 @@ namespace TrackAdemy.Backend
         {
             DataSetClear();
             var count = 1;//used to iterate through profile pics
-            Create(new StudentModel("Alex", "Randall", "alex", "alex", (count++) + ".png", "Student_Archive_NovemberHours.svg"));
-            Create(new StudentModel("Ashley", "Mortimer", "ashley", "ashley", count++ + ".png"));
-            Create(new StudentModel("Ryan", "Barter", "ryan", "ryan",  count++ + ".png"));
-            Create(new StudentModel("Kim", "Reynolds", "kim", "kim", count++ + ".png"));
-            Create(new StudentModel("Lesley", "Carring", "lesley", "lesley", count++ + ".png"));
-            Create(new StudentModel("Ramon", "Leviter", "ramon", "ramon", count++ + ".png"));
+            Create(new StudentModel("Alex", "Randall", "alex", "", (count++) + ".png", "Student_Archive_NovemberHours.svg"));
+            Create(new StudentModel("Ashley", "Mortimer", "ashley", "", count++ + ".png"));
+            Create(new StudentModel("Ryan", "Barter", "ryan", "",  count++ + ".png"));
+            Create(new StudentModel("Kim", "Reynolds", "kim", "", count++ + ".png"));
+            Create(new StudentModel("Lesley", "Carring", "lesley", "", count++ + ".png"));
+            Create(new StudentModel("Ramon", "Leviter", "ramon", "", count++ + ".png"));
             //main example student
-            Create(new StudentModel("Jamie", "Curtis", "jamie", "jamie", count++ + ".png", 
+            Create(new StudentModel("Jamie", "Curtis", "jamie", "", count++ + ".png", 
                 "Student_Home_HoursThisWeek.svg",
                "Admin_Manage_MonthHours.svg", 
                 "Admin_Manage_3MonthsHours.svg", 
                "Admin_Manage_YearToDateHours.svg",
                 232, 45, "10", "3:45"));
-            Create(new StudentModel("Seetal", "Guri", "seetal", "seetal",  count++ + ".png"));
-            Create(new StudentModel("Zachary", "Monson", "zachary", "zachary",count++ + ".png"));
+            Create(new StudentModel("Seetal", "Guri", "seetal", "",  count++ + ".png"));
+            Create(new StudentModel("Zachary", "Monson", "zachary", "",count++ + ".png"));
         }
 
         /// <summary>
