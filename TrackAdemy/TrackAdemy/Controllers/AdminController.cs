@@ -74,6 +74,14 @@ namespace TrackAdemy.Controllers
         {
             return View();
         }
+        /// <summary>
+        /// the calendar secret update
+        /// </summary>
+        /// <returns>View</returns>
+        public ActionResult _CalendarUpdate()
+        {
+            return View();
+        }
 
         /// <summary>
         /// Displays students who have been archived. This view allows the

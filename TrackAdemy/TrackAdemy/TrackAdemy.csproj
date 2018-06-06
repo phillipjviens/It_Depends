@@ -362,6 +362,7 @@
     <Content Include="Views\Admin\ManageArchived.cshtml" />
     <Content Include="Views\Student\Archive.cshtml" />
     <Content Include="Views\Student\ReadArchived.cshtml" />
+    <Content Include="Views\Admin\_CalendarUpdate.cshtml" />
     <Resource Include="fonts\collegiateHeavyOutline Medium.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
