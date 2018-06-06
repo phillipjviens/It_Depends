@@ -169,6 +169,23 @@ namespace TrackAdemy.Controllers
         }
 
         /// <summary>
+        /// Read information on a single Student who has been archived
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        // GET: Student/Details/5
+        public ActionResult ReadArchived(string id = null)
+        {
+            var myDataStudent = StudentBackend.Read(id);
+            if (myDataStudent == null)
+            {
+                return RedirectToAction("Error", "Home");
+            }
+
+            return View(myDataStudent);
+        }
+
+        /// <summary>
         /// This will show the details of the Student to update
         /// </summary>
         /// <param name="id"></param>
@@ -207,6 +224,7 @@ namespace TrackAdemy.Controllers
                                         "DaysAttended,"+
                                         "AvgIn,"+
                                         "AvgOut,"+
+                                        "CurrentlyEnrolled,"+
                                         "")] StudentModel data)
         {
             if (!ModelState.IsValid)
@@ -293,6 +311,72 @@ namespace TrackAdemy.Controllers
             }
 
             StudentBackend.Delete(data.Id);
+
+            return RedirectToAction("ManageStudent", "Admin");
+        }
+
+        /// <summary>
+        /// This shows the Student info to be archived
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        // GET: Student/Archive/5
+        public ActionResult Archive(string id = null)
+        {
+            var myDataStudent = StudentBackend.Read(id);
+            if (myDataStudent == null)
+            {
+                RedirectToAction("Error", "Home");
+            }
+
+
+            return View(myDataStudent);
+        }
+
+        /// <summary>
+        /// This toggles a student's enrollment status
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        // POST: Student/Archive/5
+        [HttpPost]
+        public ActionResult Archive([Bind(Include=
+                                        "Id,"+
+                                        "FirstName,"+
+                                        "LastName,"+
+                                        "URIProfilePicture,"+
+                                        "Username,"+
+                                        "Password,"+
+                                        "URICurrentWeek,"+
+                                        "URICurrentMonth,"+
+                                        "URI3Months,"+
+                                        "URIYear2Date,"+
+                                        "TotalHours,"+
+                                        "DaysAttended,"+
+                                        "AvgIn,"+
+                                        "AvgOut,"+
+                                        "CurrentlyEnrolled,"+
+                                        "")] StudentModel data)
+        {
+            if (!ModelState.IsValid)
+            {
+                // Send back for edit
+                return View(data);
+            }
+
+            if (data == null)
+            {
+                // Send to Error Page
+                return RedirectToAction("Error", new { route = "Home", action = "Error" });
+            }
+
+            if (string.IsNullOrEmpty(data.ToString()))
+            {
+                // Send back for edit
+                return View(data);
+            }
+
+            StudentBackend.Archive(data);
 
             return RedirectToAction("ManageStudent", "Admin");
         }
