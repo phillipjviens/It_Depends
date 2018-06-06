@@ -478,6 +478,22 @@ li a {
     display : none;
 }
 
+.btn-kiosk {
+    position: absolute;
+
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: transparent;
+    font-size: 16px;
+    padding: 50px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+    outline: none;
+}
+
 /*item1 button layout for kiosk page*/
 .item1 .btn {
     position: absolute;
