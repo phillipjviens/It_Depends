@@ -456,7 +456,7 @@ li a {
 /*Formats the student pictures on the kiosk page*/
 .studentPicture {
     height: auto;
-    width: 60%;
+    width: 120px;
     border-radius: 30%;
     overflow: hidden;
     outline: 20px solid #463927;
