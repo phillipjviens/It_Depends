@@ -239,6 +239,7 @@
     <Content Include="Content\images\petYard.png" />
     <Content Include="Content\images\SampleCalendar.jpg" />
     <Content Include="Content\images\StudentData.png" />
+    <Content Include="Content\images\studentDataFromMock.png" />
     <Content Include="Content\images\StudentHome.png" />
     <Content Include="Content\images\StudentImages\Student1.png" />
     <Content Include="Content\images\StudentImages\Student2.png" />
