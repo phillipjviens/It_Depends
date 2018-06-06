@@ -3,29 +3,35 @@
 }
 
 <!--Admin Calendar Mockup-->
-</br>
-</br>
-<body style="background:radial-gradient(#F2696A,white)">
-<div class="calContainer">
-    <img class="calPic" src="~/Content/images/SVG/ChartSVG/Admin_Calendar.svg"/>
-    <button class="invisButton" onclick="showBoxes()">This button.</button>
-</div>
-<div id="hiddenBox">
-    This is an example hidden thing. 
-</div>
-    </body>
 
-    
+<body style="background:radial-gradient(#F2696A,white)">
+    <div class="calContain">
+        <img class="calPic" src="~/Content/images/SVG/ChartSVG/Admin_Calendar.svg" />
+        <button class="invisButton" onclick="showBoxes()">This button.</button>
+        <div id="hiddenBox">
+            <label for="date"> Date to adjust: </label>
+            <input type="date" name="date" placeholder="11/07/17" />
+            <label for="hours"> Set new hours: </label>
+            <input type="text" name="hours" placeholder="9"/>
+
+            <a href="~/Admin/CalendarUpdate">Apply Changes</a>
+        </div>
+    </div>
+  
+  
+</body>
+
+
 
 <script>
     function showBoxes() {
         var x = document.getElementById("hiddenBox");
-        if (x.style.display === "none") {
-            x.style.display = "block";
+        if (x.style.display == 'block') {
+            x.style.display = 'none';
         } else {
-            x.style.display = "none";
+            x.style.display = 'block';
         }
-    } 
+    }
 
 </script>
 

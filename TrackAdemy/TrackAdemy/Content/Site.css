@@ -338,17 +338,48 @@ li a {
 /*end STUDENT READ*/
 
 /*ADMIN/CALENDAR PAGE*/
-.calContainer {
+.calContain {
     position: relative;
-    top: 50px;
+    top: 10vh;
     left: 15%;
     width: 70%;
-    height: 100vh;
+    height: 65vh;
+    margin-bottom:50px;
 }
 
 .calPic {
     width: 100%;
     height: auto;
+}
+
+.invisButton {
+    background: transparent;
+    border: none !important;
+    font-size: 0;
+    outline: 0;
+    position: absolute;
+    top: 0px;
+    width: 200px;
+    height: 50px;
+    right: 0;
+    color: black;
+}
+
+#hiddenBox {
+    position:absolute;
+    display: none;
+    background-color: transparent;
+    margin-top: 20px;
+    width:100%;
+    float:unset !important;
+    color:black;
+}
+#hiddenBox > a{
+    color:black;
+}
+
+#calButton{
+    float:unset !important;    
 }
 /*end ADMIN/CALENDAR PAGE*/
 
@@ -731,25 +762,3 @@ li a {
 }
 /*end ASPIRATIONS STUDENT*/
 
-/*ADMIN CALENDAR*/
-
-.invisButton {
-    background: transparent;
-    border: none !important;
-    font-size: 0;
-    position: absolute;
-    top:0px;
-    width:200px;
-    height:50px;
-    right:0;
-    color:black;
-}
-
-#hiddenBox{
-    text-align:center;
-    width: 100%;
-    background-color: lightblue;
-    margin-top:20px;
-}
-
-/*end ADMIN Calendar*/
