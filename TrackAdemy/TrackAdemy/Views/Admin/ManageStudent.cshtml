@@ -2,39 +2,40 @@
 @{
     ViewBag.Title = "Manage Student";
 }
-
+<body style="background:radial-gradient(red,white)">
 <div class="containerManage">
-            @{
+    @{
 
-                if (Model.StudentList == null || !Model.StudentList.Any())
-                {
-                    <br />
-                    <p>No Students in the System</p>
-                    <br />
-                }
-                else
-                {
+        if (Model.StudentList == null || !Model.StudentList.Any())
+        {
+            <br />
+            <p>No Students in the System</p>
+            <br />
+        }
+        else
+        {
 
-                    foreach (var item in Model.StudentList)
-                    {
-                        <div class="col-xs-4">
-                            <ul id="rig">
-                                <li>
-                                    <a class="rig-cell" href="~/Student/Read/@item.Id">
-                                        <img class="rig-img" src=@string.Format("/Content/images/StudentImages/Student{0}", @item.URIProfilePicture) width="75" height="75" />
-                                        <span class="rig-overlay"></span>
-                                        <span class="rig-text">@item.FirstName @item.LastName</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    }
-                }
-
+            foreach (var item in Model.StudentList)
+            {
+                <div class="col-xs-4">
+                    <ul id="rig">
+                        <li>
+                            <a class="rig-cell" href="~/Student/Read/@item.Id">
+                                <img class="rig-img" src=@string.Format("/Content/images/StudentImages/Student{0}", @item.URIProfilePicture) width="75" height="75" />
+                                <span class="rig-overlay"></span>
+                                <span class="rig-text">@item.FirstName @item.LastName</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             }
+        }
+
+    }
 
 
     <div id="createStudent">
         <a href="~/Student/Create" class="btn btn-primary">Create Student</a>
     </div>
 </div>
+    </body>
