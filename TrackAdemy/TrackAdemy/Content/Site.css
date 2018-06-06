@@ -478,6 +478,7 @@ li a {
     display : none;
 }
 
+/*Formats the kiosk button to make checkmark appear*/
 .grid-container-kiosk .btn {
     position: absolute;
     margin-top: 60px;
