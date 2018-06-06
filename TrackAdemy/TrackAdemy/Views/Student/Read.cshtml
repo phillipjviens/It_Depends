@@ -149,8 +149,6 @@
         @Html.ActionLink("Cancel", "ManageStudent", "Admin", new { id = "" }, new { @class = "btn btn-success" })
         @Html.ActionLink("Update", "Update", new { id = Model.Id }, new { @class = "btn btn-primary" })
         @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger" })
-        <button onclick="" class="btn btn-info" href="#">Download PDF</button>
-        <img id="downloadPDF" src="~/Content/images/SVG/" />
-
+        <a class="btn btn-info" href="~/Content/images/Report_PDF.pdf">Download PDF</a>
     </div>
 </div>
