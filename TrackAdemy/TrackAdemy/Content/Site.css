@@ -2,7 +2,7 @@
 /*GENERAL CLASSES USED THROUGHOUT*/
 
 /*padding for body*/
-body {    
+body {
     padding-top: 70px;
 }
 /*attempting to add font to project*/
@@ -16,13 +16,13 @@ body {
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
-    padding-right: 15px;    
+    padding-right: 15px;
 }
 
-.subheader{
-    font-family:'Century Gothic';
-    font-weight:bold;
-    text-align:center;
+.subheader {
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    text-align: center;
 }
 /*sets border box sizing*/
 * {
@@ -32,7 +32,6 @@ body {
 /*a simple means of setting auto margins for columns*/
 .column {
     margin: auto;
-    padding-top:100px;
 }
 
     /*a simple way to set image sizing and location within columns*/
@@ -153,8 +152,8 @@ li a {
 .containerManage {
     height: 100vh;
     position: relative;
-    top:75px;
-    right:50px;
+    top: 75px;
+    right: 50px;
 }
 
 #createStudent {
@@ -294,9 +293,9 @@ li a {
 #studentStats {
     width: 40%;
     position: absolute;
-    top:25%;
+    top: 25%;
     left: 25%;
-    float:left;
+    float: left;
 }
 /*spans the profile*/
 #profileSpan {
@@ -306,10 +305,10 @@ li a {
 /*attributes to apply to graphs*/
 #graphs {
     width: 70%;
-    height:100vh;
+    height: 100vh;
     position: relative;
-    top:8em;
-    left:40em;
+    top: 8em;
+    left: 40em;
 }
 /*current month style*/
 #currentMonth {
@@ -334,7 +333,7 @@ li a {
 /*manage buttons*/
 #manageButtons {
     position: relative;
-    right:22em;
+    right: 22em;
 }
 /*end STUDENT READ*/
 
@@ -345,7 +344,7 @@ li a {
     left: 15%;
     width: 70%;
     height: 65vh;
-    margin-bottom:50px;
+    margin-bottom: 50px;
 }
 
 .calPic {
@@ -367,24 +366,36 @@ li a {
 }
 
 #hiddenBox {
-    position:absolute;
+    position: absolute;
     display: none;
     background-color: transparent;
     margin-top: 20px;
-    width:100%;
-    float:unset !important;
-    color:black;
-}
-#hiddenBox > a{
-    color:black;
+    width: 100%;
+    float: unset !important;
+    color: black;
 }
 
-#calButton{
-    float:unset !important;    
+    #hiddenBox > a {
+        color: black;
+    }
+
+#calButton {
+    float: unset !important;
 }
 /*end ADMIN/CALENDAR PAGE*/
 
 /*HOME/INDEX PAGE*/
+
+.loginColumn {
+    margin: auto;
+}
+
+    /*a simple way to set image sizing and location within columns*/
+    .loginColumn img {
+        height: auto;
+        max-width: 100%;
+    }
+
 /*login input group items that are img (the custom icons)*/
 .login .input-group-addon img {
     height: auto;
@@ -403,7 +414,7 @@ li a {
     .login .input-group {
         width: 50%;
         max-width: 500px;
-        min-width:200px;
+        min-width: 200px;
         margin: auto;
         margin-top: 5px;
     }
@@ -434,7 +445,7 @@ li a {
 
 /*Formats title in kiosk page*/
 .kioksTrackAdemyTitle {
-    width:40vw; 
+    width: 40vw;
     padding-top: 0;
 }
 
@@ -505,9 +516,9 @@ li a {
     border: none;
     border-radius: 0;
     text-align: center;
-    height:auto;
+    height: auto;
     width: 100px;
-    display : none;
+    display: none;
 }
 
 /*Formats the kiosk button to make checkmark appear*/
@@ -572,8 +583,8 @@ li a {
 /*STORE PAGE*/
 
 .topStoreRow {
-    margin-top:70px;
-    margin-left:50px;
+    margin-top: 70px;
+    margin-left: 50px;
 }
 
 /*Speech bubble for Store page*/
@@ -584,9 +595,9 @@ li a {
     border-radius: 3em;
     padding: 15px;
     text-align: center;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
-/*Speech bubble triangle for store page*/
+    /*Speech bubble triangle for store page*/
     .speech-bubble:after {
         content: '';
         position: absolute;
@@ -602,30 +613,30 @@ li a {
     }
     /*speech bubble image for pet wish*/
     .speech-bubble > img {
-        width:100%;
-        height:auto;
-        max-width:100px;
-        max-height:250px
+        width: 100%;
+        height: auto;
+        max-width: 100px;
+        max-height: 250px
     }
 
- /*not button element for grid item*/
-.storeText{
-    font-family:'Century Gothic';
-    text-align:right;
+/*not button element for grid item*/
+.storeText {
+    font-family: 'Century Gothic';
+    text-align: right;
 }
-/*coin icon for purchasing items*/
-.storeText::after{
-    content: "";
-    background: url('images/SVG/Trackoin_Individual.svg') no-repeat;
-    width:30px;
-    height:30px;
-    float:right;
-    margin:6px 0 0 -10px;
-}
+    /*coin icon for purchasing items*/
+    .storeText::after {
+        content: "";
+        background: url('images/SVG/Trackoin_Individual.svg') no-repeat;
+        width: 30px;
+        height: 30px;
+        float: right;
+        margin: 6px 0 0 -10px;
+    }
 /*Large container that contains the smaller containers*/
 .containerStore {
-    margin:auto;
-    width:70%;
+    margin: auto;
+    width: 70%;
     overflow: auto;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -633,14 +644,14 @@ li a {
     background-color: white;
     align-content: space-around;
 }
-/*inherited div characteristics for the grids*/
+    /*inherited div characteristics for the grids*/
     .containerStore > div {
         border: 2px solid #C2C1C0;
         justify-content: center;
-        align-items:center;
+        align-items: center;
     }
 
- /*the smaller grid that defines each shop item and its buttons*/
+/*the smaller grid that defines each shop item and its buttons*/
 .containerSmallerStore {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -649,7 +660,7 @@ li a {
     height: 100%;
     font-family: 'Century Gothic';
 }
-/*style for buy button*/
+    /*style for buy button*/
     .containerSmallerStore .buyButton {
         display: inline-block;
         padding: 0 10px;
@@ -679,27 +690,26 @@ li a {
         border-radius: 15px;
         float: none;
     }
-/*inherited div characters for each grid in the smaller grid*/
+    /*inherited div characters for each grid in the smaller grid*/
     .containerSmallerStore > div {
         background-color: aliceblue;
-       text-align: center;       
+        text-align: center;
         font-size: 30px;
     }
     /*Making the first item (the picture) fit properly
         uses grid area to take up the top row and all 4
         columns, so that the last row can be devoted to buttons*/
-.containerSmallerStore .item1{
-    align-self: center;  
-   grid-area:1/1/1/5; /*grid area starting r1,c1, then spans 1x4 grids.*/
-}
-
-/*child img for grid item1*/
-    .containerSmallerStore .item1 > img{
-        
-        height: 200px;
-        width:15vw;
-         /*grid area starting r1,c1, then spans 1x4 grids.*/
+    .containerSmallerStore .item1 {
+        align-self: center;
+        grid-area: 1/1/1/5; /*grid area starting r1,c1, then spans 1x4 grids.*/
     }
+
+        /*child img for grid item1*/
+        .containerSmallerStore .item1 > img {
+            height: 200px;
+            width: 15vw;
+            /*grid area starting r1,c1, then spans 1x4 grids.*/
+        }
 
 /*end STORE PAGE*/
 
@@ -728,7 +738,7 @@ li a {
     grid-template: auto auto auto / auto auto auto;
     grid-gap: 50px;
     background: radial-gradient(#37499F,#3D92D0);
-    opacity:0.3;
+    opacity: 0.3;
     padding-bottom: 10px;
     padding-top: 5px;
     padding-left: 25px;
@@ -736,15 +746,15 @@ li a {
     margin-bottom: 5px;
 }
 
-    /*The divs of the grid for the student home page*/
-    .grid-container-white > div {
-        background-color: white;
-        text-align: center;
-        padding: 5px 5px;
-        font-size: 15px;
-        overflow: hidden;
-        position: relative;
-    }
+/*The divs of the grid for the student home page*/
+.grid-container-white > div {
+    background-color: white;
+    text-align: center;
+    padding: 5px 5px;
+    font-size: 15px;
+    overflow: hidden;
+    position: relative;
+}
 
 /*ASPIRATIONS STUDENT*/
 .aspirations-container {
@@ -763,3 +773,15 @@ li a {
 }
 /*end ASPIRATIONS STUDENT*/
 
+/*ADMIN INDEX*/
+
+.adminColumn {
+    margin: auto;
+    padding-top:100px;
+}
+
+    /*a simple way to set image sizing and location within columns*/
+    .adminColumn img {
+        height: auto;
+        max-width: 100%;
+    }
