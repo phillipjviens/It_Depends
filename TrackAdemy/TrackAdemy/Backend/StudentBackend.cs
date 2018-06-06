@@ -149,6 +149,33 @@ namespace TrackAdemy.Backend
         }
 
         /// <summary>
+        /// Update all attributes to be what is passed in
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>Null or updated data</returns>
+        public StudentModel Archive(StudentModel data)
+        {
+            if (data == null)
+            {
+                return null;
+            }
+
+            var myData = DataSource.Read(data.Id);
+            if (myData == null)
+            {
+                // Not found
+                return null;
+            }
+
+
+
+            // Update the record
+            var myReturn = DataSource.Archive(data);
+
+            return myReturn;
+        }
+
+        /// <summary>
         /// Sets the student to be logged In
         /// </summary>
         /// <param name="id">The Student ID</param>
