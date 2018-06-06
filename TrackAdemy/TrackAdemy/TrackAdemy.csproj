@@ -370,6 +370,7 @@
     <Content Include="fonts\GOTHICB.TTF" />
     <Content Include="fonts\GOTHICBI.TTF" />
     <Content Include="fonts\GOTHICI.TTF" />
+    <Content Include="Content\images\Report_PDF.pdf" />
     <None Include="Properties\PublishProfiles\TrackAdemy20180517070256 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\TrackAdemyDepends - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
