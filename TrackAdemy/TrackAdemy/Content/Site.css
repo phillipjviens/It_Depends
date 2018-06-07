@@ -305,7 +305,7 @@ li a {
 /*STUDENT READ*/
 #studentReadContainer {
     width: 100vw;
-    height: auto;
+    height: 70vh;
     background-color: rosybrown;
     overflow: hidden;
 }

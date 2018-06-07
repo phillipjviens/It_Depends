@@ -6,116 +6,122 @@
 
 
 <div id="studentReadcontainer" class="container">
-    <div id ="studentStats" class="row">
+    <div id="studentStats" class="row">
         <div class="col-sm-12">
             @{
-            if (Model == null)
-            {
-            <p>No Student</p>
-            }
+                if (Model == null)
+                {
+                    <p>No Student</p>
+                }
 
-            else
-            {
-            <div class="row">
-                <h2>@Model.FirstName @Model.LastName</h2>
-                <br />
-                <br />
-
-                <div class="row">
-                    <div class="col-sm-2"  >
-                        <img class="ReadProfilePic" src=@string.Format("/Content/images/StudentImages/Student{0}", @Model.URIProfilePicture) alt=""/>
+                else
+                {
+                    <div class="row">
+                        <h2 class="subheader" style="text-align:unset">@Model.FirstName @Model.LastName</h2>
                         <br />
-                        <span id="profileSpan">
-                            <br />
-                            <br />
-                            <br />
-                        </span>
-                    </div>
-                </div>
+                        <br />
 
-                <div class="row">
-                    <div class="col-sm-3 text-right">
-                        @Html.DisplayNameFor(m => m.FirstName)
-                    </div>
-                    <div class="col-sm-2">
-                        @Html.DisplayFor(m => m.FirstName)
-                    </div>
-                </div>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <img class="ReadProfilePic" src=@string.Format("/Content/images/StudentImages/Student{0}", @Model.URIProfilePicture) alt="" />
+                                <br />
+                                <span id="profileSpan">
+                                    <br />
+                                    <br />
+                                    <br />
+                                </span>
+                            </div>
+                        </div>
 
-                <div class="row">
-                    <div class="col-sm-3 text-right">
-                        @Html.DisplayNameFor(m => m.LastName)
-                    </div>
-                    <div class="col-sm-2">
-                        @Html.DisplayFor(m => m.LastName)
-                    </div>
-                </div>
+                        <div class="row">
+                            <div class="col-sm-3 text-right">
+                                @Html.DisplayNameFor(m => m.FirstName)
+                            </div>
+                            <div class="col-sm-2">
+                                @Html.DisplayFor(m => m.FirstName)
+                            </div>
+                        </div>
 
-                <div class="row">
-                    <div class="col-sm-3 text-right">
-                        @Html.DisplayNameFor(m => m.AvgIn)
-                    </div>
-                    <div class="col-sm-2">
-                        @Html.DisplayFor(m => m.AvgIn)
-                    </div>
-                </div>
+                        <div class="row">
+                            <div class="col-sm-3 text-right">
+                                @Html.DisplayNameFor(m => m.LastName)
+                            </div>
+                            <div class="col-sm-2">
+                                @Html.DisplayFor(m => m.LastName)
+                            </div>
+                        </div>
 
-                <div class="row">
-                    <div class="col-sm-3 text-right">
-                        @Html.DisplayNameFor(m => m.AvgOut)
-                    </div>
-                    <div class="col-sm-2">
-                        @Html.DisplayFor(m => m.AvgOut)
-                    </div>
-                </div>
+                        <div class="row">
+                            <div class="col-sm-3 text-right">
+                                @Html.DisplayNameFor(m => m.AvgIn)
+                            </div>
+                            <div class="col-sm-2">
+                                @Html.DisplayFor(m => m.AvgIn)
+                            </div>
+                        </div>
 
-                <div class="row">
-                    <div class="col-sm-3 text-right">
-                        @Html.DisplayNameFor(m => m.DaysAttended)
-                    </div>
-                    <div class="col-sm-2">
-                        @Html.DisplayFor(m => m.DaysAttended)
-                    </div>
-                </div>
+                        <div class="row">
+                            <div class="col-sm-3 text-right">
+                                @Html.DisplayNameFor(m => m.AvgOut)
+                            </div>
+                            <div class="col-sm-2">
+                                @Html.DisplayFor(m => m.AvgOut)
+                            </div>
+                        </div>
 
-                <div class="row">
-                    <div class="col-sm-3 text-right">
-                        @Html.DisplayNameFor(m => m.Username)
-                    </div>
-                    <div class="col-sm-2">
-                        @Html.DisplayFor(m => m.Username)
-                    </div>
-                </div>
+                        <div class="row">
+                            <div class="col-sm-3 text-right">
+                                @Html.DisplayNameFor(m => m.DaysAttended)
+                            </div>
+                            <div class="col-sm-2">
+                                @Html.DisplayFor(m => m.DaysAttended)
+                            </div>
+                        </div>
 
-                <div class="row">
-                    <div class="col-sm-3 text-right">
-                        @Html.DisplayNameFor(m => m.URIProfilePicture)
-                    </div>
-                    <div class="col-sm-2">
-                        @Html.DisplayFor(x => x.URIProfilePicture)
-                    </div>
-                </div>
+                        <div class="row">
+                            <div class="col-sm-3 text-right">
+                                @Html.DisplayNameFor(m => m.Username)
+                            </div>
+                            <div class="col-sm-2">
+                                @Html.DisplayFor(m => m.Username)
+                            </div>
+                        </div>
 
-                <div class="row">
-                    <div class="col-sm-3 text-right">
-                        @Html.DisplayNameFor(m => m.TotalHours)
-                    </div>
-                    <div class="col-sm-2">
-                        @Html.DisplayFor(x => x.TotalHours)
-                    </div>
-                </div>
+                        <div class="row">
+                            <div class="col-sm-3 text-right">
+                                @Html.DisplayNameFor(m => m.URIProfilePicture)
+                            </div>
+                            <div class="col-sm-2">
+                                @Html.DisplayFor(x => x.URIProfilePicture)
+                            </div>
+                        </div>
 
-                <br />
-                <br />
-                
+                        <div class="row">
+                            <div class="col-sm-3 text-right">
+                                @Html.DisplayNameFor(m => m.TotalHours)
+                            </div>
+                            <div class="col-sm-2">
+                                @Html.DisplayFor(x => x.TotalHours)
+                            </div>
+                        </div>
 
-            </div>
-            }
+                        <br />
+                        <br />
+
+
+                    </div>
+                }
 
             }
         </div>
-        
-        
+        <div id="manageReadButtons" class="col-sm-8">
+            @Html.ActionLink("Archive", "Archive", new { id = Model.Id }, new { @class = "btn btn-danger" })
+            @Html.ActionLink("Cancel", "ManageStudent", "Admin", new { id = "" }, new { @class = "btn btn-danger" })
+            @Html.ActionLink("Update", "Update", new { id = Model.Id }, new { @class = "btn btn-danger" })
+            @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger" })
+            <a class="btn btn-danger" href="~/Content/images/Report_PDF.pdf">Download PDF</a>
+        </div>
+
     </div>
     <div id="graphs">
         <div id="threeMonths">
@@ -141,10 +147,10 @@
 </div>
 <br />
 
-    <div id="manageReadButtons" class="col-sm-8">
+    @*<div id="manageReadButtons" class="col-sm-8">
         @Html.ActionLink("Archive", "Archive", new { id = Model.Id }, new { @class = "btn btn-danger" })
         @Html.ActionLink("Cancel", "ManageStudent", "Admin", new { id = "" }, new { @class = "btn btn-danger" })
         @Html.ActionLink("Update", "Update", new { id = Model.Id }, new { @class = "btn btn-danger" })
         @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger" })
         <a class="btn btn-danger" href="~/Content/images/Report_PDF.pdf">Download PDF</a>
-</div>
+</div>*@
