@@ -357,21 +357,36 @@ li a {
     width: 300px;
     float: left;
 }
+
+#manageButtons{
+    width:auto;
+    height:auto;
+    position:absolute;
+    top:100%;
+    left:40%;
+    display:inline-flex
+}
+
 /*manage buttons*/
-#manageButtons {
-    position: relative;
-    right: 22em;
+#manageReadButtons {
+    width: auto;
+    height: auto;
+    position: absolute;
+    margin-top:5%;
+    top:100%;
+    left: 35%;
+    display: inline-flex
 }
 /*end STUDENT READ*/
 
 /*ADMIN/CALENDAR PAGE*/
 .calContain {
     position: relative;
-    top: 10vh;
+    top: 100%;
     left: 15%;
     width: 70%;
-    height: 65vh;
-    margin-bottom: 50px;
+    height: auto;
+    margin-top:8%;
 }
 
 .calPic {
@@ -393,10 +408,11 @@ li a {
 }
 
 #hiddenBox {
-    position: absolute;
+    position: relative;
     display: none;
     background-color: transparent;
     margin-top: 20px;
+    margin-bottom:2%;
     width: 100%;
     float: unset !important;
     color: black;
