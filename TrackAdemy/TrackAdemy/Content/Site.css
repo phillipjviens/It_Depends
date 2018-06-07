@@ -102,6 +102,33 @@ input, select, textarea {
 .dl-horizontal dt {
     white-space: normal;
 }
+#adminTop, #adminBottom, #adminLeft, #adminRight{
+    background: gray;
+    position:fixed;
+}
+#adminLeft, #adminRight{
+    top:0; bottom:0;
+    width: 50px;
+}
+#adminLeft{
+    left:0;
+}
+#adminRight{
+    right:0;
+}
+#adminTop, #adminBottom{
+    left:0;
+    right:0;
+    height: 50px;
+}
+#adminTop{
+    top:0;
+}
+#adminBottom{
+    bottom:0;
+}
+
+
 /*End GENERAL CLASSES*/
 
 /*NAV*/
@@ -392,6 +419,7 @@ li a {
 
     /*a simple way to set image sizing and location within columns*/
     .loginColumn img {
+        margin:auto;
         height: auto;
         max-width: 100%;
     }

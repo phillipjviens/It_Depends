@@ -4,7 +4,12 @@
 
 <!--Admin Calendar Mockup-->
 
-<body style="background:radial-gradient(#F2696A,white)">
+<body>
+    <div id="adminLeft"></div>
+    <div id="adminRight"></div>
+    <div id="adminTop"></div>
+    <div id="adminBottom"></div>
+
     <div class="calContain">
         <img class="calPic" src="~/Content/images/SVG/ChartSVG/Admin_Calendar.svg" />
         <button class="invisButton" onclick="showBoxes()">This button.</button>
@@ -12,13 +17,13 @@
             <label for="date"> Date to adjust: </label>
             <input type="date" name="date" placeholder="11/07/17" />
             <label for="hours"> Set new hours: </label>
-            <input type="text" name="hours" placeholder="9"/>
+            <input type="text" name="hours" placeholder="9" />
 
             <a href="~/Admin/_CalendarUpdate">Apply Changes</a>
         </div>
     </div>
-  
-  
+
+
 </body>
 
 
