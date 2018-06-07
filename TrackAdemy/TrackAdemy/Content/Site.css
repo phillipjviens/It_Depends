@@ -357,8 +357,18 @@ li a {
     width: 300px;
     float: left;
 }
+
+#manageButtons{
+    width:auto;
+    height:auto;
+    position:absolute;
+    top:100%;
+    left:37%;
+    display:inline-flex
+}
+
 /*manage buttons*/
-#manageButtons {
+#manageReadButtons {
     position: relative;
     right: 22em;
 }
