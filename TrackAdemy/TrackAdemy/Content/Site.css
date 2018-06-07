@@ -382,11 +382,11 @@ li a {
 /*ADMIN/CALENDAR PAGE*/
 .calContain {
     position: relative;
-    top: 10vh;
+    top: 100%;
     left: 15%;
     width: 70%;
-    height: 65vh;
-    margin-bottom: 50px;
+    height: auto;
+    margin-top:8%;
 }
 
 .calPic {
@@ -408,10 +408,11 @@ li a {
 }
 
 #hiddenBox {
-    position: absolute;
+    position: relative;
     display: none;
     background-color: transparent;
     margin-top: 20px;
+    margin-bottom:2%;
     width: 100%;
     float: unset !important;
     color: black;
