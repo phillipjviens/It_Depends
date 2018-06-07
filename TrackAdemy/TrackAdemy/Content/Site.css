@@ -332,7 +332,7 @@ li a {
 /*attributes to apply to graphs*/
 #graphs {
     width: 70%;
-    height: 100vh;
+    height: 70vh;
     position: relative;
     top: 8em;
     left: 40em;
