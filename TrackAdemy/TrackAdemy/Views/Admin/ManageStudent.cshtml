@@ -2,46 +2,46 @@
 @{
     ViewBag.Title = "Manage Student";
 }
-<body style="background:radial-gradient(#F2696A,white)">
-<div class="containerManage">
-    @{
+<body>
+    <div class="containerManage">
+        @{
 
-        if (Model.StudentList == null || !Model.StudentList.Any())
-        {
-            <br />
-            <p>No Students in the System</p>
-            <br />
-        }
-        else
-        {
-
-            foreach (var item in Model.StudentList)
+            if (Model.StudentList == null || !Model.StudentList.Any())
             {
-                if (@item.CurrentlyEnrolled == true)
+                <br />
+                <p>No Students in the System</p>
+                <br />
+            }
+            else
+            {
+
+                foreach (var item in Model.StudentList)
                 {
-                    <div class="col-xs-4">
-                        <ul id="rig">
-                            <li>
-                                <a class="rig-cell" href="~/Student/Read/@item.Id">
-                                    <img class="rig-img" src=@string.Format("/Content/images/StudentImages/Student{0}", @item.URIProfilePicture) width="75" height="75" />
-                                    <span class="rig-overlay"></span>
-                                    <span class="rig-text">@item.FirstName @item.LastName</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    if (@item.CurrentlyEnrolled == true)
+                    {
+                        <div class="col-xs-4">
+                            <ul id="rig">
+                                <li>
+                                    <a class="rig-cell" href="~/Student/Read/@item.Id">
+                                        <img class="rig-img" src=@string.Format("/Content/images/StudentImages/Student{0}", @item.URIProfilePicture) width="75" height="75" />
+                                        <span class="rig-overlay"></span>
+                                        <span class="rig-text">@item.FirstName @item.LastName</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    }
                 }
             }
+
         }
 
-    }
 
-
-    <div id="createStudent">
-        <a href="~/Student/Create" class="btn btn-primary">Create Student</a>
+        <div id="createStudent">
+            <a href="~/Student/Create" class="btn btn-primary">Create Student</a>
+        </div>
+        <div id="archiveStudent">
+            <a href="~/Admin/ManageArchived" class="btn btn-primary">Archived Students</a>
+        </div>
     </div>
-    <div id="archiveStudent">
-        <a href="~/Admin/ManageArchived" class="btn btn-primary">Archived Students</a>
-    </div>
-</div>
 </body>

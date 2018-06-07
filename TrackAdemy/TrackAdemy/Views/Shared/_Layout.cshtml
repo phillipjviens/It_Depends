@@ -12,21 +12,23 @@
 <body>
     @{
         @*Gets view name*@
-    var controllerName = this.ViewContext.RouteData.Values["controller"].ToString();
+        var controllerName = this.ViewContext.RouteData.Values["controller"].ToString();
 
         @*getting action name*@
-    var actionName = this.ViewContext.RouteData.Values["action"].ToString();
+        var actionName = this.ViewContext.RouteData.Values["action"].ToString();
 
-    @*making a list of exception student pages*@
-    string []studentAdminPagesList= {"Read", "Create", "Update", "Delete" };
+        @*making a list of exception student pages*@
+        string[] studentAdminPagesList = { "Read", "Create", "Update", "Delete" };
 
-    @*checks if the controller name is Student and if the CRUD action is being used*@
-    bool inList = (controllerName == "Student" && Array.Exists(studentAdminPagesList, x => x == actionName));
+        @*checks if the controller name is Student and if the CRUD action is being used*@
+        bool inList = (controllerName == "Student" && Array.Exists(studentAdminPagesList, x => x == actionName));
 
         @*Conditionals to determine which view called the shared layout. Depending on which, displays navbars.*@
         @*Admin nav*@
-    if (controllerName == "Admin" || inList) 
-    {
+        if (controllerName == "Admin" || inList)
+        {
+            <div id="adminLeft"></div>
+            <div id="adminRight"></div>
             <div id="adminNav" class="navbar navbar-inverse navbar-fixed-top" style="background:linear-gradient(to right, #C22026,#F8AB9F );height:12%">
                 <div class="container">
                     <div class="navbar-header">
@@ -56,10 +58,10 @@
                     </div>
                 </div>
             </div>
-    }
+        }
         @*Student nav*@
-    else if (controllerName == "Student")
-    {
+        else if (controllerName == "Student")
+        {
             <div id="studentNav" class="navbar navbar-inverse navbar-fixed-top" style="background:linear-gradient(to right, #37499F,#3D92D0);height:12%">
                 <div class="container">
                     <div class="navbar-header">
@@ -85,16 +87,16 @@
                             <li><a href="~/Student/Aspirations">ASPIRATIONS</a></li>
                             <li><a href="~/Student/Store">PET STORE</a></li>
                             <li><a href="~/Student/Yard">PET YARD</a></li>
-                            <li><a href="~/Student/Index">STUDENT HOME</a></li>  
-                      </ul>
+                            <li><a href="~/Student/Index">STUDENT HOME</a></li>
+                        </ul>
                     </div>
                 </div>
 
             </div>
-}
+        }
         @*TrackAdemy home*@
-    else if (controllerName == "Home")
-    {
+        else if (controllerName == "Home")
+        {
             <div class="navbar navbar-inverse navbar-fixed-top" style="background:black;">
                 <div class="container">
                     <div class="navbar-header">
@@ -116,23 +118,23 @@
                     </div>
                 </div>
             </div>
+        }
+        <!--End conditional layout-->
+
+        <div class="container body-content">
+            @RenderBody()
+
+            <footer style="bottom: 0; position: static;">
+                <hr />
+                &copy;@DateTime.Now.Year - TrackAdemy
+                @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px; color:black" })
+                @Html.ActionLink("Help", "Help", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px; color:black" })
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
     }
-    <!--End conditional layout-->
-    
-            <div class="container body-content">
-                @RenderBody()
-
-                        <footer style="bottom: 0; position: static;">
-                            <hr />
-                            &copy;@DateTime.Now.Year - TrackAdemy
-                            @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px; color:black" })
-                            @Html.ActionLink("Help", "Help", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px; color:black" })
-                        </footer>
-                    </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
- }
 </body>
 </html>
