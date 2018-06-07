@@ -142,13 +142,10 @@
 </div>
 <br />
 
-<div class="row">
-    <div class="col-sm-3"></div>
-    <div id="manageButtons" class="col-sm-8">
-        @Html.ActionLink("Archive", "Archive", new { id = Model.Id }, new { @class = "btn btn-warning" })
-        @Html.ActionLink("Cancel", "ManageStudent", "Admin", new { id = "" }, new { @class = "btn btn-success" })
-        @Html.ActionLink("Update", "Update", new { id = Model.Id }, new { @class = "btn btn-primary" })
+    <div id="manageReadButtons" class="col-sm-8">
+        @Html.ActionLink("Archive", "Archive", new { id = Model.Id }, new { @class = "btn btn-danger" })
+        @Html.ActionLink("Cancel", "ManageStudent", "Admin", new { id = "" }, new { @class = "btn btn-danger" })
+        @Html.ActionLink("Update", "Update", new { id = Model.Id }, new { @class = "btn btn-danger" })
         @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger" })
-        <a class="btn btn-info" href="~/Content/images/Report_PDF.pdf">Download PDF</a>
-    </div>
+        <a class="btn btn-danger" href="~/Content/images/Report_PDF.pdf">Download PDF</a>
 </div>

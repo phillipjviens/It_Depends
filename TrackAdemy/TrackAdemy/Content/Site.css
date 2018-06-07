@@ -369,8 +369,13 @@ li a {
 
 /*manage buttons*/
 #manageReadButtons {
-    position: relative;
-    right: 22em;
+    width: auto;
+    height: auto;
+    position: absolute;
+    margin-top:5%;
+    top:100%;
+    left: 35%;
+    display: inline-flex
 }
 /*end STUDENT READ*/
 
