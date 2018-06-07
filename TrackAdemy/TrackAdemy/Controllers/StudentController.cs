@@ -126,6 +126,7 @@ namespace TrackAdemy.Controllers
                                         "DaysAttended,"+
                                         "AvgIn,"+
                                         "AvgOut,"+
+                                        "CurrentlyEnrolled,"+
                                         "")] StudentModel data)
         {
             if (!ModelState.IsValid)
