@@ -6,25 +6,28 @@
 
 <!--Drop-down menu changing the data range of statistics-->
 @*<ul class="nav nav-pills" style="margin-top:40px">
-    <li class="dropdown">
-        <a class="dropdown-toggle btn btn-info" data-toggle="dropdown" href="#">This Week<b class="caret"></b></a>
-        <ul class="dropdown-menu">
-            <div class="btn-group btn-group-justified">
-                <li><a href="~/Admin/IndexMonth" class="btn btn-primary">Last Month</a></li>
-                <li><a href="~/Admin/IndexYear" class="btn btn-primary">Last Year</a></li>
-            </div>
-        </ul>
-    </li>
-</ul>*@
+        <li class="dropdown">
+            <a class="dropdown-toggle btn btn-info" data-toggle="dropdown" href="#">This Week<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <div class="btn-group btn-group-justified">
+                    <li><a href="~/Admin/IndexMonth" class="btn btn-primary">Last Month</a></li>
+                    <li><a href="~/Admin/IndexYear" class="btn btn-primary">Last Year</a></li>
+                </div>
+            </ul>
+        </li>
+    </ul>*@
 
 
 
 <!--Graph of total hours per student in data range-->
 <body>
     <div class="row">
-        <div class="adminColumn">
+
+        <div class="columnthird adminColumn">
             <img src="~/Content/images/SVG/ChartSVG/Admin_Home_StudentAttendance.svg" style="height:50vh;" />
-            <img src="~/Content/images/SVG/ChartSVG/Admin_Home_StudentHours.svg" style="width:49vw;" />
+        </div>
+        <div class="columntwothirds adminColumn">
+            <img src="~/Content/images/SVG/ChartSVG/Admin_Home_StudentHours.svg" style="width:100%;" />
         </div>
         <!--Graph of number of students in class per day of the week in data range-->
 
@@ -36,9 +39,9 @@
 @*<img src="~/Content/images/SampleCalendar.jpg" style="width:450px;height:250px;position:relative;" />*@
 <!--Change item labels with button-->
 @*<div id="calendarMod">
-    <label for="date">Date: </label>
-    <input id="date" type="text" name="text"> <br />
-    <label for="hours">Number of Hours: </label>
-    <input id"hours" type="text" name="text"><br />
-    @Html.ActionLink("Change", "Index", "Admin", null, new { @class = "btn btn-primary" })
-</div>*@
+        <label for="date">Date: </label>
+        <input id="date" type="text" name="text"> <br />
+        <label for="hours">Number of Hours: </label>
+        <input id"hours" type="text" name="text"><br />
+        @Html.ActionLink("Change", "Index", "Admin", null, new { @class = "btn btn-primary" })
+    </div>*@

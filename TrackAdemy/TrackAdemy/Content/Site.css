@@ -818,6 +818,10 @@ li a {
     margin: auto;
     padding-top:100px;
 }
+.columntwothirds {
+    float: left;
+    width: 66%;
+}
 
     /*a simple way to set image sizing and location within columns*/
     .adminColumn img {
