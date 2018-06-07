@@ -18,7 +18,7 @@
         var actionName = this.ViewContext.RouteData.Values["action"].ToString();
 
         @*making a list of exception student pages*@
-        string[] studentAdminPagesList = { "Read", "Create", "Update", "Delete" };
+        string[] studentAdminPagesList = { "Read", "Create", "Update", "Delete", "Archive", "ReadArchived"};
 
         @*checks if the controller name is Student and if the CRUD action is being used*@
         bool inList = (controllerName == "Student" && Array.Exists(studentAdminPagesList, x => x == actionName));
