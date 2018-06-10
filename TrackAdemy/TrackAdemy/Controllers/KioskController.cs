@@ -9,9 +9,11 @@ namespace TrackAdemy.Controllers
     public class KioskController : Controller
     {
         /// <summary>
-        /// simple index page for the kiosk
+        /// The page for the student on site check in.  The student will click on their image,
+        /// a green checkmark will appear when the student checks in.  When the student is ready
+        /// to leave they will click their image and the checkmark will disappear.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>View of the kiosk page.</returns>
         public ActionResult Index()
         {
             return View();
