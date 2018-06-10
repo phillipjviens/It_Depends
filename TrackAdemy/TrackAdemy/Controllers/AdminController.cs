@@ -34,17 +34,6 @@ namespace TrackAdemy.Controllers
         }
 
         /// <summary>
-        /// Shows specific student report statistics
-        /// </summary>
-        /// <param name="student"></param>
-        /// <param name="date"></param>
-        /// <returns>View</returns>
-        public ActionResult Report(string id = null, string timeFrame = null)
-        {
-            return View();
-        }
-
-        /// <summary>
         /// Shows a PDF png of student data
         /// </summary>
         /// <returns>View</returns>

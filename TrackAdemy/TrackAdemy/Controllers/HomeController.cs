@@ -41,16 +41,6 @@ namespace TrackAdemy.Controllers
         }
 
         /// <summary>
-        /// login page
-        /// </summary>
-        /// <returns></returns>
-        public ActionResult Login()
-        {
-            ViewBag.Message = "Your Login page.";
-
-            return View();
-        }
-        /// <summary>
         /// the help page
         /// </summary>
         /// <returns></returns>
