@@ -73,9 +73,9 @@ namespace TrackAdemy.Controllers
             return View();
         }
         /// <summary>
-        /// sneaky pet's yard updated
+        /// Is an image of the backyard after items have been purchased.
         /// </summary>
-        /// <returns></returns>
+        /// <returns> View of Backyard</returns>
         public ActionResult YardUpdated()
         {
             ViewBag.Message = "Yard updated.";
