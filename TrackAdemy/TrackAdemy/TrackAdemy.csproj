@@ -193,12 +193,10 @@
     <Compile Include="Backend\StudentInterface.cs" />
     <Compile Include="Backend\StudentDataSourceMock.cs" />
     <Compile Include="Backend\StudentBackend.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\KioskController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
