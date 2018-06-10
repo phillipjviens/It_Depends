@@ -640,6 +640,9 @@ li a {
 
 
 /*STORE PAGE*/
+.backgroundStore {
+    background:radial-gradient(darkgray,white);
+}
 
 .topStoreRow {
     margin-top: 70px;
