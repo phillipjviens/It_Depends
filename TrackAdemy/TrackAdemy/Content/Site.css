@@ -438,6 +438,21 @@ li a {
         height: auto;
         max-width: 100%;
     }
+/*the top row*/
+#loginrow {
+    margin-top: 20px;
+}
+
+/*the large Icon*/
+.loginLogo {
+    max-width:15%; 
+    padding:1%;
+}
+
+/*the large title logo*/
+.loginTitle {
+   max-width:50%;
+}
 
 /*login input group items that are img (the custom icons)*/
 .login .input-group-addon img {
