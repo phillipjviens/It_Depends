@@ -494,6 +494,12 @@ li a {
     height: 100%;
 }
 
+/*Removes padding and margin of kiosk page*/
+.kioskPadding {
+    margin: 0;
+    padding: 0;
+}
+
 /*Centers everything in the kiosk page*/
 .center {
     display: block;
