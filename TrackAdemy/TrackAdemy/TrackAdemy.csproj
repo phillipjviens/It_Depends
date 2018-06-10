@@ -417,8 +417,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Admin\Report.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Student\Logout.cshtml" />
     <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Kiosk\Index.cshtml" />
     <Content Include="Views\Home\Help.cshtml" />
     <Content Include="Views\Admin\ManageStudent.cshtml" />
     <Content Include="Views\Student\Data.cshtml" />

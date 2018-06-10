@@ -1,0 +1,183 @@
+﻿@{
+    ViewBag.Title = "Kiosk Home Page";
+}
+<head>
+
+    <script>
+
+        //makes student1 checkmark appear and disappear
+        function checkMarkView1() {
+            var x = document.getElementById('checkMark1');
+            if (x.style.display == 'block') {
+                x.style.display = 'none';
+            } else {
+                x.style.display = 'block';
+            }
+        }
+        //makes student2 checkmark appear and disappear
+        function checkMarkView2() {
+            var x = document.getElementById('checkMark2');
+            if (x.style.display == 'block') {
+                x.style.display = 'none';
+            } else {
+                x.style.display = 'block';
+            }
+        }
+        //makes student3 checkmark appear and disappear
+        function checkMarkView3() {
+            var x = document.getElementById('checkMark3');
+            if (x.style.display == 'block') {
+                x.style.display = 'none';
+            } else {
+                x.style.display = 'block';
+            }
+        }
+        //makes student4 checkmark appear and disappear
+        function checkMarkView4() {
+            var x = document.getElementById('checkMark4');
+            if (x.style.display == 'block') {
+                x.style.display = 'none';
+            } else {
+                x.style.display = 'block';
+            }
+        }
+        //makes student5 checkmark appear and disappear
+        function checkMarkView5() {
+            var x = document.getElementById('checkMark5');
+            if (x.style.display == 'block') {
+                x.style.display = 'none';
+            } else {
+                x.style.display = 'block';
+            }
+
+        }
+        //makes student6 checkmark appear and disappear
+        function checkMarkView6() {
+            var x = document.getElementById('checkMark6');
+            if (x.style.display == 'block') {
+                x.style.display = 'none';
+            } else {
+                x.style.display = 'block';
+            }
+        }
+        //makes student7 checkmark appear and disappear
+        function checkMarkView7() {
+            var x = document.getElementById('checkMark7');
+            if (x.style.display == 'block') {
+                x.style.display = 'none';
+            } else {
+                x.style.display = 'block';
+            }
+        }
+        //makes student8 checkmark appear and disappear
+        function checkMarkView8() {
+            var x = document.getElementById('checkMark8');
+            if (x.style.display == 'block') {
+                x.style.display = 'none';
+            } else {
+                x.style.display = 'block';
+            }
+        }
+        //makes student9 checkmark appear and disappear
+        function checkMarkView9() {
+            var x = document.getElementById('checkMark9');
+            if (x.style.display == 'block') {
+                x.style.display = 'none';
+            } else {
+                x.style.display = 'block';
+            }
+        }
+
+
+    </script>
+
+</head>
+
+<!--Background of fading green for entire screen-->
+<body class="kioskBackground" style="margin: 0; padding: 0;" onload="checkMarkView5(), checkMarkView6(), checkMarkView7()">
+
+    <!--Centers everything on the page-->
+    <div class=" center">
+
+        <!--Adds the logo and name to the top of the page, logout to -->
+        <div>
+            <a href="~/Home/Index" class="logoutButton">LOGOUT</a>
+            <img src="~/Content/images/SVG/TrackAdemy Logo - White.svg" class="center kioksTrackAdemyTitle" />
+            <img src="~/Content/images/SVG/Logo_Default.svg" class="center kioskLogo" />
+        </div>
+
+        <!--Grid container-->
+        <div>
+            <br />
+            <div class="grid-container-kiosk">
+
+                <!--Student 1 picture with checkin and check out buttons-->
+                <div class="item1">
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student1.png" class="studentPicture" />
+                    <img id="checkMark1" src="~/Content/images/SVG/Kiosk_Checkmark.svg" class="checkMark"/>
+                    <button onclick="checkMarkView1()" class="btn">CHECKMARK</button>
+                </div>
+
+                <!--Student 2 picture with checkin and check out buttons-->
+                <div class="item2">
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student2.png" class="studentPicture" />
+                    <img id="checkMark2" src="~/Content/images/SVG/Kiosk_Checkmark.svg" class="checkMark" />
+                    <button onclick="checkMarkView2()" class="btn">CHECKMARK</button>
+                </div>
+
+                <!--Student 3 picture with checkin and check out buttons-->
+                <div class="item3">
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student3.png" class="studentPicture" />
+                    <img id="checkMark3" src="~/Content/images/SVG/Kiosk_Checkmark.svg" class="checkMark" />
+                    <button onclick="checkMarkView3()" class="btn">CHECKMARK</button>
+                </div>
+
+                <!--Student 4 picture with checkin and check out buttons-->
+                <div class="item4">
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student4.png" class="studentPicture" />
+                    <img id="checkMark4" src="~/Content/images/SVG/Kiosk_Checkmark.svg" class="checkMark" />
+                    <button onclick="checkMarkView4()" class="btn">CHECKMARK</button>
+                </div>
+
+                <!--Student 5 picture with checkin and check out buttons-->
+                <div class="item5">
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student5.png" class="studentPicture" />
+                    <img id="checkMark5" src="~/Content/images/SVG/Kiosk_Checkmark.svg" class="checkMark" />
+                    <button onclick="checkMarkView5()" class="btn">CHECKMARK</button>
+                </div>
+
+                <!--Student 6 picture with checkin and check out buttons-->
+                <div class="item6">
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student6.png" class="studentPicture" />
+                    <img id="checkMark6" src="~/Content/images/SVG/Kiosk_Checkmark.svg" class="checkMark" />
+                    <button onclick="checkMarkView6()" class="btn">CHECKMARK</button>
+                </div>
+
+                <!--Student 7 picture with checkin and check out buttons-->
+                <div class="item7">
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student7.png" class="studentPicture" />
+                    <img id="checkMark7" src="~/Content/images/SVG/Kiosk_Checkmark.svg" class="checkMark" />
+                    <button onclick="checkMarkView7()" class="btn">CHECKMARK</button>
+                </div>
+
+                <!--Student 8 picture with checkin and check out buttons-->
+                <div class="item8">
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student8.png" class="studentPicture" />
+                    <img id="checkMark8" src="~/Content/images/SVG/Kiosk_Checkmark.svg"  class="checkMark"/>
+                    <button onclick="checkMarkView8()" class="btn">CHECKMARK</button>
+                </div>
+
+                <!--Student 9 picture with checkin and check out buttons-->
+                <div class="item9">
+                    <img src="~/Content/images/NewFolder1/StudentImagesPNG/Student9.png" class="studentPicture" />
+                    <img id="checkMark9" src="~/Content/images/SVG/Kiosk_Checkmark.svg"  class="checkMark"/>
+                    <button onclick="checkMarkView9()" class="btn">CHECKMARK</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
