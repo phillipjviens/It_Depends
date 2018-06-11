@@ -850,7 +850,17 @@ li a {
 }
 
     /*a simple way to set image sizing and location within columns*/
-    .adminColumn img {
+
+
+    .adminLeftGraph{
+        float:left;
+        width: 25%;
+        max-width:25%;
         height: auto;
-        max-width: 100%;
     }
+.adminRightGraph {
+    float: left;
+    width: 75%;
+    max-width: 75%;
+    height:auto;
+}
