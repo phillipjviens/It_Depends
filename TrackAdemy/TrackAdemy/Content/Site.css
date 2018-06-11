@@ -959,157 +959,37 @@ margin-top:-22px;
 /*end STUDENT INDEX HOME */
 
 /*ASPIRATIONS STUDENT*/
-.aspirationcenter {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background: radial-gradient(darkgray,white)
-}
-/*Background of aspiration page */
+
+/*Background of aspiration page (the box)*/
 .aspirationBackground {
-    margin: 0;
+    margin-top:70px;
     padding: 0;
     text-align: center;
-    background: radial-gradient(darkgray,white)
+    background: #C9E9EA;
+    border-radius:100px;
 }
-/*The blue container in the aspiration page that contains the items*/
-.aspirations-container {
-    height: 50%;
-    width: auto;
+
+/*new smaller grid*/
+.newAspContainer {
     display: grid;
-    grid-template: auto auto auto / auto auto auto;
-    grid-gap: 40px;
-    background-color: #C9E9EA;
-    padding-bottom: 10px;
-    padding-top: 50px;
-    padding-left: 60px;
-    padding-right: 60px;
-    margin-bottom: 10px;
-    border-radius: 100px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto 30px;
+    border-radius: 20px;
+   
 }
-/*List of today's aspiration items ROW 1, three items included */
-.aspiration-item1 {
-    color: #3D92D0;
-    font-size: 14px;
-    text-align: center
+/*all grid images*/
+.newAspContainer img{
+    max-height:150px;
+    max-width:150px;
+    margin:auto;
+ 
 }
-
-.checkInPicture {
-    margin-top: 90px;
-    margin-right: 75px;
+/*immediate children of the grid that are divs(the items)*/
+.newAspContainer > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.aspiration-item2 {
-    color: #3D92D0;
-    font-size: 14px;
-    text-align: center
-}
-
-.checkOutPicture {
-    margin-top: 80px;
-    margin-right: 65px;
-}
-
-.aspiration-item3 {
-    color: #3D92D0;
-    font-size: 14px;
-    text-align: center
-}
-/*List of future aspiration items ROW 2, three items included */
-.StayAllDaypicture {
-    margin-top: 85px;
-    margin-right: 75px;
-}
-
-.aspiration-item4 {
-    color: #3D92D0;
-    font-size: 14px;
-    text-align: center;
-}
-
-.streakDarkPicture {
-    margin-top: 60px;
-    margin-right: 20px;
-}
-
-.aspiration-item5 {
-    color: #3D92D0;
-    font-size: 14px;
-    text-align: center;
-}
-
-.futureAspiration {
-    color: #FFFFFF;
-    font-size: 20px;
-    text-align: center;
-}
-
-.checkOutDark {
-    margin-top: 20px;
-    margin-right: 30px;
-}
-
-.aspiration-item6 {
-    color: #3D92D0;
-    font-size: 14px;
-    text-align: center
-}
-
-.HoursDarkPic {
-    margin-top: 50px;
-    margin-right: 70px;
-}
-
-
-/*List of Dexter's wish list , items ROW 3, three items included */
-
-.aspiration-item7 {
-    color: #3D92D0;
-    font-size: 14px;
-    text-align: center;
-}
-
-.storeStreakPic {
-    margin-top: 90px;
-    margin-right: 50px;
-}
-
-
-
-.aspiration-item8 {
-    margin-top: 30px;
-    margin-right: 20px;
-    color: #3D92D0;
-    font-size: 14px;
-    text-align: center
-}
-
-.wishlist {
-    color: #FFFFFF; /*Wish List*/
-    font-size: 20px; /*Wish List*/
-    text-align: center; /*Wish List*/
-}
-
-.handkerchiefDark {
-    margin-top: 100px;
-    margin-right: 90px
-}
-
-.aspiration-item9 {
-    margin-top: 50px;
-    margin-right: 70px;
-    font-size: 14px;
-    text-align: center;
-    color: #3D92D0;
-}
-
-.cowboyHat {
-    margin-top: 60px;
-    margin-right: 35px;
-}
-
-
-
 /*end ASPIRATIONS STUDENT*/
 
 /*ADMIN INDEX*/
