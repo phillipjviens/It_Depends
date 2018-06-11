@@ -6,7 +6,7 @@
 
 <div class="container">
     <div class="row">
-        <h2 class="subheader" style="text-align:unset">New Student</h2>
+        <h2 class="subheader studentArchive" >New Student</h2>
         <br />
         <br />
 
@@ -16,16 +16,16 @@
             @Html.HiddenFor(m => m.Id)
            
             @*Should be substituted out for values*@
-            @Html.Hidden("URICurrentWeek", "default")
-            @Html.Hidden("URICurrentMonth", "default")
-            @Html.Hidden("URI3Months", "default")
-            @Html.Hidden("URIYear2Date", "default")
+            @Html.Hidden("URICurrentWeek", "Student_Home_HoursThisWeek.svg")
+            @Html.Hidden("URICurrentMonth", "Admin_Manage_MonthHours.svg")
+            @Html.Hidden("URI3Months", "Admin_Manage_3MonthsHours.svg")
+            @Html.Hidden("URIYear2Date", "Admin_Manage_YearToDateHours.svg")
             @Html.Hidden("TotalHours", null)
             @Html.Hidden("DaysAttended",null)
-            @Html.Hidden("AvgIn", "default")
-            @Html.Hidden("AvgOut", "default")
+            @Html.Hidden("AvgIn", "9")
+            @Html.Hidden("AvgOut", "4")
             @Html.Hidden("CurrentlyEnrolled", true)
-
+           
 
 
             <div class="row">
