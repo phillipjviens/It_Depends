@@ -1011,3 +1011,13 @@ li a {
     text-align:unset;
 }
 /*end STUDENT ARCHIVE*/
+
+/*STUDENT DATA*/
+
+.studentData > img {
+width:100%;
+height:auto;
+padding-top:50px;
+}
+
+/*end STUDENT DATA*/
