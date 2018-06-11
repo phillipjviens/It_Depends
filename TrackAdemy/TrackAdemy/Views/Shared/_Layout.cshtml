@@ -25,12 +25,16 @@
 
         @*Conditionals to determine which view called the shared layout. Depending on which, displays navbars.*@
         @*Admin nav*@
+
+        <!--Admin Navbar-->
         if (controllerName == "Admin" || inList)
         {
             /*left and right border bars*/
             <div id="adminLeft"></div>
             <div id="adminRight"></div>
 
+
+            <!-- This the navbar container-->
             <div id="adminNav" class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container">
                     <div class="navbar-header">
@@ -40,18 +44,25 @@
                             <span class="icon-bar"></span>
                         </button>
                     </div>
+
+                    <!--Collapsable div to allow navbar to resize when screen shrinks-->
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbare-nav navUL" >
                             <li class="navLILeftElements">
+
+                                <!--Trackadamy logo that was turned into a clickable link-->
                                 <a href="~/Home/Index">
                                     <img class="img-responsive" src="~/Content/images/SVG/Trackademy_White.svg" >
                                 </a>
                             </li>
+
+                            <!-- centered schoolhouse logo on the navbar that was also turned into a clickable link-->
                             <li class="navLIMiddleElements">
                                 <a href="~/Home/Index">
                                     <img class="img-responsive" src="~/Content/images/SVG/Logo_Red.svg" >
                                 </a>
                             </li>
+                            <!--Remaining navbar elements that were floated to the right side of the navigation bar-->
                             <li class="navLIRightElements"><a href="~/Home/Index">LOG OUT</a></li>
                             <li><a href="~/Admin/ManageStudent">MANAGE STUDENT</a></li>
                             <li><a href="~/Admin/Calendar">CALENDAR</a></li>
@@ -61,9 +72,12 @@
                 </div>
             </div>
         }
+
+        <!--Student nav bar--->
         @*Student nav*@
         else if (controllerName == "Student")
         {
+            
             <div id="studentNav" class="navbar navbar-inverse navbar-fixed-top" >
                 <div class="container">
                     <div class="navbar-header">
@@ -85,6 +99,7 @@
                                     <img class="img-responsive" id="navbarStudentPic" src="~/Content/images/SVG/NavBar_Picture.svg" >
                                 </a>
                             </li>
+                          
                             <li class="navLIRightElements"><a href="~/Home/Index">LOG OUT</a></li>
                             <li><a href="~/Student/Aspirations">ASPIRATIONS</a></li>
                             <li><a href="~/Student/Store">PET STORE</a></li>
