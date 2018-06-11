@@ -1,71 +1,85 @@
 ﻿@{
+
     ViewBag.Title = "Aspirations";
+
 }
 
-<body style="background:radial-gradient(darkgray,white)">
-    <div class="center" style="margin:0; padding: 0;">
-        <body class="AspirationBackground" style="margin: 0; padding: 0;">
-    </div>
-    <div>
+<div class="aspirationcenter">
 
-        <div class="aspirations-container">
-            <!--<p style="color:#FFFFFF; font-size:20px; font-family:'Century Gothic'; margin-top:60px; margin-right:200px; text-align:center"> FUTURE'S ASPIRATION </p>-->
+    <body class="AspirationBackground">
+</div>
 
-            <div class="item1" style=" margin-top:90px; margin-right:75px;">
+<!-- list of todya's aspiration as item 1, 2 and 3 -->
+<div>
+    <div class="aspirations-container">
+        <div class="aspiration-item1">
+            <img id="clockIn" src="~/Content/images/SVG/Aspiration_ClockIn.svg" class="checkInPicture" />
 
-                <img id="clockIn" src="~/Content/images/SVG/Aspiration_ClockIn.svg" />
-                <p style="color:#3D92D0; font-size:14px; text-align:center"> <b> Today's Clock In</b></p>
-                <!-- <button onclick="clockIn()" class="btn">Clock In</button>-->
-            </div>
-            <div class="item2" style=" margin-top:90px; margin-right:75px;">
-                <img src="~/Content/images/SVG/Aspiration_ClockOut_Dark.svg" />
-                <p style="color:#3D92D0; font-size:14px; text-align:center"> <b> Today's Clock Out</b></p>
-                <!--<button onclick="clockOut()" class="btn">Clock Out</button>-->
-            </div>
-
-            <div class="item3" style=" margin-top:85px; margin-right:75px;">
-                <img src="~/Content/images/SVG/Aspiration_StayAllDay_Dark.svg" />
-                <p style="color:#3D92D0; font-size:14px; text-align:center"><b>Stay All Day Today</b> </p>
-                <!-- <button onclick="StayAllDay()" class="btn">StayAllDay</button>-->
-            </div>
-
-            <div class="item4" style=" margin-top:100px; margin-right:30px;">
-                <img src="~/Content/images/SVG/Aspiration_Streak_Dark.svg" />
-                <p style="color:#3D92D0; font-size:14px; text-align:center"><b>28 DAYS STREAK</b></p>
-                <!-- <button onclick="28DaysStreak();" class="btn">28DaysStreak</button>-->
-            </div>
-
-            <div class="item5" style="margin-top:20px; margin-right:30px;">
-                <p style="color:#FFFFFF; font-size:20px; text-align:center"><b> FUTURE ASPIRATION</b></p>
-                <img src="~/Content/images/SVG/Aspiration_ClockOut_3_Dark.svg" />
-                <p style="color:#3D92D0; font-size:14px; text-align:center"><b>3 DAYS IN A ROW</b> </p>
-                <!-- <button onclick="3DaysInARow()" class="btn">3 Days in a Row</button>-->
-            </div>
-
-            <div class="item6" style=" margin-top:50px; margin-right:70px;">
-                <img src="~/Content/images/SVG/Aspiration_300Hours_Dark.svg" />
-                <p style="color:#3D92D0;font-size:14px;text-align:center"><b>300 COMMUNITY HOURS</b></p>
-                <!-- <button onclick="300CommunityHours()" class="btn">300 Community Hours</button>-->
-            </div>
-
-
-            <div class="item7" style=" margin-top:90px; margin-right:50px;">
-                <img src="~/Content/images/SVG/Store_Speak.svg" style=" margin-top:50px; margin-right:90px;" />
-                <p style="color:#3D92D0; font-size:14px; text-align:center"><b>LEARN SPEAK </b></p>
-                <!-- <button onclick="LearnSpeak()" class="btn">Learn Speak</button>-->
-            </div>
-            <div class="item8" style=" margin-top:70px; margin-right:60px;">
-                <p style="color:#FFFFFF; font-size:20px; text-align:center"><b> WISH LIST</b></p>
-                <img src="~/Content/images/SVG/Store_Handkerchief_Dark.svg" style=" margin-top:30px; margin-right:50px;" />
-                <p style="color:#3D92D0; font-size:14px; text-align:center"><b>HANDKERCHIEF</b></p>
-                <!-- <button onclick="Handkrachief()" class="btn">HANDKARECHIEF</button>-->
-            </div>
-
-            <div class="item9" style=" margin-top:100px; margin-right:70px;">
-                <img src="~/Content/images/SVG/Store_CowboyHat_Dark.svg" style=" margin-top:70px; margin-right:60px;" />
-                <p style="color:#3D92D0; font-size:14px; text-align:center"><b>COWBOY HAT</b></p>
-                <!-- <button onclick="CowboyHat()" class="btn"> Cowboy Hat</button>-->
-            </div>
+            <p> <b> Today's Clock In</b></p>
 
         </div>
-</body>
+
+        <div class="aspiration-item2">
+
+            <img src="~/Content/images/SVG/Aspiration_ClockOut_Dark.svg" class=" checkOutPicture" />
+
+            <p> <b> Today's Clock Out</b></p>
+
+        </div>
+
+        <div class="aspiration-item3">
+
+            <img src="~/Content/images/SVG/Aspiration_StayAllDay_Dark.svg" class="StayAllDaypicture" />
+
+            <p><b>Stay All Day Today</b> </p>
+
+        </div>
+
+        <!-- list of future's aspiration for longer term achivments as item 3, 4 and5  -->
+        <div class="aspiration-item4">
+
+            <img src="~/Content/images/SVG/Aspiration_Streak_Dark.svg" class="StreakDarkPicture" />
+
+            <p><b>28 DAYS STREAK</b></p>
+
+        </div>
+
+        <div class="aspiration-item5">
+            <div class=" futureAspiration">
+                <p><b> FUTURE ASPIRATION</b></p>
+                <img src="~/Content/images/SVG/Aspiration_ClockOut_3_Dark.svg" class="checkOutDark" />
+            </div>
+            <p><b>3 DAYS IN A ROW</b> </p>
+
+        </div>
+
+        <div class="aspiration-item6">
+
+            <img src="~/Content/images/SVG/Aspiration_300Hours_Dark.svg" class="HoursDarkPic" />
+
+            <p><b>300 COMMUNITY HOURS</b></p>
+        </div>
+
+        <!--List of the wishlist of the pet, 3 items included as 7,8 and9-->
+        <div class="aspiration-item7">
+
+            <img src="~/Content/images/SVG/Store_Speak.svg" class="storeStreakPic" />
+
+            <p><b>LEARN SPEAK </b></p>
+        </div>
+
+        <div class="aspiration-item8">
+            <div class=" wishlist">
+                <p><b> WISH LIST</b></p>
+                <img src="~/Content/images/SVG/Store_Handkerchief_Dark.svg" class="handkerchiefDark" />
+            </div>
+            <p><b>HANDKARECHIEF</b></p>
+
+        </div>
+
+        <div class="aspiration-item9">
+            <img src="~/Content/images/SVG/Store_CowboyHat_Dark.svg" class="cowboyHat" />
+            <p><b>COWBOY HAT</b></p>
+        </div>
+    </div>
+    </body>
