@@ -1,5 +1,6 @@
 ﻿
 /*GENERAL CLASSES USED THROUGHOUT*/
+/*Best way to find something is to search by view*/
 
 /*padding for body*/
 body {
@@ -1002,3 +1003,11 @@ li a {
     max-width: 75%;
     height:auto;
 }
+/*end ADMIN INDEX */
+
+/*STUDENT ARCHIVE*/
+
+.studentArchive {
+    text-align:unset;
+}
+/*end STUDENT ARCHIVE*/
