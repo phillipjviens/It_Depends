@@ -282,6 +282,7 @@ li a {
     opacity: 1;
 }
 
+/*Controlls how rig looks on multiple display widths*/
 @media (max-width: 9000px) {
     #rig li {
         width: 50%;

@@ -2,38 +2,34 @@
 @{
     ViewBag.Title = "Manage Student";
 }
-<body>
-    <div class="containerManage">
-        @{
 
-            if (Model.StudentList == null || !Model.StudentList.Any() || !Model.StudentList.Any(n => n.CurrentlyEnrolled == false))
+<div class="containerManage">
+    @{
+        if (Model.StudentList == null || !Model.StudentList.Any() || !Model.StudentList.Any(n => n.CurrentlyEnrolled == false))
+        {
+            <br />
+            <p>No Archived Students in the System</p>
+            <br />
+        }
+        else
+        {
+            foreach (var item in Model.StudentList)
             {
-                <br />
-                <p>No Students in the System</p>
-                <br />
-            }
-            else
-            {
-
-                foreach (var item in Model.StudentList)
+                if (@item.CurrentlyEnrolled == false)
                 {
-                    if (@item.CurrentlyEnrolled == false)
-                    {
-                        <div class="col-xs-4">
-                            <ul id="rig">
-                                <li>
-                                    <a class="rig-cell" href="~/Student/ReadArchived/@item.Id">
-                                        <img class="rig-img" src=@string.Format("/Content/images/StudentImages/Student{0}", @item.URIProfilePicture) width="75" height="75" />
-                                        <span class="rig-overlay"></span>
-                                        <span class="rig-text">@item.FirstName @item.LastName</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    }
+                    <div class="col-xs-4">
+                        <ul id="rig">
+                            <li>
+                                <a class="rig-cell" href="~/Student/ReadArchived/@item.Id">
+                                    <img class="rig-img" src=@string.Format("/Content/images/StudentImages/Student{0}", @item.URIProfilePicture) width="75" height="75" />
+                                    <span class="rig-overlay"></span>
+                                    <span class="rig-text">@item.FirstName @item.LastName</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 }
             }
-
         }
-    </div>
-</body>
+    }
+</div>

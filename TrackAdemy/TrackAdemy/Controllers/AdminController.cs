@@ -45,7 +45,8 @@ namespace TrackAdemy.Controllers
         }
 
         /// <summary>
-        /// Modify's student data (name, picture(?), hours, deletes)
+        /// Terminal to look at detailed individual student reports,
+        /// create a student, or look at archived students.
         /// </summary>
         /// <returns>View</returns>
         public ActionResult ManageStudent(string id = null)
