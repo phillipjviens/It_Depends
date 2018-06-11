@@ -103,30 +103,38 @@ input, select, textarea {
 .dl-horizontal dt {
     white-space: normal;
 }
-#adminTop, #adminBottom, #adminLeft, #adminRight{
+
+#adminTop, #adminBottom, #adminLeft, #adminRight {
     background: gray;
-    position:fixed;
+    position: fixed;
 }
-#adminLeft, #adminRight{
-    top:0; bottom:0;
+
+#adminLeft, #adminRight {
+    top: 0;
+    bottom: 0;
     width: 50px;
 }
-#adminLeft{
-    left:0;
+
+#adminLeft {
+    left: 0;
 }
-#adminRight{
-    right:0;
+
+#adminRight {
+    right: 0;
 }
-#adminTop, #adminBottom{
-    left:0;
-    right:0;
+
+#adminTop, #adminBottom {
+    left: 0;
+    right: 0;
     height: 50px;
 }
-#adminTop{
-    top:0;
+
+#adminTop {
+    top: 0;
 }
-#adminBottom{
-    bottom:0;
+
+#adminBottom {
+    bottom: 0;
 }
 
 
@@ -336,7 +344,7 @@ li a {
     position: relative;
     top: 8em;
     left: 40em;
-    margin-bottom:13%;
+    margin-bottom: 13%;
 }
 /*current month style*/
 #currentMonth {
@@ -359,13 +367,13 @@ li a {
     float: left;
 }
 
-#manageButtons{
-    width:auto;
-    height:auto;
-    position:absolute;
-    top:100%;
-    left:40%;
-    display:inline-flex
+#manageButtons {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    display: inline-flex
 }
 
 /*manage buttons*/
@@ -373,8 +381,8 @@ li a {
     width: auto;
     height: auto;
     position: relative;
-    margin-top:2%;
-    top:100%;
+    margin-top: 2%;
+    top: 100%;
     left: 35%;
     display: inline-flex
 }
@@ -388,7 +396,7 @@ li a {
     width: 70%;
     height: auto;
     margin-top: 8%;
-    margin-bottom:200px;
+    margin-bottom: 200px;
 }
 
 .calPic {
@@ -414,7 +422,7 @@ li a {
     display: none;
     background-color: transparent;
     margin-top: 20px;
-    margin-bottom:2%;
+    margin-bottom: 2%;
     width: 100%;
     float: unset !important;
     color: black;
@@ -437,7 +445,7 @@ li a {
 
     /*a simple way to set image sizing and location within columns*/
     .loginColumn img {
-        margin:auto;
+        margin: auto;
         height: auto;
         max-width: 100%;
     }
@@ -448,13 +456,13 @@ li a {
 
 /*the large Icon*/
 .loginLogo {
-    max-width:15%; 
-    padding:1%;
+    max-width: 15%;
+    padding: 1%;
 }
 
 /*the large title logo*/
 .loginTitle {
-   max-width:50%;
+    max-width: 50%;
 }
 
 /*login input group items that are img (the custom icons)*/
@@ -650,7 +658,7 @@ li a {
 
 /*STORE PAGE*/
 .backgroundStore {
-    background:radial-gradient(darkgray,white);
+    background: radial-gradient(darkgray,white);
 }
 
 .topStoreRow {
@@ -786,6 +794,81 @@ li a {
 
 /*begin STUDENT HOME PAGE*/
 
+.backgroundStudentHome {
+    background: radial-gradient(darkgray,white);
+}
+
+.studentHomeContainer {
+    height: 50%;
+    width: auto;
+    display: grid;
+    grid-template: auto auto auto / auto auto auto;
+    grid-gap: 40px;
+    background-color: #C9E9EA;
+    padding-bottom: 10px;
+    padding-top: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 10px;
+    border-radius: 100px;
+}
+
+    .studentHomeContainer > .item1 {
+        margin-top:50px; 
+        margin-left:50px; 
+        background:transparent;
+    }
+
+    .studentHomeContainer > .item2 {
+        width:350px; 
+        margin-left:50px; 
+        margin-right:-300px; 
+        margin-top:100px;         
+        background:transparent;
+    }
+
+    .studentHomeContainer > .item3 {
+ margin-top:50px; 
+ margin-right:100px; 
+     background:transparent;
+    }
+
+    .studentHomeContainer > .item4 {
+ margin-left:50px; 
+     background:transparent;
+    }
+
+    .studentHomeContainer > .item5 {
+margin-left:100px; 
+    margin-right:100px;
+    background:transparent;
+    }
+
+    .studentHomeContainer > .item6 {
+margin-left:-150px; 
+    margin-left:25px; 
+    margin-right:100px; 
+    background:transparent;
+    }
+
+    .studentHomeContainer > .item7 {
+ margin-right:-150px; 
+     margin-top:50px; 
+     background:transparent;
+    }
+
+    .studentHomeContainer > .item8 {
+margin-left:10vw; 
+     margin-right:10vw; 
+     background:transparent;
+    }
+
+    .studentHomeContainer > .item9 {
+margin-left:-10vw; 
+    margin-top:50px; 
+    background:transparent;
+    }
+
 /*Creates a grid for the Student Maing page*/
 .grid-container-white {
     height: 25%;
@@ -822,6 +905,8 @@ li a {
     overflow: hidden;
     position: relative;
 }
+
+/*end STUDENT INDEX HOME */
 
 /*ASPIRATIONS STUDENT*/
 .aspirationcenter {
@@ -981,49 +1066,51 @@ li a {
 
 .adminColumn {
     margin: auto;
-    padding-top:100px;
+    padding-top: 100px;
 }
+
 .columntwothirds {
     float: left;
     width: 66%;
 }
 
-    /*a simple way to set image sizing and location within columns*/
+/*a simple way to set image sizing and location within columns*/
 
 
-    .adminLeftGraph{
-        float:left;
-        width: 25%;
-        max-width:25%;
-        height: auto;
-    }
+.adminLeftGraph {
+    float: left;
+    width: 25%;
+    max-width: 25%;
+    height: auto;
+}
+
 .adminRightGraph {
     float: left;
     width: 75%;
     max-width: 75%;
-    height:auto;
+    height: auto;
 }
 /*end ADMIN INDEX */
 
 /*STUDENT ARCHIVE*/
 
 .studentArchive {
-    text-align:unset;
+    text-align: unset;
 }
 /*end STUDENT ARCHIVE*/
 
 /*STUDENT DATA*/
 
 .studentData > img {
-width:100%;
-height:auto;
-padding-top:50px;
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
 }
 
 /*end STUDENT DATA*/
 
 /*STUDENT DELETE*/
 .studentDeleteRow {
-    margin-top:70px;
+    margin-top: 70px;
 }
 /*end STUDENT DELETE*/

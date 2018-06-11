@@ -1,82 +1,83 @@
 ﻿@{
     ViewBag.Title = "Student Home Page";
 }
-<body style="background:radial-gradient(darkgray,white)">
-        <!--Grid container for the student home page-->
-            <div class="aspirations-container">
+<body class="backgroundStudentHome">
+    <!--Grid container for the student home page-->
+    <div class="studentHomeContainer">
 
-            <!--Item 1 container-->
-            <div class="item1" style=" margin-top:50px; margin-left:50px; background:transparent;">
+        <!--Item 1 container-->
+        <div class="item1">
 
-                <!--Students current stash Icon-->
-                <p style="font-family:'MS Gothic'; font-size:medium; text-align:center; color:#3D92D0"> CURRENT STASH</p>
-                <img src="~/Content/images/SVG/Trackoin_Individual.svg" />
-                <p class="subheader" style="font-size:x-large">356</p>
+            <!--Students current stash Icon-->
+            <p style="font-family:'MS Gothic'; font-size:medium; text-align:center; color:#3D92D0"> CURRENT STASH</p>
+            <img src="~/Content/images/SVG/Trackoin_Individual.svg" />
+            <p class="subheader" style="font-size:x-large">356</p>
+        </div>
+
+        <!--Item 2 container-->
+        <div class="item2" >
+
+            <!--Pet Icon-->
+            <img src="~/Content/images/SVG/Pet_Home.svg" />
+        </div>
+
+        <!--Item 3 container-->
+        <div class="item3">
+
+            <!--TrackCoin bonus streak-->
+            <p style="font-family:'MS Gothic'; font-size:medium; text-align:center; color:#3D92D0"> BONUS STREAK</p>
+            <img src="~/Content/images/SVG/Trackoin_Bonus.svg" />
+        </div>
+
+        <!--Item 4 container-->
+        <div class="item4">
+
+            <!--Current Active aspiration-->
+            <p style="font-family:'MS Gothic'; font-size:medium; text-align:center; color:#3D92D0"> CURRENT ASPIRATION</p>
+            <img src="~/Content/images/SVG/Aspiration_ClockIn.svg" />
+        </div>
+
+        <!--Item 5 container-->
+        <div class="item5" >
+
+            <!--Home Streak Icon-->
+            <div>
+                <p style="font-family:'MS Gothic'; font-size:medium; text-align:center; color:#3D92D0"> BEST DAY STREAK</p>
             </div>
-
-            <!--Item 2 container-->
-            <div class="item2" style="width:350px; margin-left:50px; margin-right:-300px; margin-top:100px; background:transparent;">
-
-                <!--Pet Icon-->
-                <img src="~/Content/images/SVG/Pet_Home.svg" />
-            </div>
-
-            <!--Item 3 container-->
-            <div class="item3" style=" margin-top:50px; margin-right:100px; background:transparent;">
-
-                <!--TrackCoin bonus streak-->
-                <p style="font-family:'MS Gothic'; font-size:medium; text-align:center; color:#3D92D0"> BONUS STREAK</p>
-                <img src="~/Content/images/SVG/Trackoin_Bonus.svg" />
-            </div>
-
-            <!--Item 4 container-->
-            <div class="item4" style="margin-left:50px; background:transparent;">
-
-                <!--Current Active aspiration-->
-                <p style="font-family:'MS Gothic'; font-size:medium; text-align:center; color:#3D92D0"> CURRENT ASPIRATION</p>
-                <img src="~/Content/images/SVG/Aspiration_ClockIn.svg" />
-            </div>
-
-            <!--Item 5 container-->
-            <div class="item5" style="margin-left:100px; margin-right:100px; background:transparent;">
-
-                <!--Home Streak Icon-->
-                <div>
-                    <p style="font-family:'MS Gothic'; font-size:medium; text-align:center; color:#3D92D0"> BEST DAY STREAK</p>
-                </div>
-                <div>
-                    <img src="~/Content/images/SVG/Home_DayStreak_9.svg" />
-                </div>
-            </div>
-
-            <!--Item 6 container-->
-            <div class="item6" style="margin-left:-150px; margin-left:25px; margin-right:100px; background:transparent;">
-                <a href="~/Student/Data"><p style="font-family:'MS Gothic'; font-size:medium; text-align: center; color:#3D92D0"> YOUR REPORTS</p>
-                </a>
-
-                <!--Archive Button-->
-                <img src="~/Content/images/SVG/Archive_Blue.svg" />
-            </div>
-
-            <!--Item 7 container-->
-            <div class="item7" style="margin-right:-150px; margin-top:50px; background:transparent;">
-
-                <!--Community Hours Chart-->
-                <img src="~/Content/images/SVG/ChartSVG/Student_Home_CommunityHours.svg" />
-            </div>
-
-            <!--Item 8 container-->
-            <div class="item8" style="margin-left:10vw; margin-right:10vw; background:transparent;">
-
-                <!--Student Community Hours Chart-->
-                <p style="font-family:'MS Gothic'; font-size:x-large; color:#3D92D0"> TODAY'S SNAPSHOT</p>
-            </div>
-
-            <!--Item 9 container-->
-            <div class="item9" style="margin-left:-10vw; margin-top:50px; background:transparent;">
-
-                <!--Student Hours Chart-->
-                <img src="~/Content/images/SVG/ChartSVG/Student_Home_HoursThisWeek.svg" />
+            <div>
+                <img src="~/Content/images/SVG/Home_DayStreak_9.svg" />
             </div>
         </div>
+
+        <!--Item 6 container-->
+        <div class="item6" >
+            <a href="~/Student/Data">
+                <p style="font-family:'MS Gothic'; font-size:medium; text-align: center; color:#3D92D0"> YOUR REPORTS</p>
+            </a>
+
+            <!--Archive Button-->
+            <img src="~/Content/images/SVG/Archive_Blue.svg" />
+        </div>
+
+        <!--Item 7 container-->
+        <div class="item7">
+
+            <!--Community Hours Chart-->
+            <img src="~/Content/images/SVG/ChartSVG/Student_Home_CommunityHours.svg" />
+        </div>
+
+        <!--Item 8 container-->
+        <div class="item8">
+
+            <!--Student Community Hours Chart-->
+            <p style="font-family:'MS Gothic'; font-size:x-large; color:#3D92D0"> TODAY'S SNAPSHOT</p>
+        </div>
+
+        <!--Item 9 container-->
+        <div class="item9" >
+
+            <!--Student Hours Chart-->
+            <img src="~/Content/images/SVG/ChartSVG/Student_Home_HoursThisWeek.svg" />
+        </div>
+    </div>
 </body>
