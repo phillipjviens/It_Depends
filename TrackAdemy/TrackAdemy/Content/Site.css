@@ -212,6 +212,11 @@ margin-top:-22px;
 .navLIRightElements{
  margin-right:-60px;
 }
+
+#footerPos{
+    position:static;
+    bottom:0;
+}
 /*End NAV*/
 
 /*ADMIN MANAGE STUDENT*/
