@@ -204,6 +204,11 @@ width:150px;
 margin-left:200px;
 margin-top:-22px;
 }
+#navbarStudentPic {
+    width:100%; 
+    margin-left:110px; 
+    margin-top:-80px;
+}
 .navLIRightElements{
  margin-right:-60px;
 }
