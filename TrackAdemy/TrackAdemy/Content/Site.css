@@ -169,16 +169,43 @@ li a {
 /*adminNav bar gradient*/
 #adminNav {
     background: linear-gradient(to right, #C22026,#F2696A);
+    height: 12%;
 }
 
 /*studentNav bar gradient*/
 #studentNav {
     background: linear-gradient(to right, #37499F,#3D92D0);
+    height: 12%;
 }
 
 /*set navbar outline to transparent*/
 .navbar {
     border-color: transparent;
+}
+
+.navUL{
+    margin-top:13px !important;
+}
+
+.navLILeftElements {
+    float:left; 
+    margin-left:-90px;
+}
+    .navLILeftElements .img-responsive {
+        width:80%;
+        margin-top:-5px;
+    }
+.navLIMiddleElements{
+float:left; 
+overflow:visible;
+}
+.navLIMiddleElements .img-responsive {
+width:150px; 
+margin-left:200px;
+margin-top:-22px;
+}
+.navLIRightElements{
+ margin-right:-60px;
 }
 /*End NAV*/
 
@@ -813,74 +840,74 @@ li a {
     margin-bottom: 10px;
     border-radius: 100px;
 }
-/*specific child items in the grid*/
+    /*specific child items in the grid*/
     .studentHomeContainer > .item1 {
-        margin-top:50px; 
-        margin-left:50px; 
-        background:transparent;
+        margin-top: 50px;
+        margin-left: 50px;
+        background: transparent;
     }
 
     .studentHomeContainer > .item2 {
-        width:350px; 
-        margin-left:50px; 
-        margin-right:-300px; 
-        margin-top:100px;         
-        background:transparent;
+        width: 350px;
+        margin-left: 50px;
+        margin-right: -300px;
+        margin-top: 100px;
+        background: transparent;
     }
 
     .studentHomeContainer > .item3 {
- margin-top:50px; 
- margin-right:100px; 
-     background:transparent;
+        margin-top: 50px;
+        margin-right: 100px;
+        background: transparent;
     }
 
     .studentHomeContainer > .item4 {
- margin-left:50px; 
-     background:transparent;
+        margin-left: 50px;
+        background: transparent;
     }
 
     .studentHomeContainer > .item5 {
-margin-left:100px; 
-    margin-right:100px;
-    background:transparent;
+        margin-left: 100px;
+        margin-right: 100px;
+        background: transparent;
     }
 
     .studentHomeContainer > .item6 {
-margin-left:-150px; 
-    margin-left:25px; 
-    margin-right:100px; 
-    background:transparent;
+        margin-left: -150px;
+        margin-left: 25px;
+        margin-right: 100px;
+        background: transparent;
     }
 
     .studentHomeContainer > .item7 {
- margin-right:-150px; 
-     margin-top:50px; 
-     background:transparent;
+        margin-right: -150px;
+        margin-top: 50px;
+        background: transparent;
     }
 
     .studentHomeContainer > .item8 {
-margin-left:10vw; 
-     margin-right:10vw; 
-     background:transparent;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        background: transparent;
     }
 
     .studentHomeContainer > .item9 {
-margin-left:-10vw; 
-    margin-top:50px; 
-    background:transparent;
+        margin-left: -10vw;
+        margin-top: 50px;
+        background: transparent;
     }
     /*container with all p elements font stuff*/
     .studentHomeContainer p {
-font-family:'MS Gothic'; 
-font-size:medium; 
-text-align:center; 
-color:#3D92D0;
+        font-family: 'MS Gothic';
+        font-size: medium;
+        text-align: center;
+        color: #3D92D0;
     }
-    /*container with override for p.subheader elements*/
-    .studentHomeContainer p.subheader {
-        color:black;
-font-size:x-large;
-    }
+        /*container with override for p.subheader elements*/
+        .studentHomeContainer p.subheader {
+            color: black;
+            font-size: x-large;
+        }
 
 /*Creates a grid for the Student Maing page*/
 .grid-container-white {
