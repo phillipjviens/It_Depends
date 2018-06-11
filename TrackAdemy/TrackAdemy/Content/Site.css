@@ -798,6 +798,7 @@ li a {
     background: radial-gradient(darkgray,white);
 }
 
+/*the student home index grid*/
 .studentHomeContainer {
     height: 50%;
     width: auto;
@@ -812,7 +813,7 @@ li a {
     margin-bottom: 10px;
     border-radius: 100px;
 }
-
+/*specific child items in the grid*/
     .studentHomeContainer > .item1 {
         margin-top:50px; 
         margin-left:50px; 
@@ -867,6 +868,18 @@ margin-left:10vw;
 margin-left:-10vw; 
     margin-top:50px; 
     background:transparent;
+    }
+    /*container with all p elements font stuff*/
+    .studentHomeContainer p {
+font-family:'MS Gothic'; 
+font-size:medium; 
+text-align:center; 
+color:#3D92D0;
+    }
+    /*container with override for p.subheader elements*/
+    .studentHomeContainer p.subheader {
+        color:black;
+font-size:x-large;
     }
 
 /*Creates a grid for the Student Maing page*/
