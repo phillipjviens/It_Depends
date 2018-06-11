@@ -1164,3 +1164,11 @@ margin-top:-22px;
     margin-top: 70px;
 }
 /*end STUDENT DELETE*/
+
+/*HOME ABOUT/HELP*/
+.blockVertCenter {
+    position: relative;
+    top: 50%;
+    transform: translateY(+50%);
+}
+/*end HOME ABOUT/HELP*/
