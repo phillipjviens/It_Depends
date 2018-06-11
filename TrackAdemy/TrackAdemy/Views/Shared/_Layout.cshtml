@@ -18,7 +18,7 @@
         var actionName = this.ViewContext.RouteData.Values["action"].ToString();
 
         @*making a list of exception student pages*@
-        string[] studentAdminPagesList = { "Read", "Create", "Update", "Delete", "Archive", "ReadArchived"};
+        string[] studentAdminPagesList = { "Read", "Create", "Update", "Delete", "Archive", "ReadArchived" };
 
         @*checks if the controller name is Student and if the CRUD action is being used*@
         bool inList = (controllerName == "Student" && Array.Exists(studentAdminPagesList, x => x == actionName));
@@ -47,19 +47,19 @@
 
                     <!--Collapsable div to allow navbar to resize when screen shrinks-->
                     <div class="navbar-collapse collapse">
-                        <ul class="nav navbare-nav navUL" >
+                        <ul class="nav navbare-nav navUL">
                             <li class="navLILeftElements">
 
                                 <!--Trackadamy logo that was turned into a clickable link-->
                                 <a href="~/Home/Index">
-                                    <img class="img-responsive" src="~/Content/images/SVG/Trackademy_White.svg" >
+                                    <img class="img-responsive" src="~/Content/images/SVG/Trackademy_White.svg">
                                 </a>
                             </li>
 
                             <!-- centered schoolhouse logo on the navbar that was also turned into a clickable link-->
                             <li class="navLIMiddleElements">
                                 <a href="~/Home/Index">
-                                    <img class="img-responsive" src="~/Content/images/SVG/Logo_Red.svg" >
+                                    <img class="img-responsive" src="~/Content/images/SVG/Logo_Red.svg">
                                 </a>
                             </li>
                             <!--Remaining navbar elements that were floated to the right side of the navigation bar-->
@@ -77,81 +77,94 @@
         @*Student nav*@
         else if (controllerName == "Student")
         {
-            
-            <div id="studentNav" class="navbar navbar-inverse navbar-fixed-top" >
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbare-nav navUL" >
-                            <li class="navLILeftElements">
-                                <a href="~/Home/Index">
-                                    <img class="img-responsive" src="~/Content/images/SVG/Trackademy_White.svg">
-                                </a>
-                            </li>
-                            <li class="navLIMiddleElements">
-                                <a href="~/Student/Index">
-                                    <img class="img-responsive" id="navbarStudentPic" src="~/Content/images/SVG/NavBar_Picture.svg" >
-                                </a>
-                            </li>
-                          
-                            <li class="navLIRightElements"><a href="~/Home/Index">LOG OUT</a></li>
-                            <li><a href="~/Student/Aspirations">ASPIRATIONS</a></li>
-                            <li><a href="~/Student/Store">PET STORE</a></li>
-                            <li><a href="~/Student/Yard">PET YARD</a></li>
-                            <li><a href="~/Student/Index">STUDENT HOME</a></li>
-                        </ul>
-                    </div>
+        <!-- This the navbar container-->
+        <div id="studentNav" class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                 </div>
 
-            </div>
-        }
-        @*TrackAdemy home*@
-        else if (controllerName == "Home")
-        {
-            <div class="navbar navbar-inverse navbar-fixed-top" >
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbare-nav navUL">
-                            <li class="navLILeftElements">
-                                <a href="~/Home/Index"><img class="img-responsive" src="~/Content/images/SVG/Trackademy_White.svg" ></a>
-                            </li>
-                            <li><a href="~/Student/Index">Students</a></li>
-                            <li><a href="~/Admin/Index">Administrators</a></li>
-                            <li><a href="~/Kiosk/Index">Kiosk</a></li>
-                        </ul>
-                    </div>
+                <!--Collapsable div to allow navbar to resize when screen shrinks-->
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbare-nav navUL">
+                        <li class="navLILeftElements">
+
+                            <!--Trackadamy logo that was turned into a clickable link-->
+                            <a href="~/Home/Index">
+                                <img class="img-responsive" src="~/Content/images/SVG/Trackademy_White.svg">
+                            </a>
+                        </li>
+
+                        <!-- centered student on the navbar that was also turned into a clickable link-->
+                        <li class="navLIMiddleElements">
+                            <a href="~/Student/Index">
+                                <img class="img-responsive" id="navbarStudentPic" src="~/Content/images/SVG/NavBar_Picture.svg">
+                            </a>
+                        </li>
+
+                        <!--Navbar links on the right of the page-->
+                        <li class="navLIRightElements"><a href="~/Home/Index">LOG OUT</a></li>
+                        <li><a href="~/Student/Aspirations">ASPIRATIONS</a></li>
+                        <li><a href="~/Student/Store">PET STORE</a></li>
+                        <li><a href="~/Student/Yard">PET YARD</a></li>
+                        <li><a href="~/Student/Index">STUDENT HOME</a></li>
+                    </ul>
                 </div>
             </div>
-        }
-        <!--End conditional layout-->
 
-        <div class="container body-content">
-            @RenderBody()
-
-            <footer id ="footerPos">
-                <hr />
-                &copy;@DateTime.Now.Year - TrackAdemy
-                @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px; color:black" })
-                @Html.ActionLink("Help", "Help", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px; color:black" })
-            </footer>
         </div>
+    }
+    @*TrackAdemy home*@
+    else if (controllerName == "Home")
+    {
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
+    <!-- This the navbar container-->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!--Collapsable div to allow navbar to resize when screen shrinks-->
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbare-nav navUL">
+                    <li class="navLILeftElements">
+                        <a href="~/Home/Index"><img class="img-responsive" src="~/Content/images/SVG/Trackademy_White.svg"></a>
+                    </li>
+
+                    <!--Navbar links on the right of the page-->
+                    <li><a href="~/Student/Index">Students</a></li>
+                    <li><a href="~/Admin/Index">Administrators</a></li>
+                    <li><a href="~/Kiosk/Index">Kiosk</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    }
+    <!--End conditional layout-->
+
+    <div class="container body-content">
+        @RenderBody()
+
+        <footer id="footerPos">
+            <hr />
+            &copy;@DateTime.Now.Year - TrackAdemy
+            @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px; color:black" })
+            @Html.ActionLink("Help", "Help", "Home", new { controller = "Home" }, new { @class = "btn btn-link", @style = "margin-top:-8px; color:black" })
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
     }
 </body>
 </html>
